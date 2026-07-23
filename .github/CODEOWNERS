@@ -1,0 +1,12 @@
+# Repository ownership gate.
+* @nancywrayg57-jpg
+
+.github/ @nancywrayg57-jpg
+.github/workflows/ @nancywrayg57-jpg
+.github/CODEOWNERS @nancywrayg57-jpg
+Agent.md @nancywrayg57-jpg
+docs/agent/ @nancywrayg57-jpg
+docs/architecture_decisions/ @nancywrayg57-jpg
+scripts/ @nancywrayg57-jpg
+migrations/ @nancywrayg57-jpg
+drizzle/ @nancywrayg57-jpg
