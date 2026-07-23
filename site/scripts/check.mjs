@@ -7,7 +7,8 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "en/index.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "en/index.html", "ru/index.html"];
+const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 
 const voidElements = new Set([
   "area",
@@ -142,6 +143,89 @@ function validateChineseHome(html) {
   return errors;
 }
 
+function validateProductsPage(html) {
+  const errors = [];
+
+  for (const marker of [
+    "蜜獾产品与服务介绍",
+    "4 项常规产品/服务 + 跨境网络服务合并入口",
+    "产品与服务分类概览",
+    "核心能力说明",
+    "服务落地四步路径",
+    "咨询与联系入口",
+    "数字化农业综合管理系统",
+    "蜜獾原图",
+    "AI-FDE VibeCoding 培训",
+    "社媒跨境私域陪跑",
+    "跨境网络服务",
+    "详情页待接入",
+    "合并页待接入"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing products page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "products-hero",
+    "product-overview",
+    "products-capabilities",
+    "service-path",
+    "products-consult"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing products page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Products page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">首页</a>') || !html.includes('aria-current="page">产品介绍</span>')) {
+    errors.push("Products page breadcrumb must be 首页 / 产品介绍 with a working home link.");
+  }
+
+  if (!html.includes('href="./products.html" aria-current="page">产品介绍</a>')) {
+    errors.push("Products page header must mark 产品介绍 as current.");
+  }
+
+  for (const languagePath of ['href="./products.html"', 'href="./en/index.html"', 'href="./ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Products page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const productEntries = html.match(/data-product-entry=/g) || [];
+  if (productEntries.length !== 5) {
+    errors.push(`Products page must render exactly 5 top-level product entries; found ${productEntries.length}.`);
+  }
+
+  const regularEntries = html.match(/data-product-entry="regular"/g) || [];
+  if (regularEntries.length !== 4) {
+    errors.push(`Products page must render 4 regular product/service entries; found ${regularEntries.length}.`);
+  }
+
+  const networkEntries = html.match(/data-product-entry="network"/g) || [];
+  if (networkEntries.length !== 1) {
+    errors.push(`Products page must render 1 merged network-services entry; found ${networkEntries.length}.`);
+  }
+
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|跨境网络服务)\.html/i.test(html)) {
+    errors.push("Products page must keep detail and network-service links as same-page placeholder anchors.");
+  }
+
+  if (/<form[\s>]/i.test(html)) {
+    errors.push("Products page must not include a fake contact form.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
+    errors.push("Products page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
 async function validateBuiltHtml(relativePath) {
   const htmlPath = resolve(distDir, relativePath);
   const htmlStats = await stat(htmlPath).catch(() => null);
@@ -178,7 +262,7 @@ async function validateBuiltHtml(relativePath) {
     }
   }
 
-  if (/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+  if (homeHtmlPaths.has(relativePath) && /class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
     htmlErrors.push("Home pages must not render breadcrumb markup.");
   }
 
@@ -197,6 +281,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "index.html") {
     htmlErrors.push(...validateChineseHome(html));
+  }
+
+  if (relativePath === "products.html") {
+    htmlErrors.push(...validateProductsPage(html));
   }
 
   if (htmlErrors.length > 0) {
@@ -224,5 +312,5 @@ for (const requiredHtmlPath of requiredHtmlPaths) {
 }
 
 console.log(`Checked ${indexPath}`);
-console.log(`Checked ${htmlResults.length} localized home page(s).`);
+console.log(`Checked ${htmlResults.length} required static HTML page(s).`);
 console.log(`Build output contains ${files.length} file(s), ${totalBytes} byte(s).`);
