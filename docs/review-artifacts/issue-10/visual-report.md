@@ -30,6 +30,14 @@
 - Same-page anchors worked for the service module and placeholder detail section.
 - Floating support control opened and set `aria-expanded="true"`.
 
+## UI Comparison Conclusion
+
+- Navigation shell, language switcher placement, breadcrumb band, notice banner, footer, and floating support placement were compared against `UI/跨境网络服务.html` screenshots.
+- The target page keeps the S1 static shell and project tokens while replacing the UI dynamic shell with production-ready static sections for the merged service page.
+- Desktop layout preserves the reference direction: strong blue hero, right-side service summary, sectioned service content, CTA buttons, and reserved contact/support area.
+- Mobile layout keeps content readable in a single column; the mobile navigation opens cleanly and does not create horizontal overflow.
+- The target intentionally keeps the three child services as in-page sections with placeholder anchors; no static child detail pages or top-level navigation entries were introduced.
+
 ## Notes
 
 - The three IP services remain sections inside the merged page, not product matrix cards, primary navigation entries, or independent pages.
