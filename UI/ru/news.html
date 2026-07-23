@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Новости Honey Badger, отраслевые заметки, технические материалы и обновления продуктов для локальной работы ZennoLab в Китае.">
+  <title>Новости | Honey Badger</title>
+  <link rel="canonical" href="https://www.honeybadgersoft.com/ru/news.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.honeybadgersoft.com/news.html">
+  <link rel="alternate" hreflang="en-US" href="https://www.honeybadgersoft.com/en/news.html">
+  <link rel="alternate" hreflang="ru-RU" href="https://www.honeybadgersoft.com/ru/news.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.honeybadgersoft.com/news.html">
+  <!-- 标注：新闻资讯页入口，预渲染 SEO 与语言路径由静态 HTML 提供。 -->
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    body[data-page="news"] .hero {
+      background: #005ab4 url("../assets/stacked-waves-haikei_3.svg") center / cover no-repeat;
+    }
+
+    body[data-page="news"] .hero::before {
+      display: none;
+    }
+  </style>
+  <script src="../assets/app.js" defer></script>
+</head>
+<body data-page="news" data-lang="ru">
+  <a class="skip-link" href="#app">Skip to content</a>
+  <header class="site-header" aria-label="Site header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" data-page-link="home" aria-label="Honey Badger home">
+        <span class="brand-mark">HB</span>
+        <span class="brand-text">
+          <span>Honey Badger</span>
+          <small>ZennoLab China Ops</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" id="desktop-nav" aria-label="Primary navigation"></nav>
+      <div class="header-actions">
+        <select class="language-select" id="language-select" aria-label="Language">
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+          <option value="ru" selected>Русский</option>
+        </select>
+        <button class="menu-button" id="menu-button" type="button" aria-label="Menu" aria-expanded="false">=</button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+  <main id="app" tabindex="-1">
+    <section class="seo-prerender" aria-label="Pre-rendered page summary">
+      <h1>Новости</h1>
+      <p>Новости компании, отраслевые заметки и технические материалы по автоматизации.</p>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <aside class="service-float" id="service-float" aria-label="Customer service"></aside>
+</body>
+</html>
