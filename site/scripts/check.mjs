@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "en/index.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "en/index.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 
 const voidElements = new Set([
@@ -159,7 +159,7 @@ function validateProductsPage(html) {
     "社媒跨境私域陪跑",
     "跨境网络服务",
     "详情页待接入",
-    "合并页待接入"
+    "查看合并页"
   ]) {
     if (!html.includes(marker)) {
       errors.push(`Missing products page marker: ${marker}.`);
@@ -211,7 +211,11 @@ function validateProductsPage(html) {
     errors.push(`Products page must render 1 merged network-services entry; found ${networkEntries.length}.`);
   }
 
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|跨境网络服务)\.html/i.test(html)) {
+  if (!html.includes('href="./跨境网络服务.html">查看合并页</a>')) {
+    errors.push("Products page network-services card must link to the merged page.");
+  }
+
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
     errors.push("Products page must keep detail and network-service links as same-page placeholder anchors.");
   }
 
@@ -221,6 +225,84 @@ function validateProductsPage(html) {
 
   if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
     errors.push("Products page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateNetworkServicesPage(html) {
+  const errors = [];
+
+  for (const marker of [
+    "跨境网络服务",
+    "静态住宅 IP",
+    "机房 IP",
+    "动态 IP",
+    "三级",
+    "三类 IP 子服务合并承接",
+    "详情承接页待接入",
+    "返回产品介绍",
+    "接入与咨询",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing network services marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "network-services-hero",
+    "network-positioning",
+    "network-services-modules",
+    "service-static-residential-ip",
+    "service-idc-ip",
+    "service-dynamic-ip",
+    "network-consult"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing network services section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Network services page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">首页</a>') || !html.includes('href="./products.html">产品介绍</a>') || !html.includes('aria-current="page">跨境网络服务</span>')) {
+    errors.push("Network services breadcrumb must be 首页 / 产品介绍 / 跨境网络服务 with working parent links.");
+  }
+
+  if (!html.includes('href="./products.html" aria-current="page">产品介绍</a>')) {
+    errors.push("Network services page header must mark 产品介绍 as current.");
+  }
+
+  for (const languagePath of ['href="./跨境网络服务.html"', 'href="./en/index.html"', 'href="./ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Network services language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const networkServices = html.match(/data-network-service=/g) || [];
+  if (networkServices.length !== 3) {
+    errors.push(`Network services page must render exactly 3 child service sections; found ${networkServices.length}.`);
+  }
+
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
+    errors.push("Network child service detail links must stay as same-page placeholder anchors.");
+  }
+
+  for (const anchor of ['href="#static-ip-detail-pending"', 'href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+    if (!html.includes(anchor)) {
+      errors.push(`Network child service missing placeholder detail anchor ${anchor}.`);
+    }
+  }
+
+  if (/<form[\s>]/i.test(html)) {
+    errors.push("Network services page must not include a fake contact form.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
+    errors.push("Network services page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -285,6 +367,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "products.html") {
     htmlErrors.push(...validateProductsPage(html));
+  }
+
+  if (relativePath === "跨境网络服务.html") {
+    htmlErrors.push(...validateNetworkServicesPage(html));
   }
 
   if (htmlErrors.length > 0) {

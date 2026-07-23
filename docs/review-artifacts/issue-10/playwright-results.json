@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-07-23T18:25:59.717Z",
+  "results": [
+    {
+      "name": "Chinese file URL encoding",
+      "detail": "file:///D:/workspace/mihuan_software_v2/site/dist/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html"
+    },
+    {
+      "name": "network desktop horizontal overflow",
+      "detail": "{\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"innerWidth\":1440}"
+    },
+    {
+      "name": "network desktop broken images",
+      "detail": "0"
+    },
+    {
+      "name": "network desktop console/page errors",
+      "detail": "0"
+    },
+    {
+      "name": "desktop screenshot",
+      "detail": "network-services-desktop.png"
+    },
+    {
+      "name": "service card header contrast",
+      "detail": "rgb(19, 34, 56)"
+    },
+    {
+      "name": "breadcrumb structure",
+      "detail": "[{\"text\":\"首页\",\"href\":\"./index.html\"},{\"text\":\"产品介绍\",\"href\":\"./products.html\"}]"
+    },
+    {
+      "name": "breadcrumb navigation",
+      "detail": "home and products links work"
+    },
+    {
+      "name": "same-page anchors",
+      "detail": "module and placeholder anchors work"
+    },
+    {
+      "name": "support float",
+      "detail": "opens and sets aria-expanded=true"
+    },
+    {
+      "name": "network mobile horizontal overflow",
+      "detail": "{\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"innerWidth\":390}"
+    },
+    {
+      "name": "network mobile broken images",
+      "detail": "0"
+    },
+    {
+      "name": "network mobile console/page errors",
+      "detail": "0"
+    },
+    {
+      "name": "mobile screenshot",
+      "detail": "network-services-mobile.png"
+    },
+    {
+      "name": "network mobile nav open horizontal overflow",
+      "detail": "{\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"innerWidth\":390}"
+    },
+    {
+      "name": "mobile nav screenshot",
+      "detail": "network-services-mobile-nav.png"
+    },
+    {
+      "name": "products flow console/page errors",
+      "detail": "0"
+    },
+    {
+      "name": "products to network flow",
+      "detail": "NET card and return link work"
+    },
+    {
+      "name": "UI reference desktop screenshot",
+      "detail": "ui-reference-network-services-desktop.png"
+    },
+    {
+      "name": "UI reference mobile screenshot",
+      "detail": "ui-reference-network-services-mobile.png"
+    }
+  ]
+}

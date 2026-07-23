@@ -1366,6 +1366,238 @@ h3 {
   font-weight: 800;
 }
 
+.network-services-page .breadcrumb {
+  border-bottom-color: var(--border);
+  background: #fbfcff;
+}
+
+.network-services-hero {
+  background: var(--primary);
+}
+
+.network-hero-panel {
+  display: grid;
+  gap: 14px;
+  align-self: center;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 96%);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.network-hero-panel article {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  min-height: 78px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 14px;
+}
+
+.network-hero-panel strong,
+.network-hero-panel small {
+  display: block;
+}
+
+.network-hero-panel strong {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.network-hero-panel small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.network-advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.network-advantage-grid article {
+  min-height: 174px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 10px 26px rgb(19 34 56 / 6%);
+}
+
+.network-advantage-grid article:last-child {
+  grid-column: 1 / -1;
+}
+
+.network-advantage-grid span {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-weight: 900;
+}
+
+.network-advantage-grid h3 {
+  margin-top: 16px;
+}
+
+.network-advantage-grid p {
+  color: var(--muted);
+}
+
+.network-module-list {
+  display: grid;
+  gap: 28px;
+}
+
+.network-service-module {
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.network-service-module > header {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  background: rgb(255 255 255 / 14%);
+  padding: 28px;
+}
+
+.network-service-module > header .product-code {
+  width: 58px;
+  height: 58px;
+}
+
+.network-service-module > header .home-eyebrow {
+  border-color: var(--border);
+  background: var(--surface-blue);
+  color: var(--primary);
+}
+
+.network-service-module > header h3,
+.network-service-module > header p {
+  color: var(--text-body);
+}
+
+.network-service-module > header h3 {
+  color: var(--text);
+  font-size: 28px;
+}
+
+.network-service-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 24px;
+  padding: 28px;
+}
+
+.network-spec-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.network-spec-list li {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 14px;
+  border-top: 1px solid var(--border);
+  padding: 14px 0;
+}
+
+.network-spec-list li:first-child {
+  border-top: 0;
+}
+
+.network-spec-list strong {
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.network-spec-list span,
+.network-scenario-panel li {
+  color: var(--text-body);
+}
+
+.network-feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  grid-column: 1 / -1;
+}
+
+.network-feature-list article {
+  min-height: 170px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 16px;
+}
+
+.network-feature-list span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.network-feature-list strong {
+  display: block;
+  margin-top: 14px;
+  color: var(--text);
+}
+
+.network-feature-list p {
+  color: var(--muted);
+}
+
+.network-scenario-panel {
+  align-self: stretch;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 20px;
+}
+
+.network-scenario-panel h4 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.network-scenario-panel ul {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding-left: 18px;
+}
+
+.network-scenario-panel .btn {
+  width: fit-content;
+}
+
+.network-pending-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 1100px) {
   .home-hero-grid,
   .relation-grid,
@@ -1381,6 +1613,12 @@ h3 {
 
   .capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .network-service-body,
+  .network-feature-list,
+  .network-pending-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1415,9 +1653,29 @@ h3 {
   .preview-grid,
   .pending-note-grid,
   .capability-grid,
+  .network-advantage-grid,
   .service-path-list,
   .dashboard-body {
     grid-template-columns: 1fr;
+  }
+
+  .network-advantage-grid article:last-child {
+    grid-column: auto;
+  }
+
+  .network-service-module > header,
+  .network-service-body {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .network-spec-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .network-scenario-panel .btn {
+    width: 100%;
   }
 
   .product-card-wide {
