@@ -1,0 +1,14 @@
+{
+  "name": "mihuan-website-site",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Production static site scaffold for the Honey Badger corporate website.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
