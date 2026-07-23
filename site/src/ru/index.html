@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="S1-каркас сайта Honey Badger для проверки общего header, переключателя языков, footer и заполнителя поддержки.">
+    <title>Каркас сайта Honey Badger | S1 Scaffold</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/app.js" defer></script>
+  </head>
+  <body data-page="home" data-lang="ru">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header" aria-label="Шапка сайта">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Honey Badger home">
+          <span class="brand-mark" aria-hidden="true">HB</span>
+          <span class="brand-copy">
+            <strong>Honey Badger</strong>
+            <small>ZennoLab China Ops</small>
+          </span>
+        </a>
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a class="nav-link" href="./index.html" aria-current="page">Главная</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">Продукты</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">Новости</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">Карьера</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">О нас</a>
+        </nav>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="Переключатель языка">
+            <a href="../index.html" lang="zh-CN">中文</a>
+            <a href="../en/index.html" lang="en-US">EN</a>
+            <a href="./index.html" aria-current="true" lang="ru-RU">RU</a>
+          </nav>
+          <button class="menu-button" id="menu-button" type="button" aria-label="Открыть мобильную навигацию" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
+      <a class="nav-link" href="./index.html" aria-current="page">Главная</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">Продукты</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">Новости</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">Карьера</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">О нас</a>
+    </nav>
+    <main class="site-main" id="main" tabindex="-1">
+      <section class="scaffold-hero" aria-labelledby="page-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">S1 Site Shell</p>
+            <h1 id="page-title">Общий каркас сайта Honey Badger</h1>
+            <p class="scaffold-notice">开发骨架，非正式内容</p>
+            <p class="localized-notice">Технический каркас, не финальное содержимое сайта.</p>
+            <p class="lead">Эта страница проверяет общий каркас: header 76px, навигацию, языковые пути, структурные заполнители footer и плавающий заполнитель поддержки. Бизнес-страницы будут подключены в следующих Issue.</p>
+          </div>
+          <div class="shell-panel" aria-label="Область S1">
+            <span>Header</span>
+            <span>LanguageSwitcher</span>
+            <span>Breadcrumb API</span>
+            <span>Footer</span>
+            <span>FloatingSupport</span>
+          </div>
+        </div>
+      </section>
+      <section class="placeholder-section" aria-labelledby="placeholder-title">
+        <div class="container">
+          <h2 id="placeholder-title">Заполнители навигации</h2>
+          <div class="placeholder-grid">
+            <article id="s1-products-placeholder">
+              <h3>Продукты</h3>
+              <p>Бизнес-страницы запланированы для S2. Ссылки остаются локальными якорями, чтобы не создавать 404.</p>
+            </article>
+            <article id="s1-news-placeholder">
+              <h3>Новости</h3>
+              <p>Списки, детали и форматирование дат будут подключены на этапе бизнес-страниц.</p>
+            </article>
+            <article id="s1-careers-placeholder">
+              <h3>Карьера</h3>
+              <p>Структура вакансий и путь отклика зарезервированы для дальнейшего содержимого.</p>
+            </article>
+            <article id="s1-about-placeholder">
+              <h3>О нас</h3>
+              <p>Модули юридического субъекта и связи будут подключены после утверждения контента.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" aria-label="Подвал сайта">
+      <div class="container footer-grid">
+        <section>
+          <h2>Honey Badger</h2>
+          <p>Honey Badger является операционной структурой российской компании ZennoLab в Китае. Формальные сведения будут настроены после подтверждения администратором.</p>
+        </section>
+        <section>
+          <h3>Контакты</h3>
+          <ul class="footer-list">
+            <li>Корпоративная почта: ожидает настройки</li>
+            <li>Аккаунты поддержки: ожидают настройки</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Соответствие</h3>
+          <ul class="footer-list">
+            <li>ICP: ожидает настройки</li>
+            <li>Авторские права: ожидают настройки</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Внешние ссылки</h3>
+          <p>Ссылки поддержки будут добавлены после подтверждения.</p>
+        </section>
+      </div>
+    </footer>
+    <aside class="floating-support" id="floating-support" aria-label="Заполнитель поддержки">
+      <div class="support-panel" id="support-panel">
+        <div class="support-panel-head">
+          <strong>Поддержка</strong>
+          <button class="support-close" type="button" aria-label="Закрыть панель поддержки">×</button>
+        </div>
+        <p>Официальные каналы поддержки ожидают настройки. Этот этап проверяет только структуру и взаимодействие.</p>
+        <div class="support-options" aria-label="Ожидающие каналы поддержки">
+          <span>WeChat: ожидает настройки</span>
+          <span>QQ: ожидает настройки</span>
+          <span>Email: ожидает настройки</span>
+        </div>
+      </div>
+      <button class="support-toggle" type="button" aria-controls="support-panel" aria-expanded="false">
+        <span aria-hidden="true">?</span>
+        <strong>Поддержка</strong>
+      </button>
+    </aside>
+  </body>
+</html>

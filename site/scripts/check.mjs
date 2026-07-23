@@ -7,6 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
+const requiredHtmlPaths = ["index.html", "en/index.html", "ru/index.html"];
 
 const voidElements = new Set([
   "area",
@@ -92,14 +93,64 @@ function validateHtmlShape(html) {
   return errors;
 }
 
-const indexStats = await stat(indexPath).catch(() => null);
+async function validateBuiltHtml(relativePath) {
+  const htmlPath = resolve(distDir, relativePath);
+  const htmlStats = await stat(htmlPath).catch(() => null);
 
-if (!indexStats?.isFile()) {
-  throw new Error(`Missing build output: ${indexPath}`);
-}
+  if (!htmlStats?.isFile()) {
+    throw new Error(`Missing build output: ${htmlPath}`);
+  }
 
-if (indexStats.size <= 0) {
-  throw new Error(`Build output is empty: ${indexPath}`);
+  if (htmlStats.size <= 0) {
+    throw new Error(`Build output is empty: ${htmlPath}`);
+  }
+
+  const html = await readFile(htmlPath, "utf8");
+  const htmlErrors = validateHtmlShape(html);
+
+  if (!html.includes("开发骨架，非正式内容")) {
+    htmlErrors.push("Missing explicit scaffold notice.");
+  }
+
+  if (/\bhttps?:\/\//i.test(html)) {
+    htmlErrors.push("Skeleton page must not reference external URLs.");
+  }
+
+  for (const selector of [
+    "site-header",
+    "desktop-nav",
+    "language-switcher",
+    "site-footer",
+    "floating-support",
+    "support-toggle"
+  ]) {
+    if (!html.includes(selector)) {
+      htmlErrors.push(`Missing S1 shell marker: ${selector}.`);
+    }
+  }
+
+  if (/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    htmlErrors.push("Home pages must not render breadcrumb markup.");
+  }
+
+  for (const forbiddenPattern of [
+    /zennolabchina/i,
+    /48151650/,
+    /marketing@honeybadgersoft\.com/i,
+    /dingtalk|钉钉/i,
+    /copyright\s+\d{4}|版权所有.*\d{4}/i,
+    /ICP\s*[\w-]*\d/i
+  ]) {
+    if (forbiddenPattern.test(html)) {
+      htmlErrors.push(`Forbidden confirmed or example contact/compliance value found in ${relativePath}.`);
+    }
+  }
+
+  if (htmlErrors.length > 0) {
+    throw new Error(`HTML validation failed for ${relativePath}:\n${htmlErrors.map((error) => `- ${error}`).join("\n")}`);
+  }
+
+  return { htmlPath, size: htmlStats.size };
 }
 
 const files = await listFiles(distDir);
@@ -113,20 +164,12 @@ if (files.length === 0 || totalBytes <= 0) {
   throw new Error(`Build output directory has no usable files: ${distDir}`);
 }
 
-const html = await readFile(indexPath, "utf8");
-const htmlErrors = validateHtmlShape(html);
+const htmlResults = [];
 
-if (!html.includes("开发骨架，非正式内容")) {
-  htmlErrors.push("Missing explicit scaffold notice.");
-}
-
-if (/\bhttps?:\/\//i.test(html)) {
-  htmlErrors.push("Skeleton page must not reference external URLs.");
-}
-
-if (htmlErrors.length > 0) {
-  throw new Error(`HTML validation failed:\n${htmlErrors.map((error) => `- ${error}`).join("\n")}`);
+for (const requiredHtmlPath of requiredHtmlPaths) {
+  htmlResults.push(await validateBuiltHtml(requiredHtmlPath));
 }
 
 console.log(`Checked ${indexPath}`);
+console.log(`Checked ${htmlResults.length} localized home page(s).`);
 console.log(`Build output contains ${files.length} file(s), ${totalBytes} byte(s).`);

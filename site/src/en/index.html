@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Honey Badger S1 site shell scaffold for validating the shared header, language switcher, footer and support placeholder.">
+    <title>Honey Badger Site Shell | S1 Scaffold</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/app.js" defer></script>
+  </head>
+  <body data-page="home" data-lang="en">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Site header">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Honey Badger home">
+          <span class="brand-mark" aria-hidden="true">HB</span>
+          <span class="brand-copy">
+            <strong>Honey Badger</strong>
+            <small>ZennoLab China Ops</small>
+          </span>
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="./index.html" aria-current="page">Home</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">Products</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">News</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">Careers</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">About</a>
+        </nav>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="Language switcher">
+            <a href="../index.html" lang="zh-CN">中文</a>
+            <a href="./index.html" aria-current="true" lang="en-US">EN</a>
+            <a href="../ru/index.html" lang="ru-RU">RU</a>
+          </nav>
+          <button class="menu-button" id="menu-button" type="button" aria-label="Open mobile navigation" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile primary navigation">
+      <a class="nav-link" href="./index.html" aria-current="page">Home</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">Products</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">News</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">Careers</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">About</a>
+    </nav>
+    <main class="site-main" id="main" tabindex="-1">
+      <section class="scaffold-hero" aria-labelledby="page-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">S1 Site Shell</p>
+            <h1 id="page-title">Honey Badger Shared Site Framework</h1>
+            <p class="scaffold-notice">开发骨架，非正式内容</p>
+            <p class="localized-notice">Development scaffold, not final website content.</p>
+            <p class="lead">This page validates the production site shell: 76px header, primary navigation, language paths, footer placeholders and the floating support placeholder. Formal business pages will be connected in later issues.</p>
+          </div>
+          <div class="shell-panel" aria-label="S1 shared shell scope">
+            <span>Header</span>
+            <span>LanguageSwitcher</span>
+            <span>Breadcrumb API</span>
+            <span>Footer</span>
+            <span>FloatingSupport</span>
+          </div>
+        </div>
+      </section>
+      <section class="placeholder-section" aria-labelledby="placeholder-title">
+        <div class="container">
+          <h2 id="placeholder-title">Navigation Placeholders</h2>
+          <div class="placeholder-grid">
+            <article id="s1-products-placeholder">
+              <h3>Products</h3>
+              <p>Business pages are reserved for S2. Links stay on local anchors so missing pages do not create 404s.</p>
+            </article>
+            <article id="s1-news-placeholder">
+              <h3>News</h3>
+              <p>Lists, details and date formatting will be connected with the business pages.</p>
+            </article>
+            <article id="s1-careers-placeholder">
+              <h3>Careers</h3>
+              <p>Job structure and application paths are reserved for later production content.</p>
+            </article>
+            <article id="s1-about-placeholder">
+              <h3>About</h3>
+              <p>Entity and contact modules will be connected when formal content is introduced.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container footer-grid">
+        <section>
+          <h2>Honey Badger</h2>
+          <p>Honey Badger is the operations entity of Russia-based ZennoLab in China. Formal entity details will be configured after administrator confirmation.</p>
+        </section>
+        <section>
+          <h3>Contact Placeholder</h3>
+          <ul class="footer-list">
+            <li>Corporate email: pending configuration</li>
+            <li>Support accounts: pending configuration</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Compliance Placeholder</h3>
+          <ul class="footer-list">
+            <li>ICP record: pending configuration</li>
+            <li>Copyright: pending configuration</li>
+          </ul>
+        </section>
+        <section>
+          <h3>External Links</h3>
+          <p>Support links are reserved until confirmed.</p>
+        </section>
+      </div>
+    </footer>
+    <aside class="floating-support" id="floating-support" aria-label="Support placeholder">
+      <div class="support-panel" id="support-panel">
+        <div class="support-panel-head">
+          <strong>Support Placeholder</strong>
+          <button class="support-close" type="button" aria-label="Close support panel">×</button>
+        </div>
+        <p>Official support channels are pending configuration. This issue validates structure and interaction only.</p>
+        <div class="support-options" aria-label="Pending support channels">
+          <span>WeChat: pending</span>
+          <span>QQ: pending</span>
+          <span>Email: pending</span>
+        </div>
+      </div>
+      <button class="support-toggle" type="button" aria-controls="support-panel" aria-expanded="false">
+        <span aria-hidden="true">?</span>
+        <strong>Support</strong>
+      </button>
+    </aside>
+  </body>
+</html>
