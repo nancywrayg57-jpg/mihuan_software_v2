@@ -3,119 +3,135 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Honey Badger Site Scaffold</title>
-    <style>
-      :root {
-        color-scheme: light;
-        --page-bg: #f6f9fc;
-        --panel-bg: #ffffff;
-        --text-primary: #132238;
-        --text-muted: #52647a;
-        --accent: #1463ff;
-        --accent-soft: #dbe8ff;
-        --border: #d8e2ee;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        color: var(--text-primary);
-        background: var(--page-bg);
-        font-family: Inter, "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
-      }
-
-      .shell {
-        display: grid;
-        min-height: 100vh;
-        place-items: center;
-        padding: 40px 20px;
-      }
-
-      .panel {
-        width: min(100%, 760px);
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        background: var(--panel-bg);
-        padding: clamp(28px, 5vw, 48px);
-        box-shadow: 0 16px 48px rgb(19 34 56 / 8%);
-      }
-
-      .eyebrow {
-        margin: 0 0 12px;
-        color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: 2rem;
-        line-height: 1.08;
-        letter-spacing: 0;
-      }
-
-      .notice {
-        display: inline-flex;
-        align-items: center;
-        margin: 24px 0 18px;
-        border-radius: 999px;
-        background: var(--accent-soft);
-        padding: 8px 14px;
-        color: #0a45bf;
-        font-weight: 700;
-      }
-
-      .summary {
-        margin: 0;
-        color: var(--text-muted);
-        font-size: 1rem;
-        line-height: 1.8;
-      }
-
-      .checks {
-        display: grid;
-        gap: 10px;
-        margin: 28px 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .checks li {
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 12px 14px;
-        color: var(--text-muted);
-        line-height: 1.5;
-      }
-
-      @media (min-width: 700px) {
-        h1 {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+    <meta name="description" content="蜜獾官网 S1 公共组件与全站框架骨架，用于验证 Header、语言切换、Footer 与客服入口占位。">
+    <title>蜜獾官网公共框架 | Honey Badger</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/app.js" defer></script>
   </head>
-  <body>
-    <main class="shell" aria-labelledby="page-title">
-      <section class="panel">
-        <p class="eyebrow">Production Site Scaffold</p>
-        <h1 id="page-title">蜜獾官网生产工程骨架</h1>
-        <p class="notice">开发骨架，非正式内容</p>
-        <p class="summary">
-          此页面仅用于验证 site/src 到 site/dist 的静态构建链路。正式页面、三语内容、品牌资产与上线配置将在后续 Issue 中按需求接入。
-        </p>
-        <ul class="checks" aria-label="当前骨架范围">
-          <li>静态源文件位于 site/src。</li>
-          <li>构建产物输出到 site/dist。</li>
-          <li>UI 原型只作为参考源，不参与本次生产构建。</li>
-        </ul>
+  <body data-page="home" data-lang="zh">
+    <a class="skip-link" href="#main">跳至主要内容</a>
+    <header class="site-header" aria-label="站点页头">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Honey Badger 首页">
+          <span class="brand-mark" aria-hidden="true">HB</span>
+          <span class="brand-copy">
+            <strong>Honey Badger</strong>
+            <small>ZennoLab China Ops</small>
+          </span>
+        </a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a class="nav-link" href="./index.html" aria-current="page">首页</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">产品介绍</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">新闻资讯</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">人才招聘</a>
+          <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">关于我们</a>
+        </nav>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="语言切换">
+            <a href="./index.html" aria-current="true" lang="zh-CN">中文</a>
+            <a href="./en/index.html" lang="en-US">EN</a>
+            <a href="./ru/index.html" lang="ru-RU">RU</a>
+          </nav>
+          <button class="menu-button" id="menu-button" type="button" aria-label="打开移动导航" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="移动端主导航">
+      <a class="nav-link" href="./index.html" aria-current="page">首页</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">产品介绍</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">新闻资讯</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">人才招聘</a>
+      <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">关于我们</a>
+    </nav>
+    <main class="site-main" id="main" tabindex="-1">
+      <section class="scaffold-hero" aria-labelledby="page-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">S1 Site Shell</p>
+            <h1 id="page-title">蜜獾官网公共组件与全站框架</h1>
+            <p class="scaffold-notice">开发骨架，非正式内容</p>
+            <p class="lead">本页用于验证生产官网公共外壳：76px 页头、一级导航、三语路径切换、页脚结构占位与右下角客服入口占位。正式业务页面将在后续 Issue 中接入。</p>
+          </div>
+          <div class="shell-panel" aria-label="本轮公共层范围">
+            <span>Header</span>
+            <span>LanguageSwitcher</span>
+            <span>Breadcrumb API</span>
+            <span>Footer</span>
+            <span>FloatingSupport</span>
+          </div>
+        </div>
+      </section>
+      <section class="placeholder-section" aria-labelledby="placeholder-title">
+        <div class="container">
+          <h2 id="placeholder-title">本轮导航占位</h2>
+          <div class="placeholder-grid">
+            <article id="s1-products-placeholder">
+              <h3>产品介绍</h3>
+              <p>业务页面待 S2 接入；当前链接保持在本页占位锚点，避免未建页面产生 404。</p>
+            </article>
+            <article id="s1-news-placeholder">
+              <h3>新闻资讯</h3>
+              <p>列表、详情与日期格式化将在业务页面阶段接入。</p>
+            </article>
+            <article id="s1-careers-placeholder">
+              <h3>人才招聘</h3>
+              <p>岗位结构与投递路径待后续真实页面承接。</p>
+            </article>
+            <article id="s1-about-placeholder">
+              <h3>关于我们</h3>
+              <p>企业主体与联系模块将在正式内容阶段接入。</p>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="site-footer" aria-label="站点页脚">
+      <div class="container footer-grid">
+        <section>
+          <h2>Honey Badger</h2>
+          <p>蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体。正式主体信息将在管理员确认后配置。</p>
+        </section>
+        <section>
+          <h3>联系占位</h3>
+          <ul class="footer-list">
+            <li>企业邮箱：待配置</li>
+            <li>客服账号：待配置</li>
+          </ul>
+        </section>
+        <section>
+          <h3>合规占位</h3>
+          <ul class="footer-list">
+            <li>ICP备案信息：待配置</li>
+            <li>版权信息：待配置</li>
+          </ul>
+        </section>
+        <section>
+          <h3>外链预留</h3>
+          <p>支持类外链待确认后配置。</p>
+        </section>
+      </div>
+    </footer>
+    <aside class="floating-support" id="floating-support" aria-label="客服入口占位">
+      <div class="support-panel" id="support-panel">
+        <div class="support-panel-head">
+          <strong>在线客服占位</strong>
+          <button class="support-close" type="button" aria-label="关闭客服面板">×</button>
+        </div>
+        <p>正式联系渠道待配置，本轮只验证结构与交互。</p>
+        <div class="support-options" aria-label="待配置客服渠道">
+          <span>微信：待配置</span>
+          <span>QQ：待配置</span>
+          <span>邮箱：待配置</span>
+        </div>
+      </div>
+      <button class="support-toggle" type="button" aria-controls="support-panel" aria-expanded="false">
+        <span aria-hidden="true">?</span>
+        <strong>客服</strong>
+      </button>
+    </aside>
   </body>
 </html>
