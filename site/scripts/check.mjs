@@ -93,6 +93,55 @@ function validateHtmlShape(html) {
   return errors;
 }
 
+function validateChineseHome(html) {
+  const errors = [];
+
+  for (const marker of [
+    "蜜獾软件",
+    "蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体",
+    "了解产品与服务",
+    "产品与服务矩阵",
+    "数字化农业综合管理系统",
+    "蜜獾原图",
+    "AI-FDE VibeCoding 培训",
+    "社媒跨境私域陪跑",
+    "跨境网络服务",
+    "详情页待接入",
+    "新闻资讯预览",
+    "人才招聘预览",
+    "待发布",
+    "待接入",
+    "联系与客服入口"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Chinese home production marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "home-hero",
+    "home-products",
+    "home-relation",
+    "home-news",
+    "home-careers",
+    "support-note"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing Chinese home section marker: ${selector}.`);
+    }
+  }
+
+  if (/<form[\s>]/i.test(html)) {
+    errors.push("Chinese home must not include a fake contact form.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
+    errors.push("Chinese home contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
 async function validateBuiltHtml(relativePath) {
   const htmlPath = resolve(distDir, relativePath);
   const htmlStats = await stat(htmlPath).catch(() => null);
@@ -144,6 +193,10 @@ async function validateBuiltHtml(relativePath) {
     if (forbiddenPattern.test(html)) {
       htmlErrors.push(`Forbidden confirmed or example contact/compliance value found in ${relativePath}.`);
     }
+  }
+
+  if (relativePath === "index.html") {
+    htmlErrors.push(...validateChineseHome(html));
   }
 
   if (htmlErrors.length > 0) {
