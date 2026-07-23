@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="蜜獾官网 S1 公共组件与全站框架骨架，用于验证 Header、语言切换、Footer 与客服入口占位。">
-    <title>蜜獾官网公共框架 | Honey Badger</title>
+    <meta name="description" content="蜜獾面向中国市场承接 ZennoLab 产品能力、本地化技术支持、企业咨询与服务交付，专注浏览器自动化、验证码识别、反检测浏览器、代理质量管理及移动端自动化。">
+    <title>蜜獾软件 | ZennoLab 中国运营实体</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <script src="./assets/app.js" defer></script>
   </head>
@@ -21,10 +21,10 @@
         </a>
         <nav class="desktop-nav" aria-label="主导航">
           <a class="nav-link" href="./index.html" aria-current="page">首页</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">产品介绍</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">新闻资讯</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">人才招聘</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">关于我们</a>
+          <a class="nav-link nav-link-placeholder" href="#home-products" data-placeholder="true">产品介绍</a>
+          <a class="nav-link nav-link-placeholder" href="#home-news" data-placeholder="true">新闻资讯</a>
+          <a class="nav-link nav-link-placeholder" href="#home-careers" data-placeholder="true">人才招聘</a>
+          <a class="nav-link nav-link-placeholder" href="#home-relation" data-placeholder="true">关于我们</a>
         </nav>
         <div class="header-actions">
           <nav class="language-switcher" aria-label="语言切换">
@@ -42,49 +42,217 @@
     </header>
     <nav class="mobile-nav" id="mobile-nav" aria-label="移动端主导航">
       <a class="nav-link" href="./index.html" aria-current="page">首页</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">产品介绍</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">新闻资讯</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">人才招聘</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">关于我们</a>
+      <a class="nav-link nav-link-placeholder" href="#home-products" data-placeholder="true">产品介绍</a>
+      <a class="nav-link nav-link-placeholder" href="#home-news" data-placeholder="true">新闻资讯</a>
+      <a class="nav-link nav-link-placeholder" href="#home-careers" data-placeholder="true">人才招聘</a>
+      <a class="nav-link nav-link-placeholder" href="#home-relation" data-placeholder="true">关于我们</a>
     </nav>
     <main class="site-main" id="main" tabindex="-1">
-      <section class="scaffold-hero" aria-labelledby="page-title">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">S1 Site Shell</p>
-            <h1 id="page-title">蜜獾官网公共组件与全站框架</h1>
-            <p class="scaffold-notice">开发骨架，非正式内容</p>
-            <p class="lead">本页用于验证生产官网公共外壳：76px 页头、一级导航、三语路径切换、页脚结构占位与右下角客服入口占位。正式业务页面将在后续 Issue 中接入。</p>
+      <div class="site-notice-banner">
+        <div class="container">开发骨架，非正式内容 · 联系渠道、合规信息与业务详情页待管理员确认后接入</div>
+      </div>
+
+      <section class="home-hero" aria-labelledby="page-title">
+        <div class="container home-hero-grid">
+          <div class="home-hero-copy">
+            <p class="eyebrow home-eyebrow">Honey Badger 蜜獾</p>
+            <h1 id="page-title">蜜獾软件</h1>
+            <p class="home-hero-subtitle">面向中国市场的 ZennoLab 产品能力与本地化服务承接平台</p>
+            <p class="lead">蜜獾面向中国市场承接 ZennoLab 产品能力、本地化技术支持、企业咨询与服务交付。我们专注浏览器自动化、验证码识别、反检测浏览器、代理质量管理及移动端自动化等领域，帮助客户在复杂网络环境中构建高效、可靠的工作流。</p>
+            <p class="entity-callout">蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体。</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#home-products">了解产品与服务</a>
+              <a class="btn btn-outline" href="#support-note">联系服务团队</a>
+            </div>
+            <dl class="home-stats" aria-label="首页能力概览">
+              <div>
+                <dt>4+1</dt>
+                <dd>4 项常规产品/服务 + 跨境网络服务</dd>
+              </div>
+              <div>
+                <dt>3</dt>
+                <dd>语言内容结构</dd>
+              </div>
+              <div>
+                <dt>24h</dt>
+                <dd>服务入口常驻</dd>
+              </div>
+            </dl>
           </div>
-          <div class="shell-panel" aria-label="本轮公共层范围">
-            <span>Header</span>
-            <span>LanguageSwitcher</span>
-            <span>Breadcrumb API</span>
-            <span>Footer</span>
-            <span>FloatingSupport</span>
+          <figure class="home-visual" role="img" aria-label="蜜獾产品能力矩阵示意图">
+            <svg viewBox="0 0 560 420" aria-hidden="true" focusable="false">
+              <title>蜜獾产品能力矩阵示意图</title>
+              <rect class="visual-frame" x="28" y="28" width="504" height="364" rx="18"></rect>
+              <circle class="visual-node visual-node-main" cx="280" cy="210" r="62"></circle>
+              <text class="visual-main-text" x="280" y="202" text-anchor="middle">HB</text>
+              <text class="visual-sub-text" x="280" y="230" text-anchor="middle">China Ops</text>
+              <g class="visual-line">
+                <path d="M280 148 L160 92"></path>
+                <path d="M342 210 L454 140"></path>
+                <path d="M280 272 L164 326"></path>
+                <path d="M218 210 L102 176"></path>
+                <path d="M342 248 L430 318"></path>
+              </g>
+              <g class="visual-chip">
+                <rect x="86" y="58" width="148" height="68" rx="12"></rect>
+                <text x="160" y="98" text-anchor="middle">智慧农业</text>
+              </g>
+              <g class="visual-chip visual-chip-cyan">
+                <rect x="378" y="106" width="134" height="68" rx="12"></rect>
+                <text x="445" y="146" text-anchor="middle">蜜獾原图</text>
+              </g>
+              <g class="visual-chip visual-chip-purple">
+                <rect x="78" y="292" width="170" height="68" rx="12"></rect>
+                <text x="163" y="332" text-anchor="middle">AI-FDE 培训</text>
+              </g>
+              <g class="visual-chip visual-chip-green">
+                <rect x="42" y="142" width="128" height="68" rx="12"></rect>
+                <text x="106" y="182" text-anchor="middle">私域陪跑</text>
+              </g>
+              <g class="visual-chip visual-chip-blue">
+                <rect x="356" y="286" width="152" height="68" rx="12"></rect>
+                <text x="432" y="326" text-anchor="middle">跨境网络</text>
+              </g>
+            </svg>
+          </figure>
+        </div>
+      </section>
+
+      <section class="home-section" id="home-products" aria-labelledby="products-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Products</p>
+            <h2 id="products-title">产品与服务矩阵</h2>
+            <p class="lead">围绕智慧农业、跨境电商图片原创化、AI 开发培训、海外社媒私域增长和跨境网络服务，建立清晰的产品说明与咨询入口。</p>
+          </div>
+          <div class="product-matrix" aria-label="产品与服务条目">
+            <article class="product-card" id="product-agriculture">
+              <div class="product-card-head">
+                <span class="product-code accent-green">AG</span>
+                <h3>数字化农业综合管理系统</h3>
+              </div>
+              <p>全链条智慧农业管控平台，通过物联网 + AI 实现生产、监管、溯源数字化管理。</p>
+              <ul>
+                <li>适配农业基地与监管场景</li>
+                <li>强化生产流程与溯源管理</li>
+              </ul>
+              <a class="link-more" href="#product-detail-pending">详情页待接入</a>
+            </article>
+            <article class="product-card" id="product-image">
+              <div class="product-card-head">
+                <span class="product-code accent-cyan">IMG</span>
+                <h3>蜜獾原图</h3>
+              </div>
+              <p>跨境 AI 图片原创工具，面向商品图批量处理、查重规避与海外电商平台适配。</p>
+              <ul>
+                <li>支持跨境商品图处理链路</li>
+                <li>降低重复素材带来的运营风险</li>
+              </ul>
+              <a class="link-more" href="#product-detail-pending">详情页待接入</a>
+            </article>
+            <article class="product-card" id="product-ai-fde">
+              <div class="product-card-head">
+                <span class="product-code accent-purple">AI</span>
+                <h3>AI-FDE VibeCoding 培训</h3>
+              </div>
+              <p>前沿 AI 自然语言开发实战教学，围绕可商用 AI 系统项目做落地训练。</p>
+              <ul>
+                <li>强调自然语言驱动开发实践</li>
+                <li>面向真实项目的训练闭环</li>
+              </ul>
+              <a class="link-more" href="#product-detail-pending">详情页待接入</a>
+            </article>
+            <article class="product-card" id="product-social">
+              <div class="product-card-head">
+                <span class="product-code accent-blue">SM</span>
+                <h3>社媒跨境私域陪跑</h3>
+              </div>
+              <p>TikTok / Facebook / Instagram 全域运营陪跑，覆盖从引流到私域转化的实操路径。</p>
+              <ul>
+                <li>聚焦海外社媒运营节奏</li>
+                <li>承接账号冷启动与转化链路</li>
+              </ul>
+              <a class="link-more" href="#product-detail-pending">详情页待接入</a>
+            </article>
+            <article class="product-card product-card-wide" id="product-network">
+              <div class="product-card-head">
+                <span class="product-code accent-network">NET</span>
+                <h3>跨境网络服务</h3>
+              </div>
+              <p>合并静态住宅 IP、机房 IP、动态 IP 三类网络服务，覆盖固定住宅出口、机房高并发出口与动态住宅 IP 池。</p>
+              <ul>
+                <li>统一入口承接跨境网络环境咨询</li>
+                <li>按账号稳定性、并发规模与成本要求匹配资源</li>
+              </ul>
+              <a class="link-more" href="#product-detail-pending">详情页待接入</a>
+            </article>
+          </div>
+          <p class="section-note" id="product-detail-pending">产品详情页将在后续 Issue 接入；本轮所有产品入口均为本页占位锚点，避免未建页面产生 404。</p>
+        </div>
+      </section>
+
+      <section class="home-section home-section-soft" id="home-relation" aria-labelledby="relation-title">
+        <div class="container relation-grid">
+          <div>
+            <p class="eyebrow eyebrow-dark">Entity</p>
+            <h2 id="relation-title">品牌关系与本地服务边界</h2>
+            <p class="lead">蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体，负责围绕中国市场建立产品说明、服务咨询、交付支持和本地问题定位入口。</p>
+          </div>
+          <div class="relation-panel">
+            <article>
+              <h3>产品承接</h3>
+              <p>围绕智慧农业、跨境电商、AI 开发培训、海外社媒私域增长和跨境网络服务建立产品说明和咨询入口。</p>
+            </article>
+            <article>
+              <h3>本地支持</h3>
+              <p>为中国企业、开发者和合作方提供本地语言、交付流程和问题定位支持。</p>
+            </article>
+            <article>
+              <h3>合规上线</h3>
+              <p>备案、客服账号、企业邮箱和版权信息均保留配置位置，待管理员提供真实值后上线。</p>
+            </article>
           </div>
         </div>
       </section>
-      <section class="placeholder-section" aria-labelledby="placeholder-title">
+
+      <section class="home-section" aria-labelledby="preview-title">
         <div class="container">
-          <h2 id="placeholder-title">本轮导航占位</h2>
-          <div class="placeholder-grid">
-            <article id="s1-products-placeholder">
-              <h3>产品介绍</h3>
-              <p>业务页面待 S2 接入；当前链接保持在本页占位锚点，避免未建页面产生 404。</p>
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Updates</p>
+            <h2 id="preview-title">资讯与招聘预览</h2>
+            <p class="lead">新闻与招聘正式内容仍待接入，本轮仅提供结构化入口，避免虚构新闻条目或岗位信息。</p>
+          </div>
+          <div class="preview-grid">
+            <article class="preview-card" id="home-news">
+              <span class="preview-status">待发布</span>
+              <h3>新闻资讯预览</h3>
+              <p>后续将承接企业动态、产品更新、行业资讯与技术内容。正式资讯条目未确认前不展示假新闻。</p>
+              <a class="link-more" href="#home-news">资讯页面待接入</a>
             </article>
-            <article id="s1-news-placeholder">
-              <h3>新闻资讯</h3>
-              <p>列表、详情与日期格式化将在业务页面阶段接入。</p>
+            <article class="preview-card" id="home-careers">
+              <span class="preview-status">待接入</span>
+              <h3>人才招聘预览</h3>
+              <p>后续将承接团队介绍、岗位信息、招聘流程与投递指引。正式岗位未确认前不展示假岗位。</p>
+              <a class="link-more" href="#home-careers">招聘页面待接入</a>
             </article>
-            <article id="s1-careers-placeholder">
-              <h3>人才招聘</h3>
-              <p>岗位结构与投递路径待后续真实页面承接。</p>
-            </article>
-            <article id="s1-about-placeholder">
-              <h3>关于我们</h3>
-              <p>企业主体与联系模块将在正式内容阶段接入。</p>
-            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section support-note-section" id="support-note" aria-labelledby="support-note-title">
+        <div class="container support-note-grid">
+          <div>
+            <p class="eyebrow eyebrow-dark">Contact</p>
+            <h2 id="support-note-title">联系与客服入口</h2>
+            <p class="lead">本页仅保留真实渠道接入位置，不提供假表单或假提交。正式客服账号、企业邮箱、ICP备案与版权信息待管理员确认后配置。</p>
+          </div>
+          <div class="support-note-card">
+            <h3>当前可用动作</h3>
+            <p>使用右下角客服浮层查看微信、QQ、邮箱的待配置结构，或滚动至页脚联系占位。</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#floating-support">查看客服占位</a>
+              <a class="btn btn-outline" href="#site-footer-contact">页脚联系占位</a>
+            </div>
           </div>
         </div>
       </section>
@@ -95,7 +263,7 @@
           <h2>Honey Badger</h2>
           <p>蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体。正式主体信息将在管理员确认后配置。</p>
         </section>
-        <section>
+        <section id="site-footer-contact">
           <h3>联系占位</h3>
           <ul class="footer-list">
             <li>企业邮箱：待配置</li>
