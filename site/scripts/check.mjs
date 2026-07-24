@@ -144,6 +144,128 @@ function validateChineseHome(html) {
   return errors;
 }
 
+function validateEnglishHome(html) {
+  const errors = [];
+  const expectedTitle = "Honey Badger Software | ZennoLab Official Operating Entity in China";
+  const expectedDescription = "Honey Badger undertakes ZennoLab product capabilities, localized technical support, enterprise consulting and service delivery for the Chinese market, focusing on browser automation, CAPTCHA recognition, anti-detect browsers, proxy quality management and mobile automation.";
+  const expectedFooterRelationship = "Honey Badger is ZennoLab's operating entity in China.";
+
+  if (!/<html\s+lang=["']en-US["']/i.test(html)) {
+    errors.push('English home must render <html lang="en-US">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("English home meta title must match the SSOT exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("English home meta description must match the SSOT exactly.");
+  }
+
+  for (const marker of [
+    "Honey Badger 蜜獾",
+    "Honey Badger Software",
+    "ZennoLab Official Operating Entity in China",
+    expectedDescription,
+    "Explore Products & Services",
+    "Contact Service Team",
+    "4 Regular Products/Services + Cross-border Network Services",
+    "3 Language Structures",
+    "24h Persistent Support Entry",
+    "Product & Service Scope",
+    "Digital Agriculture Integrated Management System",
+    "Full-chain smart agriculture control platform, IoT + AI for digital production, supervision and traceability management",
+    "Honey Badger Original Image",
+    "Cross-border AI image originality tool, batch processing of product images, duplicate-check avoidance, compatible with all overseas e-commerce platforms",
+    "AI-FDE VibeCoding Training",
+    "Cutting-edge AI natural language development practical training, hands-on delivery of commercial AI system projects",
+    "Social Commerce Private Domain Coaching",
+    "TikTok/FB/INS full-domain operation coaching, full-process practical guidance from traffic acquisition to private domain conversion",
+    "Cross-border Network Services",
+    "Combines static residential IP, datacenter IP and dynamic IP services for stable account environments, high-concurrency exits and rotating residential IP pools",
+    "Detail page pending",
+    "Brand Relationship Notes",
+    "Product Localization",
+    "Establish product descriptions and inquiry channels around smart agriculture, cross-border e-commerce, AI development training, overseas social private domain growth and cross-border network services",
+    "Local Support",
+    "Provide local language, delivery workflow and troubleshooting support for Chinese enterprises, developers and partners",
+    "Compliant Launch",
+    "ICP filing, customer service accounts, corporate email and copyright information all retain configuration positions, to be updated after administrators provide real values",
+    "News and Careers Preview",
+    "News Preview",
+    "Careers Preview",
+    "Corporate email: To be configured",
+    "Support accounts: To be configured",
+    "ICP filing information: To be configured",
+    "Copyright information: To be configured",
+    expectedFooterRelationship,
+    "Support Placeholder",
+    "To be configured"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing English home production marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "en-home-page",
+    "home-hero",
+    "en-products",
+    "en-brand-relationship",
+    "en-news-preview",
+    "en-careers-preview",
+    "en-support-note"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing English home section marker: ${selector}.`);
+    }
+  }
+
+  if (!html.includes('<a class="nav-link" href="./index.html" aria-current="page">Home</a>')) {
+    errors.push("English home header must mark Home as the current real page.");
+  }
+
+  for (const languagePath of ['href="../index.html"', 'href="./index.html" aria-current="true"', 'href="../ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`English home language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const productEntries = html.match(/data-en-product-entry=/g) || [];
+  if (productEntries.length !== 5) {
+    errors.push(`English home must render exactly 5 product/service entries; found ${productEntries.length}.`);
+  }
+
+  const regularEntries = html.match(/data-en-product-entry="regular"/g) || [];
+  if (regularEntries.length !== 4) {
+    errors.push(`English home must render 4 regular product/service entries; found ${regularEntries.length}.`);
+  }
+
+  const networkEntries = html.match(/data-en-product-entry="network"/g) || [];
+  if (networkEntries.length !== 1) {
+    errors.push(`English home must render 1 network-services entry; found ${networkEntries.length}.`);
+  }
+
+  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
+  if (pendingProductLinks.length !== 5) {
+    errors.push(`English product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  if (/href=["'][^"']*(products|Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network)[^#"']*\.html/i.test(html)) {
+    errors.push("English home must not link to nonexistent English product or service detail pages.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("English home must not include a fake contact or application form.");
+  }
+
+  if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
+    errors.push("English home contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
 function validateProductsPage(html) {
   const errors = [];
 
@@ -729,6 +851,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "index.html") {
     htmlErrors.push(...validateChineseHome(html));
+  }
+
+  if (relativePath === "en/index.html") {
+    htmlErrors.push(...validateEnglishHome(html));
   }
 
   if (relativePath === "products.html") {

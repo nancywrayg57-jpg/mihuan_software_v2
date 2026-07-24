@@ -1,0 +1,252 @@
+{
+  "generatedAt": "2026-07-24T06:31:12.862Z",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "urls": {
+    "enHome": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+    "zhHome": "file:///D:/workspace/mihuan_software_v2/site/dist/index.html",
+    "ruHome": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html",
+    "uiEnHome": "file:///D:/workspace/mihuan_software_v2/UI/en/index.html"
+  },
+  "screenshots": [
+    {
+      "key": "enHomeDesktop",
+      "file": "docs/review-artifacts/issue-20/en-home-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fullPage": true
+    },
+    {
+      "key": "enHomeMobile",
+      "file": "docs/review-artifacts/issue-20/en-home-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    },
+    {
+      "key": "enHomeMobileNav",
+      "file": "docs/review-artifacts/issue-20/en-home-mobile-nav.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    },
+    {
+      "key": "uiReferenceDesktop",
+      "file": "docs/review-artifacts/issue-20/ui-reference-en-home-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fullPage": true
+    },
+    {
+      "key": "uiReferenceMobile",
+      "file": "docs/review-artifacts/issue-20/ui-reference-en-home-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fullPage": true
+    }
+  ],
+  "assertions": {
+    "LANG_001_languageSwitcherRoundTrip": true,
+    "LANG_004_noHomeBreadcrumb": true,
+    "LANG_005_englishCtas": true,
+    "LANG_006_englishFooter": true,
+    "LANG_007_englishSeoPartial": true,
+    "LANG_008_noOverflowDesktopMobile": true,
+    "HOME_009_zhEnRealContent": true,
+    "supportFloat": true,
+    "noBrokenImages": true,
+    "noConsoleErrors": true,
+    "noOverScopedWording": true,
+    "noFakeForms": true
+  },
+  "console": {
+    "enHomeDesktop": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "enHomeMobile": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "enHomeMobileNav": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "uiReferenceDesktop": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "uiReferenceMobile": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "interactionFlow": {
+      "consoleErrors": [],
+      "pageErrors": []
+    }
+  },
+  "metrics": {
+    "enHomeDesktop": {
+      "lang": "en-US",
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "description": "Honey Badger undertakes ZennoLab product capabilities, localized technical support, enterprise consulting and service delivery for the Chinese market, focusing on browser automation, CAPTCHA recognition, anti-detect browsers, proxy quality management and mobile automation.",
+      "bodyPage": "home",
+      "bodyLang": "en",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "horizontalOverflow": false,
+      "imageCount": 0,
+      "brokenImages": [],
+      "breadcrumbCount": 0,
+      "productCount": 5,
+      "pendingProductLinkCount": 5,
+      "currentLanguage": "en-US",
+      "currentNavTexts": [
+        "Home",
+        "Home"
+      ]
+    },
+    "enHomeMobile": {
+      "lang": "en-US",
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "description": "Honey Badger undertakes ZennoLab product capabilities, localized technical support, enterprise consulting and service delivery for the Chinese market, focusing on browser automation, CAPTCHA recognition, anti-detect browsers, proxy quality management and mobile automation.",
+      "bodyPage": "home",
+      "bodyLang": "en",
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "horizontalOverflow": false,
+      "imageCount": 0,
+      "brokenImages": [],
+      "breadcrumbCount": 0,
+      "productCount": 5,
+      "pendingProductLinkCount": 5,
+      "currentLanguage": "en-US",
+      "currentNavTexts": [
+        "Home",
+        "Home"
+      ]
+    },
+    "enHomeMobileNav": {
+      "lang": "en-US",
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "description": "Honey Badger undertakes ZennoLab product capabilities, localized technical support, enterprise consulting and service delivery for the Chinese market, focusing on browser automation, CAPTCHA recognition, anti-detect browsers, proxy quality management and mobile automation.",
+      "bodyPage": "home",
+      "bodyLang": "en",
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "horizontalOverflow": false,
+      "imageCount": 0,
+      "brokenImages": [],
+      "breadcrumbCount": 0,
+      "productCount": 5,
+      "pendingProductLinkCount": 5,
+      "currentLanguage": "en-US",
+      "currentNavTexts": [
+        "Home",
+        "Home"
+      ]
+    },
+    "uiReferenceDesktop": {
+      "lang": "en-US",
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "description": "Honey Badger undertakes ZennoLab product capabilities, localized technical support, enterprise consulting and service delivery for the Chinese market. Since its establishment, we have focused on browser automation, CAPTCHA recognition, anti-detect browsers, proxy quality management and mobile automation, helping clients build efficient and reliable workflows in complex network environments.",
+      "bodyPage": "home",
+      "bodyLang": "en",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "horizontalOverflow": false,
+      "imageCount": 1,
+      "brokenImages": [],
+      "breadcrumbCount": 0,
+      "productCount": 0,
+      "pendingProductLinkCount": 0,
+      "currentLanguage": null,
+      "currentNavTexts": [
+        "Home",
+        "Home"
+      ]
+    },
+    "uiReferenceMobile": {
+      "lang": "en-US",
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "description": "Honey Badger undertakes ZennoLab product capabilities, localized technical support, enterprise consulting and service delivery for the Chinese market. Since its establishment, we have focused on browser automation, CAPTCHA recognition, anti-detect browsers, proxy quality management and mobile automation, helping clients build efficient and reliable workflows in complex network environments.",
+      "bodyPage": "home",
+      "bodyLang": "en",
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "horizontalOverflow": false,
+      "imageCount": 1,
+      "brokenImages": [],
+      "breadcrumbCount": 0,
+      "productCount": 0,
+      "pendingProductLinkCount": 0,
+      "currentLanguage": null,
+      "currentNavTexts": [
+        "Home",
+        "Home"
+      ]
+    }
+  },
+  "flow": {
+    "initial": {
+      "lang": "en-US",
+      "hasBreadcrumb": false,
+      "enCurrent": "true",
+      "homeCurrentCount": 2,
+      "primaryCta": "Explore Products & Services",
+      "secondaryCta": "Contact Service Team",
+      "footerRelationship": true,
+      "relationshipSubtitleCount": 3,
+      "overScopedWording": false,
+      "fakeFormCount": 0,
+      "supportExpandedBefore": "false"
+    },
+    "support": {
+      "isOpen": true,
+      "expanded": "true",
+      "options": [
+        "WeChat: To be configured",
+        "QQ: To be configured",
+        "Email: To be configured"
+      ]
+    },
+    "zh": {
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/index.html",
+      "lang": "zh-CN",
+      "bodyLang": "zh",
+      "zhCurrent": "true",
+      "enHref": "./en/index.html"
+    },
+    "enReturn": {
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+      "lang": "en-US",
+      "bodyLang": "en",
+      "enCurrent": "true"
+    },
+    "ru": {
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html",
+      "lang": "ru-RU",
+      "bodyLang": "ru",
+      "ruCurrent": "true"
+    }
+  }
+}
