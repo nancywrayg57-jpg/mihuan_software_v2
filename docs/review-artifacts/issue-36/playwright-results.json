@@ -1,0 +1,235 @@
+{
+  "generatedAt": "2026-07-24T10:30:32.420Z",
+  "target": "site/dist/ru/跨境网络服务.html",
+  "reference": "UI/ru/跨境网络服务.html",
+  "screenshots": [
+    "docs/review-artifacts/issue-36/ru-network-desktop.png",
+    "docs/review-artifacts/issue-36/ru-network-mobile.png",
+    "docs/review-artifacts/issue-36/ru-network-mobile-nav.png",
+    "docs/review-artifacts/issue-36/ui-reference-ru-network-desktop.png",
+    "docs/review-artifacts/issue-36/ui-reference-ru-network-mobile.png"
+  ],
+  "assertions": [
+    {
+      "name": "ru-network-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Кроссбордерные сетевые сервисы | Honey Badger\",\"h1\":\"Кроссбордерные сетевые сервисы\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ru-network-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru network hero title",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network hero lead",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network three-level breadcrumb",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network products nav current",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network required service sections",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network child detail anchors pending",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network no fake form",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network footer relationship exact",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network no forbidden contacts wording links claims",
+      "status": "PASS",
+      "details": "{\"h1\":\"Кроссбордерные сетевые сервисы\",\"lead\":\"Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.\",\"breadcrumb\":[\"Главная\",\"Продукты\",\"Кроссбордерные сетевые сервисы\"],\"currentNavCount\":2,\"services\":3,\"staticService\":true,\"idcService\":true,\"dynamicService\":true,\"anchors\":[\"#static-ip-detail-pending\",\"#idc-ip-detail-pending\",\"#dynamic-ip-detail-pending\"],\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"unconfirmedClaims\":false}"
+    },
+    {
+      "name": "ru network support float opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"configuredCount\":4}"
+    },
+    {
+      "name": "ru network breadcrumb products link works",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/products.html"
+    },
+    {
+      "name": "ru network breadcrumb home link works",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html"
+    },
+    {
+      "name": "ru products NET card has merged page link",
+      "status": "PASS",
+      "details": "{\"netHref\":\"./跨境网络服务.html\"}"
+    },
+    {
+      "name": "ru products NET card reaches network page",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html\",\"h1\":\"Кроссбордерные сетевые сервисы\"}"
+    },
+    {
+      "name": "ru network zh language switch keeps network context",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html\",\"h1\":\"跨境网络服务\"}"
+    },
+    {
+      "name": "ru network en language switch keeps network context",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html\",\"h1\":\"Cross-border Network Services\"}"
+    },
+    {
+      "name": "ru network page anchor works",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html#network-services-modules"
+    },
+    {
+      "name": "ru-network-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Кроссбордерные сетевые сервисы | Honey Badger\",\"h1\":\"Кроссбордерные сетевые сервисы\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ru-network-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru network mobile nav opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"mobileProductsCurrent\":true}"
+    },
+    {
+      "name": "ui-reference-ru-network-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Сетевые сервисы для международного бизнеса | Honey Badger\",\"h1\":\"Сетевые сервисы для международного бизнеса\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ui-reference-ru-network-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui reference desktop renders ru network page",
+      "status": "PASS",
+      "details": "{\"title\":\"Сетевые сервисы для международного бизнеса | Honey Badger\",\"h1\":\"Сетевые сервисы для международного бизнеса\",\"hasNetworkIntent\":true}"
+    },
+    {
+      "name": "ui-reference-ru-network-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Сетевые сервисы для международного бизнеса | Honey Badger\",\"h1\":\"Сетевые сервисы для международного бизнеса\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ui-reference-ru-network-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru-network-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru-products-net-nav: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "language-switch: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "page-anchors: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru-network-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui-reference-ru-network-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui-reference-ru-network-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    }
+  ],
+  "e2e": [
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Three-level breadcrumb Главная / Продукты / Кроссбордерные сетевые сервисы was asserted; Home and Products links were clicked successfully."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "Russian merged network page is complete; Russian child IP detail pages remain intentionally pending anchors by Issue #36 scope."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "zh/en language switches from ru/跨境网络服务.html keep merged network page context via existing zh/en pages."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "ru/跨境网络服务.html renders ru-RU metadata, breadcrumb and RU current language state."
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Russian production page content remains Russian except the explicit Chinese skeleton notice required by this scaffold."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "Desktop and mobile screenshots show Russian long text without horizontal overflow."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N-A",
+      "evidence": "Static/IP child detail pages are not implemented in Issue #36; all child detail links remain same-page pending anchors."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "No broken images and no console/page errors were observed across target and UI reference pages."
+    }
+  ],
+  "consoleErrors": {
+    "ru-network-desktop": [],
+    "ru-products-net-nav": [],
+    "language-switch": [],
+    "page-anchors": [],
+    "ru-network-mobile": [],
+    "ui-reference-ru-network-desktop": [],
+    "ui-reference-ru-network-mobile": []
+  }
+}
