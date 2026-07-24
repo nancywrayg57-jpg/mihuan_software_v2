@@ -7,9 +7,9 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "en/index.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "en/index.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html"]);
 
 const voidElements = new Set([
   "area",
@@ -328,6 +328,25 @@ function validateAboutNavigation(html, relativePath) {
   return errors;
 }
 
+function validateNewsNavigation(html, relativePath) {
+  const errors = [];
+  const isNewsPage = relativePath === "news.html";
+  const expectedLink = isNewsPage
+    ? /<a class=["']nav-link["'] href=["']\.\/news\.html["'] aria-current=["']page["']>新闻资讯<\/a>/g
+    : /<a class=["']nav-link["'] href=["']\.\/news\.html["']>新闻资讯<\/a>/g;
+  const newsLinks = html.match(expectedLink) || [];
+
+  if (newsLinks.length !== 2) {
+    errors.push(`${relativePath} must render desktop and mobile 新闻资讯 nav links to ./news.html; found ${newsLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>新闻资讯<\/a>/i.test(html)) {
+    errors.push(`${relativePath} must not keep 新闻资讯 as a placeholder nav link.`);
+  }
+
+  return errors;
+}
+
 function validateAboutPage(html) {
   const errors = [];
   const relationship = "蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体";
@@ -395,6 +414,110 @@ function validateAboutPage(html) {
   return errors;
 }
 
+function validateNewsPage(html) {
+  const errors = [];
+  const newsEntries = [
+    ["公司动态", "蜜獾软件正式成为 ZennoLab 中国运营实体", "2026-06-15"],
+    ["产品更新", "蜜獾原图 V2.0 上线：新增批量场景图生成功能", "2026-06-01"],
+    ["行业资讯", "2026 跨境电商 AI 工具应用趋势报告发布", "2026-05-20"],
+    ["技术分享", "住宅 IP 与机房 IP 怎么选？代理选型完全指南", "2026-05-08"],
+    ["公司动态", "AI-FDE 首期 VibeCoding 培训圆满结业", "2026-04-25"],
+    ["产品更新", "跨境网络服务新增东南亚节点资源", "2026-04-10"]
+  ];
+
+  for (const marker of [
+    "新闻资讯",
+    "企业动态",
+    "产品更新",
+    "行业洞察",
+    "资讯分类展示",
+    "全部",
+    "公司动态",
+    "行业资讯",
+    "技术分享",
+    "资讯列表",
+    "详情页待接入",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing news page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "news-hero",
+    "news-categories",
+    "news-list",
+    "news-detail-pending"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing news page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("News page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">首页</a>') || !html.includes('aria-current="page">新闻资讯</span>')) {
+    errors.push("News page breadcrumb must be 首页 / 新闻资讯 with a working home link.");
+  }
+
+  if (!html.includes('href="./news.html" aria-current="page">新闻资讯</a>')) {
+    errors.push("News page header must mark 新闻资讯 as current.");
+  }
+
+  for (const languagePath of ['href="./news.html"', 'href="./en/index.html"', 'href="./ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`News page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const entryMarkers = html.match(/data-news-entry=/g) || [];
+  if (entryMarkers.length !== 6) {
+    errors.push(`News page must render exactly 6 news entries; found ${entryMarkers.length}.`);
+  }
+
+  for (const [category, title, date] of newsEntries) {
+    if (!html.includes(category) || !html.includes(title) || !html.includes(`datetime="${date}"`) || !html.includes(`>${date}</time>`)) {
+      errors.push(`Missing news entry category/title/date: ${category} / ${title} / ${date}.`);
+    }
+  }
+
+  const dateMatches = html.match(/<time datetime=["']\d{4}-\d{2}-\d{2}["']>\d{4}-\d{2}-\d{2}<\/time>/g) || [];
+  if (dateMatches.length !== 6) {
+    errors.push(`News page must render 6 YYYY-MM-DD time elements; found ${dateMatches.length}.`);
+  }
+
+  const thumbLabels = html.match(/aria-label=["'][^"']*缩略图["']/g) || [];
+  if (thumbLabels.length !== 6) {
+    errors.push(`News page must render 6 inline thumbnail labels; found ${thumbLabels.length}.`);
+  }
+
+  const detailLinks = html.match(/<a class=["']link-more["'] href=["']#news-detail-pending["']>详情页待接入<\/a>/g) || [];
+  if (detailLinks.length !== 6) {
+    errors.push(`News entry links must stay as same-page detail placeholders; found ${detailLinks.length}.`);
+  }
+
+  if (/href=["'][^"']*news-detail[^#"']*\.html/i.test(html) || /href=["'][^"']*news\/[^#"']+/i.test(html)) {
+    errors.push("News page must not link to nonexistent news detail or category pages.");
+  }
+
+  if (/<button[\s>]/i.test(html) && !/class=["']menu-button["']|class=["']support-close["']|class=["']support-toggle["']/.test(html)) {
+    errors.push("News page must not include fake filter interaction buttons.");
+  }
+
+  if (/<form[\s>]/i.test(html)) {
+    errors.push("News page must not include a fake contact form.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
+    errors.push("News page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
 async function validateBuiltHtml(relativePath) {
   const htmlPath = resolve(distDir, relativePath);
   const htmlStats = await stat(htmlPath).catch(() => null);
@@ -437,6 +560,7 @@ async function validateBuiltHtml(relativePath) {
 
   if (zhHtmlPaths.has(relativePath)) {
     htmlErrors.push(...validateAboutNavigation(html, relativePath));
+    htmlErrors.push(...validateNewsNavigation(html, relativePath));
   }
 
   for (const forbiddenPattern of [
@@ -466,6 +590,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "about.html") {
     htmlErrors.push(...validateAboutPage(html));
+  }
+
+  if (relativePath === "news.html") {
+    htmlErrors.push(...validateNewsPage(html));
   }
 
   if (htmlErrors.length > 0) {

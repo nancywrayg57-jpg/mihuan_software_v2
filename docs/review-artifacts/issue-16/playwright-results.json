@@ -1,0 +1,333 @@
+{
+  "generatedAt": "2026-07-24T03:02:26.073Z",
+  "browser": "Google Chrome via Playwright",
+  "viewportEvidence": [
+    "news-desktop.png",
+    "news-mobile.png",
+    "news-mobile-nav.png",
+    "ui-reference-news-desktop.png",
+    "ui-reference-news-mobile.png"
+  ],
+  "e2eChecklist": [
+    {
+      "id": "NEWS-001",
+      "title": "首屏定位说明覆盖企业动态、产品更新、行业洞察",
+      "status": "PASS",
+      "evidence": "Hero lead includes 企业动态 / 产品更新 / 行业洞察.",
+      "reason": ""
+    },
+    {
+      "id": "NEWS-002",
+      "title": "分类展示覆盖全部/公司动态/产品更新/行业资讯/技术分享并包含企业活动与行业新闻",
+      "status": "PASS",
+      "evidence": "Categories: 全部\n6 条 | 公司动态\n企业活动 | 产品更新\n2 条 | 行业资讯\n行业新闻 | 技术分享\n1 条",
+      "reason": ""
+    },
+    {
+      "id": "NEWS-003",
+      "title": "资讯列表非空且包含文案第九节全部 6 条",
+      "status": "PASS",
+      "evidence": "Found 6 entries: 蜜獾软件正式成为 ZennoLab 中国运营实体 | 蜜獾原图 V2.0 上线：新增批量场景图生成功能 | 2026 跨境电商 AI 工具应用趋势报告发布 | 住宅 IP 与机房 IP 怎么选？代理选型完全指南 | AI-FDE 首期 VibeCoding 培训圆满结业 | 跨境网络服务新增东南亚节点资源",
+      "reason": ""
+    },
+    {
+      "id": "NEWS-004",
+      "title": "发布时间统一 YYYY-MM-DD 格式",
+      "status": "PASS",
+      "evidence": "[{\"text\":\"2026-06-15\",\"datetime\":\"2026-06-15\"},{\"text\":\"2026-06-01\",\"datetime\":\"2026-06-01\"},{\"text\":\"2026-05-20\",\"datetime\":\"2026-05-20\"},{\"text\":\"2026-05-08\",\"datetime\":\"2026-05-08\"},{\"text\":\"2026-04-25\",\"datetime\":\"2026-04-25\"},{\"text\":\"2026-04-10\",\"datetime\":\"2026-04-10\"}]",
+      "reason": ""
+    },
+    {
+      "id": "NEWS-005",
+      "title": "每条资讯含中文缩略图标注",
+      "status": "PASS",
+      "evidence": "[{\"label\":\"蜜獾软件正式成为 ZennoLab 中国运营实体缩略图\",\"title\":\"蜜獾软件正式成为 ZennoLab 中国运营实体缩略图\"},{\"label\":\"蜜獾原图 V2.0 上线缩略图\",\"title\":\"蜜獾原图 V2.0 上线缩略图\"},{\"label\":\"2026 跨境电商 AI 工具应用趋势报告缩略图\",\"title\":\"2026 跨境电商 AI 工具应用趋势报告缩略图\"},{\"label\":\"住宅 IP 与机房 IP 代理选型指南缩略图\",\"title\":\"住宅 IP 与机房 IP 代理选型指南缩略图\"},{\"label\":\"AI-FDE 首期 VibeCoding 培训结业缩略图\",\"title\":\"AI-FDE 首期 VibeCoding 培训结业缩略图\"},{\"label\":\"跨境网络服务新增东南亚节点资源缩略图\",\"title\":\"跨境网络服务新增东南亚节点资源缩略图\"}]",
+      "reason": ""
+    },
+    {
+      "id": "NEWS-010",
+      "title": "结构口径：详情入口本页锚点占位，无假筛选交互、无假表单、无不存在详情链接",
+      "status": "PASS",
+      "evidence": "{\"links\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeButtons\":0,\"forms\":0,\"badDetailLinks\":[]}",
+      "reason": ""
+    },
+    {
+      "id": "NAV-005",
+      "title": "面包屑：首页 / 新闻资讯，首页链接可返回首页",
+      "status": "PASS",
+      "evidence": "Breadcrumb current text is 新闻资讯 and home link targets ./index.html.",
+      "reason": ""
+    },
+    {
+      "id": "NAV-002",
+      "title": "四页导航到 news",
+      "status": "PASS",
+      "evidence": "[{\"from\":\"index.html\",\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/news.html\",\"passed\":true},{\"from\":\"products.html\",\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/news.html\",\"passed\":true},{\"from\":\"跨境网络服务.html\",\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/news.html\",\"passed\":true},{\"from\":\"about.html\",\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/news.html\",\"passed\":true}]",
+      "reason": ""
+    }
+  ],
+  "results": [
+    {
+      "name": "news-desktop.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "name": "news-desktop.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "news-desktop.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "news-mobile.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "name": "news-mobile.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "news-mobile.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "mobile navigation opens on news page",
+      "passed": true,
+      "details": {
+        "expanded": "true",
+        "navOpen": true
+      }
+    },
+    {
+      "name": "news-mobile-nav.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "name": "news-mobile-nav.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "news-mobile-nav.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "ui-reference-news-desktop.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "name": "ui-reference-news-desktop.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "ui-reference-news-desktop.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "ui-reference-news-mobile.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "name": "ui-reference-news-mobile.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "ui-reference-news-mobile.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "news page current nav highlight",
+      "passed": true,
+      "details": {
+        "currentLinks": 2
+      }
+    },
+    {
+      "name": "floating support opens on news page",
+      "passed": true,
+      "details": {
+        "expanded": "true",
+        "open": true
+      }
+    },
+    {
+      "name": "news breadcrumb returns to home",
+      "passed": true,
+      "details": {
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/index.html"
+      }
+    },
+    {
+      "name": "news page interactions no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "homepage nav reaches news",
+      "passed": true,
+      "details": {
+        "from": "index.html",
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/news.html"
+      }
+    },
+    {
+      "name": "homepage nav reaches news: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "products nav reaches news",
+      "passed": true,
+      "details": {
+        "from": "products.html",
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/news.html"
+      }
+    },
+    {
+      "name": "products nav reaches news: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "network services nav reaches news",
+      "passed": true,
+      "details": {
+        "from": "跨境网络服务.html",
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/news.html"
+      }
+    },
+    {
+      "name": "network services nav reaches news: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "about nav reaches news",
+      "passed": true,
+      "details": {
+        "from": "about.html",
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/news.html"
+      }
+    },
+    {
+      "name": "about nav reaches news: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "UI news reference loaded for comparison",
+      "passed": true,
+      "details": {
+        "hasHeader": true,
+        "hasMobileNav": true,
+        "hasFooter": true,
+        "hasServiceFloat": true,
+        "hasNewsContent": true
+      }
+    },
+    {
+      "name": "UI news reference no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    }
+  ]
+}
