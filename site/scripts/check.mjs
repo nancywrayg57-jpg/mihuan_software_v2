@@ -266,6 +266,130 @@ function validateEnglishHome(html) {
   return errors;
 }
 
+function validateRussianHome(html) {
+  const errors = [];
+  const expectedTitle = "Honey Badger Software | Официальная операционная структура ZennoLab в Китае";
+  const expectedDescription = "Honey Badger принимает возможности продуктов ZennoLab, локальную техническую поддержку, корпоративные консультации и сервисную поставку для китайского рынка, фокусируясь на автоматизации браузера, распознавании CAPTCHA, антидетект-браузерах, качестве прокси и мобильной автоматизации.";
+  const expectedSubtitle = "Официальная операционная структура ZennoLab в Китае";
+  const expectedFooterRelationship = "Honey Badger является операционной структурой российской компании ZennoLab в Китае.";
+
+  if (!/<html\s+lang=["']ru-RU["']/i.test(html)) {
+    errors.push('Russian home must render <html lang="ru-RU">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("Russian home meta title must match the SSOT exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("Russian home meta description must match the SSOT exactly.");
+  }
+
+  for (const marker of [
+    "Honey Badger 蜜獾",
+    "Honey Badger Software",
+    expectedSubtitle,
+    expectedDescription,
+    "Honey Badger принимает возможности продуктов ZennoLab, локальную техническую поддержку, корпоративные консультации и сервисную поставку для китайского рынка. С момента основания мы всегда фокусировались на автоматизации браузера, распознавании CAPTCHA, антидетект-браузерах, управлении качеством прокси и мобильной автоматизации, помогая клиентам создавать эффективные и надежные рабочие процессы в сложных сетевых средах.",
+    "Изучить продукты и услуги",
+    "Связаться с сервисной командой",
+    "4 стандартных продукта/услуги + кроссбордерные сетевые сервисы",
+    "3 языковые версии",
+    "24-часовой доступ к поддержке",
+    "Объем продуктов и услуг",
+    "Интегрированная система цифрового сельского хозяйства",
+    "Платформа полного цикла для умного сельского хозяйства, IoT + ИИ для цифрового управления производством, контролем и прослеживаемостью",
+    "Оригинальные изображения Honey Badger",
+    "Кроссбордерный ИИ-инструмент для оригинальности изображений, пакетная обработка товарных фото, избежание проверок на дубликаты, адаптация ко всем зарубежным e-commerce платформам",
+    "Обучение AI-FDE VibeCoding",
+    "Практическое обучение разработке на естественном языке с помощью передового ИИ, пошаговая реализация коммерческих проектов на базе ИИ-систем",
+    "Сопровождение приватной зоны в соцсетях",
+    "Полномасштабное сопровождение операций в TikTok/FB/INS, практическое руководство по всему процессу от привлечения трафика до конверсии в приватной зоне",
+    "Кроссбордерные сетевые сервисы",
+    "Объединяют статический домашний IP, датацентровый IP и динамический IP для стабильных аккаунтных сред, высокопараллельных выходов и ротационных домашних IP-пулов",
+    "Страница деталей ожидает подключения",
+    "Пояснения к бренд-отношениям",
+    "Локализация продуктов",
+    "Создание описаний продуктов и каналов консультаций вокруг умного сельского хозяйства, кроссбордерной электронной коммерции, обучения разработке ИИ, роста приватной зоны в зарубежных соцсетях и кроссбордерных сетевых сервисов",
+    "Локальная поддержка",
+    "Предоставление поддержки на местном языке, процессов доставки и диагностики проблем для китайских предприятий, разработчиков и партнеров",
+    "Запуск с соблюдением требований",
+    "Регистрация ICP, аккаунты поддержки, корпоративная почта и информация об авторских правах сохраняют позиции для конфигурации, будут обновлены после предоставления реальных значений администраторами",
+    "Предпросмотр новостей и вакансий",
+    "Предпросмотр новостей",
+    "Предпросмотр вакансий",
+    "Корпоративная почта: Будет настроено",
+    "Аккаунты поддержки: Будет настроено",
+    "Информация о регистрации ICP: Будет настроено",
+    "Информация об авторских правах: Будет настроено",
+    expectedFooterRelationship,
+    "Заполнитель поддержки",
+    "Будет настроено"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Russian home production marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "ru-home-page",
+    "home-hero",
+    "ru-products",
+    "ru-brand-relationship",
+    "ru-news-preview",
+    "ru-careers-preview",
+    "ru-support-note"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing Russian home section marker: ${selector}.`);
+    }
+  }
+
+  if (!html.includes('<a class="nav-link" href="./index.html" aria-current="page">Главная</a>')) {
+    errors.push("Russian home header must mark Главная as the current real page.");
+  }
+
+  for (const languagePath of ['href="../index.html"', 'href="../en/index.html"', 'href="./index.html" aria-current="true"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Russian home language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const productEntries = html.match(/data-ru-product-entry=/g) || [];
+  if (productEntries.length !== 5) {
+    errors.push(`Russian home must render exactly 5 product/service entries; found ${productEntries.length}.`);
+  }
+
+  const regularEntries = html.match(/data-ru-product-entry="regular"/g) || [];
+  if (regularEntries.length !== 4) {
+    errors.push(`Russian home must render 4 regular product/service entries; found ${regularEntries.length}.`);
+  }
+
+  const networkEntries = html.match(/data-ru-product-entry="network"/g) || [];
+  if (networkEntries.length !== 1) {
+    errors.push(`Russian home must render 1 network-services entry; found ${networkEntries.length}.`);
+  }
+
+  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
+  if (pendingProductLinks.length !== 5) {
+    errors.push(`Russian product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  if (/href=["'][^"']*(products|Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+    errors.push("Russian home must not link to nonexistent Russian product or service detail pages.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("Russian home must not include a fake contact or application form.");
+  }
+
+  if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
+    errors.push("Russian home contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
 function validateProductsPage(html) {
   const errors = [];
 
@@ -855,6 +979,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "en/index.html") {
     htmlErrors.push(...validateEnglishHome(html));
+  }
+
+  if (relativePath === "ru/index.html") {
+    htmlErrors.push(...validateRussianHome(html));
   }
 
   if (relativePath === "products.html") {
