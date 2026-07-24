@@ -1798,6 +1798,189 @@ h3 {
   font-weight: 900;
 }
 
+.news-page .breadcrumb {
+  border-bottom-color: var(--border);
+  background: #fbfcff;
+}
+
+.news-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.news-visual {
+  margin: 0;
+}
+
+.news-visual-panel {
+  display: grid;
+  gap: 20px;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 96%);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.news-visual-head {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 16px;
+}
+
+.news-visual-head span {
+  display: inline-grid;
+  place-items: center;
+  width: 68px;
+  height: 54px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.news-visual-head strong {
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.news-visual-list {
+  display: grid;
+  gap: 12px;
+}
+
+.news-visual-list span {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: white;
+  padding: 12px 14px;
+  color: var(--text-body);
+  font-weight: 900;
+}
+
+.news-visual-list span:nth-child(2) {
+  border-left-color: var(--green);
+}
+
+.news-visual-list span:nth-child(3) {
+  border-left-color: var(--purple);
+}
+
+.news-visual-list span:nth-child(4) {
+  border-left-color: var(--cyan);
+}
+
+.news-category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.news-category-grid a {
+  display: grid;
+  gap: 8px;
+  min-height: 116px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgb(19 34 56 / 6%);
+}
+
+.news-category-grid a:hover,
+.news-category-grid a:focus-visible {
+  border-color: rgb(11 103 194 / 36%);
+  box-shadow: 0 16px 34px rgb(11 103 194 / 12%);
+}
+
+.news-category-grid span {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.news-category-grid strong {
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.news-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.news-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.82fr) minmax(0, 1.18fr);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 10px 26px rgb(19 34 56 / 6%);
+}
+
+.news-thumb {
+  width: 100%;
+  height: 100%;
+  min-height: 210px;
+}
+
+.news-card-body {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 22px;
+}
+
+.news-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-badge {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  background: var(--surface-blue);
+  padding: 6px 11px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.news-card-meta time {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.news-card h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.news-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 @media (max-width: 1100px) {
   .home-hero-grid,
   .relation-grid,
@@ -1807,7 +1990,8 @@ h3 {
   .about-hero-grid,
   .about-position-grid,
   .about-background-grid,
-  .about-entity-grid {
+  .about-entity-grid,
+  .news-hero-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1817,6 +2001,15 @@ h3 {
 
   .about-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .news-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .news-list-grid,
+  .news-card {
+    grid-template-columns: 1fr;
   }
 
   .capability-grid {
@@ -1861,6 +2054,8 @@ h3 {
   .preview-grid,
   .pending-note-grid,
   .about-card-grid,
+  .news-category-grid,
+  .news-list-grid,
   .capability-grid,
   .network-advantage-grid,
   .service-path-list,

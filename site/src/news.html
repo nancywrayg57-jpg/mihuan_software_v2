@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="查看 Honey Badger 蜜獾软件的企业动态、产品更新、行业资讯与技术分享示例条目。">
+    <title>新闻资讯 | Honey Badger</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/app.js" defer></script>
+  </head>
+  <body class="news-page" data-page="news" data-lang="zh">
+    <a class="skip-link" href="#main">跳至主要内容</a>
+    <header class="site-header" aria-label="站点页头">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Honey Badger 首页">
+          <span class="brand-mark" aria-hidden="true">HB</span>
+          <span class="brand-copy">
+            <strong>Honey Badger</strong>
+            <small>ZennoLab China Ops</small>
+          </span>
+        </a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a class="nav-link" href="./index.html">首页</a>
+          <a class="nav-link" href="./products.html">产品介绍</a>
+          <a class="nav-link" href="./news.html" aria-current="page">新闻资讯</a>
+          <a class="nav-link nav-link-placeholder" href="./index.html#home-careers" data-placeholder="true">人才招聘</a>
+          <a class="nav-link" href="./about.html">关于我们</a>
+        </nav>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="语言切换">
+            <a href="./news.html" aria-current="true" lang="zh-CN">中文</a>
+            <a href="./en/index.html" lang="en-US">EN</a>
+            <a href="./ru/index.html" lang="ru-RU">RU</a>
+          </nav>
+          <button class="menu-button" id="menu-button" type="button" aria-label="打开移动导航" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="移动端主导航">
+      <a class="nav-link" href="./index.html">首页</a>
+      <a class="nav-link" href="./products.html">产品介绍</a>
+      <a class="nav-link" href="./news.html" aria-current="page">新闻资讯</a>
+      <a class="nav-link nav-link-placeholder" href="./index.html#home-careers" data-placeholder="true">人才招聘</a>
+      <a class="nav-link" href="./about.html">关于我们</a>
+    </nav>
+    <main class="site-main" id="main" tabindex="-1">
+      <div class="site-notice-banner">
+        <div class="container">开发骨架，非正式内容 · 新闻详情页、正式联系方式、备案与版权信息待管理员确认后配置</div>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+          <a href="./index.html">首页</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">新闻资讯</span>
+        </div>
+      </nav>
+
+      <section class="products-hero news-hero" aria-labelledby="page-title">
+        <div class="container news-hero-grid">
+          <div class="products-hero-copy">
+            <p class="eyebrow home-eyebrow">News Center</p>
+            <h1 id="page-title">新闻资讯</h1>
+            <p class="products-hero-subtitle">企业动态、产品更新、行业洞察与技术分享的静态资讯入口</p>
+            <p class="lead">新闻资讯页用于统一呈现蜜獾官网建设期的企业动态、产品更新、行业资讯和技术分享示例条目，帮助访客了解企业活动、行业新闻与产品实践边界。</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#news-list">查看资讯列表</a>
+              <a class="btn btn-outline" href="#news-categories">查看分类</a>
+            </div>
+            <dl class="products-stat-grid" aria-label="新闻资讯页概览">
+              <div>
+                <dt>6</dt>
+                <dd>文案第九节示例条目</dd>
+              </div>
+              <div>
+                <dt>5</dt>
+                <dd>静态资讯分类</dd>
+              </div>
+              <div>
+                <dt>0</dt>
+                <dd>详情页暂不接入</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="news-visual" role="img" aria-label="新闻资讯分类与列表结构示意图">
+            <div class="news-visual-panel" aria-hidden="true">
+              <div class="news-visual-head">
+                <span>NEWS</span>
+                <strong>分类与列表</strong>
+              </div>
+              <div class="news-visual-list">
+                <span>公司动态</span>
+                <span>产品更新</span>
+                <span>行业资讯</span>
+                <span>技术分享</span>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="home-section" id="news-categories" aria-labelledby="news-categories-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Categories</p>
+            <h2 id="news-categories-title">资讯分类展示</h2>
+            <p class="lead">分类以静态页内锚点呈现，不做筛选按钮、不模拟动态搜索或后台能力。</p>
+          </div>
+          <nav class="news-category-grid" aria-label="新闻资讯分类锚点">
+            <a href="#news-list">
+              <span>全部</span>
+              <strong>6 条</strong>
+            </a>
+            <a href="#category-company">
+              <span>公司动态</span>
+              <strong>企业活动</strong>
+            </a>
+            <a href="#category-product">
+              <span>产品更新</span>
+              <strong>2 条</strong>
+            </a>
+            <a href="#category-industry">
+              <span>行业资讯</span>
+              <strong>行业新闻</strong>
+            </a>
+            <a href="#category-tech">
+              <span>技术分享</span>
+              <strong>1 条</strong>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="home-section home-section-soft" id="news-list" aria-labelledby="news-list-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Articles</p>
+            <h2 id="news-list-title">资讯列表</h2>
+            <p class="lead">以下 6 条来自文案第九节示例资讯条目。新闻详情页归后续 Issue，本轮入口仅保留本页锚点占位。</p>
+          </div>
+          <div class="news-list-grid">
+            <article class="news-card" id="news-zennolab-ops" data-news-entry="company" data-news-category="公司动态">
+              <svg class="news-thumb" role="img" aria-label="蜜獾软件正式成为 ZennoLab 中国运营实体缩略图" viewBox="0 0 320 180">
+                <title>蜜獾软件正式成为 ZennoLab 中国运营实体缩略图</title>
+                <rect width="320" height="180" rx="8" fill="#eaf3ff"/>
+                <path d="M36 128h248" stroke="#0b67c2" stroke-width="10" stroke-linecap="round"/>
+                <path d="M58 94h204" stroke="#18a36a" stroke-width="10" stroke-linecap="round"/>
+                <path d="M80 60h160" stroke="#7652c8" stroke-width="10" stroke-linecap="round"/>
+                <circle cx="70" cy="126" r="20" fill="#0b67c2"/>
+                <circle cx="250" cy="60" r="18" fill="#7652c8"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-company" class="news-badge">公司动态</span>
+                  <time datetime="2026-06-15">2026-06-15</time>
+                </div>
+                <h3>蜜獾软件正式成为 ZennoLab 中国运营实体</h3>
+                <p>文案第九节公司动态示例条目，用于呈现企业活动入口；正式正文将在详情页接入时补充。</p>
+                <a class="link-more" href="#news-detail-pending">详情页待接入</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-yuantu-v2" data-news-entry="product" data-news-category="产品更新">
+              <svg class="news-thumb" role="img" aria-label="蜜獾原图 V2.0 上线缩略图" viewBox="0 0 320 180">
+                <title>蜜獾原图 V2.0 上线缩略图</title>
+                <rect width="320" height="180" rx="8" fill="#eefcf8"/>
+                <rect x="42" y="38" width="96" height="76" rx="8" fill="#18a36a" opacity=".2"/>
+                <rect x="132" y="62" width="118" height="78" rx="8" fill="#0b67c2" opacity=".18"/>
+                <path d="M58 132l54-54 42 42 24-24 62 62" fill="none" stroke="#18a36a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="226" cy="48" r="18" fill="#0b67c2"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-product" class="news-badge">产品更新</span>
+                  <time datetime="2026-06-01">2026-06-01</time>
+                </div>
+                <h3>蜜獾原图 V2.0 上线：新增批量场景图生成功能</h3>
+                <p>文案第九节产品更新示例条目，用于呈现产品更新入口；正式正文将在详情页接入时补充。</p>
+                <a class="link-more" href="#news-detail-pending">详情页待接入</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-ai-trend" data-news-entry="industry" data-news-category="行业资讯">
+              <svg class="news-thumb" role="img" aria-label="2026 跨境电商 AI 工具应用趋势报告缩略图" viewBox="0 0 320 180">
+                <title>2026 跨境电商 AI 工具应用趋势报告缩略图</title>
+                <rect width="320" height="180" rx="8" fill="#f5f0ff"/>
+                <rect x="54" y="102" width="34" height="42" rx="6" fill="#7652c8"/>
+                <rect x="116" y="76" width="34" height="68" rx="6" fill="#0b67c2"/>
+                <rect x="178" y="52" width="34" height="92" rx="6" fill="#18a36a"/>
+                <path d="M56 66c42 18 82 14 120-12 28-20 56-24 84-12" fill="none" stroke="#7652c8" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-industry" class="news-badge">行业资讯</span>
+                  <time datetime="2026-05-20">2026-05-20</time>
+                </div>
+                <h3>2026 跨境电商 AI 工具应用趋势报告发布</h3>
+                <p>文案第九节行业资讯示例条目，用于呈现行业新闻入口；正式正文将在详情页接入时补充。</p>
+                <a class="link-more" href="#news-detail-pending">详情页待接入</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-ip-guide" data-news-entry="tech" data-news-category="技术分享">
+              <svg class="news-thumb" role="img" aria-label="住宅 IP 与机房 IP 代理选型指南缩略图" viewBox="0 0 320 180">
+                <title>住宅 IP 与机房 IP 代理选型指南缩略图</title>
+                <rect width="320" height="180" rx="8" fill="#eef8ff"/>
+                <path d="M72 130V80l44-32 44 32v50" fill="none" stroke="#0b67c2" stroke-width="10" stroke-linejoin="round"/>
+                <rect x="188" y="54" width="64" height="84" rx="8" fill="none" stroke="#18a36a" stroke-width="10"/>
+                <path d="M196 82h48M196 108h48" stroke="#18a36a" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-tech" class="news-badge">技术分享</span>
+                  <time datetime="2026-05-08">2026-05-08</time>
+                </div>
+                <h3>住宅 IP 与机房 IP 怎么选？代理选型完全指南</h3>
+                <p>文案第九节技术分享示例条目，用于呈现技术内容入口；正式正文将在详情页接入时补充。</p>
+                <a class="link-more" href="#news-detail-pending">详情页待接入</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-ai-fde-training" data-news-entry="company" data-news-category="公司动态">
+              <svg class="news-thumb" role="img" aria-label="AI-FDE 首期 VibeCoding 培训结业缩略图" viewBox="0 0 320 180">
+                <title>AI-FDE 首期 VibeCoding 培训结业缩略图</title>
+                <rect width="320" height="180" rx="8" fill="#fff8ec"/>
+                <rect x="48" y="46" width="224" height="92" rx="10" fill="#ffffff" stroke="#f0b54a" stroke-width="8"/>
+                <path d="M88 86h144M88 112h94" stroke="#7652c8" stroke-width="8" stroke-linecap="round"/>
+                <circle cx="70" cy="138" r="16" fill="#f0b54a"/>
+                <circle cx="250" cy="42" r="16" fill="#7652c8"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span class="news-badge">公司动态</span>
+                  <time datetime="2026-04-25">2026-04-25</time>
+                </div>
+                <h3>AI-FDE 首期 VibeCoding 培训圆满结业</h3>
+                <p>文案第九节公司动态示例条目，用于呈现企业活动入口；正式正文将在详情页接入时补充。</p>
+                <a class="link-more" href="#news-detail-pending">详情页待接入</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-network-sea" data-news-entry="product" data-news-category="产品更新">
+              <svg class="news-thumb" role="img" aria-label="跨境网络服务新增东南亚节点资源缩略图" viewBox="0 0 320 180">
+                <title>跨境网络服务新增东南亚节点资源缩略图</title>
+                <rect width="320" height="180" rx="8" fill="#eef6ff"/>
+                <circle cx="92" cy="72" r="22" fill="#0b67c2"/>
+                <circle cx="158" cy="108" r="28" fill="#18a36a"/>
+                <circle cx="232" cy="70" r="20" fill="#7652c8"/>
+                <path d="M92 72l66 36 74-38M92 72l140-2" stroke="#163b68" stroke-width="8" stroke-linecap="round" opacity=".35"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span class="news-badge">产品更新</span>
+                  <time datetime="2026-04-10">2026-04-10</time>
+                </div>
+                <h3>跨境网络服务新增东南亚节点资源</h3>
+                <p>文案第九节产品更新示例条目，用于呈现产品更新入口；正式正文将在详情页接入时补充。</p>
+                <a class="link-more" href="#news-detail-pending">详情页待接入</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section support-note-section" id="news-detail-pending" aria-labelledby="news-detail-pending-title">
+        <div class="container support-note-grid">
+          <div>
+            <p class="eyebrow eyebrow-dark">Details</p>
+            <h2 id="news-detail-pending-title">详情页待接入</h2>
+            <p class="lead">新闻详情页、分类筛选与后台维护能力均归后续 Issue；本轮只提供静态列表和本页锚点入口。</p>
+          </div>
+          <div class="support-note-card">
+            <h3>咨询与联系入口</h3>
+            <p>如需了解示例资讯背后的产品或服务范围，请使用客服浮层或页脚联系占位；本页不提供假表单或假提交。</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#floating-support">查看客服占位</a>
+              <a class="btn btn-outline" href="#site-footer-contact">页脚联系占位</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" aria-label="站点页脚">
+      <div class="container footer-grid">
+        <section>
+          <h2>Honey Badger</h2>
+          <p>蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体。正式主体信息将在管理员确认后配置。</p>
+        </section>
+        <section id="site-footer-contact">
+          <h3>联系占位</h3>
+          <ul class="footer-list">
+            <li>企业邮箱：待配置</li>
+            <li>客服账号：待配置</li>
+          </ul>
+        </section>
+        <section>
+          <h3>合规占位</h3>
+          <ul class="footer-list">
+            <li>ICP备案信息：待配置</li>
+            <li>版权信息：待配置</li>
+          </ul>
+        </section>
+        <section>
+          <h3>外链预留</h3>
+          <p>支持类外链待确认后配置。</p>
+        </section>
+      </div>
+    </footer>
+    <aside class="floating-support" id="floating-support" aria-label="客服入口占位">
+      <div class="support-panel" id="support-panel">
+        <div class="support-panel-head">
+          <strong>在线客服占位</strong>
+          <button class="support-close" type="button" aria-label="关闭客服面板">×</button>
+        </div>
+        <p>正式联系渠道待配置，本轮只验证结构与交互。</p>
+        <div class="support-options" aria-label="待配置客服渠道">
+          <span>微信：待配置</span>
+          <span>QQ：待配置</span>
+          <span>邮箱：待配置</span>
+        </div>
+      </div>
+      <button class="support-toggle" type="button" aria-controls="support-panel" aria-expanded="false">
+        <span aria-hidden="true">?</span>
+        <strong>客服</strong>
+      </button>
+    </aside>
+  </body>
+</html>
