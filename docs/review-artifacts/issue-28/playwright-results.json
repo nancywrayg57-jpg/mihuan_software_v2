@@ -1,0 +1,236 @@
+{
+  "generatedAt": "2026-07-24T08:53:18.148Z",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "referenceSource": "UI/en/about.html",
+  "urls": {
+    "enAbout": "file:///D:/workspace/mihuan_software_v2/site/dist/en/about.html",
+    "enHome": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+    "zhAbout": "file:///D:/workspace/mihuan_software_v2/site/dist/about.html",
+    "reference": "file:///D:/workspace/mihuan_software_v2/UI/en/about.html"
+  },
+  "screenshots": {
+    "desktop": "en-about-desktop.png",
+    "mobile": "en-about-mobile.png",
+    "mobileNav": "en-about-mobile-nav.png",
+    "referenceDesktop": "ui-reference-en-about-desktop.png",
+    "referenceMobile": "ui-reference-en-about-mobile.png"
+  },
+  "assertions": {
+    "desktopSignals": {
+      "title": "About Us | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/about.html",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 4597,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / About Us",
+      "currentLinks": [
+        {
+          "text": "About",
+          "href": "./about.html"
+        },
+        {
+          "text": "About",
+          "href": "./about.html"
+        }
+      ],
+      "relationshipCount": 2,
+      "entityHasRelationship": true,
+      "footerHasRelationship": true,
+      "contactPlaceholders": true,
+      "fakeForms": 0,
+      "aboutSections": 5,
+      "supportPanelPresent": true,
+      "mobileNavOpen": false
+    },
+    "mobileSignals": {
+      "title": "About Us | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/about.html",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 7594,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / About Us",
+      "currentLinks": [
+        {
+          "text": "About",
+          "href": "./about.html"
+        },
+        {
+          "text": "About",
+          "href": "./about.html"
+        }
+      ],
+      "relationshipCount": 2,
+      "entityHasRelationship": true,
+      "footerHasRelationship": true,
+      "contactPlaceholders": true,
+      "fakeForms": 0,
+      "aboutSections": 5,
+      "supportPanelPresent": true,
+      "mobileNavOpen": false
+    },
+    "mobileNavSignals": {
+      "title": "About Us | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/about.html",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 7594,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / About Us",
+      "currentLinks": [
+        {
+          "text": "About",
+          "href": "./about.html"
+        },
+        {
+          "text": "About",
+          "href": "./about.html"
+        }
+      ],
+      "relationshipCount": 2,
+      "entityHasRelationship": true,
+      "footerHasRelationship": true,
+      "contactPlaceholders": true,
+      "fakeForms": 0,
+      "aboutSections": 5,
+      "supportPanelPresent": true,
+      "mobileNavOpen": true
+    },
+    "referenceDesktopSignals": {
+      "title": "About | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/UI/en/about.html",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 2330,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / About",
+      "currentLinks": [
+        {
+          "text": "About",
+          "href": "../en/about.html"
+        },
+        {
+          "text": "About",
+          "href": "../en/about.html"
+        }
+      ],
+      "relationshipCount": 0,
+      "entityHasRelationship": false,
+      "footerHasRelationship": false,
+      "contactPlaceholders": false,
+      "fakeForms": 0,
+      "aboutSections": 0,
+      "supportPanelPresent": false,
+      "mobileNavOpen": false
+    },
+    "referenceMobileSignals": {
+      "title": "About | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/UI/en/about.html",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 3946,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / About",
+      "currentLinks": [
+        {
+          "text": "About",
+          "href": "../en/about.html"
+        },
+        {
+          "text": "About",
+          "href": "../en/about.html"
+        }
+      ],
+      "relationshipCount": 0,
+      "entityHasRelationship": false,
+      "footerHasRelationship": false,
+      "contactPlaceholders": false,
+      "fakeForms": 0,
+      "aboutSections": 0,
+      "supportPanelPresent": false,
+      "mobileNavOpen": false
+    },
+    "navFlow": {
+      "homeToAboutUrl": "file:///D:/workspace/mihuan_software_v2/site/dist/en/about.html",
+      "homeToAboutOk": true,
+      "breadcrumbHomeUrl": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+      "breadcrumbHomeOk": true,
+      "zhSwitcherUrl": "file:///D:/workspace/mihuan_software_v2/site/dist/about.html",
+      "zhSwitcherOk": true
+    },
+    "supportOpen": true,
+    "noConsoleErrors": true,
+    "noBrokenImages": true,
+    "noHorizontalOverflow": true
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "checks": [
+    {
+      "id": "ABOUT-004",
+      "status": "PASS",
+      "evidence": "Entity block and footer both contain the exact ZennoLab relationship sentence."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "EN About zh switcher opened file:///D:/workspace/mihuan_software_v2/site/dist/about.html."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "Breadcrumb text: Home / About Us"
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Footer relationship statement checked exactly."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "EN home About nav reached file:///D:/workspace/mihuan_software_v2/site/dist/en/about.html; breadcrumb returned file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "Desktop/mobile overflow, broken image and console checks completed."
+    },
+    {
+      "id": "NAV-002",
+      "status": "PASS",
+      "evidence": "Header marks About current; mobile navigation opens on 390px viewport."
+    },
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Two-level breadcrumb Home / About Us verified."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "This issue adds the EN About page; zh About exists and RU target remains RU home by scope."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N-A",
+      "evidence": "RU About page is outside Issue #28 scope; RU switch intentionally targets RU home."
+    }
+  ]
+}
