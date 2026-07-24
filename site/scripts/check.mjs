@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html", "ru/about.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -1050,6 +1050,15 @@ function validateRussianHome(html) {
     errors.push("Russian home Продукты navigation must not remain a placeholder link.");
   }
 
+  const newsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/news\.html["']>Новости<\/a>/g) || [];
+  if (newsNavLinks.length !== 2) {
+    errors.push(`Russian home Новости navigation must point to ./news.html on desktop and mobile; found ${newsNavLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>Новости<\/a>/i.test(html)) {
+    errors.push("Russian home Новости navigation must not remain a placeholder link.");
+  }
+
   const aboutNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/about\.html["']>О нас<\/a>/g) || [];
   if (aboutNavLinks.length !== 2) {
     errors.push(`Russian home О нас navigation must point to ./about.html on desktop and mobile; found ${aboutNavLinks.length}.`);
@@ -1095,6 +1104,139 @@ function validateRussianHome(html) {
 
   if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
     errors.push("Russian home contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateRussianNews(html) {
+  const errors = [];
+  const expectedTitle = "Новости | Honey Badger";
+  const expectedDescription = "Читайте новости компании Honey Badger, обновления продуктов, отраслевые новости и технические материалы на русской странице новостей официального сайта.";
+  const expectedFooterRelationship = "Honey Badger является операционной структурой российской компании ZennoLab в Китае.";
+  const newsEntries = [
+    ["Новости компании", "Honey Badger Software официально становится операционной структурой ZennoLab в Китае", "2026-06-15", "15.06.2026"],
+    ["Обновления продуктов", "Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений", "2026-06-01", "01.06.2026"],
+    ["Отраслевые новости", "Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026", "2026-05-20", "20.05.2026"],
+    ["Технические материалы", "Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси", "2026-05-08", "08.05.2026"],
+    ["Новости компании", "Первое обучение AI-FDE VibeCoding успешно завершено", "2026-04-25", "25.04.2026"],
+    ["Обновления продуктов", "Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии", "2026-04-10", "10.04.2026"]
+  ];
+
+  if (!/<html\s+lang=["']ru-RU["']/i.test(html)) {
+    errors.push('Russian news page must render <html lang="ru-RU">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("Russian news page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("Russian news page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "Центр новостей",
+    "Новости",
+    "Статический вход для новостей компании, обновлений продуктов, отраслевых новостей и технических материалов",
+    "Категории новостей",
+    "Все",
+    "Новости компании",
+    "Обновления продуктов",
+    "Отраслевые новости",
+    "Технические материалы",
+    "Список новостей",
+    "Резюме являются нейтральными заполнителями",
+    "Страницы деталей новостей ожидают подключения",
+    "Страница деталей ожидает подключения",
+    "Вход для консультации и контакта",
+    "Корпоративная почта: Будет настроено",
+    "Аккаунты поддержки: Будет настроено",
+    "Информация о регистрации ICP: Будет настроено",
+    "Информация об авторских правах: Будет настроено",
+    expectedFooterRelationship,
+    "Заполнитель поддержки",
+    "Будет настроено"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Russian news page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "ru-news-page",
+    "news-hero",
+    "news-categories",
+    "news-list",
+    "news-detail-pending"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing Russian news page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Russian news page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Главная</a>') || !html.includes('aria-current="page">Новости</span>')) {
+    errors.push("Russian news page breadcrumb must be Главная / Новости with a working home link.");
+  }
+
+  if (!html.includes('href="./news.html" aria-current="page">Новости</a>')) {
+    errors.push("Russian news page header must mark Новости as current.");
+  }
+
+  for (const languagePath of ['href="../news.html"', 'href="../en/news.html"', 'href="./news.html" aria-current="true"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Russian news page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const entryMarkers = html.match(/data-news-entry=/g) || [];
+  if (entryMarkers.length !== 6) {
+    errors.push(`Russian news page must render exactly 6 news entries; found ${entryMarkers.length}.`);
+  }
+
+  for (const [category, title, datetime, displayDate] of newsEntries) {
+    if (!html.includes(category) || !html.includes(title) || !html.includes(`datetime="${datetime}"`) || !html.includes(`>${displayDate}</time>`)) {
+      errors.push(`Missing Russian news entry category/title/date: ${category} / ${title} / ${datetime} / ${displayDate}.`);
+    }
+  }
+
+  const timeMatches = html.match(/<time datetime=["']\d{4}-\d{2}-\d{2}["']>\d{2}\.\d{2}\.\d{4}<\/time>/g) || [];
+  if (timeMatches.length !== 6) {
+    errors.push(`Russian news page must render 6 time elements with datetime YYYY-MM-DD and visible DD.MM.YYYY; found ${timeMatches.length}.`);
+  }
+
+  const thumbnailMatches = html.match(/class=["']news-thumb["'][\s\S]*?aria-label=["'][^"']*Миниатюра[^"']*["']/g) || [];
+  if (thumbnailMatches.length !== 6) {
+    errors.push(`Russian news page must render 6 inline SVG thumbnails with Russian aria labels; found ${thumbnailMatches.length}.`);
+  }
+
+  const detailLinks = html.match(/<a class=["']link-more["'] href=["']#news-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
+  if (detailLinks.length !== 6) {
+    errors.push(`Russian news entry links must stay as same-page detail placeholders; found ${detailLinks.length}.`);
+  }
+
+  if (/href=["'][^"']*news-detail[^#"']*\.html/i.test(html) || /href=["'][^"']*news\/[^#"']+/i.test(html)) {
+    errors.push("Russian news page must not link to nonexistent news detail or category pages.");
+  }
+
+  if (/<button[\s>]/i.test(html) && !/class=["']menu-button["']|class=["']support-close["']|class=["']support-toggle["']/.test(html)) {
+    errors.push("Russian news page must not include fake filter interaction buttons.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("Russian news page must not include a fake contact form.");
+  }
+
+  if (/zennolabchina|48151650|marketing@honeybadgersoft\.com/i.test(html)) {
+    errors.push("Russian news page must not include real contact values.");
+  }
+
+  if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
+    errors.push("Russian news page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -2107,6 +2249,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "ru/about.html") {
     htmlErrors.push(...validateRussianAbout(html));
+  }
+
+  if (relativePath === "ru/news.html") {
+    htmlErrors.push(...validateRussianNews(html));
   }
 
   if (relativePath === "ru/跨境网络服务.html") {
