@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -238,6 +238,15 @@ function validateEnglishHome(html) {
   const newsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/news\.html["']>News<\/a>/g) || [];
   if (newsNavLinks.length !== 2) {
     errors.push(`English home News navigation must point to ./news.html on desktop and mobile; found ${newsNavLinks.length}.`);
+  }
+
+  const careersNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/careers\.html["']>Careers<\/a>/g) || [];
+  if (careersNavLinks.length !== 2) {
+    errors.push(`English home Careers navigation must point to ./careers.html on desktop and mobile; found ${careersNavLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>Careers<\/a>/i.test(html)) {
+    errors.push("English home Careers navigation must not remain a placeholder link.");
   }
 
   if (/data-placeholder=["']true["'][^>]*>News<\/a>/i.test(html)) {
@@ -792,6 +801,158 @@ function validateEnglishNews(html) {
 
   if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
     errors.push("English news page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateEnglishCareers(html) {
+  const errors = [];
+  const expectedTitle = "Careers | Honey Badger";
+  const expectedDescription = "Explore Honey Badger careers, why join us, benefits, open positions with configured placeholders, recruitment process and application contact placeholders.";
+  const expectedFooterRelationship = "Honey Badger is ZennoLab's operating entity in China.";
+  const jobEntries = [
+    ["Cross-Border Operations Specialist", "TikTok/FB/INS content operation and private domain conversion"],
+    ["Frontend Developer", "Official website and product backend development, exploring AI-assisted development"],
+    ["Customer Success Manager", "Enterprise customer liaison and service, upsell and lifecycle management"],
+    ["AI Training Instructor Assistant", "Course material preparation, student Q&amp;A, community operation"]
+  ];
+
+  if (!/<html\s+lang=["']en-US["']/i.test(html)) {
+    errors.push('English careers page must render <html lang="en-US">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("English careers page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("English careers page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "Join Honey Badger, Do Something Valuable Together",
+    "A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.",
+    "Why Join Us",
+    "Broad industry prospects",
+    "Flat management",
+    "Technology-driven atmosphere",
+    "Competitive compensation",
+    "Benefits",
+    "Five social insurances and housing fund + commercial insurance",
+    "Flexible work system",
+    "Team building and holiday benefits",
+    "Annual health checkup",
+    "Paid annual leave",
+    "Learning and training budget",
+    "Open Positions",
+    "Location",
+    "Role type",
+    "To be configured",
+    "Role details pending",
+    "Recruitment Process",
+    "Resume Submission",
+    "Initial Screening",
+    "Business Interview",
+    "Final Interview / Offer",
+    "Application and Contact",
+    "Corporate email: To be configured",
+    "Support panel: To be configured",
+    "开发骨架，非正式内容",
+    expectedFooterRelationship
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing English careers page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "en-careers-page",
+    "careers-hero",
+    "careers-why",
+    "careers-benefits",
+    "careers-jobs",
+    "careers-process",
+    "careers-apply",
+    "career-detail-pending"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing English careers page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("English careers page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Home</a>') || !html.includes('aria-current="page">Careers</span>')) {
+    errors.push("English careers page breadcrumb must be Home / Careers with a working home link.");
+  }
+
+  if (!html.includes('href="./careers.html" aria-current="page">Careers</a>')) {
+    errors.push("English careers page header must mark Careers as current.");
+  }
+
+  for (const languagePath of ['href="../careers.html"', 'href="./careers.html" aria-current="true"', 'href="../ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`English careers page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const jobMarkers = html.match(/data-career-job=/g) || [];
+  if (jobMarkers.length !== 4) {
+    errors.push(`English careers page must render exactly 4 job entries; found ${jobMarkers.length}.`);
+  }
+
+  for (const [title, summary] of jobEntries) {
+    if (!html.includes(title) || !html.includes(summary)) {
+      errors.push(`Missing English careers job title/summary: ${title} / ${summary}.`);
+    }
+  }
+
+  const benefitMarkers = html.match(/data-career-benefit=/g) || [];
+  if (benefitMarkers.length !== 6) {
+    errors.push(`English careers page must render exactly 6 benefit entries; found ${benefitMarkers.length}.`);
+  }
+
+  const locationPlaceholders = html.match(/data-career-location=["']To be configured["']/g) || [];
+  const typePlaceholders = html.match(/data-career-type=["']To be configured["']/g) || [];
+  if (locationPlaceholders.length !== 4 || typePlaceholders.length !== 4) {
+    errors.push(`English careers job cards must keep location/type as To be configured; found ${locationPlaceholders.length} locations and ${typePlaceholders.length} types.`);
+  }
+
+  const detailLinks = html.match(/<a class=["']link-more["'] href=["']#career-detail-pending["']>Role details pending<\/a>/g) || [];
+  if (detailLinks.length !== 4) {
+    errors.push(`English careers job detail links must stay as same-page placeholders; found ${detailLinks.length}.`);
+  }
+
+  const processMarkers = html.match(/data-career-process=/g) || [];
+  if (processMarkers.length !== 4) {
+    errors.push(`English careers page must render exactly 4 process steps; found ${processMarkers.length}.`);
+  }
+
+  if (!html.includes(expectedFooterRelationship)) {
+    errors.push("English careers page footer relationship statement must match exactly.");
+  }
+
+  if (/href=["'][^"']*career-detail[^#"']*\.html|href=["'][^"']*jobs\/[^#"']+/i.test(html)) {
+    errors.push("English careers page must not link to nonexistent job detail pages.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("English careers page must not include a fake application form.");
+  }
+
+  if (/<button[\s>]/i.test(html) && !/class=["']menu-button["']|class=["']support-close["']|class=["']support-toggle["']/.test(html)) {
+    errors.push("English careers page must not include fake recruiting interaction buttons.");
+  }
+
+  if (/\b(job location|full-time|part-time|internship|hybrid|remote|onsite|salary|resume upload|submitted successfully|apply now|HR phone)\b/i.test(html)) {
+    errors.push("English careers page contains unconfirmed recruiting facts or fake application wording.");
+  }
+
+  if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
+    errors.push("English careers page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -1526,6 +1687,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "en/news.html") {
     htmlErrors.push(...validateEnglishNews(html));
+  }
+
+  if (relativePath === "en/careers.html") {
+    htmlErrors.push(...validateEnglishCareers(html));
   }
 
   if (relativePath === "ru/index.html") {

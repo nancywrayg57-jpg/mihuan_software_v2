@@ -1,0 +1,249 @@
+{
+  "generatedAt": "2026-07-24T09:46:47.218Z",
+  "target": "site/dist/en/careers.html",
+  "reference": "UI/en/careers.html",
+  "screenshots": [
+    "docs/review-artifacts/issue-32/en-careers-desktop.png",
+    "docs/review-artifacts/issue-32/en-careers-mobile.png",
+    "docs/review-artifacts/issue-32/en-careers-mobile-nav.png",
+    "docs/review-artifacts/issue-32/ui-reference-en-careers-desktop.png",
+    "docs/review-artifacts/issue-32/ui-reference-en-careers-mobile.png"
+  ],
+  "assertions": [
+    {
+      "name": "en-careers-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Careers | Honey Badger\",\"h1\":\"Join Honey Badger, Do Something Valuable Together\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "en-careers-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "careers hero title",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers hero lead",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers breadcrumb home/current",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers current nav markers",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers required counts",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers no fake form",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers footer relationship exact",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers no real contact or over-scoped wording",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers job placeholders",
+      "status": "PASS",
+      "details": "{\"title\":\"Join Honey Badger, Do Something Valuable Together\",\"lead\":\"A young and efficient team focused on bringing world-leading automation technology and AI capabilities to Chinese customers.\",\"breadcrumbHome\":\"Home\",\"breadcrumbCurrent\":\"Careers\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"processes\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"locations\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"],\"types\":[\"To be configured\",\"To be configured\",\"To be configured\",\"To be configured\"]}"
+    },
+    {
+      "name": "careers support float opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"configuredCount\":4}"
+    },
+    {
+      "name": "careers breadcrumb navigates home",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html"
+    },
+    {
+      "name": "en home desktop nav has careers link",
+      "status": "PASS",
+      "details": "{\"homeNavCount\":1}"
+    },
+    {
+      "name": "en home desktop nav reaches careers",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/en/careers.html\",\"h1\":\"Join Honey Badger, Do Something Valuable Together\"}"
+    },
+    {
+      "name": "careers zh language switch keeps careers context",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/careers.html\",\"h1\":\"加入蜜獾，一起做有价值的事\"}"
+    },
+    {
+      "name": "en-careers-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Careers | Honey Badger\",\"h1\":\"Join Honey Badger, Do Something Valuable Together\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "en-careers-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "careers mobile nav opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"mobileCareersCurrent\":true}"
+    },
+    {
+      "name": "ui-reference-en-careers-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Careers | Honey Badger\",\"h1\":\"Careers\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":false}"
+    },
+    {
+      "name": "ui-reference-en-careers-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui reference desktop renders careers page",
+      "status": "PASS",
+      "details": "{\"title\":\"Careers | Honey Badger\",\"h1\":\"Careers\",\"sectionCount\":5}"
+    },
+    {
+      "name": "ui-reference-en-careers-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Careers | Honey Badger\",\"h1\":\"Careers\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":false}"
+    },
+    {
+      "name": "ui-reference-en-careers-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "en-careers-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "en-home-nav: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "language-switch: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "en-careers-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui-reference-en-careers-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui-reference-en-careers-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    }
+  ],
+  "e2e": [
+    {
+      "id": "CAREER-001",
+      "status": "PASS",
+      "evidence": "Hero title, lead, breadcrumb, and Careers current nav were asserted on site/dist/en/careers.html."
+    },
+    {
+      "id": "CAREER-002",
+      "status": "PASS",
+      "evidence": "Why Join Us 4 items, Benefits 6 items, and Open Positions 4 cards were counted and source checker validates exact English SSOT markers."
+    },
+    {
+      "id": "CAREER-003",
+      "status": "N-A",
+      "evidence": "Role details/responsibilities are intentionally pending because Issue #32 only authorizes role name and one-line summary."
+    },
+    {
+      "id": "CAREER-004",
+      "status": "N-A",
+      "evidence": "Application submission remains a placeholder; no fake form or fake submission state exists."
+    },
+    {
+      "id": "CAREER-005",
+      "status": "PASS",
+      "evidence": "Recruitment process renders exactly 4 configured steps: Resume Submission, Initial Screening, Business Interview, Final Interview / Offer."
+    },
+    {
+      "id": "CAREER-006",
+      "status": "PASS",
+      "evidence": "Footer relationship sentence is exact and support/footer contact values remain To be configured."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "English careers page is complete; RU careers page is intentionally out of Issue #32 scope and links to the RU home fallback."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "html lang en-US, English title/description, and EN current language state are validated by check.mjs and browser pass."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "Language switch from en/careers.html to zh careers context reached site/dist/careers.html."
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "English production page content remains English except the explicit skeleton notice required by this static scaffold."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "Desktop and mobile screenshots show stable responsive layout with no horizontal overflow."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N-A",
+      "evidence": "RU careers page is not implemented in this issue; fallback remains ../ru/index.html by requirement."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "No broken images and no console/page errors were observed across target and UI reference pages."
+    },
+    {
+      "id": "NAV-002",
+      "status": "PASS",
+      "evidence": "English home desktop Careers nav was clicked and reached site/dist/en/careers.html."
+    },
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Mobile menu opened on en/careers.html and Careers remained marked as the current item."
+    }
+  ],
+  "consoleErrors": {
+    "en-careers-desktop": [],
+    "en-home-nav": [],
+    "language-switch": [],
+    "en-careers-mobile": [],
+    "ui-reference-en-careers-desktop": [],
+    "ui-reference-en-careers-mobile": []
+  }
+}
