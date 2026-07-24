@@ -1,0 +1,513 @@
+{
+  "generatedAt": "2026-07-24T12:38:49.119Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "playwrightVersion": "1.61.1",
+  "sharpVersion": "0.34.5",
+  "checks": [
+    {
+      "id": "zh-index",
+      "label": "zh homepage",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/index.html",
+        "screenshot": "zh-index-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "蜜獾软件 | ZennoLab 中国运营实体",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 520.015625,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/index.html",
+        "screenshot": "zh-index-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "蜜獾软件 | ZennoLab 中国官方运营实体",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "zh-index-comparison.png",
+      "status": "PASS"
+    },
+    {
+      "id": "zh-products",
+      "label": "zh products",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/products.html",
+        "screenshot": "zh-products-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "产品介绍 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 520.015625,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/products.html",
+        "screenshot": "zh-products-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "产品介绍 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "zh-products-comparison.png",
+      "status": "PASS"
+    },
+    {
+      "id": "zh-network",
+      "label": "zh network services",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/跨境网络服务.html",
+        "screenshot": "zh-network-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "跨境网络服务 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 520.015625,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/跨境网络服务.html",
+        "screenshot": "zh-network-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "跨境网络服务 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "zh-network-comparison.png",
+      "status": "PASS"
+    },
+    {
+      "id": "zh-about",
+      "label": "zh about",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/about.html",
+        "screenshot": "zh-about-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "关于我们 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 520.015625,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/about.html",
+        "screenshot": "zh-about-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "关于我们 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "zh-about-comparison.png",
+      "status": "PASS"
+    },
+    {
+      "id": "zh-news",
+      "label": "zh news",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/news.html",
+        "screenshot": "zh-news-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "新闻资讯 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 520.015625,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/news.html",
+        "screenshot": "zh-news-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "新闻资讯 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "zh-news-comparison.png",
+      "status": "PASS"
+    },
+    {
+      "id": "zh-careers",
+      "label": "zh careers",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/careers.html",
+        "screenshot": "zh-careers-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "人才招聘 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 520.015625,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/careers.html",
+        "screenshot": "zh-careers-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "人才招聘 | Honey Badger",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "zh-careers-comparison.png",
+      "status": "PASS"
+    },
+    {
+      "id": "en-index",
+      "label": "en homepage",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/en/index.html",
+        "screenshot": "en-index-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 495.21875,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/en/index.html",
+        "screenshot": "en-index-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "en-index-comparison.png",
+      "status": "PASS"
+    },
+    {
+      "id": "ru-index",
+      "label": "ru homepage",
+      "site": {
+        "kind": "site",
+        "path": "site/dist/ru/index.html",
+        "screenshot": "ru-index-site.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": {
+            "left": 1096,
+            "top": 470.421875,
+            "right": 1416,
+            "bottom": 876
+          },
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "ui": {
+        "kind": "ui",
+        "path": "UI/ru/index.html",
+        "screenshot": "ru-index-ui.png",
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+          "viewportWidth": 1440,
+          "documentScrollWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "hasHorizontalOverflow": false,
+          "imageIssues": [],
+          "supportBox": null,
+          "visibleCtaCount": 2,
+          "supportOverlapsCta": false
+        },
+        "status": "PASS"
+      },
+      "comparison": "ru-index-comparison.png",
+      "status": "PASS"
+    }
+  ],
+  "languageRegression": [
+    {
+      "page": "index",
+      "rows": [
+        {
+          "file": "site/dist/index.html",
+          "consoleErrors": [],
+          "metrics": {
+            "title": "蜜獾软件 | ZennoLab 中国运营实体",
+            "documentScrollWidth": 1440,
+            "hasHorizontalOverflow": false,
+            "heroHeight": 839.46875,
+            "navWidth": 849.703125,
+            "languageSwitcherWidth": 140
+          },
+          "status": "PASS"
+        },
+        {
+          "file": "site/dist/en/index.html",
+          "consoleErrors": [],
+          "metrics": {
+            "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+            "documentScrollWidth": 1440,
+            "hasHorizontalOverflow": false,
+            "heroHeight": 932.53125,
+            "navWidth": 849.703125,
+            "languageSwitcherWidth": 140
+          },
+          "status": "PASS"
+        },
+        {
+          "file": "site/dist/ru/index.html",
+          "consoleErrors": [],
+          "metrics": {
+            "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+            "documentScrollWidth": 1440,
+            "hasHorizontalOverflow": false,
+            "heroHeight": 1058.421875,
+            "navWidth": 849.703125,
+            "languageSwitcherWidth": 140
+          },
+          "status": "PASS"
+        }
+      ],
+      "heroHeightDelta": 218.953125,
+      "status": "PASS"
+    },
+    {
+      "page": "products",
+      "rows": [
+        {
+          "file": "site/dist/products.html",
+          "consoleErrors": [],
+          "metrics": {
+            "title": "产品介绍 | Honey Badger",
+            "documentScrollWidth": 1440,
+            "hasHorizontalOverflow": false,
+            "heroHeight": 678,
+            "navWidth": 849.703125,
+            "languageSwitcherWidth": 140
+          },
+          "status": "PASS"
+        },
+        {
+          "file": "site/dist/en/products.html",
+          "consoleErrors": [],
+          "metrics": {
+            "title": "Products | Honey Badger",
+            "documentScrollWidth": 1440,
+            "hasHorizontalOverflow": false,
+            "heroHeight": 899.09375,
+            "navWidth": 849.703125,
+            "languageSwitcherWidth": 140
+          },
+          "status": "PASS"
+        },
+        {
+          "file": "site/dist/ru/products.html",
+          "consoleErrors": [],
+          "metrics": {
+            "title": "Продукты | Honey Badger",
+            "documentScrollWidth": 1440,
+            "hasHorizontalOverflow": false,
+            "heroHeight": 874.4375,
+            "navWidth": 849.703125,
+            "languageSwitcherWidth": 140
+          },
+          "status": "PASS"
+        }
+      ],
+      "heroHeightDelta": 221.09375,
+      "status": "PASS"
+    }
+  ]
+}
