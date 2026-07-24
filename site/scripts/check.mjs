@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -303,8 +303,9 @@ function validateEnglishProducts(html) {
     "TikTok/FB/INS full-domain operation coaching, full-process practical guidance from traffic acquisition to private domain conversion",
     "Cross-border Network Services",
     "Combines static residential IP, datacenter IP and dynamic IP services for stable account environments, high-concurrency exits and rotating residential IP pools",
-    "English product detail pages are pending; all product entries stay on same-page anchors in this S3 first round.",
-    "The merged English network page is pending; the NET entry also uses the same-page pending anchor instead of linking to an unbuilt page.",
+    "English detail pages for the four regular entries remain pending, while the merged English network page is now connected from the NET card.",
+    "Opens the merged English network page for static residential IP, datacenter IP and dynamic IP",
+    "The merged English network page is connected; the three IP child service detail entries remain pending inside that page.",
     "Core Capabilities",
     "Industrial Digital Control",
     "Integrating IoT, big data and AI to bring production, supervision, warehousing and traceability into a unified management chain",
@@ -380,17 +381,21 @@ function validateEnglishProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
-  if (pendingProductLinks.length !== 5) {
-    errors.push(`English products page product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  if (pendingProductLinks.length !== 4) {
+    errors.push(`English products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  if (!html.includes('href="./跨境网络服务.html">View merged page</a>')) {
+    errors.push("English products page NET card must link to the merged English network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`English products page detail links must stay on #en-product-detail-pending; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`English products page detail links must stay on #en-product-detail-pending or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|跨境网络服务)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
     errors.push("English products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -400,6 +405,134 @@ function validateEnglishProducts(html) {
 
   if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
     errors.push("English products page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateEnglishNetworkServices(html) {
+  const errors = [];
+  const expectedTitle = "Cross-border Network Services | Honey Badger";
+  const expectedDescription = "Cross-border Network Services consolidates static residential IP, datacenter IP and dynamic IP to help cross-border teams choose network resources by account stability, access frequency, concurrency scale and cost requirements.";
+  const expectedFooterRelationship = "Honey Badger is ZennoLab's operating entity in China.";
+
+  if (!/<html\s+lang=["']en-US["']/i.test(html)) {
+    errors.push('English network services page must render <html lang="en-US">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("English network services page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("English network services page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "Cross-border Network Services",
+    "Static residential IP, datacenter IP and dynamic IP presented under one service page for stable, flexible and scalable network resources",
+    "Cross-border Network Services consolidates three IP capabilities into one product detail entry. It helps cross-border e-commerce, overseas social media operations, ad verification, public data collection and localization testing teams choose suitable network resources based on account stability, access frequency, concurrency scale and cost requirements.",
+    "Service Positioning",
+    "Three Network Services",
+    "Static Residential IP",
+    "For long-term account operations, store login, ad account management and other stable identity scenarios, focusing on fixed exits, environment consistency and lower risk-control recognition.",
+    "Datacenter IP",
+    "For batch collection, monitoring, testing and server workload exits, focusing on bandwidth, latency, cost and batch access efficiency.",
+    "Dynamic IP",
+    "For short-cycle research, ad verification, public data collection and high-frequency multi-session tasks, focusing on IP pool rotation, anonymity and flexible integration.",
+    "Unified Entry",
+    "The product page and navigation no longer split the three IP types as top-level products; they are grouped under Cross-border Network Services.",
+    "Scenario-Based Matching",
+    "Match network resources by stable accounts, batch concurrency and high-frequency rotation needs.",
+    "Flexible Integration",
+    "Supports fixed nodes, port rotation, endpoint rotation and API integration.",
+    "Controlled Operations",
+    "Supports batch management, node monitoring, exception replacement and usage tracking.",
+    "Compliant Claims",
+    "Describes cross-border network environment setup without unconfirmed node counts, refund promises or absolute SLA claims.",
+    "Applicable Scenarios",
+    "Long-term cross-border store operations, overseas social account farming, ad account management, public data collection, ad effectiveness verification, localization access testing, lightweight server workload exits",
+    "Access &amp; Assurance",
+    "Confirm target regions, protocols, concurrency, rotation method and operations requirements by business goal; specific node resources, packages, SLA and after-sales policy must follow administrator-confirmed production wording",
+    "Detail page pending",
+    "Back to Products",
+    "Corporate email: To be configured",
+    "Support accounts: To be configured",
+    "ICP filing information: To be configured",
+    "Copyright information: To be configured",
+    expectedFooterRelationship,
+    "Support Placeholder",
+    "To be configured"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing English network services page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "network-services-hero",
+    "network-positioning",
+    "network-services-modules",
+    "service-static-residential-ip",
+    "service-idc-ip",
+    "service-dynamic-ip",
+    "network-scenarios",
+    "network-consult"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing English network services page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("English network services page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Home</a>') || !html.includes('href="./products.html">Products</a>') || !html.includes('aria-current="page">Cross-border Network Services</span>')) {
+    errors.push("English network services breadcrumb must be Home / Products / Cross-border Network Services with working parent links.");
+  }
+
+  if (!html.includes('href="./products.html" aria-current="page">Products</a>')) {
+    errors.push("English network services page header must mark Products as current.");
+  }
+
+  for (const languagePath of ['href="../跨境网络服务.html"', 'href="./跨境网络服务.html" aria-current="true"', 'href="../ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`English network services page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const networkServices = html.match(/data-network-service=/g) || [];
+  if (networkServices.length !== 3) {
+    errors.push(`English network services page must render exactly 3 child service sections; found ${networkServices.length}.`);
+  }
+
+  for (const service of ['data-network-service="static-residential-ip"', 'data-network-service="idc-ip"', 'data-network-service="dynamic-ip"']) {
+    if (!html.includes(service)) {
+      errors.push(`English network services page missing ${service}.`);
+    }
+  }
+
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
+    errors.push("English network child service detail links must stay as same-page placeholder anchors.");
+  }
+
+  for (const anchor of ['href="#static-ip-detail-pending"', 'href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+    if (!html.includes(anchor)) {
+      errors.push(`English network child service missing placeholder detail anchor ${anchor}.`);
+    }
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("English network services page must not include a fake contact form.");
+  }
+
+  if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
+    errors.push("English network services page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  if (/node count:\s*\d+|nodes:\s*\d+|\d+\s+nodes|refund guarantee|money-back|guaranteed SLA|100%\s*SLA/i.test(html)) {
+    errors.push("English network services page contains unconfirmed node counts, refund guarantees or absolute SLA wording.");
   }
 
   return errors;
@@ -1122,6 +1255,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "en/products.html") {
     htmlErrors.push(...validateEnglishProducts(html));
+  }
+
+  if (relativePath === "en/跨境网络服务.html") {
+    htmlErrors.push(...validateEnglishNetworkServices(html));
   }
 
   if (relativePath === "ru/index.html") {

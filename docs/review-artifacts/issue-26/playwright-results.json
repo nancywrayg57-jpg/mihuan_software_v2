@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-07-24T08:24:58.381Z",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "referenceSource": "UI/en/跨境网络服务.html",
+  "segmentRoot": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\issue26-mobile-stitch-fe889a27c4fd4b849b774aa5342e975e",
+  "urls": {
+    "enNetwork": "file:///D:/workspace/mihuan_software_v2/site/dist/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+    "enProducts": "file:///D:/workspace/mihuan_software_v2/site/dist/en/products.html",
+    "enIndex": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+    "zhNetwork": "file:///D:/workspace/mihuan_software_v2/site/dist/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+    "reference": "file:///D:/workspace/mihuan_software_v2/UI/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html"
+  },
+  "screenshots": {
+    "desktop": "en-network-services-desktop.png",
+    "mobile": "en-network-services-mobile.png",
+    "mobileNav": "en-network-services-mobile-nav.png",
+    "referenceDesktop": "ui-reference-en-network-services-desktop.png",
+    "referenceMobile": "ui-reference-en-network-services-mobile.png"
+  },
+  "assertions": {
+    "desktopSignals": {
+      "title": "Cross-border Network Services | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "networkServiceCount": 3,
+      "childLinks": [
+        "#static-ip-detail-pending",
+        "#idc-ip-detail-pending",
+        "#dynamic-ip-detail-pending"
+      ],
+      "currentProducts": [
+        {
+          "href": "./products.html",
+          "current": "page"
+        },
+        {
+          "href": "./products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products / Cross-border Network Services",
+      "footerHasRelationship": true,
+      "hasFakeForm": false,
+      "scaffold": true
+    },
+    "mobileSignals": {
+      "title": "Cross-border Network Services | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "networkServiceCount": 3,
+      "childLinks": [
+        "#static-ip-detail-pending",
+        "#idc-ip-detail-pending",
+        "#dynamic-ip-detail-pending"
+      ],
+      "currentProducts": [
+        {
+          "href": "./products.html",
+          "current": "page"
+        },
+        {
+          "href": "./products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products / Cross-border Network Services",
+      "footerHasRelationship": true,
+      "hasFakeForm": false,
+      "scaffold": true
+    },
+    "mobileNavOpen": true,
+    "referenceDesktopSignals": {
+      "title": "Cross-border Network Services | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "networkServiceCount": 0,
+      "childLinks": [],
+      "currentProducts": [
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        },
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products / Cross-border Network Services",
+      "footerHasRelationship": false,
+      "hasFakeForm": false,
+      "scaffold": false
+    },
+    "referenceMobileSignals": {
+      "title": "Cross-border Network Services | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "networkServiceCount": 0,
+      "childLinks": [],
+      "currentProducts": [
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        },
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products / Cross-border Network Services",
+      "footerHasRelationship": false,
+      "hasFakeForm": false,
+      "scaffold": false
+    },
+    "productsNetToNetwork": true,
+    "productsCurrentOnNetwork": true,
+    "breadcrumbProductsWorks": true,
+    "breadcrumbHomeWorks": true,
+    "inPageAnchorWorks": true,
+    "backToProductsWorks": true,
+    "languageZhKeepsNetworkContext": true,
+    "supportPanelOpens": true,
+    "noConsoleErrors": true,
+    "noBrokenImages": true,
+    "noHorizontalOverflow": true,
+    "childLinksSamePage": true,
+    "threeNetworkServices": true,
+    "footerRelationshipExact": true,
+    "noFakeForm": true
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "e2e": [
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Three-level breadcrumb Home / Products / Cross-border Network Services and Products current state verified."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "EN network page zh switcher opened dist/跨境网络服务.html."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "Breadcrumb text: Home / Products / Cross-border Network Services"
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Footer relationship statement checked exactly."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "NET reaches page; child links: #static-ip-detail-pending, #idc-ip-detail-pending, #dynamic-ip-detail-pending"
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "Desktop/mobile overflow, broken image and console checks completed."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "This issue adds the EN network services page only; zh network page exists and RU target remains RU home by scope."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N-A",
+      "evidence": "Three IP child detail pages are out of Issue #26 scope; child links intentionally stay as same-page pending anchors."
+    }
+  ]
+}
