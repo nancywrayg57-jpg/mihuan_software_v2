@@ -1,0 +1,262 @@
+{
+  "generatedAt": "2026-07-24T02:21:12.337Z",
+  "browser": "Google Chrome via Playwright",
+  "viewportEvidence": [
+    "about-desktop.png",
+    "about-mobile.png",
+    "about-mobile-nav.png",
+    "ui-reference-about-desktop.png",
+    "ui-reference-about-mobile.png"
+  ],
+  "results": [
+    {
+      "name": "about-desktop.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "name": "about-desktop.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "about-desktop.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "about-mobile.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "name": "about-mobile.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "about-mobile.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "mobile navigation opens on about page",
+      "passed": true,
+      "details": {
+        "expanded": "true",
+        "navOpen": true
+      }
+    },
+    {
+      "name": "about-mobile-nav.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "name": "about-mobile-nav.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "about-mobile-nav.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "ui-reference-about-desktop.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "name": "ui-reference-about-desktop.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "ui-reference-about-desktop.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "ui-reference-about-mobile.png: no horizontal overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "name": "ui-reference-about-mobile.png: zero broken images",
+      "passed": true,
+      "details": {
+        "brokenCount": 0,
+        "broken": []
+      }
+    },
+    {
+      "name": "ui-reference-about-mobile.png: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "about page structure and current nav highlight",
+      "passed": true,
+      "details": {
+        "currentLinks": 2,
+        "sectionCount": 5,
+        "relationshipCount": 4,
+        "contactPlaceholders": true,
+        "hasForm": false
+      }
+    },
+    {
+      "name": "floating support opens on about page",
+      "passed": true,
+      "details": {
+        "expanded": "true",
+        "open": true
+      }
+    },
+    {
+      "name": "about breadcrumb returns to home",
+      "passed": true,
+      "details": {
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/index.html"
+      }
+    },
+    {
+      "name": "about page interactions no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "homepage nav reaches about",
+      "passed": true,
+      "details": {
+        "from": "index.html",
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/about.html"
+      }
+    },
+    {
+      "name": "homepage nav reaches about: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "products nav reaches about",
+      "passed": true,
+      "details": {
+        "from": "products.html",
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/about.html"
+      }
+    },
+    {
+      "name": "products nav reaches about: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "network services nav reaches about",
+      "passed": true,
+      "details": {
+        "from": "跨境网络服务.html",
+        "url": "file:///D:/workspace/mihuan_software_v2/site/dist/about.html"
+      }
+    },
+    {
+      "name": "network services nav reaches about: no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    },
+    {
+      "name": "UI about reference loaded for comparison",
+      "passed": true,
+      "details": {
+        "hasHeader": true,
+        "hasMobileNav": true,
+        "hasFooter": true,
+        "hasServiceFloat": true,
+        "hasAboutContent": true
+      }
+    },
+    {
+      "name": "UI about reference no console or page errors",
+      "passed": true,
+      "details": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": []
+      }
+    }
+  ]
+}

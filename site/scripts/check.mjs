@@ -7,8 +7,9 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "en/index.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "en/index.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html"]);
 
 const voidElements = new Set([
   "area",
@@ -308,6 +309,92 @@ function validateNetworkServicesPage(html) {
   return errors;
 }
 
+function validateAboutNavigation(html, relativePath) {
+  const errors = [];
+  const isAboutPage = relativePath === "about.html";
+  const expectedLink = isAboutPage
+    ? /<a class=["']nav-link["'] href=["']\.\/about\.html["'] aria-current=["']page["']>关于我们<\/a>/g
+    : /<a class=["']nav-link["'] href=["']\.\/about\.html["']>关于我们<\/a>/g;
+  const aboutLinks = html.match(expectedLink) || [];
+
+  if (aboutLinks.length !== 2) {
+    errors.push(`${relativePath} must render desktop and mobile 关于我们 nav links to ./about.html; found ${aboutLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>关于我们<\/a>/i.test(html)) {
+    errors.push(`${relativePath} must not keep 关于我们 as a placeholder nav link.`);
+  }
+
+  return errors;
+}
+
+function validateAboutPage(html) {
+  const errors = [];
+  const relationship = "蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体";
+
+  for (const marker of [
+    "关于我们",
+    "品牌介绍",
+    "品牌定位与形象展示",
+    "企业背景介绍",
+    "公司主体说明",
+    "联系我们",
+    "品牌名称",
+    "品牌愿景",
+    "核心定位",
+    relationship,
+    "企业邮箱：待配置",
+    "客服路径：待配置",
+    "线下联系信息：待配置",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing about page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "about-hero",
+    "about-brand",
+    "about-positioning",
+    "about-background",
+    "about-entity",
+    "about-contact"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing about page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("About page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">首页</a>') || !html.includes('aria-current="page">关于我们</span>')) {
+    errors.push("About page breadcrumb must be 首页 / 关于我们 with a working home link.");
+  }
+
+  if (!html.includes('href="./about.html" aria-current="page">关于我们</a>')) {
+    errors.push("About page header must mark 关于我们 as current.");
+  }
+
+  for (const languagePath of ['href="./about.html"', 'href="./en/index.html"', 'href="./ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`About page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  if (/<form[\s>]/i.test(html)) {
+    errors.push("About page must not include a fake contact form.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
+    errors.push("About page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
 async function validateBuiltHtml(relativePath) {
   const htmlPath = resolve(distDir, relativePath);
   const htmlStats = await stat(htmlPath).catch(() => null);
@@ -348,6 +435,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push("Home pages must not render breadcrumb markup.");
   }
 
+  if (zhHtmlPaths.has(relativePath)) {
+    htmlErrors.push(...validateAboutNavigation(html, relativePath));
+  }
+
   for (const forbiddenPattern of [
     /zennolabchina/i,
     /48151650/,
@@ -371,6 +462,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "跨境网络服务.html") {
     htmlErrors.push(...validateNetworkServicesPage(html));
+  }
+
+  if (relativePath === "about.html") {
+    htmlErrors.push(...validateAboutPage(html));
   }
 
   if (htmlErrors.length > 0) {
