@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -225,6 +225,11 @@ function validateEnglishHome(html) {
     errors.push("English home header must mark Home as the current real page.");
   }
 
+  const productsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/products\.html["']>Products<\/a>/g) || [];
+  if (productsNavLinks.length !== 2) {
+    errors.push(`English home Products navigation must point to ./products.html on desktop and mobile; found ${productsNavLinks.length}.`);
+  }
+
   for (const languagePath of ['href="../index.html"', 'href="./index.html" aria-current="true"', 'href="../ru/index.html"']) {
     if (!html.includes(languagePath)) {
       errors.push(`English home language switcher missing ${languagePath}.`);
@@ -251,7 +256,7 @@ function validateEnglishHome(html) {
     errors.push(`English product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
-  if (/href=["'][^"']*(products|Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network)[^#"']*\.html/i.test(html)) {
     errors.push("English home must not link to nonexistent English product or service detail pages.");
   }
 
@@ -261,6 +266,140 @@ function validateEnglishHome(html) {
 
   if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
     errors.push("English home contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateEnglishProducts(html) {
+  const errors = [];
+  const expectedTitle = "Products | Honey Badger";
+  const expectedDescription = "Learn about Honey Badger Digital Agriculture Integrated Management System, Honey Badger Original Image, AI-FDE VibeCoding Training, social commerce private domain coaching and cross-border network services.";
+  const expectedFooterRelationship = "Honey Badger is ZennoLab's operating entity in China.";
+
+  if (!/<html\s+lang=["']en-US["']/i.test(html)) {
+    errors.push('English products page must render <html lang="en-US">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("English products page meta title must match the SSOT exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("English products page meta description must match the SSOT exactly.");
+  }
+
+  for (const marker of [
+    "Honey Badger Products &amp; Services Introduction",
+    "Providing practical product and service solutions around digital agriculture, cross-border e-commerce image originality, AI natural language development training, overseas social private domain operations and cross-border network services.",
+    "Product &amp; Service Scope",
+    "Digital Agriculture Integrated Management System",
+    "Full-chain smart agriculture control platform, IoT + AI for digital production, supervision and traceability management",
+    "Honey Badger Original Image",
+    "Cross-border AI image originality tool, batch processing of product images, duplicate-check avoidance, compatible with all overseas e-commerce platforms",
+    "AI-FDE VibeCoding Training",
+    "Cutting-edge AI natural language development practical training, hands-on delivery of commercial AI system projects",
+    "Social Commerce Private Domain Coaching",
+    "TikTok/FB/INS full-domain operation coaching, full-process practical guidance from traffic acquisition to private domain conversion",
+    "Cross-border Network Services",
+    "Combines static residential IP, datacenter IP and dynamic IP services for stable account environments, high-concurrency exits and rotating residential IP pools",
+    "English product detail pages are pending; all product entries stay on same-page anchors in this S3 first round.",
+    "The merged English network page is pending; the NET entry also uses the same-page pending anchor instead of linking to an unbuilt page.",
+    "Core Capabilities",
+    "Industrial Digital Control",
+    "Integrating IoT, big data and AI to bring production, supervision, warehousing and traceability into a unified management chain",
+    "Cross-border Image Originality",
+    "Batch reconstruction of original product images, retaining core details and adapting to main image and scene image requirements of overseas e-commerce platforms",
+    "AI Development Capability Building",
+    "Centered on the Vibe Coding natural language development paradigm, training teams to build commercial AI systems from scratch",
+    "Overseas Private Domain Growth",
+    "Connecting the traffic acquisition, retention, conversion and review processes of TikTok, Facebook and Instagram",
+    "Combines static residential IP, datacenter IP and dynamic IP under one service entry for stable accounts, high concurrency and rotating access scenarios",
+    "Four-Step Service Implementation Path",
+    "Confirm business objectives, scenario boundaries and delivery scope",
+    "Select the corresponding product or coaching service solution",
+    "Establish pilot processes, materials or system prototypes",
+    "Complete training, delivery, review and continuous iteration",
+    "Contact and Support Entry",
+    "Corporate email: To be configured",
+    "Support accounts: To be configured",
+    "ICP filing information: To be configured",
+    "Copyright information: To be configured",
+    expectedFooterRelationship,
+    "Support Placeholder",
+    "To be configured"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing English products page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "products-hero",
+    "product-overview",
+    "products-capabilities",
+    "service-path",
+    "products-consult"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing English products page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("English products page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Home</a>') || !html.includes('aria-current="page">Products</span>')) {
+    errors.push("English products page breadcrumb must be Home / Products with a working home link.");
+  }
+
+  if (!html.includes('href="./products.html" aria-current="page">Products</a>')) {
+    errors.push("English products page header must mark Products as current.");
+  }
+
+  for (const languagePath of ['href="../products.html"', 'href="./products.html" aria-current="true"', 'href="../ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`English products page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const productEntries = html.match(/data-product-entry=/g) || [];
+  if (productEntries.length !== 5) {
+    errors.push(`English products page must render exactly 5 top-level product entries; found ${productEntries.length}.`);
+  }
+
+  const regularEntries = html.match(/data-product-entry="regular"/g) || [];
+  if (regularEntries.length !== 4) {
+    errors.push(`English products page must render 4 regular product/service entries; found ${regularEntries.length}.`);
+  }
+
+  const networkEntries = html.match(/data-product-entry="network"/g) || [];
+  if (networkEntries.length !== 1) {
+    errors.push(`English products page must render 1 network-services entry; found ${networkEntries.length}.`);
+  }
+
+  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
+  if (pendingProductLinks.length !== 5) {
+    errors.push(`English products page product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending");
+  if (externalDetailLinks.length > 0) {
+    errors.push(`English products page detail links must stay on #en-product-detail-pending; found ${externalDetailLinks.join(", ")}.`);
+  }
+
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|跨境网络服务)[^#"']*\.html/i.test(html)) {
+    errors.push("English products page must not link to nonexistent product or network-service detail pages.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("English products page must not include a fake contact form.");
+  }
+
+  if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
+    errors.push("English products page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -979,6 +1118,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "en/index.html") {
     htmlErrors.push(...validateEnglishHome(html));
+  }
+
+  if (relativePath === "en/products.html") {
+    htmlErrors.push(...validateEnglishProducts(html));
   }
 
   if (relativePath === "ru/index.html") {
