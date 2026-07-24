@@ -7,9 +7,9 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "en/index.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
 const voidElements = new Set([
   "area",
@@ -347,6 +347,25 @@ function validateNewsNavigation(html, relativePath) {
   return errors;
 }
 
+function validateCareersNavigation(html, relativePath) {
+  const errors = [];
+  const isCareersPage = relativePath === "careers.html";
+  const expectedLink = isCareersPage
+    ? /<a class=["']nav-link["'] href=["']\.\/careers\.html["'] aria-current=["']page["']>人才招聘<\/a>/g
+    : /<a class=["']nav-link["'] href=["']\.\/careers\.html["']>人才招聘<\/a>/g;
+  const careersLinks = html.match(expectedLink) || [];
+
+  if (careersLinks.length !== 2) {
+    errors.push(`${relativePath} must render desktop and mobile 人才招聘 nav links to ./careers.html; found ${careersLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>人才招聘<\/a>/i.test(html)) {
+    errors.push(`${relativePath} must not keep 人才招聘 as a placeholder nav link.`);
+  }
+
+  return errors;
+}
+
 function validateAboutPage(html) {
   const errors = [];
   const relationship = "蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体";
@@ -518,6 +537,137 @@ function validateNewsPage(html) {
   return errors;
 }
 
+function validateCareersPage(html) {
+  const errors = [];
+  const jobEntries = [
+    ["跨境运营专员", "TikTok/FB/INS 内容运营与私域转化"],
+    ["前端开发工程师", "官网与产品后台开发，探索 AI 辅助开发"],
+    ["客户成功经理", "企业客户对接与服务，增购与生命周期管理"],
+    ["AI 培训讲师助理", "课程素材准备、学员答疑、社群运营"]
+  ];
+
+  for (const marker of [
+    "人才招聘",
+    "加入蜜獾，一起做有价值的事",
+    "年轻高效的团队，专注将全球领先的自动化技术与 AI 能力带给中国客户。",
+    "为什么加入",
+    "赛道前景广阔",
+    "扁平化管理",
+    "技术驱动氛围",
+    "有竞争力的薪酬",
+    "福利待遇",
+    "五险一金 + 商保",
+    "弹性工作制",
+    "团建节日福利",
+    "年度体检",
+    "带薪年假",
+    "学习培训预算",
+    "在招岗位",
+    "工作地点",
+    "岗位类型",
+    "待配置",
+    "岗位详情待接入",
+    "招聘流程",
+    "简历投递",
+    "初筛沟通",
+    "业务面试",
+    "终面 / Offer",
+    "投递与联系",
+    "企业邮箱：待配置",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing careers page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "careers-hero",
+    "careers-why",
+    "careers-benefits",
+    "careers-jobs",
+    "careers-process",
+    "careers-apply",
+    "career-detail-pending"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing careers page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Careers page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">首页</a>') || !html.includes('aria-current="page">人才招聘</span>')) {
+    errors.push("Careers page breadcrumb must be 首页 / 人才招聘 with a working home link.");
+  }
+
+  if (!html.includes('href="./careers.html" aria-current="page">人才招聘</a>')) {
+    errors.push("Careers page header must mark 人才招聘 as current.");
+  }
+
+  for (const languagePath of ['href="./careers.html"', 'href="./en/index.html"', 'href="./ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Careers page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const jobMarkers = html.match(/data-career-job=/g) || [];
+  if (jobMarkers.length !== 4) {
+    errors.push(`Careers page must render exactly 4 job entries; found ${jobMarkers.length}.`);
+  }
+
+  for (const [title, summary] of jobEntries) {
+    if (!html.includes(title) || !html.includes(summary)) {
+      errors.push(`Missing careers job title/summary: ${title} / ${summary}.`);
+    }
+  }
+
+  const benefitMarkers = html.match(/data-career-benefit=/g) || [];
+  if (benefitMarkers.length !== 6) {
+    errors.push(`Careers page must render exactly 6 benefit entries; found ${benefitMarkers.length}.`);
+  }
+
+  const locationPlaceholders = html.match(/data-career-location=["']待配置["']/g) || [];
+  const typePlaceholders = html.match(/data-career-type=["']待配置["']/g) || [];
+  if (locationPlaceholders.length !== 4 || typePlaceholders.length !== 4) {
+    errors.push(`Careers job cards must keep location/type as 待配置; found ${locationPlaceholders.length} locations and ${typePlaceholders.length} types.`);
+  }
+
+  const detailLinks = html.match(/<a class=["']link-more["'] href=["']#career-detail-pending["']>岗位详情待接入<\/a>/g) || [];
+  if (detailLinks.length !== 4) {
+    errors.push(`Careers job detail links must stay as same-page placeholders; found ${detailLinks.length}.`);
+  }
+
+  const processMarkers = html.match(/data-career-process=/g) || [];
+  if (processMarkers.length !== 4) {
+    errors.push(`Careers page must render exactly 4 process steps; found ${processMarkers.length}.`);
+  }
+
+  if (/href=["'][^"']*career-detail[^#"']*\.html|href=["'][^"']*jobs\/[^#"']+/i.test(html)) {
+    errors.push("Careers page must not link to nonexistent job detail pages.");
+  }
+
+  if (/<form[\s>]/i.test(html)) {
+    errors.push("Careers page must not include a fake application form.");
+  }
+
+  if (/<button[\s>]/i.test(html) && !/class=["']menu-button["']|class=["']support-close["']|class=["']support-toggle["']/.test(html)) {
+    errors.push("Careers page must not include fake recruiting interaction buttons.");
+  }
+
+  if (/立即投递|提交成功|上传简历|在线表单|薪资|广州|全职|社招|校招|实习|人力资源电话|HR 电话/i.test(html)) {
+    errors.push("Careers page contains unconfirmed recruiting facts or fake application wording.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
+    errors.push("Careers page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
 async function validateBuiltHtml(relativePath) {
   const htmlPath = resolve(distDir, relativePath);
   const htmlStats = await stat(htmlPath).catch(() => null);
@@ -561,6 +711,7 @@ async function validateBuiltHtml(relativePath) {
   if (zhHtmlPaths.has(relativePath)) {
     htmlErrors.push(...validateAboutNavigation(html, relativePath));
     htmlErrors.push(...validateNewsNavigation(html, relativePath));
+    htmlErrors.push(...validateCareersNavigation(html, relativePath));
   }
 
   for (const forbiddenPattern of [
@@ -594,6 +745,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "news.html") {
     htmlErrors.push(...validateNewsPage(html));
+  }
+
+  if (relativePath === "careers.html") {
+    htmlErrors.push(...validateCareersPage(html));
   }
 
   if (htmlErrors.length > 0) {

@@ -1981,6 +1981,240 @@ h3 {
   color: var(--muted);
 }
 
+.careers-page .breadcrumb {
+  border-bottom-color: var(--border);
+  background: #fbfcff;
+}
+
+.careers-hero-grid,
+.careers-process-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.careers-visual {
+  margin: 0;
+}
+
+.careers-visual-map {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 12%);
+  box-shadow: var(--shadow);
+}
+
+.career-why-grid,
+.career-benefit-grid,
+.careers-jobs-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.career-why-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.career-benefit-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.careers-jobs-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.career-why-card,
+.career-benefit-card,
+.career-job-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 10px 26px rgb(19 34 56 / 6%);
+}
+
+.career-why-card {
+  min-height: 232px;
+  padding: 22px;
+}
+
+.career-why-card span,
+.career-job-head span {
+  display: inline-grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.career-why-card span {
+  width: 38px;
+  height: 38px;
+}
+
+.career-why-card:nth-child(2) span,
+.career-job-card:nth-child(2) .career-job-head span {
+  background: var(--green);
+}
+
+.career-why-card:nth-child(3) span,
+.career-job-card:nth-child(3) .career-job-head span {
+  background: var(--purple);
+}
+
+.career-why-card:nth-child(4) span,
+.career-job-card:nth-child(4) .career-job-head span {
+  background: var(--cyan);
+}
+
+.career-why-card h3 {
+  margin-top: 18px;
+}
+
+.career-why-card p {
+  color: var(--muted);
+}
+
+.career-benefit-card {
+  display: grid;
+  gap: 8px;
+  min-height: 118px;
+  padding: 20px;
+}
+
+.career-benefit-card strong {
+  color: var(--text);
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.career-benefit-card span {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.career-job-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 22px;
+}
+
+.career-job-head {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.career-job-head span {
+  width: 52px;
+  height: 52px;
+}
+
+.career-job-head h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.career-job-card p {
+  margin: 16px 0 0;
+  color: var(--text-body);
+  font-weight: 800;
+}
+
+.career-job-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.career-job-meta div {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 12px;
+}
+
+.career-job-meta dt,
+.career-job-meta dd {
+  margin: 0;
+}
+
+.career-job-meta dt {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.career-job-meta dd {
+  margin-top: 4px;
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.career-job-card .link-more {
+  margin-top: auto;
+}
+
+.career-process-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: career-step;
+}
+
+.career-process-list li {
+  position: relative;
+  min-height: 132px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  padding: 58px 18px 18px;
+  box-shadow: 0 10px 26px rgb(19 34 56 / 6%);
+  counter-increment: career-step;
+}
+
+.career-process-list li::before {
+  content: counter(career-step, decimal-leading-zero);
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.career-process-list strong {
+  display: block;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.careers-apply-card {
+  min-height: 292px;
+}
+
 @media (max-width: 1100px) {
   .home-hero-grid,
   .relation-grid,
@@ -1991,7 +2225,9 @@ h3 {
   .about-position-grid,
   .about-background-grid,
   .about-entity-grid,
-  .news-hero-grid {
+  .news-hero-grid,
+  .careers-hero-grid,
+  .careers-process-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1999,7 +2235,9 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .about-card-grid {
+  .about-card-grid,
+  .career-why-grid,
+  .career-benefit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2008,7 +2246,8 @@ h3 {
   }
 
   .news-list-grid,
-  .news-card {
+  .news-card,
+  .careers-jobs-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2059,7 +2298,12 @@ h3 {
   .capability-grid,
   .network-advantage-grid,
   .service-path-list,
-  .dashboard-body {
+  .dashboard-body,
+  .career-why-grid,
+  .career-benefit-grid,
+  .careers-jobs-grid,
+  .career-job-meta,
+  .career-process-list {
     grid-template-columns: 1fr;
   }
 

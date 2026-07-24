@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-07-24T03:41:21.023Z",
+  "chromeExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "pages": {
+    "careers-desktop": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "horizontalOverflow": false,
+      "brokenImages": []
+    },
+    "nav-index.html": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "nav-products.html": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "nav-跨境网络服务.html": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "nav-about.html": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "nav-news.html": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "ui-reference-careers-desktop": {
+      "consoleErrors": [],
+      "pageErrors": []
+    },
+    "careers-mobile": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "horizontalOverflow": false,
+      "brokenImages": []
+    },
+    "ui-reference-careers-mobile": {
+      "consoleErrors": [],
+      "pageErrors": []
+    }
+  },
+  "screenshots": [
+    "docs/review-artifacts/issue-18/careers-desktop.png",
+    "docs/review-artifacts/issue-18/ui-reference-careers-desktop.png",
+    "docs/review-artifacts/issue-18/careers-mobile.png",
+    "docs/review-artifacts/issue-18/careers-mobile-nav.png",
+    "docs/review-artifacts/issue-18/ui-reference-careers-mobile.png"
+  ],
+  "assertions": [
+    {
+      "name": "careers-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "scrollWidth=1440, viewport=1440"
+    },
+    {
+      "name": "careers-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "0 broken image(s)"
+    },
+    {
+      "name": "careers hero title",
+      "status": "PASS",
+      "details": "加入蜜獾，一起做有价值的事"
+    },
+    {
+      "name": "careers breadcrumb home/current",
+      "status": "PASS",
+      "details": "{\"title\":\"加入蜜獾，一起做有价值的事\",\"breadcrumbHome\":\"首页\",\"breadcrumbCurrent\":\"人才招聘\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"process\":4,\"fakeForms\":0}"
+    },
+    {
+      "name": "careers desktop+mobile current nav markers",
+      "status": "PASS",
+      "details": "count=2"
+    },
+    {
+      "name": "careers required counts",
+      "status": "PASS",
+      "details": "{\"title\":\"加入蜜獾，一起做有价值的事\",\"breadcrumbHome\":\"首页\",\"breadcrumbCurrent\":\"人才招聘\",\"currentNavCount\":2,\"jobs\":4,\"benefits\":6,\"process\":4,\"fakeForms\":0}"
+    },
+    {
+      "name": "careers no form",
+      "status": "PASS",
+      "details": "form count=0"
+    },
+    {
+      "name": "careers support float opens",
+      "status": "PASS",
+      "details": "supportOpen=true"
+    },
+    {
+      "name": "careers breadcrumb navigates home",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/index.html"
+    },
+    {
+      "name": "index.html: desktop nav has careers link",
+      "status": "PASS",
+      "details": "count=1"
+    },
+    {
+      "name": "index.html: desktop nav reaches careers",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/careers.html"
+    },
+    {
+      "name": "products.html: desktop nav has careers link",
+      "status": "PASS",
+      "details": "count=1"
+    },
+    {
+      "name": "products.html: desktop nav reaches careers",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/careers.html"
+    },
+    {
+      "name": "跨境网络服务.html: desktop nav has careers link",
+      "status": "PASS",
+      "details": "count=1"
+    },
+    {
+      "name": "跨境网络服务.html: desktop nav reaches careers",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/careers.html"
+    },
+    {
+      "name": "about.html: desktop nav has careers link",
+      "status": "PASS",
+      "details": "count=1"
+    },
+    {
+      "name": "about.html: desktop nav reaches careers",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/careers.html"
+    },
+    {
+      "name": "news.html: desktop nav has careers link",
+      "status": "PASS",
+      "details": "count=1"
+    },
+    {
+      "name": "news.html: desktop nav reaches careers",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/careers.html"
+    },
+    {
+      "name": "careers-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "scrollWidth=390, viewport=390"
+    },
+    {
+      "name": "careers-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "0 broken image(s)"
+    },
+    {
+      "name": "careers mobile nav opens",
+      "status": "PASS",
+      "details": "mobileNavOpen=true"
+    },
+    {
+      "name": "careers-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "nav-index.html: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "nav-products.html: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "nav-跨境网络服务.html: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "nav-about.html: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "nav-news.html: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "ui-reference-careers-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "careers-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    },
+    {
+      "name": "ui-reference-careers-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "{\"consoleErrors\":[],\"pageErrors\":[]}"
+    }
+  ],
+  "e2eChecklist": [
+    {
+      "id": "CAREER-001",
+      "status": "PASS",
+      "evidence": "Hero title, lead, breadcrumb, and careers current nav were asserted on dist/careers.html."
+    },
+    {
+      "id": "CAREER-002",
+      "status": "PASS",
+      "evidence": "4 job cards and 6 benefit entries were asserted in DOM."
+    },
+    {
+      "id": "CAREER-003",
+      "status": "N/A",
+      "evidence": "Job detail responsibilities/requirements are SSOT-missing and intentionally deferred; same-page placeholder anchors only."
+    },
+    {
+      "id": "CAREER-004",
+      "status": "N/A",
+      "evidence": "Application submission path is a structure placeholder; no form or fake success state is present."
+    },
+    {
+      "id": "CAREER-005",
+      "status": "PASS",
+      "evidence": "Four process steps were asserted in DOM."
+    },
+    {
+      "id": "CAREER-006",
+      "status": "PASS",
+      "evidence": "Support float was opened and aria-expanded became true."
+    },
+    {
+      "id": "NAV-002",
+      "status": "PASS",
+      "evidence": "Five zh pages desktop nav links were clicked and reached dist/careers.html."
+    },
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Mobile nav opened on dist/careers.html and current careers item was present from static nav assertion."
+    }
+  ],
+  "status": "PASS"
+}
