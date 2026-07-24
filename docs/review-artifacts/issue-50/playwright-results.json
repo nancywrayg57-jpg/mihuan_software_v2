@@ -1,0 +1,4009 @@
+{
+  "issue": 50,
+  "startedAt": "2026-07-24T13:40:11.364Z",
+  "completedAt": "2026-07-24T13:40:58.748Z",
+  "nodeVersion": "v24.14.0",
+  "npmVersion": null,
+  "npmAvailable": false,
+  "baseUrl": "http://127.0.0.1:63158",
+  "summary": {
+    "totalChecks": 54,
+    "pass": true,
+    "failures": [],
+    "consoleErrorCount": 0,
+    "pageErrorCount": 0,
+    "failedRequestCount": 0,
+    "badResponseCount": 0,
+    "brokenImageCount": 0,
+    "home010": true,
+    "lang008": true
+  },
+  "comparisons": [
+    {
+      "key": "zh-home",
+      "viewport": "desktop-1440x900",
+      "production": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-home.png",
+      "uiReference": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\ui-desktop-1440x900-zh-home.png",
+      "comparison": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\compare-desktop-1440x900-zh-home.png"
+    },
+    {
+      "key": "zh-products",
+      "viewport": "desktop-1440x900",
+      "production": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-products.png",
+      "uiReference": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\ui-desktop-1440x900-zh-products.png",
+      "comparison": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\compare-desktop-1440x900-zh-products.png"
+    },
+    {
+      "key": "zh-network",
+      "viewport": "desktop-1440x900",
+      "production": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-network.png",
+      "uiReference": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\ui-desktop-1440x900-zh-network.png",
+      "comparison": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\compare-desktop-1440x900-zh-network.png"
+    },
+    {
+      "key": "zh-about",
+      "viewport": "desktop-1440x900",
+      "production": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-about.png",
+      "uiReference": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\ui-desktop-1440x900-zh-about.png",
+      "comparison": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\compare-desktop-1440x900-zh-about.png"
+    },
+    {
+      "key": "en-home",
+      "viewport": "desktop-1440x900",
+      "production": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-en-home.png",
+      "uiReference": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\ui-desktop-1440x900-en-home.png",
+      "comparison": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\compare-desktop-1440x900-en-home.png"
+    },
+    {
+      "key": "ru-home",
+      "viewport": "desktop-1440x900",
+      "production": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-ru-home.png",
+      "uiReference": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\ui-desktop-1440x900-ru-home.png",
+      "comparison": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\compare-desktop-1440x900-ru-home.png"
+    }
+  ],
+  "results": [
+    {
+      "key": "zh-home",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/index.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-home.png",
+      "state": {
+        "title": "蜜獾软件 | ZennoLab 中国运营实体",
+        "lang": "zh-CN",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1314,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 668.5625,
+          "bottom": 716.5625,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 280.828125,
+          "bottom": 336.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./index.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-products",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/products.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-products.png",
+      "state": {
+        "title": "产品介绍 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1314,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 565.859375,
+          "bottom": 613.859375,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 349.65625,
+          "bottom": 405.8125,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./products.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-network",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-network.png",
+      "state": {
+        "title": "跨境网络服务 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1314,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 614.578125,
+          "bottom": 662.578125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 391.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-about",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/about.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-about.png",
+      "state": {
+        "title": "关于我们 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1314,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 658.328125,
+          "bottom": 706.328125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 391.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./about.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-news",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/news.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-news.png",
+      "state": {
+        "title": "新闻资讯 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1314,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 552.03125,
+          "bottom": 600.03125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 391.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./news.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-careers",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/careers.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-zh-careers.png",
+      "state": {
+        "title": "人才招聘 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1314,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 576.6875,
+          "bottom": 624.6875,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 448.140625,
+          "width": 604.796875,
+          "height": 112.3125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./careers.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-home",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/en/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/index.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-en-home.png",
+      "state": {
+        "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+        "lang": "en-US",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1280.28125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 712.03125,
+          "bottom": 760.03125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 280.828125,
+          "bottom": 393.140625,
+          "width": 604.796875,
+          "height": 112.3125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../index.html",
+            "current": null
+          },
+          {
+            "href": "./index.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-products",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/en/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Products | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1280.28125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 758.390625,
+          "bottom": 806.390625,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 504.296875,
+          "width": 604.796875,
+          "height": 168.46875
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../products.html",
+            "current": null
+          },
+          {
+            "href": "./products.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-network",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/en/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Cross-border Network Services | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1280.28125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 796.28125,
+          "bottom": 844.28125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 448.140625,
+          "width": 604.796875,
+          "height": 112.3125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-about",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/en/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "About Us | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1280.28125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 777.171875,
+          "bottom": 825.171875,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 391.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../about.html",
+            "current": null
+          },
+          {
+            "href": "./about.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-news",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/en/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "News | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1280.28125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 614.578125,
+          "bottom": 662.578125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 391.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../news.html",
+            "current": null
+          },
+          {
+            "href": "./news.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-careers",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/en/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Careers | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1280.28125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 664.34375,
+          "bottom": 712.34375,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 504.296875,
+          "width": 604.796875,
+          "height": 168.46875
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../careers.html",
+            "current": null
+          },
+          {
+            "href": "./careers.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-home",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/ru/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/index.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-desktop-1440x900-ru-home.png",
+      "state": {
+        "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+        "lang": "ru-RU",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1248.03125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 775.921875,
+          "bottom": 885.921875,
+          "width": 604.796875,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 280.828125,
+          "bottom": 393.140625,
+          "width": 604.796875,
+          "height": 112.3125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../index.html",
+            "current": null
+          },
+          {
+            "href": "../en/index.html",
+            "current": null
+          },
+          {
+            "href": "./index.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-products",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/ru/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Продукты | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1248.03125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 733.734375,
+          "bottom": 781.734375,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 448.140625,
+          "width": 604.796875,
+          "height": 112.3125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../products.html",
+            "current": null
+          },
+          {
+            "href": "../en/products.html",
+            "current": null
+          },
+          {
+            "href": "./products.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-network",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/ru/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1248.03125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 858.828125,
+          "bottom": 906.828125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 448.140625,
+          "width": 604.796875,
+          "height": 112.3125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "../en/跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-about",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/ru/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "О нас | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1248.03125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 896.015625,
+          "bottom": 944.015625,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 391.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../about.html",
+            "current": null
+          },
+          {
+            "href": "../en/about.html",
+            "current": null
+          },
+          {
+            "href": "./about.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-news",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/ru/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Новости | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1248.03125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 677.125,
+          "bottom": 725.125,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 391.984375,
+          "width": 604.796875,
+          "height": 56.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../news.html",
+            "current": null
+          },
+          {
+            "href": "../en/news.html",
+            "current": null
+          },
+          {
+            "href": "./news.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-careers",
+      "viewport": "desktop-1440x900",
+      "path": "/site/dist/ru/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Карьера | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 1440,
+        "viewportWidth": 1440,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 1248.03125,
+          "right": 1416,
+          "top": 828,
+          "bottom": 876,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 752,
+          "bottom": 800,
+          "width": 604.796875,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 120,
+          "right": 724.796875,
+          "top": 335.828125,
+          "bottom": 560.453125,
+          "width": 604.796875,
+          "height": 224.625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../careers.html",
+            "current": null
+          },
+          {
+            "href": "../en/careers.html",
+            "current": null
+          },
+          {
+            "href": "./careers.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-home",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/index.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "蜜獾软件 | ZennoLab 中国运营实体",
+        "lang": "zh-CN",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 642,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 596.03125,
+          "bottom": 644.03125,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 280.828125,
+          "bottom": 328.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./index.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-products",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "产品介绍 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 642,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 543.390625,
+          "bottom": 591.390625,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 383.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./products.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-network",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "跨境网络服务 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 642,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 605.9375,
+          "bottom": 653.9375,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 383.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-about",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "关于我们 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 642,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 649.6875,
+          "bottom": 697.6875,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 383.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./about.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-news",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "新闻资讯 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 642,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 543.390625,
+          "bottom": 591.390625,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 383.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./news.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-careers",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "人才招聘 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 642,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 102,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 511.890625,
+          "bottom": 559.890625,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 383.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./careers.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-home",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/en/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/index.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+        "lang": "en-US",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 608.28125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 615.734375,
+          "bottom": 663.734375,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 280.828125,
+          "bottom": 328.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../index.html",
+            "current": null
+          },
+          {
+            "href": "./index.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-products",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/en/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Products | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 608.28125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 684.953125,
+          "bottom": 732.953125,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 430.859375,
+          "width": 704,
+          "height": 95.03125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../products.html",
+            "current": null
+          },
+          {
+            "href": "./products.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-network",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/en/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Cross-border Network Services | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 608.28125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 699.984375,
+          "bottom": 747.984375,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 383.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-about",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/en/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "About Us | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 608.28125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 768.53125,
+          "bottom": 816.53125,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 335.828125,
+          "bottom": 383.34375,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../about.html",
+            "current": null
+          },
+          {
+            "href": "./about.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-news",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/en/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "News | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 608.28125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 627.625,
+          "bottom": 675.625,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 357.515625,
+          "bottom": 405.03125,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../news.html",
+            "current": null
+          },
+          {
+            "href": "./news.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-careers",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/en/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Careers | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 608.28125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 135.71875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 612.59375,
+          "bottom": 660.59375,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 357.515625,
+          "bottom": 452.546875,
+          "width": 704,
+          "height": 95.03125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../careers.html",
+            "current": null
+          },
+          {
+            "href": "./careers.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-home",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/ru/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/index.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+        "lang": "ru-RU",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 576.03125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 701.3125,
+          "bottom": 749.3125,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 302.515625,
+          "bottom": 350.03125,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../index.html",
+            "current": null
+          },
+          {
+            "href": "../en/index.html",
+            "current": null
+          },
+          {
+            "href": "./index.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-products",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/ru/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Продукты | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 576.03125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 706.640625,
+          "bottom": 754.640625,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 357.515625,
+          "bottom": 452.546875,
+          "width": 704,
+          "height": 95.03125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../products.html",
+            "current": null
+          },
+          {
+            "href": "../en/products.html",
+            "current": null
+          },
+          {
+            "href": "./products.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-network",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/ru/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 576.03125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 831.734375,
+          "bottom": 879.734375,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 357.515625,
+          "bottom": 452.546875,
+          "width": 704,
+          "height": 95.03125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "../en/跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-about",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/ru/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "О нас | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 576.03125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 821.71875,
+          "bottom": 869.71875,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 357.515625,
+          "bottom": 405.03125,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../about.html",
+            "current": null
+          },
+          {
+            "href": "../en/about.html",
+            "current": null
+          },
+          {
+            "href": "./about.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-news",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/ru/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Новости | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 576.03125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 690.171875,
+          "bottom": 738.171875,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 357.515625,
+          "bottom": 405.03125,
+          "width": 704,
+          "height": 47.515625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../news.html",
+            "current": null
+          },
+          {
+            "href": "../en/news.html",
+            "current": null
+          },
+          {
+            "href": "./news.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-careers",
+      "viewport": "tablet-768x1024",
+      "path": "/site/dist/ru/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Карьера | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 768,
+        "viewportWidth": 768,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 576.03125,
+          "right": 744,
+          "top": 952,
+          "bottom": 1000,
+          "width": 167.96875,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 32,
+          "right": 736,
+          "top": 691.609375,
+          "bottom": 739.609375,
+          "width": 704,
+          "height": 48
+        },
+        "h1Rect": {
+          "left": 32,
+          "right": 736,
+          "top": 357.515625,
+          "bottom": 500.0625,
+          "width": 704,
+          "height": 142.546875
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../careers.html",
+            "current": null
+          },
+          {
+            "href": "../en/careers.html",
+            "current": null
+          },
+          {
+            "href": "./careers.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-home",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/index.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-mobile-390x844-zh-home.png",
+      "state": {
+        "title": "蜜獾软件 | ZennoLab 中国运营实体",
+        "lang": "zh-CN",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 642.375,
+          "bottom": 752.375,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 247.421875,
+          "bottom": 285.5,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./index.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-products",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "产品介绍 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 541.78125,
+          "bottom": 651.78125,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 340.5,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./products.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-network",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "跨境网络服务 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 623.421875,
+          "bottom": 733.421875,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 340.5,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-about",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "关于我们 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 643.734375,
+          "bottom": 753.734375,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 340.5,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./about.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-news",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "新闻资讯 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 541.78125,
+          "bottom": 651.78125,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 340.5,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./news.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "zh-careers",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "人才招聘 | Honey Badger",
+        "lang": "zh-CN",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 526.21875,
+          "bottom": 636.21875,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 378.578125,
+          "width": 358,
+          "height": 76.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "./careers.html",
+            "current": "true"
+          },
+          {
+            "href": "./en/index.html",
+            "current": null
+          },
+          {
+            "href": "./ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-home",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/en/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/index.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-mobile-390x844-en-home.png",
+      "state": {
+        "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+        "lang": "en-US",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 720.859375,
+          "bottom": 830.859375,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 247.421875,
+          "bottom": 323.578125,
+          "width": 358,
+          "height": 76.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../index.html",
+            "current": null
+          },
+          {
+            "href": "./index.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-products",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/en/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Products | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 701.9375,
+          "bottom": 811.9375,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 416.65625,
+          "width": 358,
+          "height": 114.234375
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../products.html",
+            "current": null
+          },
+          {
+            "href": "./products.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-network",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/en/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Cross-border Network Services | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 799.140625,
+          "bottom": 909.140625,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 378.578125,
+          "width": 358,
+          "height": 76.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-about",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/en/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "About Us | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 856.609375,
+          "bottom": 966.609375,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 340.5,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../about.html",
+            "current": null
+          },
+          {
+            "href": "./about.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-news",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/en/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "News | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 623.421875,
+          "bottom": 733.421875,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 302.421875,
+          "bottom": 340.5,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../news.html",
+            "current": null
+          },
+          {
+            "href": "./news.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "en-careers",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/en/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/en/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Careers | Honey Badger",
+        "lang": "en-US",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 640.4375,
+          "bottom": 750.4375,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 322.5625,
+          "bottom": 436.796875,
+          "width": 358,
+          "height": 114.234375
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../careers.html",
+            "current": null
+          },
+          {
+            "href": "./careers.html",
+            "current": "true"
+          },
+          {
+            "href": "../ru/index.html",
+            "current": null
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-home",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/ru/index.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/index.html",
+      "screenshotPath": "D:\\workspace\\mihuan_software_v2\\docs\\review-artifacts\\issue-50\\prod-mobile-390x844-ru-home.png",
+      "state": {
+        "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+        "lang": "ru-RU",
+        "bodyPage": "home",
+        "selector": ".home-hero",
+        "expectedAsset": "hero-light-blue.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(120deg, rgba(0, 50, 118, 0.94), rgba(0, 90, 180, 0.78) 45%, rgba(42, 119, 212, 0.66)), url(\"http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/hero-light-blue.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 825,
+          "bottom": 938.59375,
+          "width": 294,
+          "height": 113.59375
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 267.5625,
+          "bottom": 343.71875,
+          "width": 358,
+          "height": 76.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../index.html",
+            "current": null
+          },
+          {
+            "href": "../en/index.html",
+            "current": null
+          },
+          {
+            "href": "./index.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-products",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/ru/products.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/products.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Продукты | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "products",
+        "selector": ".products-hero",
+        "expectedAsset": "stacked-waves-haikei_2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 59, 137, 0.94), rgba(0, 94, 204, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 778.078125,
+          "bottom": 891.671875,
+          "width": 294,
+          "height": 113.59375
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 322.5625,
+          "bottom": 436.796875,
+          "width": 358,
+          "height": 114.234375
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../products.html",
+            "current": null
+          },
+          {
+            "href": "../en/products.html",
+            "current": null
+          },
+          {
+            "href": "./products.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-network",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/ru/跨境网络服务.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "network-services",
+        "selector": ".network-services-hero",
+        "expectedAsset": "IP.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 48, 127, 0.95), rgba(75, 54, 180, 0.82)), url(\"http://127.0.0.1:63158/site/dist/assets/img/IP.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/IP.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 952.203125,
+          "bottom": 1065.796875,
+          "width": 294,
+          "height": 113.59375
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 322.5625,
+          "bottom": 398.71875,
+          "width": 358,
+          "height": 76.15625
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "../en/跨境网络服务.html",
+            "current": null
+          },
+          {
+            "href": "./跨境网络服务.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-about",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/ru/about.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/about.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "О нас | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "about",
+        "selector": ".about-hero",
+        "expectedAsset": "waves-haikei-2.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 58, 139, 0.94), rgba(18, 95, 211, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei-2.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 1011.1875,
+          "bottom": 1121.1875,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 322.5625,
+          "bottom": 360.640625,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../about.html",
+            "current": null
+          },
+          {
+            "href": "../en/about.html",
+            "current": null
+          },
+          {
+            "href": "./about.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-news",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/ru/news.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/news.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Новости | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "news",
+        "selector": ".news-hero",
+        "expectedAsset": "stacked-waves-haikei_3.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 53, 127, 0.94), rgba(0, 92, 196, 0.8)), url(\"http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/stacked-waves-haikei_3.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 717.34375,
+          "bottom": 827.34375,
+          "width": 294,
+          "height": 110
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 342.703125,
+          "bottom": 380.78125,
+          "width": 358,
+          "height": 38.078125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../news.html",
+            "current": null
+          },
+          {
+            "href": "../en/news.html",
+            "current": null
+          },
+          {
+            "href": "./news.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "ru-careers",
+      "viewport": "mobile-390x844",
+      "path": "/site/dist/ru/careers.html",
+      "url": "http://127.0.0.1:63158/site/dist/ru/careers.html",
+      "screenshotPath": null,
+      "state": {
+        "title": "Карьера | Honey Badger",
+        "lang": "ru-RU",
+        "bodyPage": "careers",
+        "selector": ".careers-hero",
+        "expectedAsset": "waves-haikei.svg",
+        "heroFound": true,
+        "heroBackgroundImage": "linear-gradient(135deg, rgba(0, 56, 132, 0.94), rgba(26, 107, 218, 0.78)), url(\"http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg\")",
+        "expectedAssetInComputedBackground": true,
+        "h1Color": "rgb(255, 255, 255)",
+        "horizontalOverflow": false,
+        "scrollWidth": 390,
+        "viewportWidth": 390,
+        "imageCount": 0,
+        "brokenImages": [],
+        "cssResourceEntries": [
+          "http://127.0.0.1:63158/site/dist/assets/img/waves-haikei.svg"
+        ],
+        "cssAssetLoaded": true,
+        "supportRect": {
+          "left": 326,
+          "right": 374,
+          "top": 772,
+          "bottom": 820,
+          "width": 48,
+          "height": 48
+        },
+        "actionsRect": {
+          "left": 16,
+          "right": 310,
+          "top": 726.65625,
+          "bottom": 840.25,
+          "width": 294,
+          "height": 113.59375
+        },
+        "h1Rect": {
+          "left": 16,
+          "right": 374,
+          "top": 342.703125,
+          "bottom": 495.015625,
+          "width": 358,
+          "height": 152.3125
+        },
+        "supportOverlapsActions": false,
+        "supportOverlapsH1": false,
+        "languageLinks": [
+          {
+            "href": "../careers.html",
+            "current": null
+          },
+          {
+            "href": "../en/careers.html",
+            "current": null
+          },
+          {
+            "href": "./careers.html",
+            "current": "true"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": [],
+      "pass": true,
+      "failures": []
+    }
+  ]
+}

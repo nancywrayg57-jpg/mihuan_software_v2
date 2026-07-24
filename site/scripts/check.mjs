@@ -2644,3 +2644,43 @@ for (const requiredHtmlPath of requiredHtmlPaths) {
 console.log(`Checked ${indexPath}`);
 console.log(`Checked ${htmlResults.length} required static HTML page(s).`);
 console.log(`Build output contains ${files.length} file(s), ${totalBytes} byte(s).`);
+
+async function validateIssue50HeroAssetReferences() {
+  const stylesPath = resolve(distDir, "assets", "styles.css");
+  const css = await readFile(stylesPath, "utf8");
+  const requiredHeroAssets = new Set([
+    "hero-light-blue.svg",
+    "stacked-waves-haikei_2.svg",
+    "stacked-waves-haikei_3.svg",
+    "waves-haikei.svg",
+    "waves-haikei-2.svg",
+    "IP.svg"
+  ]);
+  const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
+  const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));
+
+  for (const url of cssUrls) {
+    if (/^https?:\/\//i.test(url)) {
+      throw new Error(`CSS must not reference external assets: ${url}`);
+    }
+  }
+
+  for (const assetName of requiredHeroAssets) {
+    if (!heroAssetRefs.includes(`./img/${assetName}`)) {
+      throw new Error(`Missing Issue #50 hero asset CSS reference: ./img/${assetName}`);
+    }
+  }
+
+  for (const ref of heroAssetRefs) {
+    const assetPath = resolve(distDir, "assets", ref.replace(/^\.\//, ""));
+    const assetStats = await stat(assetPath).catch(() => null);
+
+    if (!assetStats?.isFile() || assetStats.size <= 0) {
+      throw new Error(`Missing or empty CSS background asset: ${ref}`);
+    }
+  }
+
+  console.log(`Checked ${heroAssetRefs.length} local hero background asset reference(s).`);
+}
+
+await validateIssue50HeroAssetReferences();

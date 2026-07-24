@@ -776,7 +776,11 @@ h3 {
 }
 
 .home-hero {
-  background: var(--hero);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgb(0 50 118 / 94%), rgb(0 90 180 / 78%) 45%, rgb(42 119 212 / 66%)),
+    url("./img/hero-light-blue.svg") center / cover no-repeat;
   color: white;
   padding: 112px 0 92px;
 }
@@ -1176,7 +1180,9 @@ h3 {
 .products-hero {
   position: relative;
   overflow: hidden;
-  background: var(--hero);
+  background:
+    linear-gradient(135deg, rgb(0 59 137 / 94%), rgb(0 94 204 / 82%)),
+    url("./img/stacked-waves-haikei_2.svg") center / cover no-repeat;
   color: white;
   padding: 112px 0 92px;
 }
@@ -1229,6 +1235,24 @@ h3 {
 .products-hero .btn-outline:active {
   background: white;
   color: var(--primary);
+}
+
+.about-hero {
+  background:
+    linear-gradient(135deg, rgb(0 58 139 / 94%), rgb(18 95 211 / 80%)),
+    url("./img/waves-haikei-2.svg") center / cover no-repeat;
+}
+
+.news-hero {
+  background:
+    linear-gradient(135deg, rgb(0 53 127 / 94%), rgb(0 92 196 / 80%)),
+    url("./img/stacked-waves-haikei_3.svg") center / cover no-repeat;
+}
+
+.careers-hero {
+  background:
+    linear-gradient(135deg, rgb(0 56 132 / 94%), rgb(26 107 218 / 78%)),
+    url("./img/waves-haikei.svg") center / cover no-repeat;
 }
 
 .products-stat-grid {
@@ -1486,7 +1510,9 @@ h3 {
 }
 
 .network-services-hero {
-  background: var(--primary);
+  background:
+    linear-gradient(135deg, rgb(0 48 127 / 95%), rgb(75 54 180 / 82%)),
+    url("./img/IP.svg") center / cover no-repeat;
 }
 
 .network-hero-panel {
@@ -2416,6 +2442,11 @@ h3 {
 
   .btn {
     width: 100%;
+  }
+
+  .home-hero .actions,
+  .products-hero .actions {
+    width: min(100%, calc(100% - 64px));
   }
 
   .home-stats,
