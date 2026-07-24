@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html", "ru/about.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -1050,6 +1050,15 @@ function validateRussianHome(html) {
     errors.push("Russian home Продукты navigation must not remain a placeholder link.");
   }
 
+  const aboutNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/about\.html["']>О нас<\/a>/g) || [];
+  if (aboutNavLinks.length !== 2) {
+    errors.push(`Russian home О нас navigation must point to ./about.html on desktop and mobile; found ${aboutNavLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>О нас<\/a>/i.test(html)) {
+    errors.push("Russian home О нас navigation must not remain a placeholder link.");
+  }
+
   for (const languagePath of ['href="../index.html"', 'href="../en/index.html"', 'href="./index.html" aria-current="true"']) {
     if (!html.includes(languagePath)) {
       errors.push(`Russian home language switcher missing ${languagePath}.`);
@@ -1086,6 +1095,122 @@ function validateRussianHome(html) {
 
   if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
     errors.push("Russian home contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateRussianAbout(html) {
+  const errors = [];
+  const expectedTitle = "О нас | Honey Badger";
+  const expectedDescription = "Узнайте о Guangzhou Honey Badger Software Co., Ltd., профиле компании, позиционировании, бэкграунде, структуре Honey Badger как операционной структуре ZennoLab в Китае и контактных заполнителях.";
+  const expectedFooterRelationship = "Honey Badger является операционной структурой российской компании ZennoLab в Китае.";
+
+  if (!/<html\s+lang=["']ru-RU["']/i.test(html)) {
+    errors.push('Russian about page must render <html lang="ru-RU">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("Russian about page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("Russian about page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "О нас",
+    "Бренд",
+    "Позиционирование",
+    "Бэкграунд",
+    "Структура",
+    "Контакты",
+    "Guangzhou Honey Badger Software Co., Ltd.",
+    "основана 25 января 2017 года",
+    "Миссия и видение",
+    "Основное позиционирование",
+    "Бизнес-направления",
+    "Сервисные особенности",
+    "Профиль компании",
+    "Зарегистрированные виды деятельности",
+    "Охват бизнеса 4+1",
+    "4 стандартных продукта/услуги + кроссбордерные сетевые сервисы",
+    "Формулировка не расширяется до более сильных заявлений об авторизации, агентстве или дистрибуции.",
+    "Контактная информация",
+    "Страница «О нас» сохраняет официальный контактный модуль для запросов по бренду, продуктам, кроссбордерным сетевым сервисам и партнерству.",
+    "Корпоративная почта: Будет настроено",
+    "Аккаунты поддержки: Будет настроено",
+    "Офлайн-контактная информация: Будет настроено",
+    "Информация о регистрации ICP: Будет настроено",
+    "Информация об авторских правах: Будет настроено",
+    expectedFooterRelationship,
+    "Заполнитель поддержки",
+    "Будет настроено"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Russian about page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "ru-about-page",
+    "about-hero",
+    "about-brand",
+    "about-positioning",
+    "about-background",
+    "about-entity",
+    "about-contact"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing Russian about page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Russian about page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Главная</a>') || !html.includes('aria-current="page">О нас</span>')) {
+    errors.push("Russian about page breadcrumb must be Главная / О нас with a working home link.");
+  }
+
+  if (!html.includes('href="./about.html" aria-current="page">О нас</a>')) {
+    errors.push("Russian about page header must mark О нас as current.");
+  }
+
+  for (const languagePath of ['href="../about.html"', 'href="../en/about.html"', 'href="./about.html" aria-current="true"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Russian about page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const relationshipMatches = html.match(new RegExp(expectedFooterRelationship.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || [];
+  if (relationshipMatches.length !== 2) {
+    errors.push(`Russian about page must render the exact ZennoLab relationship sentence in entity and footer blocks; found ${relationshipMatches.length}.`);
+  }
+
+  if (!/<section class=["'][^"']*home-section[^"']*home-section-soft[^"']*["'] id=["']about-entity["'][\s\S]*?<p class=["']about-entity-statement["']>Honey Badger является операционной структурой российской компании ZennoLab в Китае\.<\/p>/i.test(html)) {
+    errors.push("Russian about page entity block must contain the exact relationship sentence.");
+  }
+
+  if (!/<footer class=["']site-footer["'][\s\S]*?<p>Honey Badger является операционной структурой российской компании ZennoLab в Китае\.<\/p>/i.test(html)) {
+    errors.push("Russian about page footer must contain the exact relationship sentence.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("Russian about page must not include a fake contact form.");
+  }
+
+  if (/zennolabchina|48151650|marketing@honeybadgersoft\.com/i.test(html)) {
+    errors.push("Russian about page must not include real contact values.");
+  }
+
+  if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
+    errors.push("Russian about page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  if (/\b(ZennoProxy|order system|payment system|member system|CMS backend|RDS|Redis|OSS|代理销售平台|资金链路)\b/i.test(html)) {
+    errors.push("Russian about page contains out-of-scope historical project facts.");
   }
 
   return errors;
@@ -1978,6 +2103,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "ru/products.html") {
     htmlErrors.push(...validateRussianProducts(html));
+  }
+
+  if (relativePath === "ru/about.html") {
+    htmlErrors.push(...validateRussianAbout(html));
   }
 
   if (relativePath === "ru/跨境网络服务.html") {

@@ -1,0 +1,206 @@
+{
+  "generatedAt": "2026-07-24T10:53:34.924Z",
+  "target": "site/dist/ru/about.html",
+  "reference": "UI/ru/about.html",
+  "screenshots": [
+    "docs/review-artifacts/issue-38/ru-about-desktop.png",
+    "docs/review-artifacts/issue-38/ui-reference-ru-about-desktop.png",
+    "docs/review-artifacts/issue-38/ru-about-mobile.png",
+    "docs/review-artifacts/issue-38/ru-about-mobile-nav.png",
+    "docs/review-artifacts/issue-38/ui-reference-ru-about-mobile.png"
+  ],
+  "assertions": [
+    {
+      "name": "ru-about-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"currentLinks\":[\"О нас\",\"RU\",\"О нас\"],\"supportExists\":true}"
+    },
+    {
+      "name": "ru-about-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru about title",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about h1",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about breadcrumb",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about current nav",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about five modules",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about relationship twice",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about contact placeholders only",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about no fake form",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about no forbidden contacts wording old facts",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about language switch context",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"breadcrumb\":[\"Главная\",\"О нас\"],\"navAboutCurrent\":true,\"mobileAboutCurrent\":true,\"sectionIds\":[\"about-brand\",\"about-positioning\",\"about-background\",\"about-entity\",\"about-contact\"],\"relationCount\":2,\"placeholders\":[\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"Офлайн-контактная информация: Будет настроено\",\"Корпоративная почта: Будет настроено\",\"Аккаунты поддержки: Будет настроено\",\"WeChat: Будет настроено\",\"QQ: Будет настроено\",\"Email: Будет настроено\"],\"fakeForms\":0,\"realForbidden\":false,\"overscope\":false,\"oldFacts\":false,\"langHrefs\":[\"../about.html\",\"../en/about.html\",\"./about.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru about support float opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"configuredCount\":3}"
+    },
+    {
+      "name": "ru about breadcrumb home link works",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html"
+    },
+    {
+      "name": "ru home about nav has real path",
+      "status": "PASS",
+      "details": "{\"desktop\":\"./about.html\",\"mobile\":\"./about.html\"}"
+    },
+    {
+      "name": "ru home about nav reaches ru about",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/about.html"
+    },
+    {
+      "name": "ru about brand link returns home",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html"
+    },
+    {
+      "name": "ru about zh language switch keeps about context",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/about.html"
+    },
+    {
+      "name": "ru about en language switch keeps about context",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/en/about.html"
+    },
+    {
+      "name": "ui-reference-ru-about-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"Промышленная надежность для глобальных продуктов автоматизации\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"currentLinks\":[\"О нас\",\"О нас\"],\"supportExists\":false}"
+    },
+    {
+      "name": "ui-reference-ru-about-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui reference desktop renders ru about page",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"Промышленная надежность для глобальных продуктов автоматизации\",\"hasAboutIntent\":true}"
+    },
+    {
+      "name": "ru-about-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"О нас\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"currentLinks\":[\"О нас\",\"RU\",\"О нас\"],\"supportExists\":true}"
+    },
+    {
+      "name": "ru-about-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru about mobile nav opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"currentAbout\":true}"
+    },
+    {
+      "name": "ui-reference-ru-about-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"О нас | Honey Badger\",\"h1\":\"Промышленная надежность для глобальных продуктов автоматизации\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"currentLinks\":[\"О нас\",\"О нас\"],\"supportExists\":false}"
+    },
+    {
+      "name": "ui-reference-ru-about-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "desktop console/page errors clean",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "mobile console/page errors clean",
+      "status": "PASS",
+      "details": "[]"
+    }
+  ],
+  "e2eChecklist": [
+    {
+      "id": "ABOUT-004",
+      "status": "PASS",
+      "evidence": "Exact Russian ZennoLab relationship sentence appears twice on ru/about.html: entity block and footer."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "Russian about page is complete; other pending Russian first-level pages remain outside Issue #38 scope."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "zh/en language switches from ru/about.html keep about-page context."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "ru/about.html renders ru-RU metadata, breadcrumb and RU current language state."
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Russian production page content remains Russian except the explicit Chinese scaffold notice."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "Desktop and mobile screenshots show Russian long text without horizontal overflow."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N/A",
+      "evidence": "No child detail page is introduced by Issue #38."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "No broken images and no console/page errors were observed across target and reference pages."
+    },
+    {
+      "id": "NAV-002/005",
+      "status": "PASS",
+      "evidence": "Russian home About navigation reaches ru/about.html; breadcrumb Главная / О нас returns to Russian home."
+    }
+  ]
+}
