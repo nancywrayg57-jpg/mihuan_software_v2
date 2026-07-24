@@ -1,0 +1,464 @@
+{
+  "generatedAt": "2026-07-24T09:15:53.087Z",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "referenceSource": "UI/en/news.html",
+  "urls": {
+    "enNews": "file:///D:/workspace/mihuan_software_v2/site/dist/en/news.html",
+    "enHome": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+    "zhNews": "file:///D:/workspace/mihuan_software_v2/site/dist/news.html",
+    "reference": "file:///D:/workspace/mihuan_software_v2/UI/en/news.html"
+  },
+  "screenshots": {
+    "desktop": "en-news-desktop.png",
+    "mobile": "en-news-mobile.png",
+    "mobileNav": "en-news-mobile-nav.png",
+    "referenceDesktop": "ui-reference-en-news-desktop.png",
+    "referenceMobile": "ui-reference-en-news-mobile.png"
+  },
+  "assertions": {
+    "desktopSignals": {
+      "title": "News | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/news.html",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 3603,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / News",
+      "currentLinks": [
+        {
+          "text": "News",
+          "href": "./news.html"
+        },
+        {
+          "text": "News",
+          "href": "./news.html"
+        }
+      ],
+      "relationshipCount": 1,
+      "footerHasRelationship": true,
+      "categoryTexts": [
+        "All",
+        "Company News",
+        "Product Updates",
+        "Industry News",
+        "Tech Sharing"
+      ],
+      "entryCount": 6,
+      "entryData": [
+        {
+          "id": "news-zennolab-ops",
+          "category": "Company News",
+          "title": "Honey Badger Software Officially Becomes ZennoLab China Operating Entity",
+          "date": "2026-06-15",
+          "displayDate": "2026-06-15",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Honey Badger Software Officially Becomes ZennoLab China Operating Entity thumbnail"
+        },
+        {
+          "id": "news-yuantu-v2",
+          "category": "Product Update",
+          "title": "Honey Badger Original Image V2.0 Launched: New Batch Scene Image Generation Feature",
+          "date": "2026-06-01",
+          "displayDate": "2026-06-01",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Honey Badger Original Image V2.0 Launched thumbnail"
+        },
+        {
+          "id": "news-ai-trend",
+          "category": "Industry News",
+          "title": "2026 Cross-Border E-Commerce AI Tool Application Trend Report Released",
+          "date": "2026-05-20",
+          "displayDate": "2026-05-20",
+          "link": "#news-detail-pending",
+          "thumbLabel": "2026 Cross-Border E-Commerce AI Tool Application Trend Report thumbnail"
+        },
+        {
+          "id": "news-ip-guide",
+          "category": "Tech Sharing",
+          "title": "How to Choose Between Residential IP and Datacenter IP? Complete Guide to Proxy Selection",
+          "date": "2026-05-08",
+          "displayDate": "2026-05-08",
+          "link": "#news-detail-pending",
+          "thumbLabel": "How to Choose Between Residential IP and Datacenter IP thumbnail"
+        },
+        {
+          "id": "news-ai-fde-training",
+          "category": "Company News",
+          "title": "First AI-FDE VibeCoding Training Successfully Concluded",
+          "date": "2026-04-25",
+          "displayDate": "2026-04-25",
+          "link": "#news-detail-pending",
+          "thumbLabel": "First AI-FDE VibeCoding Training Successfully Concluded thumbnail"
+        },
+        {
+          "id": "news-network-sea",
+          "category": "Product Update",
+          "title": "Cross-border Network Services Add Southeast Asia Node Resources",
+          "date": "2026-04-10",
+          "displayDate": "2026-04-10",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Cross-border Network Services Add Southeast Asia Node Resources thumbnail"
+        }
+      ],
+      "timeCount": 6,
+      "thumbnailCount": 6,
+      "detailLinksOk": true,
+      "fakeForms": 0,
+      "disallowedButtons": 0,
+      "supportPanelPresent": true,
+      "mobileNavOpen": false
+    },
+    "mobileSignals": {
+      "title": "News | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/news.html",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 7666,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / News",
+      "currentLinks": [
+        {
+          "text": "News",
+          "href": "./news.html"
+        },
+        {
+          "text": "News",
+          "href": "./news.html"
+        }
+      ],
+      "relationshipCount": 1,
+      "footerHasRelationship": true,
+      "categoryTexts": [
+        "All",
+        "Company News",
+        "Product Updates",
+        "Industry News",
+        "Tech Sharing"
+      ],
+      "entryCount": 6,
+      "entryData": [
+        {
+          "id": "news-zennolab-ops",
+          "category": "Company News",
+          "title": "Honey Badger Software Officially Becomes ZennoLab China Operating Entity",
+          "date": "2026-06-15",
+          "displayDate": "2026-06-15",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Honey Badger Software Officially Becomes ZennoLab China Operating Entity thumbnail"
+        },
+        {
+          "id": "news-yuantu-v2",
+          "category": "Product Update",
+          "title": "Honey Badger Original Image V2.0 Launched: New Batch Scene Image Generation Feature",
+          "date": "2026-06-01",
+          "displayDate": "2026-06-01",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Honey Badger Original Image V2.0 Launched thumbnail"
+        },
+        {
+          "id": "news-ai-trend",
+          "category": "Industry News",
+          "title": "2026 Cross-Border E-Commerce AI Tool Application Trend Report Released",
+          "date": "2026-05-20",
+          "displayDate": "2026-05-20",
+          "link": "#news-detail-pending",
+          "thumbLabel": "2026 Cross-Border E-Commerce AI Tool Application Trend Report thumbnail"
+        },
+        {
+          "id": "news-ip-guide",
+          "category": "Tech Sharing",
+          "title": "How to Choose Between Residential IP and Datacenter IP? Complete Guide to Proxy Selection",
+          "date": "2026-05-08",
+          "displayDate": "2026-05-08",
+          "link": "#news-detail-pending",
+          "thumbLabel": "How to Choose Between Residential IP and Datacenter IP thumbnail"
+        },
+        {
+          "id": "news-ai-fde-training",
+          "category": "Company News",
+          "title": "First AI-FDE VibeCoding Training Successfully Concluded",
+          "date": "2026-04-25",
+          "displayDate": "2026-04-25",
+          "link": "#news-detail-pending",
+          "thumbLabel": "First AI-FDE VibeCoding Training Successfully Concluded thumbnail"
+        },
+        {
+          "id": "news-network-sea",
+          "category": "Product Update",
+          "title": "Cross-border Network Services Add Southeast Asia Node Resources",
+          "date": "2026-04-10",
+          "displayDate": "2026-04-10",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Cross-border Network Services Add Southeast Asia Node Resources thumbnail"
+        }
+      ],
+      "timeCount": 6,
+      "thumbnailCount": 6,
+      "detailLinksOk": true,
+      "fakeForms": 0,
+      "disallowedButtons": 0,
+      "supportPanelPresent": true,
+      "mobileNavOpen": false
+    },
+    "mobileNavSignals": {
+      "title": "News | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/news.html",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 7666,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / News",
+      "currentLinks": [
+        {
+          "text": "News",
+          "href": "./news.html"
+        },
+        {
+          "text": "News",
+          "href": "./news.html"
+        }
+      ],
+      "relationshipCount": 1,
+      "footerHasRelationship": true,
+      "categoryTexts": [
+        "All",
+        "Company News",
+        "Product Updates",
+        "Industry News",
+        "Tech Sharing"
+      ],
+      "entryCount": 6,
+      "entryData": [
+        {
+          "id": "news-zennolab-ops",
+          "category": "Company News",
+          "title": "Honey Badger Software Officially Becomes ZennoLab China Operating Entity",
+          "date": "2026-06-15",
+          "displayDate": "2026-06-15",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Honey Badger Software Officially Becomes ZennoLab China Operating Entity thumbnail"
+        },
+        {
+          "id": "news-yuantu-v2",
+          "category": "Product Update",
+          "title": "Honey Badger Original Image V2.0 Launched: New Batch Scene Image Generation Feature",
+          "date": "2026-06-01",
+          "displayDate": "2026-06-01",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Honey Badger Original Image V2.0 Launched thumbnail"
+        },
+        {
+          "id": "news-ai-trend",
+          "category": "Industry News",
+          "title": "2026 Cross-Border E-Commerce AI Tool Application Trend Report Released",
+          "date": "2026-05-20",
+          "displayDate": "2026-05-20",
+          "link": "#news-detail-pending",
+          "thumbLabel": "2026 Cross-Border E-Commerce AI Tool Application Trend Report thumbnail"
+        },
+        {
+          "id": "news-ip-guide",
+          "category": "Tech Sharing",
+          "title": "How to Choose Between Residential IP and Datacenter IP? Complete Guide to Proxy Selection",
+          "date": "2026-05-08",
+          "displayDate": "2026-05-08",
+          "link": "#news-detail-pending",
+          "thumbLabel": "How to Choose Between Residential IP and Datacenter IP thumbnail"
+        },
+        {
+          "id": "news-ai-fde-training",
+          "category": "Company News",
+          "title": "First AI-FDE VibeCoding Training Successfully Concluded",
+          "date": "2026-04-25",
+          "displayDate": "2026-04-25",
+          "link": "#news-detail-pending",
+          "thumbLabel": "First AI-FDE VibeCoding Training Successfully Concluded thumbnail"
+        },
+        {
+          "id": "news-network-sea",
+          "category": "Product Update",
+          "title": "Cross-border Network Services Add Southeast Asia Node Resources",
+          "date": "2026-04-10",
+          "displayDate": "2026-04-10",
+          "link": "#news-detail-pending",
+          "thumbLabel": "Cross-border Network Services Add Southeast Asia Node Resources thumbnail"
+        }
+      ],
+      "timeCount": 6,
+      "thumbnailCount": 6,
+      "detailLinksOk": true,
+      "fakeForms": 0,
+      "disallowedButtons": 0,
+      "supportPanelPresent": true,
+      "mobileNavOpen": true
+    },
+    "referenceDesktopSignals": {
+      "title": "News | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/UI/en/news.html",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 4968,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / News",
+      "currentLinks": [
+        {
+          "text": "News",
+          "href": "../en/news.html"
+        },
+        {
+          "text": "News",
+          "href": "../en/news.html"
+        }
+      ],
+      "relationshipCount": 0,
+      "footerHasRelationship": false,
+      "categoryTexts": [],
+      "entryCount": 0,
+      "entryData": [],
+      "timeCount": 0,
+      "thumbnailCount": 0,
+      "detailLinksOk": true,
+      "fakeForms": 0,
+      "disallowedButtons": 8,
+      "supportPanelPresent": false,
+      "mobileNavOpen": false
+    },
+    "referenceMobileSignals": {
+      "title": "News | Honey Badger",
+      "lang": "en-US",
+      "url": "file:///D:/workspace/mihuan_software_v2/UI/en/news.html",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 8097,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "breadcrumb": "Home / News",
+      "currentLinks": [
+        {
+          "text": "News",
+          "href": "../en/news.html"
+        },
+        {
+          "text": "News",
+          "href": "../en/news.html"
+        }
+      ],
+      "relationshipCount": 0,
+      "footerHasRelationship": false,
+      "categoryTexts": [],
+      "entryCount": 0,
+      "entryData": [],
+      "timeCount": 0,
+      "thumbnailCount": 0,
+      "detailLinksOk": true,
+      "fakeForms": 0,
+      "disallowedButtons": 8,
+      "supportPanelPresent": false,
+      "mobileNavOpen": false
+    },
+    "navFlow": {
+      "homeToNewsUrl": "file:///D:/workspace/mihuan_software_v2/site/dist/en/news.html",
+      "homeToNewsOk": true,
+      "breadcrumbHomeUrl": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+      "breadcrumbHomeOk": true,
+      "zhSwitcherUrl": "file:///D:/workspace/mihuan_software_v2/site/dist/news.html",
+      "zhSwitcherOk": true
+    },
+    "supportOpen": true,
+    "noConsoleErrors": true,
+    "noBrokenImages": true,
+    "noHorizontalOverflow": true
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "checks": [
+    {
+      "id": "NEWS-001",
+      "status": "PASS",
+      "evidence": "Categories: All / Company News / Product Updates / Industry News / Tech Sharing."
+    },
+    {
+      "id": "NEWS-002",
+      "status": "PASS",
+      "evidence": "Exactly 6 SSOT English news entries render with category, title and date."
+    },
+    {
+      "id": "NEWS-003",
+      "status": "PASS",
+      "evidence": "Six time elements use YYYY-MM-DD datetime and display text."
+    },
+    {
+      "id": "NEWS-004",
+      "status": "PASS",
+      "evidence": "Six inline SVG thumbnails expose English thumbnail aria-labels."
+    },
+    {
+      "id": "NEWS-005",
+      "status": "PASS",
+      "evidence": "All entry detail links stay on #news-detail-pending."
+    },
+    {
+      "id": "NEWS-010",
+      "status": "PASS",
+      "evidence": "No fake filter buttons, fake forms or fake submission controls are present."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "EN News zh switcher opened file:///D:/workspace/mihuan_software_v2/site/dist/news.html."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "Breadcrumb text: Home / News"
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Footer relationship statement checked exactly."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "EN home News nav reached file:///D:/workspace/mihuan_software_v2/site/dist/en/news.html; breadcrumb returned file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "Desktop/mobile overflow, broken image and console checks completed."
+    },
+    {
+      "id": "NAV-002",
+      "status": "PASS",
+      "evidence": "Header marks News current; mobile navigation opens on 390px viewport."
+    },
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Two-level breadcrumb Home / News verified."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "This issue adds the EN News page; zh News exists and RU target remains RU home by scope."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N-A",
+      "evidence": "RU News page is outside Issue #30 scope; RU switch intentionally targets RU home."
+    }
+  ]
+}

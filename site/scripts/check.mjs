@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -233,6 +233,15 @@ function validateEnglishHome(html) {
   const aboutNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/about\.html["']>About<\/a>/g) || [];
   if (aboutNavLinks.length !== 2) {
     errors.push(`English home About navigation must point to ./about.html on desktop and mobile; found ${aboutNavLinks.length}.`);
+  }
+
+  const newsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/news\.html["']>News<\/a>/g) || [];
+  if (newsNavLinks.length !== 2) {
+    errors.push(`English home News navigation must point to ./news.html on desktop and mobile; found ${newsNavLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>News<\/a>/i.test(html)) {
+    errors.push("English home News navigation must not remain a placeholder link.");
   }
 
   if (/data-placeholder=["']true["'][^>]*>About<\/a>/i.test(html)) {
@@ -654,6 +663,135 @@ function validateEnglishAbout(html) {
 
   if (/\b(ZennoProxy|order system|payment system|member system|CMS backend|RDS|Redis|OSS)\b/i.test(html)) {
     errors.push("English about page contains out-of-scope historical project facts.");
+  }
+
+  return errors;
+}
+
+function validateEnglishNews(html) {
+  const errors = [];
+  const expectedTitle = "News | Honey Badger";
+  const expectedDescription = "Read Honey Badger company news, product updates, industry news and technical sharing entries from the English website news center.";
+  const expectedFooterRelationship = "Honey Badger is ZennoLab's operating entity in China.";
+  const newsEntries = [
+    ["Company News", "Honey Badger Software Officially Becomes ZennoLab China Operating Entity", "2026-06-15"],
+    ["Product Update", "Honey Badger Original Image V2.0 Launched: New Batch Scene Image Generation Feature", "2026-06-01"],
+    ["Industry News", "2026 Cross-Border E-Commerce AI Tool Application Trend Report Released", "2026-05-20"],
+    ["Tech Sharing", "How to Choose Between Residential IP and Datacenter IP? Complete Guide to Proxy Selection", "2026-05-08"],
+    ["Company News", "First AI-FDE VibeCoding Training Successfully Concluded", "2026-04-25"],
+    ["Product Update", "Cross-border Network Services Add Southeast Asia Node Resources", "2026-04-10"]
+  ];
+
+  if (!/<html\s+lang=["']en-US["']/i.test(html)) {
+    errors.push('English news page must render <html lang="en-US">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("English news page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("English news page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "News Center",
+    "News",
+    "Static entry for company news, product updates, industry news and technical sharing",
+    "News Categories",
+    "All",
+    "Company News",
+    "Product Updates",
+    "Industry News",
+    "Tech Sharing",
+    "News Entry List",
+    "Summaries are neutral placeholders",
+    "News Detail Pages Pending",
+    "Detail page pending",
+    "Consultation and Contact Entry",
+    "Corporate email: To be configured",
+    "Support accounts: To be configured",
+    "ICP filing information: To be configured",
+    "Copyright information: To be configured",
+    expectedFooterRelationship,
+    "Support Placeholder",
+    "To be configured"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing English news page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "en-news-page",
+    "news-hero",
+    "news-categories",
+    "news-list",
+    "news-detail-pending"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing English news page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("English news page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Home</a>') || !html.includes('aria-current="page">News</span>')) {
+    errors.push("English news page breadcrumb must be Home / News with a working home link.");
+  }
+
+  if (!html.includes('href="./news.html" aria-current="page">News</a>')) {
+    errors.push("English news page header must mark News as current.");
+  }
+
+  for (const languagePath of ['href="../news.html"', 'href="./news.html" aria-current="true"', 'href="../ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`English news page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const entryMarkers = html.match(/data-news-entry=/g) || [];
+  if (entryMarkers.length !== 6) {
+    errors.push(`English news page must render exactly 6 news entries; found ${entryMarkers.length}.`);
+  }
+
+  for (const [category, title, date] of newsEntries) {
+    if (!html.includes(category) || !html.includes(title) || !html.includes(`datetime="${date}"`) || !html.includes(`>${date}</time>`)) {
+      errors.push(`Missing English news entry category/title/date: ${category} / ${title} / ${date}.`);
+    }
+  }
+
+  const dateMatches = html.match(/<time datetime=["']\d{4}-\d{2}-\d{2}["']>\d{4}-\d{2}-\d{2}<\/time>/g) || [];
+  if (dateMatches.length !== 6) {
+    errors.push(`English news page must render 6 YYYY-MM-DD time elements; found ${dateMatches.length}.`);
+  }
+
+  const thumbLabels = html.match(/aria-label=["'][^"']*thumbnail["']/g) || [];
+  if (thumbLabels.length !== 6) {
+    errors.push(`English news page must render 6 inline thumbnail labels; found ${thumbLabels.length}.`);
+  }
+
+  const detailLinks = html.match(/<a class=["']link-more["'] href=["']#news-detail-pending["']>Detail page pending<\/a>/g) || [];
+  if (detailLinks.length !== 6) {
+    errors.push(`English news entry links must stay as same-page detail placeholders; found ${detailLinks.length}.`);
+  }
+
+  if (/href=["'][^"']*news-detail[^#"']*\.html/i.test(html) || /href=["'][^"']*news\/[^#"']+/i.test(html)) {
+    errors.push("English news page must not link to nonexistent news detail or category pages.");
+  }
+
+  if (/<button[\s>]/i.test(html) && !/class=["']menu-button["']|class=["']support-close["']|class=["']support-toggle["']/.test(html)) {
+    errors.push("English news page must not include fake filter interaction buttons.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("English news page must not include a fake contact form.");
+  }
+
+  if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
+    errors.push("English news page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -1384,6 +1522,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "en/about.html") {
     htmlErrors.push(...validateEnglishAbout(html));
+  }
+
+  if (relativePath === "en/news.html") {
+    htmlErrors.push(...validateEnglishNews(html));
   }
 
   if (relativePath === "ru/index.html") {
