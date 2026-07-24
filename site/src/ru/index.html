@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="S1-каркас сайта Honey Badger для проверки общего header, переключателя языков, footer и заполнителя поддержки.">
-    <title>Каркас сайта Honey Badger | S1 Scaffold</title>
+    <meta name="description" content="Honey Badger принимает возможности продуктов ZennoLab, локальную техническую поддержку, корпоративные консультации и сервисную поставку для китайского рынка, фокусируясь на автоматизации браузера, распознавании CAPTCHA, антидетект-браузерах, качестве прокси и мобильной автоматизации.">
+    <title>Honey Badger Software | Официальная операционная структура ZennoLab в Китае</title>
     <link rel="stylesheet" href="../assets/styles.css">
     <script src="../assets/app.js" defer></script>
   </head>
-  <body data-page="home" data-lang="ru">
+  <body class="ru-home-page" data-page="home" data-lang="ru">
     <a class="skip-link" href="#main">Перейти к содержимому</a>
     <header class="site-header" aria-label="Шапка сайта">
       <div class="header-inner">
-        <a class="brand" href="./index.html" aria-label="Honey Badger home">
+        <a class="brand" href="./index.html" aria-label="Главная Honey Badger">
           <span class="brand-mark" aria-hidden="true">HB</span>
           <span class="brand-copy">
             <strong>Honey Badger</strong>
@@ -21,10 +21,10 @@
         </a>
         <nav class="desktop-nav" aria-label="Основная навигация">
           <a class="nav-link" href="./index.html" aria-current="page">Главная</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">Продукты</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">Новости</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">Карьера</a>
-          <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">О нас</a>
+          <a class="nav-link nav-link-placeholder" href="#ru-products" data-placeholder="true">Продукты</a>
+          <a class="nav-link nav-link-placeholder" href="#ru-news-preview" data-placeholder="true">Новости</a>
+          <a class="nav-link nav-link-placeholder" href="#ru-careers-preview" data-placeholder="true">Карьера</a>
+          <a class="nav-link nav-link-placeholder" href="#ru-brand-relationship" data-placeholder="true">О нас</a>
         </nav>
         <div class="header-actions">
           <nav class="language-switcher" aria-label="Переключатель языка">
@@ -40,93 +40,240 @@
         </div>
       </div>
     </header>
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная основная навигация">
       <a class="nav-link" href="./index.html" aria-current="page">Главная</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-products-placeholder" data-placeholder="true">Продукты</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-news-placeholder" data-placeholder="true">Новости</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-careers-placeholder" data-placeholder="true">Карьера</a>
-      <a class="nav-link nav-link-placeholder" href="#s1-about-placeholder" data-placeholder="true">О нас</a>
+      <a class="nav-link nav-link-placeholder" href="#ru-products" data-placeholder="true">Продукты</a>
+      <a class="nav-link nav-link-placeholder" href="#ru-news-preview" data-placeholder="true">Новости</a>
+      <a class="nav-link nav-link-placeholder" href="#ru-careers-preview" data-placeholder="true">Карьера</a>
+      <a class="nav-link nav-link-placeholder" href="#ru-brand-relationship" data-placeholder="true">О нас</a>
     </nav>
     <main class="site-main" id="main" tabindex="-1">
-      <section class="scaffold-hero" aria-labelledby="page-title">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">S1 Site Shell</p>
-            <h1 id="page-title">Общий каркас сайта Honey Badger</h1>
-            <p class="scaffold-notice">开发骨架，非正式内容</p>
-            <p class="localized-notice">Технический каркас, не финальное содержимое сайта.</p>
-            <p class="lead">Эта страница проверяет общий каркас: header 76px, навигацию, языковые пути, структурные заполнители footer и плавающий заполнитель поддержки. Бизнес-страницы будут подключены в следующих Issue.</p>
+      <div class="site-notice-banner">
+        <div class="container">开发骨架，非正式内容 · Технический каркас, не финальные контактные, регистрационные или авторские данные</div>
+      </div>
+
+      <section class="home-hero" aria-labelledby="page-title">
+        <div class="container home-hero-grid">
+          <div class="home-hero-copy">
+            <p class="eyebrow home-eyebrow">Honey Badger 蜜獾</p>
+            <h1 id="page-title">Honey Badger Software</h1>
+            <p class="home-hero-subtitle">Официальная операционная структура ZennoLab в Китае</p>
+            <p class="lead">Honey Badger принимает возможности продуктов ZennoLab, локальную техническую поддержку, корпоративные консультации и сервисную поставку для китайского рынка. С момента основания мы всегда фокусировались на автоматизации браузера, распознавании CAPTCHA, антидетект-браузерах, управлении качеством прокси и мобильной автоматизации, помогая клиентам создавать эффективные и надежные рабочие процессы в сложных сетевых средах.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#ru-products">Изучить продукты и услуги</a>
+              <a class="btn btn-outline" href="#ru-support-note">Связаться с сервисной командой</a>
+            </div>
+            <dl class="home-stats" aria-label="Ключевые показатели главной страницы">
+              <div aria-label="4 стандартных продукта/услуги + кроссбордерные сетевые сервисы">
+                <dt>4+1</dt>
+                <dd>4 стандартных продукта/услуги + кроссбордерные сетевые сервисы</dd>
+              </div>
+              <div aria-label="3 языковые версии">
+                <dt>3</dt>
+                <dd>языковые версии</dd>
+              </div>
+              <div aria-label="24-часовой доступ к поддержке">
+                <dt>24h</dt>
+                <dd>24-часовой доступ к поддержке</dd>
+              </div>
+            </dl>
           </div>
-          <div class="shell-panel" aria-label="Область S1">
-            <span>Header</span>
-            <span>LanguageSwitcher</span>
-            <span>Breadcrumb API</span>
-            <span>Footer</span>
-            <span>FloatingSupport</span>
+          <figure class="home-visual" role="img" aria-label="Схема матрицы продуктовых возможностей Honey Badger">
+            <svg viewBox="0 0 560 420" aria-hidden="true" focusable="false">
+              <title>Схема матрицы продуктовых возможностей Honey Badger</title>
+              <rect class="visual-frame" x="28" y="28" width="504" height="364" rx="18"></rect>
+              <circle class="visual-node visual-node-main" cx="280" cy="210" r="62"></circle>
+              <text class="visual-main-text" x="280" y="202" text-anchor="middle">HB</text>
+              <text class="visual-sub-text" x="280" y="230" text-anchor="middle">China Ops</text>
+              <g class="visual-line">
+                <path d="M280 148 L160 92"></path>
+                <path d="M342 210 L454 140"></path>
+                <path d="M280 272 L164 326"></path>
+                <path d="M218 210 L102 176"></path>
+                <path d="M342 248 L430 318"></path>
+              </g>
+              <g class="visual-chip">
+                <rect x="86" y="58" width="148" height="68" rx="12"></rect>
+                <text x="160" y="98" text-anchor="middle">Сельское хоз.</text>
+              </g>
+              <g class="visual-chip visual-chip-cyan">
+                <rect x="378" y="106" width="134" height="68" rx="12"></rect>
+                <text x="445" y="146" text-anchor="middle">Изображения</text>
+              </g>
+              <g class="visual-chip visual-chip-purple">
+                <rect x="78" y="292" width="170" height="68" rx="12"></rect>
+                <text x="163" y="332" text-anchor="middle">AI-FDE</text>
+              </g>
+              <g class="visual-chip visual-chip-green">
+                <rect x="42" y="142" width="128" height="68" rx="12"></rect>
+                <text x="106" y="182" text-anchor="middle">Соцсети</text>
+              </g>
+              <g class="visual-chip visual-chip-blue">
+                <rect x="356" y="286" width="152" height="68" rx="12"></rect>
+                <text x="432" y="326" text-anchor="middle">Сети</text>
+              </g>
+            </svg>
+          </figure>
+        </div>
+      </section>
+
+      <section class="home-section" id="ru-products" aria-labelledby="ru-products-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Продукты</p>
+            <h2 id="ru-products-title">Объем продуктов и услуг</h2>
+            <p class="lead">Русская главная страница сохраняет продуктовые входы как якорные заполнители до создания русских страниц деталей.</p>
+          </div>
+          <div class="product-matrix" aria-label="Продукты и услуги">
+            <article class="product-card" id="ru-product-agriculture" data-ru-product-entry="regular">
+              <div class="product-card-head">
+                <span class="product-code accent-green">AG</span>
+                <h3>Интегрированная система цифрового сельского хозяйства</h3>
+              </div>
+              <p>Платформа полного цикла для умного сельского хозяйства, IoT + ИИ для цифрового управления производством, контролем и прослеживаемостью</p>
+              <a class="link-more" href="#ru-product-detail-pending">Страница деталей ожидает подключения</a>
+            </article>
+            <article class="product-card" id="ru-product-image" data-ru-product-entry="regular">
+              <div class="product-card-head">
+                <span class="product-code accent-cyan">IMG</span>
+                <h3>Оригинальные изображения Honey Badger</h3>
+              </div>
+              <p>Кроссбордерный ИИ-инструмент для оригинальности изображений, пакетная обработка товарных фото, избежание проверок на дубликаты, адаптация ко всем зарубежным e-commerce платформам</p>
+              <a class="link-more" href="#ru-product-detail-pending">Страница деталей ожидает подключения</a>
+            </article>
+            <article class="product-card" id="ru-product-ai-fde" data-ru-product-entry="regular">
+              <div class="product-card-head">
+                <span class="product-code accent-purple">AI</span>
+                <h3>Обучение AI-FDE VibeCoding</h3>
+              </div>
+              <p>Практическое обучение разработке на естественном языке с помощью передового ИИ, пошаговая реализация коммерческих проектов на базе ИИ-систем</p>
+              <a class="link-more" href="#ru-product-detail-pending">Страница деталей ожидает подключения</a>
+            </article>
+            <article class="product-card" id="ru-product-social" data-ru-product-entry="regular">
+              <div class="product-card-head">
+                <span class="product-code accent-blue">SM</span>
+                <h3>Сопровождение приватной зоны в соцсетях</h3>
+              </div>
+              <p>Полномасштабное сопровождение операций в TikTok/FB/INS, практическое руководство по всему процессу от привлечения трафика до конверсии в приватной зоне</p>
+              <a class="link-more" href="#ru-product-detail-pending">Страница деталей ожидает подключения</a>
+            </article>
+            <article class="product-card product-card-wide" id="ru-product-network" data-ru-product-entry="network">
+              <div class="product-card-head">
+                <span class="product-code accent-network">NET</span>
+                <h3>Кроссбордерные сетевые сервисы</h3>
+              </div>
+              <p>Объединяют статический домашний IP, датацентровый IP и динамический IP для стабильных аккаунтных сред, высокопараллельных выходов и ротационных домашних IP-пулов</p>
+              <a class="link-more" href="#ru-product-detail-pending">Страница деталей ожидает подключения</a>
+            </article>
+          </div>
+          <p class="section-note" id="ru-product-detail-pending">Русские страницы деталей продуктов ожидают подключения; в этом раунде S3 все продуктовые входы остаются якорями на текущей странице.</p>
+        </div>
+      </section>
+
+      <section class="home-section home-section-soft" id="ru-brand-relationship" aria-labelledby="ru-relationship-title">
+        <div class="container relation-grid">
+          <div>
+            <p class="eyebrow eyebrow-dark">Структура</p>
+            <h2 id="ru-relationship-title">Пояснения к бренд-отношениям</h2>
+            <p class="lead">Официальная операционная структура ZennoLab в Китае</p>
+          </div>
+          <div class="relation-panel">
+            <article>
+              <h3>Локализация продуктов</h3>
+              <p>Создание описаний продуктов и каналов консультаций вокруг умного сельского хозяйства, кроссбордерной электронной коммерции, обучения разработке ИИ, роста приватной зоны в зарубежных соцсетях и кроссбордерных сетевых сервисов</p>
+            </article>
+            <article>
+              <h3>Локальная поддержка</h3>
+              <p>Предоставление поддержки на местном языке, процессов доставки и диагностики проблем для китайских предприятий, разработчиков и партнеров</p>
+            </article>
+            <article>
+              <h3>Запуск с соблюдением требований</h3>
+              <p>Регистрация ICP, аккаунты поддержки, корпоративная почта и информация об авторских правах сохраняют позиции для конфигурации, будут обновлены после предоставления реальных значений администраторами</p>
+            </article>
           </div>
         </div>
       </section>
-      <section class="placeholder-section" aria-labelledby="placeholder-title">
+
+      <section class="home-section" aria-labelledby="ru-preview-title">
         <div class="container">
-          <h2 id="placeholder-title">Заполнители навигации</h2>
-          <div class="placeholder-grid">
-            <article id="s1-products-placeholder">
-              <h3>Продукты</h3>
-              <p>Бизнес-страницы запланированы для S2. Ссылки остаются локальными якорями, чтобы не создавать 404.</p>
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Обновления</p>
+            <h2 id="ru-preview-title">Предпросмотр новостей и вакансий</h2>
+            <p class="lead">Русские новости и вакансии остаются явно ожидающими подключения в этом раунде; страница не создает статьи, факты о вакансиях или действия подачи.</p>
+          </div>
+          <div class="preview-grid">
+            <article class="preview-card" id="ru-news-preview">
+              <span class="preview-status">Будет опубликовано</span>
+              <h3>Предпросмотр новостей</h3>
+              <p>Обновления компании, продуктов, отраслевые материалы и технический контент будут локализованы в следующих работах S3.</p>
+              <a class="link-more" href="#ru-news-preview">Страница новостей ожидает подключения</a>
             </article>
-            <article id="s1-news-placeholder">
-              <h3>Новости</h3>
-              <p>Списки, детали и форматирование дат будут подключены на этапе бизнес-страниц.</p>
+            <article class="preview-card" id="ru-careers-preview">
+              <span class="preview-status">Будет подключено</span>
+              <h3>Предпросмотр вакансий</h3>
+              <p>Представление команды, информация о вакансиях, процесс найма и инструкции по отклику будут локализованы в следующих работах S3.</p>
+              <a class="link-more" href="#ru-careers-preview">Страница вакансий ожидает подключения</a>
             </article>
-            <article id="s1-careers-placeholder">
-              <h3>Карьера</h3>
-              <p>Структура вакансий и путь отклика зарезервированы для дальнейшего содержимого.</p>
-            </article>
-            <article id="s1-about-placeholder">
-              <h3>О нас</h3>
-              <p>Модули юридического субъекта и связи будут подключены после утверждения контента.</p>
-            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section support-note-section" id="ru-support-note" aria-labelledby="ru-support-note-title">
+        <div class="container support-note-grid">
+          <div>
+            <p class="eyebrow eyebrow-dark">Контакт</p>
+            <h2 id="ru-support-note-title">Контактный и сервисный вход</h2>
+            <p class="lead">Эта страница сохраняет только позиции для настройки реальных каналов и не предоставляет фиктивную форму или фиктивное состояние отправки.</p>
+          </div>
+          <div class="support-note-card">
+            <h3>Доступное действие</h3>
+            <p>Используйте плавающий заполнитель поддержки или контактный заполнитель в нижнем колонтитуле. Корпоративная почта и аккаунты поддержки: Будет настроено.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#floating-support">Посмотреть заполнитель поддержки</a>
+              <a class="btn btn-outline" href="#site-footer-contact">Заполнитель контактов внизу</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer" aria-label="Подвал сайта">
+    <footer class="site-footer" aria-label="Нижний колонтитул сайта">
       <div class="container footer-grid">
         <section>
           <h2>Honey Badger</h2>
-          <p>Honey Badger является операционной структурой российской компании ZennoLab в Китае. Формальные сведения будут настроены после подтверждения администратором.</p>
+          <p>Honey Badger — Продукты и услуги Honey Badger фокусируются на цифровизации промышленности, росте кроссбордерной электронной коммерции, формировании возможностей внедрения ИИ и кроссбордерных сетевых сервисах.</p>
+          <p>Honey Badger является операционной структурой российской компании ZennoLab в Китае.</p>
         </section>
-        <section>
-          <h3>Контакты</h3>
+        <section id="site-footer-contact">
+          <h3>Контактный заполнитель</h3>
           <ul class="footer-list">
-            <li>Корпоративная почта: ожидает настройки</li>
-            <li>Аккаунты поддержки: ожидают настройки</li>
+            <li>Корпоративная почта: Будет настроено</li>
+            <li>Аккаунты поддержки: Будет настроено</li>
           </ul>
         </section>
         <section>
-          <h3>Соответствие</h3>
+          <h3>Заполнитель соответствия</h3>
           <ul class="footer-list">
-            <li>ICP: ожидает настройки</li>
-            <li>Авторские права: ожидают настройки</li>
+            <li>Информация о регистрации ICP: Будет настроено</li>
+            <li>Информация об авторских правах: Будет настроено</li>
           </ul>
         </section>
         <section>
           <h3>Внешние ссылки</h3>
-          <p>Ссылки поддержки будут добавлены после подтверждения.</p>
+          <p>Ссылки поддержки зарезервированы до подтверждения.</p>
         </section>
       </div>
     </footer>
     <aside class="floating-support" id="floating-support" aria-label="Заполнитель поддержки">
       <div class="support-panel" id="support-panel">
         <div class="support-panel-head">
-          <strong>Поддержка</strong>
+          <strong>Заполнитель поддержки</strong>
           <button class="support-close" type="button" aria-label="Закрыть панель поддержки">×</button>
         </div>
-        <p>Официальные каналы поддержки ожидают настройки. Этот этап проверяет только структуру и взаимодействие.</p>
+        <p>Официальные каналы поддержки: Будет настроено. Этот issue проверяет только структуру и взаимодействие.</p>
         <div class="support-options" aria-label="Ожидающие каналы поддержки">
-          <span>WeChat: ожидает настройки</span>
-          <span>QQ: ожидает настройки</span>
-          <span>Email: ожидает настройки</span>
+          <span>WeChat: Будет настроено</span>
+          <span>QQ: Будет настроено</span>
+          <span>Email: Будет настроено</span>
         </div>
       </div>
       <button class="support-toggle" type="button" aria-controls="support-panel" aria-expanded="false">
