@@ -19,6 +19,9 @@
   --warning: #e67d4b;
   --shadow: 0 0 12px rgb(0 0 0 / 10%);
   --shadow-hover: 0 12px 32px rgb(0 90 180 / 16%);
+  --shadow-press: 0 6px 18px rgb(0 90 180 / 12%);
+  --focus-ring: #111827;
+  --focus-ring-soft: rgb(65 140 245 / 28%);
   --radius: 16px;
   --radius-sm: 10px;
   --header-h: 76px;
@@ -68,11 +71,14 @@ button {
   padding: 10px 14px;
   color: white;
   font-weight: 800;
-  transition: top 0.2s ease;
+  transition: top 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skip-link:focus {
   top: 14px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--focus-ring-soft);
 }
 
 .container,
@@ -158,16 +164,23 @@ button {
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  background: rgb(0 90 180 / 6%);
 }
 
 .nav-link:hover,
 .nav-link:focus-visible,
-.nav-link:active,
 .nav-link[aria-current="page"] {
   border-bottom-color: var(--primary);
   color: var(--primary);
-  outline: none;
+}
+
+.nav-link:active {
+  transform: translateY(1px);
 }
 
 .nav-link-placeholder {
@@ -201,7 +214,7 @@ button {
   color: var(--text-body);
   font-size: 13px;
   font-weight: 900;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .language-switcher a:hover,
@@ -210,7 +223,10 @@ button {
 .language-switcher a[aria-current="true"] {
   background: var(--primary);
   color: white;
-  outline: none;
+}
+
+.language-switcher a:active {
+  transform: translateY(1px);
 }
 
 .menu-button {
@@ -221,6 +237,7 @@ button {
   border-radius: 999px;
   background: white;
   color: var(--primary);
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .menu-button span {
@@ -236,7 +253,10 @@ button {
 .menu-button:focus-visible,
 .menu-button:active {
   border-color: var(--primary);
-  outline: none;
+}
+
+.menu-button:active {
+  transform: translateY(1px);
 }
 
 .mobile-nav {
@@ -467,26 +487,37 @@ h3 {
   width: min(320px, calc(100vw - 48px));
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: white;
+  background: #ffffff;
   padding: 16px;
   box-shadow: var(--shadow);
-  opacity: 0;
+  opacity: 1;
+  visibility: hidden;
   pointer-events: none;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(10px) scale(0.98);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease, visibility 0s linear 0.2s;
 }
 
-.floating-support:hover .support-panel,
 .floating-support.is-open .support-panel {
-  opacity: 1;
+  visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .floating-support:hover .support-panel {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    transition-delay: 0s;
+  }
 }
 
 .floating-support.is-dismissed .support-panel {
-  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transform: translateY(8px);
+  transform: translateY(10px) scale(0.98);
 }
 
 .support-panel-head {
@@ -510,7 +541,7 @@ h3 {
 .support-options span {
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: var(--surface-blue);
+  background: #eef3ff;
   padding: 10px 12px;
   color: var(--primary);
   font-weight: 900;
@@ -555,8 +586,13 @@ h3 {
 .support-close:hover,
 .support-close:focus-visible,
 .support-close:active {
-  outline: none;
   transform: translateY(-2px);
+}
+
+.support-toggle:active,
+.support-close:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-press);
 }
 
 @media (min-width: 900px) {
@@ -874,11 +910,14 @@ h3 {
 }
 
 .btn:hover,
-.btn:focus-visible,
-.btn:active {
-  outline: none;
+.btn:focus-visible {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-press);
 }
 
 .btn-outline:hover,
@@ -1044,12 +1083,34 @@ h3 {
   background: var(--surface-card);
   padding: 28px;
   box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
   min-height: 318px;
+}
+
+.product-card:hover,
+.product-card:focus-within,
+.preview-card:hover,
+.preview-card:focus-within,
+.support-note-card:hover,
+.support-note-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgb(0 90 180 / 28%);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-card:active,
+.product-card:has(.link-more:active),
+.preview-card:active,
+.preview-card:has(.link-more:active),
+.support-note-card:active,
+.support-note-card:has(.link-more:active) {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-press);
 }
 
 .product-card-wide {
@@ -1111,17 +1172,28 @@ h3 {
 
 .link-more {
   display: inline-flex;
+  align-items: center;
   width: fit-content;
   margin-top: auto;
   color: var(--primary);
   font-weight: 900;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .link-more:hover,
 .link-more:focus-visible,
 .link-more:active {
-  outline: none;
+  color: #003f82;
   text-decoration: underline;
+}
+
+.link-more:hover,
+.link-more:focus-visible {
+  transform: translateX(3px);
+}
+
+.link-more:active {
+  transform: translate(3px, 1px);
 }
 
 .relation-panel {
@@ -2069,6 +2141,20 @@ h3 {
   border-radius: var(--radius);
   background: white;
   box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.news-card:hover,
+.news-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgb(0 90 180 / 28%);
+  box-shadow: var(--shadow-hover);
+}
+
+.news-card:active,
+.news-card:has(.link-more:active) {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-press);
 }
 
 .news-thumb {
@@ -2176,6 +2262,20 @@ h3 {
   border-radius: var(--radius);
   background: white;
   box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.career-job-card:hover,
+.career-job-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgb(0 90 180 / 28%);
+  box-shadow: var(--shadow-hover);
+}
+
+.career-job-card:active,
+.career-job-card:has(.link-more:active) {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-press);
 }
 
 .career-why-card {
@@ -2495,5 +2595,71 @@ h3 {
   .home-visual,
   .product-dashboard {
     padding: 12px;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible,
+.skip-link:focus-visible,
+.nav-link:focus-visible,
+.language-switcher a:focus-visible,
+.menu-button:focus-visible,
+.btn:focus-visible,
+.link-more:focus-visible,
+.support-toggle:focus-visible,
+.support-close:focus-visible,
+.news-category-grid a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--focus-ring-soft), var(--shadow-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible,
+  .nav-link:active,
+  .language-switcher a:active,
+  .menu-button:active,
+  .support-toggle:hover,
+  .support-toggle:focus-visible,
+  .support-toggle:active,
+  .support-close:hover,
+  .support-close:focus-visible,
+  .support-close:active,
+  .btn:hover,
+  .btn:focus-visible,
+  .btn:active,
+  .product-card:hover,
+  .product-card:focus-within,
+  .product-card:active,
+  .preview-card:hover,
+  .preview-card:focus-within,
+  .preview-card:active,
+  .support-note-card:hover,
+  .support-note-card:focus-within,
+  .support-note-card:active,
+  .news-card:hover,
+  .news-card:focus-within,
+  .news-card:active,
+  .career-job-card:hover,
+  .career-job-card:focus-within,
+  .career-job-card:active,
+  .link-more:active,
+  .floating-support.is-open .support-panel {
+    transform: none;
   }
 }

@@ -1,0 +1,158 @@
+{
+  "issue": 52,
+  "baseUrl": "http://127.0.0.1:49194/",
+  "nodeVersion": "v24.14.0",
+  "npmVersion": null,
+  "appJsChanged": false,
+  "staticTolerance": {
+    "maxDiffPixels": 2,
+    "maxDelta": 2
+  },
+  "screenshots": [
+    "interaction-hover-nav-desktop.png",
+    "interaction-hover-main-button-desktop.png",
+    "interaction-hover-product-card-desktop.png",
+    "interaction-hover-link-more-desktop.png",
+    "interaction-hover-language-switch-desktop.png",
+    "interaction-active-main-button-desktop.png",
+    "interaction-active-product-card-link-desktop.png",
+    "support-open-desktop-1440.png",
+    "interaction-focus-skip-link-desktop.png",
+    "interaction-focus-nav-desktop.png",
+    "interaction-focus-language-switch-desktop.png",
+    "interaction-focus-main-button-desktop.png",
+    "interaction-focus-product-link-desktop.png",
+    "interaction-focus-support-toggle-desktop.png",
+    "support-open-mobile-390.png",
+    "regression-zh-index-desktop-current.png",
+    "regression-zh-index-desktop-baseline-main.png",
+    "regression-zh-index-tablet-current.png",
+    "regression-zh-index-tablet-baseline-main.png",
+    "regression-zh-index-mobile-current.png",
+    "regression-zh-index-mobile-baseline-main.png"
+  ],
+  "assertions": {
+    "supportDesktop": {
+      "visibility": "visible",
+      "opacity": "1",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "backgroundAlpha": 1,
+      "width": 320,
+      "height": 298,
+      "text": "在线客服占位 × 正式联系渠道待配置，本轮只验证结构与交互。 微信：待配置 QQ：待配置 邮箱：待配置",
+      "pass": true
+    },
+    "focus": {
+      "nav": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(17, 24, 39)",
+        "boxShadow": "rgba(65, 140, 245, 0.28) 0px 0px 0px 5px, rgba(0, 90, 180, 0.16) 0px 12px 32px 0px",
+        "pass": true
+      },
+      "button": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(17, 24, 39)",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "pass": true
+      },
+      "linkMore": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(17, 24, 39)",
+        "boxShadow": "rgba(65, 140, 245, 0.28) 0px 0px 0px 5px, rgba(0, 90, 180, 0.16) 0px 12px 32px 0px",
+        "pass": true
+      },
+      "language": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(17, 24, 39)",
+        "boxShadow": "rgba(65, 140, 245, 0.28) 0px 0px 0px 5px, rgba(0, 90, 180, 0.16) 0px 12px 32px 0px",
+        "pass": true
+      },
+      "support": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(17, 24, 39)",
+        "boxShadow": "rgba(65, 140, 245, 0.28) 0px 0px 0px 5px, rgba(0, 90, 180, 0.16) 0px 12px 32px 0px",
+        "pass": true
+      },
+      "supportScreenshot": "interaction-focus-support-toggle-desktop.png"
+    },
+    "supportMobile": {
+      "visibility": "visible",
+      "opacity": "1",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "backgroundAlpha": 1,
+      "width": 358,
+      "height": 298,
+      "text": "在线客服占位 × 正式联系渠道待配置，本轮只验证结构与交互。 微信：待配置 QQ：待配置 邮箱：待配置",
+      "pass": true
+    },
+    "escapeClosesSupport": true,
+    "escapeClosesMobileNav": true,
+    "overflow-desktop": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "pass": true
+    },
+    "overflow-tablet": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "pass": true
+    },
+    "overflow-mobile": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "pass": true
+    },
+    "reducedMotion": {
+      "transitionDuration": "0.001s",
+      "pass": true
+    }
+  },
+  "staticRegression": {
+    "desktop": {
+      "pass": true,
+      "diffPixels": 1,
+      "totalPixels": 5603040,
+      "diffRatio": 1.8e-7,
+      "maxDelta": 2,
+      "width": 1440,
+      "height": 3891,
+      "tolerance": {
+        "maxDiffPixels": 2,
+        "maxDelta": 2
+      }
+    },
+    "tablet": {
+      "pass": true,
+      "diffPixels": 1,
+      "totalPixels": 4068864,
+      "diffRatio": 2.5e-7,
+      "maxDelta": 2,
+      "width": 768,
+      "height": 5298,
+      "tolerance": {
+        "maxDiffPixels": 2,
+        "maxDelta": 2
+      }
+    },
+    "mobile": {
+      "pass": true,
+      "diffPixels": 0,
+      "totalPixels": 2559180,
+      "diffRatio": 0,
+      "maxDelta": 0,
+      "width": 390,
+      "height": 6562,
+      "tolerance": {
+        "maxDiffPixels": 2,
+        "maxDelta": 2
+      }
+    }
+  },
+  "consoleErrors": [],
+  "pass": true
+}
