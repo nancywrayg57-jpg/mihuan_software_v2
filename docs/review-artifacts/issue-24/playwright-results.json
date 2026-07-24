@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-07-24T07:25:14.815Z",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "referenceSource": "UI/en/products.html",
+  "urls": {
+    "enProducts": "file:///D:/workspace/mihuan_software_v2/site/dist/en/products.html",
+    "enIndex": "file:///D:/workspace/mihuan_software_v2/site/dist/en/index.html",
+    "zhProducts": "file:///D:/workspace/mihuan_software_v2/site/dist/products.html",
+    "ruIndex": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html",
+    "reference": "file:///D:/workspace/mihuan_software_v2/UI/en/products.html"
+  },
+  "screenshots": {
+    "desktop": "en-products-desktop.png",
+    "mobile": "en-products-mobile.png",
+    "mobileNav": "en-products-mobile-nav.png",
+    "referenceDesktop": "ui-reference-en-products-desktop.png",
+    "referenceMobile": "ui-reference-en-products-mobile.png"
+  },
+  "assertions": {
+    "desktopSignals": {
+      "title": "Products | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "detailLinks": [
+        "#en-product-detail-pending",
+        "#en-product-detail-pending",
+        "#en-product-detail-pending",
+        "#en-product-detail-pending",
+        "#en-product-detail-pending"
+      ],
+      "currentProducts": [
+        {
+          "href": "./products.html",
+          "current": "page"
+        },
+        {
+          "href": "./products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products",
+      "footerHasRelationship": true,
+      "hasFakeForm": false,
+      "scaffold": true
+    },
+    "mobileSignals": {
+      "title": "Products | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "detailLinks": [
+        "#en-product-detail-pending",
+        "#en-product-detail-pending",
+        "#en-product-detail-pending",
+        "#en-product-detail-pending",
+        "#en-product-detail-pending"
+      ],
+      "currentProducts": [
+        {
+          "href": "./products.html",
+          "current": "page"
+        },
+        {
+          "href": "./products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products",
+      "footerHasRelationship": true,
+      "hasFakeForm": false,
+      "scaffold": true
+    },
+    "mobileNavOpen": true,
+    "referenceDesktopSignals": {
+      "title": "Products | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "detailLinks": [],
+      "currentProducts": [
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        },
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products",
+      "footerHasRelationship": false,
+      "hasFakeForm": false,
+      "scaffold": false
+    },
+    "referenceMobileSignals": {
+      "title": "Products | Honey Badger",
+      "lang": "en-US",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalOverflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "detailLinks": [],
+      "currentProducts": [
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        },
+        {
+          "href": "../en/products.html",
+          "current": "page"
+        }
+      ],
+      "breadcrumbText": "Home / Products",
+      "footerHasRelationship": false,
+      "hasFakeForm": false,
+      "scaffold": false
+    },
+    "navHomeToProducts": true,
+    "productsCurrentAfterNav": true,
+    "breadcrumbBackToHome": true,
+    "languageZhKeepsProductsContext": true,
+    "supportPanelOpens": true,
+    "noConsoleErrors": true,
+    "noBrokenImages": true,
+    "noHorizontalOverflow": true,
+    "detailLinksSamePage": true,
+    "footerRelationshipExact": true,
+    "noFakeForm": true
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "e2e": [
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "EN products language switcher zh link opened dist/products.html."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "Breadcrumb text: Home / Products"
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Footer relationship statement checked exactly."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "Detail links: #en-product-detail-pending, #en-product-detail-pending, #en-product-detail-pending, #en-product-detail-pending, #en-product-detail-pending"
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "Desktop/mobile overflow and broken image checks completed."
+    },
+    {
+      "id": "NAV-002",
+      "status": "PASS",
+      "evidence": "EN home Products nav reaches EN products; breadcrumb returns to EN home."
+    },
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Products current state and mobile nav expansion verified."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "This issue adds the EN products page only; zh products and ru home are existing pages."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N-A",
+      "evidence": "No EN product detail pages are in Issue #24 scope; detail links intentionally stay as same-page pending anchors."
+    }
+  ]
+}
