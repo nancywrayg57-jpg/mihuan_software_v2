@@ -1,0 +1,224 @@
+{
+  "generatedAt": "2026-07-24T10:09:02.203Z",
+  "target": "site/dist/ru/products.html",
+  "reference": "UI/ru/products.html",
+  "screenshots": [
+    "docs/review-artifacts/issue-34/ru-products-desktop.png",
+    "docs/review-artifacts/issue-34/ru-products-mobile.png",
+    "docs/review-artifacts/issue-34/ru-products-mobile-nav.png",
+    "docs/review-artifacts/issue-34/ui-reference-ru-products-desktop.png",
+    "docs/review-artifacts/issue-34/ui-reference-ru-products-mobile.png"
+  ],
+  "assertions": [
+    {
+      "name": "ru-products-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Продукты | Honey Badger\",\"h1\":\"Описание продуктов и услуг Honey Badger\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ru-products-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru products hero title",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products hero lead",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products breadcrumb home/current",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products current nav markers",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products required counts",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products all detail links are same-page anchors",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products no fake form",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products footer relationship exact",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products no real contact or over-scoped wording",
+      "status": "PASS",
+      "details": "{\"title\":\"Описание продуктов и услуг Honey Badger\",\"lead\":\"Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.\",\"breadcrumbHome\":\"Главная\",\"breadcrumbCurrent\":\"Продукты\",\"currentNavCount\":2,\"entries\":5,\"regular\":4,\"network\":1,\"capabilities\":5,\"steps\":4,\"fakeForms\":0,\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"detailLinks\":[\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\",\"#ru-product-detail-pending\"]}"
+    },
+    {
+      "name": "ru products support float opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"configuredCount\":4}"
+    },
+    {
+      "name": "ru products breadcrumb navigates home",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html"
+    },
+    {
+      "name": "ru home desktop nav has products link",
+      "status": "PASS",
+      "details": "{\"homeNavCount\":1}"
+    },
+    {
+      "name": "ru home desktop nav reaches products",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/ru/products.html\",\"h1\":\"Описание продуктов и услуг Honey Badger\"}"
+    },
+    {
+      "name": "ru products zh language switch keeps products context",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/products.html\",\"h1\":\"蜜獾产品与服务介绍\"}"
+    },
+    {
+      "name": "ru products en language switch keeps products context",
+      "status": "PASS",
+      "details": "{\"url\":\"file:///D:/workspace/mihuan_software_v2/site/dist/en/products.html\",\"h1\":\"Honey Badger Products & Services Introduction\"}"
+    },
+    {
+      "name": "ru-products-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Продукты | Honey Badger\",\"h1\":\"Описание продуктов и услуг Honey Badger\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ru-products-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru products mobile nav opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"mobileProductsCurrent\":true}"
+    },
+    {
+      "name": "ui-reference-ru-products-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Продукты | Honey Badger\",\"h1\":\"Локализованные возможности ZennoLab для Китая\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ui-reference-ru-products-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui reference desktop renders ru products page",
+      "status": "PASS",
+      "details": "{\"title\":\"Продукты | Honey Badger\",\"h1\":\"Локализованные возможности ZennoLab для Китая\",\"hasProductsIntent\":true}"
+    },
+    {
+      "name": "ui-reference-ru-products-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Продукты | Honey Badger\",\"h1\":\"Локализованные возможности ZennoLab для Китая\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"navCurrent\":2,\"supportExists\":true}"
+    },
+    {
+      "name": "ui-reference-ru-products-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru-products-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru-home-nav: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "language-switch: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru-products-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui-reference-ru-products-desktop: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui-reference-ru-products-mobile: no console/page errors",
+      "status": "PASS",
+      "details": "[]"
+    }
+  ],
+  "e2e": [
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "Russian products page is complete; remaining Russian subpages are intentionally outside Issue #34 scope."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "zh/en language switches from ru/products.html keep product context via site/dist/products.html and site/dist/en/products.html."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "ru/products.html renders ru-RU metadata, breadcrumb and RU current language state."
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Russian production page content remains Russian except the explicit Chinese skeleton notice required by this scaffold."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "Desktop and mobile screenshots show Russian long text without horizontal overflow."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N-A",
+      "evidence": "Russian network/services detail pages are not implemented in Issue #34; all product detail links remain same-page pending anchors."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "No broken images and no console/page errors were observed across target and UI reference pages."
+    },
+    {
+      "id": "NAV-002",
+      "status": "PASS",
+      "evidence": "Russian home desktop Продукты nav was clicked and reached site/dist/ru/products.html."
+    },
+    {
+      "id": "NAV-005",
+      "status": "PASS",
+      "evidence": "Mobile menu opened on ru/products.html and Продукты remained marked as the current item."
+    }
+  ],
+  "consoleErrors": {
+    "ru-products-desktop": [],
+    "ru-home-nav": [],
+    "language-switch": [],
+    "ru-products-mobile": [],
+    "ui-reference-ru-products-desktop": [],
+    "ui-reference-ru-products-mobile": []
+  }
+}

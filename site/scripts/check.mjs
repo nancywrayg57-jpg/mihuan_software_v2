@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -1041,6 +1041,15 @@ function validateRussianHome(html) {
     errors.push("Russian home header must mark Главная as the current real page.");
   }
 
+  const productsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/products\.html["']>Продукты<\/a>/g) || [];
+  if (productsNavLinks.length !== 2) {
+    errors.push(`Russian home Продукты navigation must point to ./products.html on desktop and mobile; found ${productsNavLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>Продукты<\/a>/i.test(html)) {
+    errors.push("Russian home Продукты navigation must not remain a placeholder link.");
+  }
+
   for (const languagePath of ['href="../index.html"', 'href="../en/index.html"', 'href="./index.html" aria-current="true"']) {
     if (!html.includes(languagePath)) {
       errors.push(`Russian home language switcher missing ${languagePath}.`);
@@ -1067,7 +1076,7 @@ function validateRussianHome(html) {
     errors.push(`Russian product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
-  if (/href=["'][^"']*(products|Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
     errors.push("Russian home must not link to nonexistent Russian product or service detail pages.");
   }
 
@@ -1077,6 +1086,142 @@ function validateRussianHome(html) {
 
   if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
     errors.push("Russian home contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateRussianProducts(html) {
+  const errors = [];
+  const expectedTitle = "Продукты | Honey Badger";
+  const expectedDescription = "Узнайте об интегрированной системе цифрового сельского хозяйства Honey Badger, оригинальных изображениях Honey Badger, обучении AI-FDE VibeCoding, сопровождении приватной зоны в соцсетях и кроссбордерных сетевых сервисах.";
+  const expectedFooterRelationship = "Honey Badger является операционной структурой российской компании ZennoLab в Китае.";
+
+  if (!/<html\s+lang=["']ru-RU["']/i.test(html)) {
+    errors.push('Russian products page must render <html lang="ru-RU">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("Russian products page meta title must match the SSOT exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("Russian products page meta description must match the SSOT exactly.");
+  }
+
+  for (const marker of [
+    "Описание продуктов и услуг Honey Badger",
+    "Предоставление практичных решений продуктов и услуг вокруг цифрового сельского хозяйства, оригинальности кроссбордерных товарных изображений, обучения разработке на естественном языке ИИ, операций в приватной зоне зарубежных соцсетей и кроссбордерных сетевых сервисов.",
+    "Объем продуктов и услуг",
+    "Интегрированная система цифрового сельского хозяйства",
+    "Платформа полного цикла для умного сельского хозяйства, IoT + ИИ для цифрового управления производством, контролем и прослеживаемостью",
+    "Оригинальные изображения Honey Badger",
+    "Кроссбордерный ИИ-инструмент для оригинальности изображений, пакетная обработка товарных фото, избежание проверок на дубликаты, адаптация ко всем зарубежным e-commerce платформам",
+    "Обучение AI-FDE VibeCoding",
+    "Практическое обучение разработке на естественном языке с помощью передового ИИ, пошаговая реализация коммерческих проектов на базе ИИ-систем",
+    "Сопровождение приватной зоны в соцсетях",
+    "Полномасштабное сопровождение операций в TikTok/FB/INS, практическое руководство по всему процессу от привлечения трафика до конверсии в приватной зоне",
+    "Кроссбордерные сетевые сервисы",
+    "Объединяют статический домашний IP, датацентровый IP и динамический IP для стабильных аккаунтных сред, высокопараллельных выходов и ротационных домашних IP-пулов",
+    "Русские страницы деталей продуктов и русская объединенная страница сетевых сервисов ожидают подключения.",
+    "Русская объединенная страница сетевых сервисов ожидает подключения",
+    "Русские страницы деталей продуктов ожидают подключения; в этом раунде S3 все продуктовые входы остаются якорями на текущей странице.",
+    "Основные возможности",
+    "Цифровой контроль промышленности",
+    "Интеграция Интернета вещей, больших данных и ИИ для объединения производства, контроля, хранения и прослеживаемости в единую цепь управления",
+    "Оригинальность кроссбордерных изображений",
+    "Пакетная реконструкция исходных товарных изображений с сохранением ключевых деталей и адаптацией под требования основных и сценарных изображений зарубежных e-commerce платформ",
+    "Формирование навыков разработки ИИ",
+    "Основанное на парадигме разработки на естественном языке Vibe Coding обучение команд созданию коммерческих ИИ-систем с нуля",
+    "Рост зарубежной приватной зоны",
+    "Объединение процессов привлечения трафика, накопления, конверсии и анализа в TikTok, Facebook и Instagram",
+    "Объединение статического домашнего IP, датацентрового IP и динамического IP в один сервисный вход для стабильных аккаунтов, высокой параллельности и ротационных сценариев доступа",
+    "Четырехэтапный путь внедрения услуг",
+    "Подтверждение бизнес-целей, границ сценария и объема поставки",
+    "Выбор соответствующего продукта или решения услуг сопровождения",
+    "Создание пилотных процессов, материалов или прототипов системы",
+    "Завершение обучения, поставки, анализа и непрерывной итерации",
+    "Вход для консультации и контакта",
+    "Корпоративная почта: Будет настроено",
+    "Аккаунты поддержки: Будет настроено",
+    "Информация о регистрации ICP: Будет настроено",
+    "Информация об авторских правах: Будет настроено",
+    expectedFooterRelationship,
+    "Заполнитель поддержки",
+    "Будет настроено"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Russian products page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "ru-products-page",
+    "products-hero",
+    "product-overview",
+    "products-capabilities",
+    "service-path",
+    "products-consult"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing Russian products page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Russian products page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Главная</a>') || !html.includes('aria-current="page">Продукты</span>')) {
+    errors.push("Russian products page breadcrumb must be Главная / Продукты with a working home link.");
+  }
+
+  if (!html.includes('href="./products.html" aria-current="page">Продукты</a>')) {
+    errors.push("Russian products page header must mark Продукты as current.");
+  }
+
+  for (const languagePath of ['href="../products.html"', 'href="../en/products.html"', 'href="./products.html" aria-current="true"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Russian products page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const productEntries = html.match(/data-product-entry=/g) || [];
+  if (productEntries.length !== 5) {
+    errors.push(`Russian products page must render exactly 5 top-level product entries; found ${productEntries.length}.`);
+  }
+
+  const regularEntries = html.match(/data-product-entry="regular"/g) || [];
+  if (regularEntries.length !== 4) {
+    errors.push(`Russian products page must render 4 regular product/service entries; found ${regularEntries.length}.`);
+  }
+
+  const networkEntries = html.match(/data-product-entry="network"/g) || [];
+  if (networkEntries.length !== 1) {
+    errors.push(`Russian products page must render 1 network-services entry; found ${networkEntries.length}.`);
+  }
+
+  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
+  if (pendingProductLinks.length !== 5) {
+    errors.push(`Russian products page product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending");
+  if (externalDetailLinks.length > 0) {
+    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending; found ${externalDetailLinks.join(", ")}.`);
+  }
+
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+    errors.push("Russian products page must not link to nonexistent product or network-service detail pages.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("Russian products page must not include a fake contact form.");
+  }
+
+  if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
+    errors.push("Russian products page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -1695,6 +1840,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "ru/index.html") {
     htmlErrors.push(...validateRussianHome(html));
+  }
+
+  if (relativePath === "ru/products.html") {
+    htmlErrors.push(...validateRussianProducts(html));
   }
 
   if (relativePath === "products.html") {
