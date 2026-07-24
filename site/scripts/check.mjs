@@ -10,6 +10,14 @@ const indexPath = resolve(distDir, "index.html");
 const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
+const productionOrigin = "https://www.honeybadgersoft.com";
+const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
+const seoLocaleConfigs = [
+  { key: "zh", hreflang: "zh-CN", prefix: "", htmlLang: "zh-CN" },
+  { key: "en", hreflang: "en-US", prefix: "en/", htmlLang: "en-US" },
+  { key: "ru", hreflang: "ru-RU", prefix: "ru/", htmlLang: "ru-RU" }
+];
+const seoHreflangs = [...seoLocaleConfigs.map((locale) => locale.hreflang), "x-default"];
 
 const voidElements = new Set([
   "area",
@@ -90,6 +98,148 @@ function validateHtmlShape(html) {
 
   if (stack.length > 0) {
     errors.push(`Unclosed HTML tag <${stack.at(-1)}>.`);
+  }
+
+  return errors;
+}
+
+function parseTagAttributes(tag) {
+  const attributes = new Map();
+  const attributePattern = /([a-zA-Z:-]+)=["']([^"']*)["']/g;
+  let match;
+
+  while ((match = attributePattern.exec(tag)) !== null) {
+    attributes.set(match[1].toLowerCase(), match[2]);
+  }
+
+  return attributes;
+}
+
+function getSeoPageDetails(relativePath) {
+  const locale = relativePath.startsWith("en/")
+    ? seoLocaleConfigs[1]
+    : relativePath.startsWith("ru/")
+      ? seoLocaleConfigs[2]
+      : seoLocaleConfigs[0];
+
+  return {
+    locale,
+    pageFile: relativePath.slice(locale.prefix.length)
+  };
+}
+
+function encodeSeoFileName(pageFile) {
+  return pageFile === "跨境网络服务.html" ? encodedNetworkServicesFile : pageFile;
+}
+
+function getSeoUrl(localeKey, pageFile) {
+  const locale = seoLocaleConfigs.find((candidate) => candidate.key === localeKey);
+
+  if (!locale) {
+    throw new Error(`Unknown SEO locale key: ${localeKey}`);
+  }
+
+  return `${productionOrigin}/${locale.prefix}${encodeSeoFileName(pageFile)}`;
+}
+
+function stripAllowedProductionSeoLinks(html) {
+  return html.replace(/<link\b[^>]*>/gi, (tag) => {
+    const attributes = parseTagAttributes(tag);
+    const rel = attributes.get("rel")?.toLowerCase();
+    const href = attributes.get("href");
+    const hreflang = attributes.get("hreflang");
+
+    if (rel === "canonical" && href?.startsWith(`${productionOrigin}/`)) {
+      return "";
+    }
+
+    if (rel === "alternate" && seoHreflangs.includes(hreflang) && href?.startsWith(`${productionOrigin}/`)) {
+      return "";
+    }
+
+    return tag;
+  });
+}
+
+function validateSeoLinks(relativePath, html) {
+  const errors = [];
+  const { locale, pageFile } = getSeoPageDetails(relativePath);
+  const headMatch = html.match(/<head\b[^>]*>[\s\S]*?<\/head>/i);
+
+  if (!headMatch) {
+    return ["Missing <head> block for SEO validation."];
+  }
+
+  const head = headMatch[0];
+  const htmlWithoutHead = html.replace(headMatch[0], "");
+
+  if (/<link\b[^>]*rel=["'](?:canonical|alternate)["']/i.test(htmlWithoutHead)) {
+    errors.push("canonical and alternate link tags must stay inside <head>.");
+  }
+
+  if (!new RegExp(`<html\\b[^>]*\\blang=["']${locale.htmlLang}["']`, "i").test(html)) {
+    errors.push(`Expected html lang="${locale.htmlLang}".`);
+  }
+
+  const headTitles = head.match(/<title>[\s\S]*?<\/title>/gi) || [];
+  if (headTitles.length !== 1) {
+    errors.push(`Expected exactly 1 head title, found ${headTitles.length}.`);
+  } else if (!/<title>\s*[^<\s][\s\S]*<\/title>/i.test(headTitles[0])) {
+    errors.push("Head title must not be empty.");
+  }
+
+  const descriptionMetas = [...head.matchAll(/<meta\b[^>]*>/gi)]
+    .map((match) => parseTagAttributes(match[0]))
+    .filter((attributes) => attributes.get("name")?.toLowerCase() === "description");
+  if (descriptionMetas.length !== 1) {
+    errors.push(`Expected exactly 1 meta description, found ${descriptionMetas.length}.`);
+  } else if (!descriptionMetas[0].get("content")?.trim()) {
+    errors.push("Meta description must not be empty.");
+  }
+
+  const linkTags = [...head.matchAll(/<link\b[^>]*>/gi)].map((match) => parseTagAttributes(match[0]));
+  const canonicalLinks = linkTags.filter((attributes) => attributes.get("rel")?.toLowerCase() === "canonical");
+  const alternateLinks = linkTags.filter((attributes) => attributes.get("rel")?.toLowerCase() === "alternate");
+  const expectedCanonical = getSeoUrl(locale.key, pageFile);
+  const expectedAlternates = new Map([
+    ...seoLocaleConfigs.map((config) => [config.hreflang, getSeoUrl(config.key, pageFile)]),
+    ["x-default", getSeoUrl("zh", pageFile)]
+  ]);
+
+  if (canonicalLinks.length !== 1) {
+    errors.push(`Expected exactly 1 canonical link, found ${canonicalLinks.length}.`);
+  } else if (canonicalLinks[0].get("href") !== expectedCanonical) {
+    errors.push(`Expected canonical ${expectedCanonical}, found ${canonicalLinks[0].get("href") || "missing href"}.`);
+  }
+
+  if (alternateLinks.length !== seoHreflangs.length) {
+    errors.push(`Expected exactly ${seoHreflangs.length} hreflang links, found ${alternateLinks.length}.`);
+  }
+
+  const seenAlternates = new Map();
+  for (const attributes of alternateLinks) {
+    const hreflang = attributes.get("hreflang");
+    const href = attributes.get("href");
+
+    if (!seoHreflangs.includes(hreflang)) {
+      errors.push(`Unexpected hreflang "${hreflang || "missing"}" on alternate link.`);
+      continue;
+    }
+
+    if (seenAlternates.has(hreflang)) {
+      errors.push(`Duplicate hreflang "${hreflang}" alternate link.`);
+      continue;
+    }
+
+    seenAlternates.set(hreflang, href);
+  }
+
+  for (const [hreflang, expectedHref] of expectedAlternates) {
+    const foundHref = seenAlternates.get(hreflang);
+
+    if (foundHref !== expectedHref) {
+      errors.push(`Expected hreflang ${hreflang} href ${expectedHref}, found ${foundHref || "missing"}.`);
+    }
   }
 
   return errors;
@@ -2349,13 +2499,14 @@ async function validateBuiltHtml(relativePath) {
 
   const html = await readFile(htmlPath, "utf8");
   const htmlErrors = validateHtmlShape(html);
+  htmlErrors.push(...validateSeoLinks(relativePath, html));
 
   if (!html.includes("开发骨架，非正式内容")) {
     htmlErrors.push("Missing explicit scaffold notice.");
   }
 
-  if (/\bhttps?:\/\//i.test(html)) {
-    htmlErrors.push("Skeleton page must not reference external URLs.");
+  if (/\bhttps?:\/\//i.test(stripAllowedProductionSeoLinks(html))) {
+    htmlErrors.push("Skeleton page must not reference external URLs outside canonical or alternate SEO links.");
   }
 
   for (const selector of [
