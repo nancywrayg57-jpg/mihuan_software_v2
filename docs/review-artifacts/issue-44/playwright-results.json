@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-07-24T12:17:21.698Z",
+  "playwrightVersion": "1.61.1",
+  "viewport": {
+    "width": 1440,
+    "height": 1200
+  },
+  "canonicalRows": [
+    {
+      "pageKey": "home",
+      "locale": "zh-CN",
+      "source": "site/src/index.html",
+      "canonical": "https://www.honeybadgersoft.com/index.html"
+    },
+    {
+      "pageKey": "home",
+      "locale": "en-US",
+      "source": "site/src/en/index.html",
+      "canonical": "https://www.honeybadgersoft.com/en/index.html"
+    },
+    {
+      "pageKey": "home",
+      "locale": "ru-RU",
+      "source": "site/src/ru/index.html",
+      "canonical": "https://www.honeybadgersoft.com/ru/index.html"
+    },
+    {
+      "pageKey": "products",
+      "locale": "zh-CN",
+      "source": "site/src/products.html",
+      "canonical": "https://www.honeybadgersoft.com/products.html"
+    },
+    {
+      "pageKey": "products",
+      "locale": "en-US",
+      "source": "site/src/en/products.html",
+      "canonical": "https://www.honeybadgersoft.com/en/products.html"
+    },
+    {
+      "pageKey": "products",
+      "locale": "ru-RU",
+      "source": "site/src/ru/products.html",
+      "canonical": "https://www.honeybadgersoft.com/ru/products.html"
+    },
+    {
+      "pageKey": "network-services",
+      "locale": "zh-CN",
+      "source": "site/src/跨境网络服务.html",
+      "canonical": "https://www.honeybadgersoft.com/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html"
+    },
+    {
+      "pageKey": "network-services",
+      "locale": "en-US",
+      "source": "site/src/en/跨境网络服务.html",
+      "canonical": "https://www.honeybadgersoft.com/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html"
+    },
+    {
+      "pageKey": "network-services",
+      "locale": "ru-RU",
+      "source": "site/src/ru/跨境网络服务.html",
+      "canonical": "https://www.honeybadgersoft.com/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html"
+    },
+    {
+      "pageKey": "about",
+      "locale": "zh-CN",
+      "source": "site/src/about.html",
+      "canonical": "https://www.honeybadgersoft.com/about.html"
+    },
+    {
+      "pageKey": "about",
+      "locale": "en-US",
+      "source": "site/src/en/about.html",
+      "canonical": "https://www.honeybadgersoft.com/en/about.html"
+    },
+    {
+      "pageKey": "about",
+      "locale": "ru-RU",
+      "source": "site/src/ru/about.html",
+      "canonical": "https://www.honeybadgersoft.com/ru/about.html"
+    },
+    {
+      "pageKey": "news",
+      "locale": "zh-CN",
+      "source": "site/src/news.html",
+      "canonical": "https://www.honeybadgersoft.com/news.html"
+    },
+    {
+      "pageKey": "news",
+      "locale": "en-US",
+      "source": "site/src/en/news.html",
+      "canonical": "https://www.honeybadgersoft.com/en/news.html"
+    },
+    {
+      "pageKey": "news",
+      "locale": "ru-RU",
+      "source": "site/src/ru/news.html",
+      "canonical": "https://www.honeybadgersoft.com/ru/news.html"
+    },
+    {
+      "pageKey": "careers",
+      "locale": "zh-CN",
+      "source": "site/src/careers.html",
+      "canonical": "https://www.honeybadgersoft.com/careers.html"
+    },
+    {
+      "pageKey": "careers",
+      "locale": "en-US",
+      "source": "site/src/en/careers.html",
+      "canonical": "https://www.honeybadgersoft.com/en/careers.html"
+    },
+    {
+      "pageKey": "careers",
+      "locale": "ru-RU",
+      "source": "site/src/ru/careers.html",
+      "canonical": "https://www.honeybadgersoft.com/ru/careers.html"
+    }
+  ],
+  "alternateRows": [
+    {
+      "pageKey": "home",
+      "file": "index.html",
+      "zh-CN": "https://www.honeybadgersoft.com/index.html",
+      "en-US": "https://www.honeybadgersoft.com/en/index.html",
+      "ru-RU": "https://www.honeybadgersoft.com/ru/index.html",
+      "x-default": "https://www.honeybadgersoft.com/index.html"
+    },
+    {
+      "pageKey": "products",
+      "file": "products.html",
+      "zh-CN": "https://www.honeybadgersoft.com/products.html",
+      "en-US": "https://www.honeybadgersoft.com/en/products.html",
+      "ru-RU": "https://www.honeybadgersoft.com/ru/products.html",
+      "x-default": "https://www.honeybadgersoft.com/products.html"
+    },
+    {
+      "pageKey": "network-services",
+      "file": "跨境网络服务.html",
+      "zh-CN": "https://www.honeybadgersoft.com/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "en-US": "https://www.honeybadgersoft.com/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "ru-RU": "https://www.honeybadgersoft.com/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "x-default": "https://www.honeybadgersoft.com/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html"
+    },
+    {
+      "pageKey": "about",
+      "file": "about.html",
+      "zh-CN": "https://www.honeybadgersoft.com/about.html",
+      "en-US": "https://www.honeybadgersoft.com/en/about.html",
+      "ru-RU": "https://www.honeybadgersoft.com/ru/about.html",
+      "x-default": "https://www.honeybadgersoft.com/about.html"
+    },
+    {
+      "pageKey": "news",
+      "file": "news.html",
+      "zh-CN": "https://www.honeybadgersoft.com/news.html",
+      "en-US": "https://www.honeybadgersoft.com/en/news.html",
+      "ru-RU": "https://www.honeybadgersoft.com/ru/news.html",
+      "x-default": "https://www.honeybadgersoft.com/news.html"
+    },
+    {
+      "pageKey": "careers",
+      "file": "careers.html",
+      "zh-CN": "https://www.honeybadgersoft.com/careers.html",
+      "en-US": "https://www.honeybadgersoft.com/en/careers.html",
+      "ru-RU": "https://www.honeybadgersoft.com/ru/careers.html",
+      "x-default": "https://www.honeybadgersoft.com/careers.html"
+    }
+  ],
+  "checks": [
+    {
+      "id": "zh-index",
+      "file": "index.html",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/index.html",
+      "screenshot": "zh-index-desktop.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "overflow": {
+        "viewportWidth": 1440,
+        "documentScrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "hasHorizontalOverflow": false
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "en-products",
+      "file": "en/products.html",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/en/products.html",
+      "screenshot": "en-products-desktop.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "overflow": {
+        "viewportWidth": 1440,
+        "documentScrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "hasHorizontalOverflow": false
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "ru-network-services",
+      "file": "ru/跨境网络服务.html",
+      "url": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshot": "ru-network-services-desktop.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "overflow": {
+        "viewportWidth": 1440,
+        "documentScrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "hasHorizontalOverflow": false
+      },
+      "status": "PASS"
+    }
+  ]
+}
