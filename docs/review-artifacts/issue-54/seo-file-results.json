@@ -1,0 +1,196 @@
+{
+  "issue": 54,
+  "nodeVersion": "v24.14.0",
+  "sitemap": {
+    "locCount": 18,
+    "locs": [
+      "https://www.honeybadgersoft.com/index.html",
+      "https://www.honeybadgersoft.com/products.html",
+      "https://www.honeybadgersoft.com/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "https://www.honeybadgersoft.com/about.html",
+      "https://www.honeybadgersoft.com/news.html",
+      "https://www.honeybadgersoft.com/careers.html",
+      "https://www.honeybadgersoft.com/en/index.html",
+      "https://www.honeybadgersoft.com/en/products.html",
+      "https://www.honeybadgersoft.com/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "https://www.honeybadgersoft.com/en/about.html",
+      "https://www.honeybadgersoft.com/en/news.html",
+      "https://www.honeybadgersoft.com/en/careers.html",
+      "https://www.honeybadgersoft.com/ru/index.html",
+      "https://www.honeybadgersoft.com/ru/products.html",
+      "https://www.honeybadgersoft.com/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "https://www.honeybadgersoft.com/ru/about.html",
+      "https://www.honeybadgersoft.com/ru/news.html",
+      "https://www.honeybadgersoft.com/ru/careers.html"
+    ],
+    "hasLastmod": false,
+    "hasChangefreq": false,
+    "hasPriority": false
+  },
+  "robots": {
+    "lines": [
+      "User-agent: *",
+      "Allow: /",
+      "",
+      "Sitemap: https://www.honeybadgersoft.com/sitemap.xml"
+    ],
+    "hasUserAgentAll": true,
+    "hasAllowAll": true,
+    "sitemapDirective": "https://www.honeybadgersoft.com/sitemap.xml",
+    "disallowLines": []
+  },
+  "idempotency": {
+    "pass": true,
+    "firstFileCount": 28,
+    "secondFileCount": 28,
+    "firstTotalBytes": 452251,
+    "secondTotalBytes": 452251,
+    "manifest": [
+      {
+        "path": "about.html",
+        "bytes": 13621,
+        "sha256": "85be598a0142d9a77024ebf3af782ad7fdfd6f55cef221f5b9351826eba814e3"
+      },
+      {
+        "path": "assets/app.js",
+        "bytes": 2988,
+        "sha256": "6dbc733523ff4d58eaba544865376b681d462062c17ed6c910826cce880c9820"
+      },
+      {
+        "path": "assets/img/hero-light-blue.svg",
+        "bytes": 5493,
+        "sha256": "caf2a6dc82e1015edce273142b00e27a61b7afa74d3792b11ec37c81cacd6972"
+      },
+      {
+        "path": "assets/img/IP.svg",
+        "bytes": 5204,
+        "sha256": "d4a99984e2ae74f24befb1099a7d5042557060d1c39af7cf41a5a18277004157"
+      },
+      {
+        "path": "assets/img/stacked-waves-haikei_2.svg",
+        "bytes": 7538,
+        "sha256": "b1cec5657d49d03db8b201e6d0a714d6cdf70f651d2b9c137a527426d38faf3c"
+      },
+      {
+        "path": "assets/img/stacked-waves-haikei_3.svg",
+        "bytes": 8551,
+        "sha256": "4b9ad0a5bd48cd7c2a35f0aecd4d98724cd75e6ffd01914b8abbe7738469b691"
+      },
+      {
+        "path": "assets/img/waves-haikei-2.svg",
+        "bytes": 9211,
+        "sha256": "f85067d05f1b97ce9e70317ba475e571b6dadd2aaabe9de33ea7bd77663f96d0"
+      },
+      {
+        "path": "assets/img/waves-haikei.svg",
+        "bytes": 10360,
+        "sha256": "6f0f6cb66904ba0f831a61cf8caf05955d31c0e05025257276ad1a1c64395d2a"
+      },
+      {
+        "path": "assets/styles.css",
+        "bytes": 47397,
+        "sha256": "873091711ac4bea40e251f68aee6f5a5f97ac1412bfcd996afc0d4b00e51832b"
+      },
+      {
+        "path": "careers.html",
+        "bytes": 17359,
+        "sha256": "7ee83a8b746631bd44f0637d5f196573faf5fefa79182915afdee0424fbd6ad2"
+      },
+      {
+        "path": "en/about.html",
+        "bytes": 14906,
+        "sha256": "ec8ae902065ab38db70648effac6a1c4797529c02de3cfa968a8ac4720fb17f3"
+      },
+      {
+        "path": "en/careers.html",
+        "bytes": 18596,
+        "sha256": "fd7fd1b21f0faec6ceaedb716b251b6a32e621f27df67beae9208dd7c7cd03e8"
+      },
+      {
+        "path": "en/index.html",
+        "bytes": 16513,
+        "sha256": "7544b6a27c262a972135652ba36cbea494788ae4e3540ba7485f7ba97d848e74"
+      },
+      {
+        "path": "en/news.html",
+        "bytes": 19309,
+        "sha256": "3e51fa91eab59ae6f6b0041f11e176e956dbae75240dd1b95e67b65c82a37032"
+      },
+      {
+        "path": "en/products.html",
+        "bytes": 18696,
+        "sha256": "b538f50a3f4b956b337104d24c583709e79c8fdbf678d10577d77ba7901471d7"
+      },
+      {
+        "path": "en/跨境网络服务.html",
+        "bytes": 20509,
+        "sha256": "c2d8d674cb65acb613cdefb3fc7e7f6d3531f2e6d430b490ca989a5429694d28"
+      },
+      {
+        "path": "index.html",
+        "bytes": 16434,
+        "sha256": "678ddadd9a85fccdd09be329a45e571ea80923f755c4f32866d46cd34aa334f5"
+      },
+      {
+        "path": "news.html",
+        "bytes": 18437,
+        "sha256": "e1c75b7be224bd0cc21b7d9387a64d965c2923c22ddf38b096dc2277ab61ce2f"
+      },
+      {
+        "path": "products.html",
+        "bytes": 17265,
+        "sha256": "7abae08bdb15eb0baf1e03f9f3176ab185f3ddcd728f1517becdbe2deeb40e18"
+      },
+      {
+        "path": "robots.txt",
+        "bytes": 77,
+        "sha256": "22b0ae2a3950d7faf89698d8edbc9f4e86780704ee8f54cefc5aabb43678238f"
+      },
+      {
+        "path": "ru/about.html",
+        "bytes": 19970,
+        "sha256": "fcdddfb6b86b435ab38aa9d425bce682f83207d3ef1340ab94e51904b77194ab"
+      },
+      {
+        "path": "ru/careers.html",
+        "bytes": 23261,
+        "sha256": "e77c16ac67fce3962c8f67d03e2f679431046c4e145a37017c07f885b763d3d4"
+      },
+      {
+        "path": "ru/index.html",
+        "bytes": 21807,
+        "sha256": "4a39f8fd6f091ab35272b5736546b1744d1c597161c06da82e3c88d1282c581c"
+      },
+      {
+        "path": "ru/news.html",
+        "bytes": 24742,
+        "sha256": "4ebfdb761289de4ef1ef66cddfc810f2a56eb3c7c9ba9ca01542b1cc4f36140a"
+      },
+      {
+        "path": "ru/products.html",
+        "bytes": 25689,
+        "sha256": "695440af6bf55f4f3c8c0422c03405916eebc35e4b286337a65c9f65a67162a7"
+      },
+      {
+        "path": "ru/跨境网络服务.html",
+        "bytes": 28491,
+        "sha256": "f3d1ee0e76a2ca199eb38e67274ca536573af98a23a1d9b54235d5c2bbe03efc"
+      },
+      {
+        "path": "sitemap.xml",
+        "bytes": 1655,
+        "sha256": "97c21e3d547567bb5acd13f1eca8e4e6cb0e61e161d4497f5b90ab80e7eaff6a"
+      },
+      {
+        "path": "跨境网络服务.html",
+        "bytes": 18172,
+        "sha256": "3216414b4f297002623efe4114b7552de34b0449beb6f1ffa5613e4b8582f194"
+      }
+    ]
+  },
+  "screenshots": [
+    "file-open-sitemap.png",
+    "file-open-robots.png"
+  ],
+  "pass": true
+}

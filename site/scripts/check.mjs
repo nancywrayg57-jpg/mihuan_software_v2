@@ -2683,4 +2683,112 @@ async function validateIssue50HeroAssetReferences() {
   console.log(`Checked ${heroAssetRefs.length} local hero background asset reference(s).`);
 }
 
+function getCanonicalHref(relativePath, html) {
+  const headMatch = html.match(/<head\b[^>]*>[\s\S]*?<\/head>/i);
+
+  if (!headMatch) {
+    throw new Error(`Missing <head> block while reading canonical for ${relativePath}.`);
+  }
+
+  const canonicalLinks = [...headMatch[0].matchAll(/<link\b[^>]*>/gi)]
+    .map((match) => parseTagAttributes(match[0]))
+    .filter((attributes) => attributes.get("rel")?.toLowerCase() === "canonical");
+
+  if (canonicalLinks.length !== 1) {
+    throw new Error(`Expected exactly 1 canonical while reading ${relativePath}, found ${canonicalLinks.length}.`);
+  }
+
+  const href = canonicalLinks[0].get("href");
+
+  if (!href) {
+    throw new Error(`Canonical link missing href in ${relativePath}.`);
+  }
+
+  return href;
+}
+
+async function validateSitemapAndRobots() {
+  const sitemapPath = resolve(distDir, "sitemap.xml");
+  const robotsPath = resolve(distDir, "robots.txt");
+  const sitemapStats = await stat(sitemapPath).catch(() => null);
+  const robotsStats = await stat(robotsPath).catch(() => null);
+
+  if (!sitemapStats?.isFile() || sitemapStats.size <= 0) {
+    throw new Error(`Missing or empty sitemap output: ${sitemapPath}`);
+  }
+
+  if (!robotsStats?.isFile() || robotsStats.size <= 0) {
+    throw new Error(`Missing or empty robots output: ${robotsPath}`);
+  }
+
+  const sitemap = await readFile(sitemapPath, "utf8");
+  const robots = await readFile(robotsPath, "utf8");
+  const expectedCanonicals = [];
+
+  for (const requiredHtmlPath of requiredHtmlPaths) {
+    const html = await readFile(resolve(distDir, requiredHtmlPath), "utf8");
+    expectedCanonicals.push(getCanonicalHref(requiredHtmlPath, html));
+  }
+
+  if (!/^<\?xml version="1\.0" encoding="UTF-8"\?>\n<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">[\s\S]*<\/urlset>\s*$/u.test(sitemap)) {
+    throw new Error("sitemap.xml must be a static XML sitemap using the sitemap.org urlset namespace.");
+  }
+
+  if (/<lastmod>|<changefreq>|<priority>/i.test(sitemap)) {
+    throw new Error("sitemap.xml must not include dynamic lastmod, changefreq, or priority fields at this stage.");
+  }
+
+  const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  const uniqueLocs = new Set(sitemapLocs);
+
+  if (sitemapLocs.length !== requiredHtmlPaths.length) {
+    throw new Error(`sitemap.xml must contain ${requiredHtmlPaths.length} loc entries, found ${sitemapLocs.length}.`);
+  }
+
+  if (uniqueLocs.size !== sitemapLocs.length) {
+    throw new Error("sitemap.xml must not contain duplicate loc entries.");
+  }
+
+  for (const loc of sitemapLocs) {
+    if (!loc.startsWith(`${productionOrigin}/`)) {
+      throw new Error(`sitemap.xml loc must stay under ${productionOrigin}: ${loc}`);
+    }
+
+    if (loc.includes("://") && !loc.startsWith(`${productionOrigin}/`)) {
+      throw new Error(`sitemap.xml loc contains an unexpected external URL: ${loc}`);
+    }
+  }
+
+  for (const canonical of expectedCanonicals) {
+    if (!uniqueLocs.has(canonical)) {
+      throw new Error(`sitemap.xml missing canonical loc: ${canonical}`);
+    }
+  }
+
+  if (!/^User-agent:\s*\*\s*$/mi.test(robots)) {
+    throw new Error("robots.txt must contain User-agent: *.");
+  }
+
+  if (!/^Allow:\s*\/\s*$/mi.test(robots)) {
+    throw new Error("robots.txt must contain Allow: /.");
+  }
+
+  if (!/^Sitemap:\s*https:\/\/www\.honeybadgersoft\.com\/sitemap\.xml\s*$/mi.test(robots)) {
+    throw new Error("robots.txt must point to https://www.honeybadgersoft.com/sitemap.xml.");
+  }
+
+  const disallowLines = robots.split(/\r?\n/).filter((line) => /^Disallow:/i.test(line.trim()) && line.trim() !== "Disallow:");
+  if (disallowLines.length > 0) {
+    throw new Error(`robots.txt must not disallow core paths: ${disallowLines.join(", ")}`);
+  }
+
+  if (/zennolabchina|48151650|marketing@honeybadgersoft\.com|dingtalk|钉钉/i.test(robots)) {
+    throw new Error("robots.txt must not contain contact-channel or unapproved support content.");
+  }
+
+  console.log(`Checked sitemap.xml with ${sitemapLocs.length} canonical loc entry(s).`);
+  console.log("Checked robots.txt allow-all and sitemap directive.");
+}
+
 await validateIssue50HeroAssetReferences();
+await validateSitemapAndRobots();
