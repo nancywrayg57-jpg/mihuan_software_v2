@@ -1,0 +1,182 @@
+{
+  "generatedAt": "2026-07-24T11:46:51.454Z",
+  "target": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/careers.html",
+  "reference": "file:///D:/workspace/mihuan_software_v2/UI/ru/careers.html",
+  "screenshots": [
+    "ru-careers-desktop.png",
+    "ru-careers-mobile.png",
+    "ru-careers-mobile-nav.png",
+    "ui-reference-ru-careers-desktop.png",
+    "ui-reference-ru-careers-mobile.png"
+  ],
+  "assertions": [
+    {
+      "name": "Desktop target title/lang/meta",
+      "pass": true,
+      "evidence": "{\"title\":\"Карьера | Honey Badger\",\"lang\":\"ru-RU\"}"
+    },
+    {
+      "name": "Career structure counts",
+      "pass": true,
+      "evidence": "{\"jobs\":4,\"benefits\":6,\"why\":4,\"process\":4}"
+    },
+    {
+      "name": "Job placeholders and pending links",
+      "pass": true,
+      "evidence": "{\"locations\":4,\"types\":4,\"details\":4}"
+    },
+    {
+      "name": "No fake application form",
+      "pass": true,
+      "evidence": "No form or submit button present"
+    },
+    {
+      "name": "Breadcrumb and current nav",
+      "pass": true,
+      "evidence": "{\"breadcrumb\":\"Главная\\n/\\nКарьера\",\"currentLinks\":2}"
+    },
+    {
+      "name": "Language switcher context",
+      "pass": true,
+      "evidence": "[{\"lang\":\"zh-CN\",\"href\":\"../careers.html\",\"current\":null},{\"lang\":\"en-US\",\"href\":\"../en/careers.html\",\"current\":null},{\"lang\":\"ru-RU\",\"href\":\"./careers.html\",\"current\":\"true\"}]"
+    },
+    {
+      "name": "Footer relationship exact",
+      "pass": true,
+      "evidence": "Footer relationship sentence present exactly"
+    },
+    {
+      "name": "No real contacts or over-scoped wording",
+      "pass": true,
+      "evidence": "{\"realContact\":false,\"overScoped\":false,\"unconfirmedRecruiting\":false}"
+    },
+    {
+      "name": "No broken images desktop",
+      "pass": true,
+      "evidence": "[]"
+    },
+    {
+      "name": "Desktop no horizontal overflow",
+      "pass": true,
+      "evidence": "overflow delta 0"
+    },
+    {
+      "name": "Russian content outside scaffold notice",
+      "pass": true,
+      "evidence": "[]"
+    },
+    {
+      "name": "Mobile no horizontal overflow",
+      "pass": true,
+      "evidence": "overflow delta 0"
+    },
+    {
+      "name": "Mobile navigation expands",
+      "pass": true,
+      "evidence": "Menu button aria-expanded=true and mobile nav visible"
+    },
+    {
+      "name": "RU home nav reaches careers",
+      "pass": true,
+      "evidence": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/careers.html"
+    },
+    {
+      "name": "Careers breadcrumb returns home",
+      "pass": true,
+      "evidence": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html"
+    },
+    {
+      "name": "ZH language switch keeps careers context",
+      "pass": true,
+      "evidence": "file:///D:/workspace/mihuan_software_v2/site/dist/careers.html"
+    },
+    {
+      "name": "EN language switch keeps careers context",
+      "pass": true,
+      "evidence": "file:///D:/workspace/mihuan_software_v2/site/dist/en/careers.html"
+    },
+    {
+      "name": "Floating support toggles",
+      "pass": true,
+      "evidence": "support-toggle aria-expanded=true after click"
+    },
+    {
+      "name": "No console or page errors",
+      "pass": true,
+      "evidence": "[]"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "CAREER-001",
+      "status": "PASS",
+      "evidence": "Hero, why-join 4 points, benefits 6 items, 4 job cards and process 4 steps are present."
+    },
+    {
+      "id": "CAREER-002",
+      "status": "PASS",
+      "evidence": "Each job card keeps location/type as Будет настроено and links only to #career-detail-pending."
+    },
+    {
+      "id": "CAREER-003",
+      "status": "N/A",
+      "evidence": "No confirmed responsibilities/requirements in Russian SSOT §X; details remain pending anchor."
+    },
+    {
+      "id": "CAREER-004",
+      "status": "N/A",
+      "evidence": "No real application endpoint or email confirmed for this page; no fake application form is present."
+    },
+    {
+      "id": "CAREER-005",
+      "status": "PASS",
+      "evidence": "No fake submit flow and no invented salary/location/type/responsibility facts."
+    },
+    {
+      "id": "CAREER-006",
+      "status": "PASS",
+      "evidence": "Footer relationship is exact; real contact values and over-scoped wording are absent."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "Russian careers is complete; remaining S3 SEO alignment is outside Issue #42 scope."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "zh/en language switches land on careers pages."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "ru-RU metadata, title and breadcrumb are present."
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Russian page content has no Chinese outside the explicit scaffold notice."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "Desktop and mobile scroll widths do not exceed viewport width."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N/A",
+      "evidence": "No child job-detail page introduced in Issue #42."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "No broken images, console errors or page errors during target/reference/navigation checks."
+    },
+    {
+      "id": "NAV-002/005",
+      "status": "PASS",
+      "evidence": "RU home careers nav reaches ru/careers and breadcrumb returns to ru home."
+    }
+  ],
+  "consoleEvents": []
+}

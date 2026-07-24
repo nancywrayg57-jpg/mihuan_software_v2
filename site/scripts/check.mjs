@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -1059,6 +1059,15 @@ function validateRussianHome(html) {
     errors.push("Russian home Новости navigation must not remain a placeholder link.");
   }
 
+  const careersNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/careers\.html["']>Карьера<\/a>/g) || [];
+  if (careersNavLinks.length !== 2) {
+    errors.push(`Russian home Карьера navigation must point to ./careers.html on desktop and mobile; found ${careersNavLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>Карьера<\/a>/i.test(html)) {
+    errors.push("Russian home Карьера navigation must not remain a placeholder link.");
+  }
+
   const aboutNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/about\.html["']>О нас<\/a>/g) || [];
   if (aboutNavLinks.length !== 2) {
     errors.push(`Russian home О нас navigation must point to ./about.html on desktop and mobile; found ${aboutNavLinks.length}.`);
@@ -1237,6 +1246,180 @@ function validateRussianNews(html) {
 
   if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
     errors.push("Russian news page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateRussianCareers(html) {
+  const errors = [];
+  const expectedTitle = "Карьера | Honey Badger";
+  const expectedDescription = "Изучите карьерные возможности Honey Badger, причины присоединиться, социальный пакет, открытые вакансии с безопасными заполнителями, процесс найма и контактные позиции для отклика.";
+  const expectedFooterRelationship = "Honey Badger является операционной структурой российской компании ZennoLab в Китае.";
+  const whyEntries = [
+    "Широкие перспективы отрасли",
+    "плоская структура управления",
+    "атмосфера технологического драйва",
+    "конкурентоспособная компенсация"
+  ];
+  const benefitEntries = [
+    "Пять социальных страховок и жилищный фонд + коммерческая страховка",
+    "гибкий график работы",
+    "корпоративные мероприятия и праздничные бонусы",
+    "ежегодный медицинский осмотр",
+    "оплачиваемый отпуск",
+    "бюджет на обучение и повышение квалификации"
+  ];
+  const jobEntries = [
+    ["Специалист по кроссбордерным операциям", "Операции с контентом в TikTok/FB/INS и конверсия в приватной зоне"],
+    ["Frontend-разработчик", "Разработка официального сайта и бэкенда продукта, исследование ИИ-помощи в разработке"],
+    ["Менеджер по успеху клиентов", "Взаимодействие с корпоративными клиентами и поддержка, дополнительные продажи и управление жизненным циклом"],
+    ["Помощник преподавателя по обучению ИИ", "Подготовка учебных материалов, ответы на вопросы слушателей, управление сообществом"]
+  ];
+  const processEntries = [
+    "Отправка резюме",
+    "Первичный отбор",
+    "Собеседование по профилю",
+    "Финальное собеседование / Оффер"
+  ];
+
+  if (!/<html\s+lang=["']ru-RU["']/i.test(html)) {
+    errors.push('Russian careers page must render <html lang="ru-RU">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("Russian careers page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("Russian careers page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "Присоединяйтесь к Honey Badger, делайте ценные вещи вместе",
+    "Молодая и эффективная команда, сосредоточенная на предоставлении передовых мировых технологий автоматизации и возможностей ИИ китайским клиентам.",
+    "Почему стоит присоединиться",
+    "Социальный пакет",
+    "Открытые вакансии",
+    "Местоположение",
+    "Тип должности",
+    "Будет настроено",
+    "Детали вакансии ожидают подключения",
+    "Процесс найма",
+    "Отклик и контакт",
+    "Корпоративная почта: Будет настроено",
+    "Панель поддержки: Будет настроено",
+    "开发骨架，非正式内容",
+    expectedFooterRelationship,
+    "Заполнитель поддержки"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Russian careers page marker: ${marker}.`);
+    }
+  }
+
+  for (const marker of [...whyEntries, ...benefitEntries, ...processEntries]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Russian careers SSOT marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "ru-careers-page",
+    "careers-hero",
+    "careers-why",
+    "careers-benefits",
+    "careers-jobs",
+    "careers-process",
+    "careers-apply",
+    "career-detail-pending"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing Russian careers page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Russian careers page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Главная</a>') || !html.includes('aria-current="page">Карьера</span>')) {
+    errors.push("Russian careers page breadcrumb must be Главная / Карьера with a working home link.");
+  }
+
+  if (!html.includes('href="./careers.html" aria-current="page">Карьера</a>')) {
+    errors.push("Russian careers page header must mark Карьера as current.");
+  }
+
+  for (const languagePath of ['href="../careers.html"', 'href="../en/careers.html"', 'href="./careers.html" aria-current="true"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Russian careers page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const jobMarkers = html.match(/data-career-job=/g) || [];
+  if (jobMarkers.length !== 4) {
+    errors.push(`Russian careers page must render exactly 4 job entries; found ${jobMarkers.length}.`);
+  }
+
+  for (const [title, summary] of jobEntries) {
+    if (!html.includes(title) || !html.includes(summary)) {
+      errors.push(`Missing Russian careers job title/summary: ${title} / ${summary}.`);
+    }
+  }
+
+  const benefitMarkers = html.match(/data-career-benefit=/g) || [];
+  if (benefitMarkers.length !== 6) {
+    errors.push(`Russian careers page must render exactly 6 benefit entries; found ${benefitMarkers.length}.`);
+  }
+
+  const whyMarkers = html.match(/class=["']career-why-card["']/g) || [];
+  if (whyMarkers.length !== 4) {
+    errors.push(`Russian careers page must render exactly 4 why-join entries; found ${whyMarkers.length}.`);
+  }
+
+  const locationPlaceholders = html.match(/data-career-location=["']Будет настроено["']/g) || [];
+  const typePlaceholders = html.match(/data-career-type=["']Будет настроено["']/g) || [];
+  if (locationPlaceholders.length !== 4 || typePlaceholders.length !== 4) {
+    errors.push(`Russian careers job cards must keep location/type as Будет настроено; found ${locationPlaceholders.length} locations and ${typePlaceholders.length} types.`);
+  }
+
+  const detailLinks = html.match(/<a class=["']link-more["'] href=["']#career-detail-pending["']>Детали вакансии ожидают подключения<\/a>/g) || [];
+  if (detailLinks.length !== 4) {
+    errors.push(`Russian careers job detail links must stay as same-page placeholders; found ${detailLinks.length}.`);
+  }
+
+  const processMarkers = html.match(/data-career-process=/g) || [];
+  if (processMarkers.length !== 4) {
+    errors.push(`Russian careers page must render exactly 4 process steps; found ${processMarkers.length}.`);
+  }
+
+  if (!html.includes(expectedFooterRelationship)) {
+    errors.push("Russian careers page footer relationship statement must match exactly.");
+  }
+
+  if (/href=["'][^"']*career-detail[^#"']*\.html|href=["'][^"']*jobs\/[^#"']+/i.test(html)) {
+    errors.push("Russian careers page must not link to nonexistent job detail pages.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("Russian careers page must not include a fake application form.");
+  }
+
+  if (/<button[\s>]/i.test(html) && !/class=["']menu-button["']|class=["']support-close["']|class=["']support-toggle["']/.test(html)) {
+    errors.push("Russian careers page must not include fake recruiting interaction buttons.");
+  }
+
+  if (/zennolabchina|48151650|marketing@honeybadgersoft\.com/i.test(html)) {
+    errors.push("Russian careers page must not include real contact values.");
+  }
+
+  if (/зарплат|оклад|полная\s+занятость|частичная\s+занятость|стажировк|гибрид|удален|офис|телефон\s+HR|отправлено\s+успешно|откликнуться\s+сейчас/i.test(html)) {
+    errors.push("Russian careers page contains unconfirmed recruiting facts or fake application wording.");
+  }
+
+  if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
+    errors.push("Russian careers page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -2253,6 +2436,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "ru/news.html") {
     htmlErrors.push(...validateRussianNews(html));
+  }
+
+  if (relativePath === "ru/careers.html") {
+    htmlErrors.push(...validateRussianCareers(html));
   }
 
   if (relativePath === "ru/跨境网络服务.html") {
