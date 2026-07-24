@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -1123,9 +1123,10 @@ function validateRussianProducts(html) {
     "Полномасштабное сопровождение операций в TikTok/FB/INS, практическое руководство по всему процессу от привлечения трафика до конверсии в приватной зоне",
     "Кроссбордерные сетевые сервисы",
     "Объединяют статический домашний IP, датацентровый IP и динамический IP для стабильных аккаунтных сред, высокопараллельных выходов и ротационных домашних IP-пулов",
-    "Русские страницы деталей продуктов и русская объединенная страница сетевых сервисов ожидают подключения.",
-    "Русская объединенная страница сетевых сервисов ожидает подключения",
-    "Русские страницы деталей продуктов ожидают подключения; в этом раунде S3 все продуктовые входы остаются якорями на текущей странице.",
+    "Русские страницы деталей четырех стандартных продуктов ожидают подключения, а русская объединенная страница сетевых сервисов уже подключена из карточки NET.",
+    "Открывает русскую объединенную страницу сетевых сервисов для статического домашнего IP, датацентрового IP и динамического IP",
+    "Русские страницы деталей четырех стандартных продуктов ожидают подключения; эти входы остаются якорями на текущей странице.",
+    "Русская объединенная страница сетевых сервисов подключена; три дочерних IP-сервиса остаются ожидающими внутри этой страницы.",
     "Основные возможности",
     "Цифровой контроль промышленности",
     "Интеграция Интернета вещей, больших данных и ИИ для объединения производства, контроля, хранения и прослеживаемости в единую цепь управления",
@@ -1202,14 +1203,18 @@ function validateRussianProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
-  if (pendingProductLinks.length !== 5) {
-    errors.push(`Russian products page product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  if (pendingProductLinks.length !== 4) {
+    errors.push(`Russian products page regular entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  if (!html.includes('href="./跨境网络服务.html">Открыть объединенную страницу</a>')) {
+    errors.push("Russian products page NET card must link to the merged Russian network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
   if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
@@ -1222,6 +1227,135 @@ function validateRussianProducts(html) {
 
   if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
     errors.push("Russian products page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateRussianNetworkServices(html) {
+  const errors = [];
+  const expectedTitle = "Кроссбордерные сетевые сервисы | Honey Badger";
+  const expectedDescription = "Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта для подбора сетевых ресурсов по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.";
+  const expectedFooterRelationship = "Honey Badger является операционной структурой российской компании ZennoLab в Китае.";
+
+  if (!/<html\s+lang=["']ru-RU["']/i.test(html)) {
+    errors.push('Russian network services page must render <html lang="ru-RU">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("Russian network services page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("Russian network services page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "Кроссбордерные сетевые сервисы",
+    "Статический домашний IP, датацентровый IP и динамический IP представлены на одной сервисной странице для стабильных, гибких и масштабируемых сетевых ресурсов",
+    "Кроссбордерные сетевые сервисы объединяют три типа IP-возможностей в один вход деталей продукта. Они помогают командам кроссбордерной электронной коммерции, зарубежных соцсетей, проверки рекламы, сбора публичных данных и локализационного тестирования выбирать подходящие сетевые ресурсы по стабильности аккаунтов, частоте доступа, масштабу параллельности и требованиям к затратам.",
+    "Позиционирование сервиса",
+    "Три сетевых сервиса",
+    "Статический домашний IP",
+    "Для долгосрочной работы аккаунтов, входа в магазины, управления рекламными аккаунтами и других сценариев стабильной идентичности; акцент на фиксированном выходе, согласованности среды и более низком распознавании риск-контролем.",
+    "Датацентровый IP",
+    "Для пакетного сбора, мониторинга, тестирования и серверных выходов; акцент на пропускной способности, задержке, стоимости и эффективности массового подключения.",
+    "Динамический IP",
+    "Для краткосрочных исследований, проверки рекламы, сбора публичных данных и высокочастотных многосессионных задач; акцент на ротации IP-пула, анонимности и гибкой интеграции.",
+    "Единый вход",
+    "Страница продуктов и навигация больше не разделяют три типа IP как верхнеуровневые продукты; они сгруппированы в кроссбордерные сетевые сервисы.",
+    "Подбор по сценариям",
+    "Сопоставление сетевых ресурсов с потребностями стабильных аккаунтов, пакетной параллельности и высокочастотной ротации.",
+    "Гибкая интеграция",
+    "Поддержка фиксированных узлов, ротации портов, ротации конечных точек и API-интеграции.",
+    "Контролируемая эксплуатация",
+    "Поддержка пакетного управления, мониторинга узлов, замены при исключениях и отслеживания использования.",
+    "Корректные формулировки",
+    "Описание построения кроссбордерной сетевой среды без неподтвержденных чисел узлов, обещаний возврата или абсолютных SLA.",
+    "Применимые сценарии",
+    "Долгосрочная работа кроссбордерных магазинов, ведение зарубежных соцсетевых аккаунтов, управление рекламными аккаунтами, сбор публичных данных, проверка эффективности рекламы, локализационное тестирование доступа, легкие серверные выходы",
+    "Доступ и гарантии",
+    "Регионы, протоколы, параллельность, способ ротации и требования к эксплуатации подтверждаются по бизнес-цели; конкретные ресурсы узлов, пакеты, SLA и послепродажная политика должны следовать производственным формулировкам, подтвержденным администратором",
+    "Страница деталей ожидает подключения",
+    "Вернуться к Продуктам",
+    "Корпоративная почта: Будет настроено",
+    "Аккаунты поддержки: Будет настроено",
+    "Информация о регистрации ICP: Будет настроено",
+    "Информация об авторских правах: Будет настроено",
+    expectedFooterRelationship,
+    "Заполнитель поддержки",
+    "Будет настроено"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Russian network services page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "ru-network-services-page",
+    "network-services-hero",
+    "network-positioning",
+    "network-services-modules",
+    "service-static-residential-ip",
+    "service-idc-ip",
+    "service-dynamic-ip",
+    "network-scenarios",
+    "network-consult"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing Russian network services page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("Russian network services page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Главная</a>') || !html.includes('href="./products.html">Продукты</a>') || !html.includes('aria-current="page">Кроссбордерные сетевые сервисы</span>')) {
+    errors.push("Russian network services breadcrumb must be Главная / Продукты / Кроссбордерные сетевые сервисы with working parent links.");
+  }
+
+  if (!html.includes('href="./products.html" aria-current="page">Продукты</a>')) {
+    errors.push("Russian network services page header must mark Продукты as current.");
+  }
+
+  for (const languagePath of ['href="../跨境网络服务.html"', 'href="../en/跨境网络服务.html"', 'href="./跨境网络服务.html" aria-current="true"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Russian network services page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const networkServices = html.match(/data-network-service=/g) || [];
+  if (networkServices.length !== 3) {
+    errors.push(`Russian network services page must render exactly 3 child service sections; found ${networkServices.length}.`);
+  }
+
+  for (const service of ['data-network-service="static-residential-ip"', 'data-network-service="idc-ip"', 'data-network-service="dynamic-ip"']) {
+    if (!html.includes(service)) {
+      errors.push(`Russian network services page missing ${service}.`);
+    }
+  }
+
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
+    errors.push("Russian network child service detail links must stay as same-page placeholder anchors.");
+  }
+
+  for (const anchor of ['href="#static-ip-detail-pending"', 'href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+    if (!html.includes(anchor)) {
+      errors.push(`Russian network child service missing placeholder detail anchor ${anchor}.`);
+    }
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("Russian network services page must not include a fake contact form.");
+  }
+
+  if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
+    errors.push("Russian network services page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  if (/node count:\s*\d+|nodes:\s*\d+|\d+\s+nodes|refund guarantee|money-back|guaranteed SLA|100%\s*SLA|гарантированн[а-яё]*\s+SLA|\d+\s+узл/i.test(html)) {
+    errors.push("Russian network services page contains unconfirmed node counts, refund guarantees or absolute SLA wording.");
   }
 
   return errors;
@@ -1844,6 +1978,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "ru/products.html") {
     htmlErrors.push(...validateRussianProducts(html));
+  }
+
+  if (relativePath === "ru/跨境网络服务.html") {
+    htmlErrors.push(...validateRussianNetworkServices(html));
   }
 
   if (relativePath === "products.html") {
