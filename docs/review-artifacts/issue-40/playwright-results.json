@@ -1,0 +1,241 @@
+{
+  "generatedAt": "2026-07-24T11:15:02.413Z",
+  "target": "site/dist/ru/news.html",
+  "reference": "UI/ru/news.html",
+  "screenshots": [
+    "docs/review-artifacts/issue-40/ru-news-desktop.png",
+    "docs/review-artifacts/issue-40/ui-reference-ru-news-desktop.png",
+    "docs/review-artifacts/issue-40/ru-news-mobile.png",
+    "docs/review-artifacts/issue-40/ru-news-mobile-nav.png",
+    "docs/review-artifacts/issue-40/ui-reference-ru-news-mobile.png"
+  ],
+  "assertions": [
+    {
+      "name": "ru-news-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"currentLinks\":[\"Новости\",\"RU\",\"Новости\"],\"supportExists\":true}"
+    },
+    {
+      "name": "ru-news-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru news title",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news h1",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news breadcrumb",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news current nav",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news categories",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news six entries",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news exact SSOT entries with dual dates",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news six thumbnails",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news pending detail anchors only",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news no fake filters or forms",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news footer relationship exact and no forbidden wording",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news language switch context",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"breadcrumb\":[\"Главная\",\"Новости\"],\"navNewsCurrent\":true,\"mobileNewsCurrent\":true,\"categories\":[\"Все\",\"Новости компании\",\"Обновления продуктов\",\"Отраслевые новости\",\"Технические материалы\"],\"entries\":[{\"id\":\"news-zennolab-ops\",\"category\":\"Новости компании\",\"title\":\"Honey Badger Software официально становится операционной структурой ZennoLab в Китае\",\"datetime\":\"2026-06-15\",\"displayDate\":\"15.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае\"},{\"id\":\"news-yuantu-v2\",\"category\":\"Обновления продуктов\",\"title\":\"Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений\",\"datetime\":\"2026-06-01\",\"displayDate\":\"01.06.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Запущена версия Honey Badger Original Image V2.0\"},{\"id\":\"news-ai-trend\",\"category\":\"Отраслевые новости\",\"title\":\"Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026\",\"datetime\":\"2026-05-20\",\"displayDate\":\"20.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов\"},{\"id\":\"news-ip-guide\",\"category\":\"Технические материалы\",\"title\":\"Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси\",\"datetime\":\"2026-05-08\",\"displayDate\":\"08.05.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Как выбрать между домашним IP и датацентровым IP\"},{\"id\":\"news-ai-fde-training\",\"category\":\"Новости компании\",\"title\":\"Первое обучение AI-FDE VibeCoding успешно завершено\",\"datetime\":\"2026-04-25\",\"displayDate\":\"25.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено\"},{\"id\":\"news-network-sea\",\"category\":\"Обновления продуктов\",\"title\":\"Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\",\"datetime\":\"2026-04-10\",\"displayDate\":\"10.04.2026\",\"link\":\"#news-detail-pending\",\"thumbLabel\":\"Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии\"}],\"expectedEntriesFound\":true,\"timeDualFormat\":true,\"thumbCount\":6,\"pendingLinks\":[\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\",\"#news-detail-pending\"],\"fakeForms\":0,\"unexpectedButtons\":[],\"footerRelationship\":true,\"realForbidden\":false,\"overscope\":false,\"forbiddenLinks\":[],\"langHrefs\":[\"../news.html\",\"../en/news.html\",\"./news.html\"],\"currentLang\":\"RU\"}"
+    },
+    {
+      "name": "ru news support float opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"configuredCount\":3}"
+    },
+    {
+      "name": "ru news breadcrumb home link works",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html"
+    },
+    {
+      "name": "ru home news nav has real path",
+      "status": "PASS",
+      "details": "{\"desktop\":\"./news.html\",\"mobile\":\"./news.html\"}"
+    },
+    {
+      "name": "ru home news nav reaches ru news",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/news.html"
+    },
+    {
+      "name": "ru news brand link returns home",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/ru/index.html"
+    },
+    {
+      "name": "ru news zh language switch keeps news context",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/news.html"
+    },
+    {
+      "name": "ru news en language switch keeps news context",
+      "status": "PASS",
+      "details": "file:///D:/workspace/mihuan_software_v2/site/dist/en/news.html"
+    },
+    {
+      "name": "ui-reference-ru-news-desktop: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"scrollWidth\":1440,\"clientWidth\":1440,\"bodyScrollWidth\":1440,\"bodyClientWidth\":1440,\"brokenImages\":[],\"currentLinks\":[\"Новости\",\"Новости\"],\"supportExists\":false}"
+    },
+    {
+      "name": "ui-reference-ru-news-desktop: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ui reference desktop renders ru news page",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"hasNewsIntent\":true}"
+    },
+    {
+      "name": "ru-news-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"currentLinks\":[\"Новости\",\"RU\",\"Новости\"],\"supportExists\":true}"
+    },
+    {
+      "name": "ru-news-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "ru news mobile nav opens",
+      "status": "PASS",
+      "details": "{\"expanded\":\"true\",\"currentNews\":true}"
+    },
+    {
+      "name": "ui-reference-ru-news-mobile: no horizontal overflow",
+      "status": "PASS",
+      "details": "{\"title\":\"Новости | Honey Badger\",\"h1\":\"Новости\",\"scrollWidth\":390,\"clientWidth\":390,\"bodyScrollWidth\":390,\"bodyClientWidth\":390,\"brokenImages\":[],\"currentLinks\":[\"Новости\",\"Новости\"],\"supportExists\":false}"
+    },
+    {
+      "name": "ui-reference-ru-news-mobile: 0 broken images",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "desktop console/page errors clean",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "name": "mobile console/page errors clean",
+      "status": "PASS",
+      "details": "[]"
+    }
+  ],
+  "e2eChecklist": [
+    {
+      "id": "NEWS-001",
+      "status": "PASS",
+      "evidence": "Russian news page renders hero positioning, static category section and news list structure."
+    },
+    {
+      "id": "NEWS-002",
+      "status": "PASS",
+      "evidence": "Categories are static same-page anchors: Все / Новости компании / Обновления продуктов / Отраслевые новости / Технические материалы; no fake filter buttons."
+    },
+    {
+      "id": "NEWS-003",
+      "status": "PASS",
+      "evidence": "Exactly 6 `data-news-entry` cards render SSOT Russian categories and titles."
+    },
+    {
+      "id": "NEWS-004",
+      "status": "PASS",
+      "evidence": "All six dates use visible DD.MM.YYYY and machine-readable datetime YYYY-MM-DD, matched one-to-one."
+    },
+    {
+      "id": "NEWS-005",
+      "status": "PASS",
+      "evidence": "All entry links stay on `#news-detail-pending`; no nonexistent news detail/category pages are linked."
+    },
+    {
+      "id": "NEWS-010",
+      "status": "PASS",
+      "evidence": "Contact/support section remains placeholder-only, with no fake form and exact Russian footer relationship sentence."
+    },
+    {
+      "id": "LANG-002",
+      "status": "PARTIAL",
+      "evidence": "Russian news page is complete; Russian careers page remains pending by separate issue scope."
+    },
+    {
+      "id": "LANG-003",
+      "status": "PASS",
+      "evidence": "zh/en language switches from ru/news.html keep news-page context."
+    },
+    {
+      "id": "LANG-004",
+      "status": "PASS",
+      "evidence": "ru/news.html renders ru-RU metadata, breadcrumb and RU current language state."
+    },
+    {
+      "id": "LANG-005",
+      "status": "PASS",
+      "evidence": "Russian production page content remains Russian except the explicit Chinese scaffold notice."
+    },
+    {
+      "id": "LANG-006",
+      "status": "PASS",
+      "evidence": "Desktop and mobile screenshots show Russian long text without horizontal overflow."
+    },
+    {
+      "id": "LANG-007",
+      "status": "N/A",
+      "evidence": "No child detail page is introduced by Issue #40."
+    },
+    {
+      "id": "LANG-008",
+      "status": "PASS",
+      "evidence": "No broken images and no console/page errors were observed across target and reference pages."
+    },
+    {
+      "id": "NAV-002/005",
+      "status": "PASS",
+      "evidence": "Russian home News navigation reaches ru/news.html; breadcrumb Главная / Новости returns to Russian home."
+    }
+  ]
+}

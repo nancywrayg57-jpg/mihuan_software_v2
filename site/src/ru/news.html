@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Читайте новости компании Honey Badger, обновления продуктов, отраслевые новости и технические материалы на русской странице новостей официального сайта.">
+    <title>Новости | Honey Badger</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/app.js" defer></script>
+  </head>
+  <body class="news-page ru-news-page" data-page="news" data-lang="ru">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header" aria-label="Шапка сайта">
+      <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="Главная Honey Badger">
+          <span class="brand-mark" aria-hidden="true">HB</span>
+          <span class="brand-copy">
+            <strong>Honey Badger</strong>
+            <small>ZennoLab China Ops</small>
+          </span>
+        </a>
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a class="nav-link" href="./index.html">Главная</a>
+          <a class="nav-link" href="./products.html">Продукты</a>
+          <a class="nav-link" href="./news.html" aria-current="page">Новости</a>
+          <a class="nav-link" href="./index.html#ru-careers-preview">Карьера</a>
+          <a class="nav-link" href="./about.html">О нас</a>
+        </nav>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="Переключатель языка">
+            <a href="../news.html" lang="zh-CN">中文</a>
+            <a href="../en/news.html" lang="en-US">EN</a>
+            <a href="./news.html" aria-current="true" lang="ru-RU">RU</a>
+          </nav>
+          <button class="menu-button" id="menu-button" type="button" aria-label="Открыть мобильную навигацию" aria-controls="mobile-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная основная навигация">
+      <a class="nav-link" href="./index.html">Главная</a>
+      <a class="nav-link" href="./products.html">Продукты</a>
+      <a class="nav-link" href="./news.html" aria-current="page">Новости</a>
+      <a class="nav-link" href="./index.html#ru-careers-preview">Карьера</a>
+      <a class="nav-link" href="./about.html">О нас</a>
+    </nav>
+    <main class="site-main" id="main" tabindex="-1">
+      <div class="site-notice-banner">
+        <div class="container">开发骨架，非正式内容 · Технический каркас, страницы деталей новостей, финальные контактные, регистрационные и авторские данные ожидают настройки</div>
+      </div>
+      <nav class="breadcrumb" aria-label="Навигационная цепочка">
+        <div class="container">
+          <a href="./index.html">Главная</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Новости</span>
+        </div>
+      </nav>
+
+      <section class="products-hero news-hero" aria-labelledby="page-title">
+        <div class="container news-hero-grid">
+          <div class="products-hero-copy">
+            <p class="eyebrow home-eyebrow">Центр новостей</p>
+            <h1 id="page-title">Новости</h1>
+            <p class="products-hero-subtitle">Статический вход для новостей компании, обновлений продуктов, отраслевых новостей и технических материалов</p>
+            <p class="lead">Страница новостей представляет корпоративные динамики Honey Badger, обновления продуктов, отраслевые наблюдения и технические материалы как статический информационный центр на этапе производственной сборки сайта.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#news-list">Посмотреть записи новостей</a>
+              <a class="btn btn-outline" href="#news-categories">Посмотреть категории</a>
+            </div>
+            <dl class="products-stat-grid" aria-label="Обзор страницы новостей">
+              <div>
+                <dt>6</dt>
+                <dd>Примерные записи из SSOT</dd>
+              </div>
+              <div>
+                <dt>5</dt>
+                <dd>Статические категории новостей</dd>
+              </div>
+              <div>
+                <dt>0</dt>
+                <dd>Подключенных страниц деталей</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="news-visual" role="img" aria-label="Иллюстрация структуры категорий и списка новостей">
+            <div class="news-visual-panel" aria-hidden="true">
+              <div class="news-visual-head">
+                <span>NEWS</span>
+                <strong>Категории и записи</strong>
+              </div>
+              <div class="news-visual-list">
+                <span>Новости компании</span>
+                <span>Обновления продуктов</span>
+                <span>Отраслевые новости</span>
+                <span>Технические материалы</span>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="home-section" id="news-categories" aria-labelledby="news-categories-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Категории</p>
+            <h2 id="news-categories-title">Категории новостей</h2>
+            <p class="lead">Категории являются статическими якорями на этой странице. Страница не предоставляет фиктивную фильтрацию, фиктивный поиск или backend-взаимодействие.</p>
+          </div>
+          <nav class="news-category-grid" aria-label="Якоря категорий новостей">
+            <a href="#news-list">
+              <span>Все</span>
+              <strong>6 записей</strong>
+            </a>
+            <a href="#category-company">
+              <span>Новости компании</span>
+              <strong>2 записи</strong>
+            </a>
+            <a href="#category-product">
+              <span>Обновления продуктов</span>
+              <strong>2 записи</strong>
+            </a>
+            <a href="#category-industry">
+              <span>Отраслевые новости</span>
+              <strong>1 запись</strong>
+            </a>
+            <a href="#category-tech">
+              <span>Технические материалы</span>
+              <strong>1 запись</strong>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="home-section home-section-soft" id="news-list" aria-labelledby="news-list-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Записи</p>
+            <h2 id="news-list-title">Список новостей</h2>
+            <p class="lead">Шесть записей ниже взяты из русской секции SSOT IX. Резюме являются нейтральными заполнителями; страницы деталей будут добавлены только после отдельного подключения.</p>
+          </div>
+          <div class="news-list-grid">
+            <article class="news-card" id="news-zennolab-ops" data-news-entry="company" data-news-category="Новости компании">
+              <svg class="news-thumb" role="img" aria-label="Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае" viewBox="0 0 320 180">
+                <title>Миниатюра новости Honey Badger Software официально становится операционной структурой ZennoLab в Китае</title>
+                <rect width="320" height="180" rx="8" fill="#eaf3ff"/>
+                <path d="M36 128h248" stroke="#0b67c2" stroke-width="10" stroke-linecap="round"/>
+                <path d="M58 94h204" stroke="#18a36a" stroke-width="10" stroke-linecap="round"/>
+                <path d="M80 60h160" stroke="#7652c8" stroke-width="10" stroke-linecap="round"/>
+                <circle cx="70" cy="126" r="20" fill="#0b67c2"/>
+                <circle cx="250" cy="60" r="18" fill="#7652c8"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-company" class="news-badge">Новости компании</span>
+                  <time datetime="2026-06-15">15.06.2026</time>
+                </div>
+                <h3>Honey Badger Software официально становится операционной структурой ZennoLab в Китае</h3>
+                <p>Нейтральное резюме-заполнитель для этой примерной записи SSOT; полный текст новости ожидает отдельной страницы деталей.</p>
+                <a class="link-more" href="#news-detail-pending">Страница деталей ожидает подключения</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-yuantu-v2" data-news-entry="product" data-news-category="Обновления продуктов">
+              <svg class="news-thumb" role="img" aria-label="Миниатюра новости Запущена версия Honey Badger Original Image V2.0" viewBox="0 0 320 180">
+                <title>Миниатюра новости Запущена версия Honey Badger Original Image V2.0</title>
+                <rect width="320" height="180" rx="8" fill="#eefcf8"/>
+                <rect x="42" y="38" width="96" height="76" rx="8" fill="#18a36a" opacity=".2"/>
+                <rect x="132" y="62" width="118" height="78" rx="8" fill="#0b67c2" opacity=".18"/>
+                <path d="M58 132l54-54 42 42 24-24 62 62" fill="none" stroke="#18a36a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="226" cy="48" r="18" fill="#0b67c2"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-product" class="news-badge">Обновления продуктов</span>
+                  <time datetime="2026-06-01">01.06.2026</time>
+                </div>
+                <h3>Запущена версия Honey Badger Original Image V2.0: добавлена функция пакетной генерации сценарных изображений</h3>
+                <p>Нейтральное резюме-заполнитель для этой примерной записи SSOT; полный текст новости ожидает отдельной страницы деталей.</p>
+                <a class="link-more" href="#news-detail-pending">Страница деталей ожидает подключения</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-ai-trend" data-news-entry="industry" data-news-category="Отраслевые новости">
+              <svg class="news-thumb" role="img" aria-label="Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов" viewBox="0 0 320 180">
+                <title>Миниатюра новости Опубликован отчет о тенденциях применения ИИ-инструментов</title>
+                <rect width="320" height="180" rx="8" fill="#f5f0ff"/>
+                <rect x="54" y="102" width="34" height="42" rx="6" fill="#7652c8"/>
+                <rect x="116" y="76" width="34" height="68" rx="6" fill="#0b67c2"/>
+                <rect x="178" y="52" width="34" height="92" rx="6" fill="#18a36a"/>
+                <path d="M56 66c42 18 82 14 120-12 28-20 56-24 84-12" fill="none" stroke="#7652c8" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-industry" class="news-badge">Отраслевые новости</span>
+                  <time datetime="2026-05-20">20.05.2026</time>
+                </div>
+                <h3>Опубликован отчет о тенденциях применения ИИ-инструментов в кроссбордерной электронной коммерции 2026</h3>
+                <p>Нейтральное резюме-заполнитель для этой примерной записи SSOT; полный текст новости ожидает отдельной страницы деталей.</p>
+                <a class="link-more" href="#news-detail-pending">Страница деталей ожидает подключения</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-ip-guide" data-news-entry="tech" data-news-category="Технические материалы">
+              <svg class="news-thumb" role="img" aria-label="Миниатюра новости Как выбрать между домашним IP и датацентровым IP" viewBox="0 0 320 180">
+                <title>Миниатюра новости Как выбрать между домашним IP и датацентровым IP</title>
+                <rect width="320" height="180" rx="8" fill="#eef8ff"/>
+                <path d="M72 130V80l44-32 44 32v50" fill="none" stroke="#0b67c2" stroke-width="10" stroke-linejoin="round"/>
+                <rect x="188" y="54" width="64" height="84" rx="8" fill="none" stroke="#18a36a" stroke-width="10"/>
+                <path d="M196 82h48M196 108h48" stroke="#18a36a" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span id="category-tech" class="news-badge">Технические материалы</span>
+                  <time datetime="2026-05-08">08.05.2026</time>
+                </div>
+                <h3>Как выбрать между домашним IP и датацентровым IP? Полное руководство по выбору прокси</h3>
+                <p>Нейтральное резюме-заполнитель для этой примерной записи SSOT; полный текст новости ожидает отдельной страницы деталей.</p>
+                <a class="link-more" href="#news-detail-pending">Страница деталей ожидает подключения</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-ai-fde-training" data-news-entry="company" data-news-category="Новости компании">
+              <svg class="news-thumb" role="img" aria-label="Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено" viewBox="0 0 320 180">
+                <title>Миниатюра новости Первое обучение AI-FDE VibeCoding успешно завершено</title>
+                <rect width="320" height="180" rx="8" fill="#fff8ec"/>
+                <rect x="48" y="46" width="224" height="92" rx="10" fill="#ffffff" stroke="#f0b54a" stroke-width="8"/>
+                <path d="M88 86h144M88 112h94" stroke="#7652c8" stroke-width="8" stroke-linecap="round"/>
+                <circle cx="70" cy="138" r="16" fill="#f0b54a"/>
+                <circle cx="250" cy="42" r="16" fill="#7652c8"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span class="news-badge">Новости компании</span>
+                  <time datetime="2026-04-25">25.04.2026</time>
+                </div>
+                <h3>Первое обучение AI-FDE VibeCoding успешно завершено</h3>
+                <p>Нейтральное резюме-заполнитель для этой примерной записи SSOT; полный текст новости ожидает отдельной страницы деталей.</p>
+                <a class="link-more" href="#news-detail-pending">Страница деталей ожидает подключения</a>
+              </div>
+            </article>
+
+            <article class="news-card" id="news-network-sea" data-news-entry="product" data-news-category="Обновления продуктов">
+              <svg class="news-thumb" role="img" aria-label="Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии" viewBox="0 0 320 180">
+                <title>Миниатюра новости Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии</title>
+                <rect width="320" height="180" rx="8" fill="#eef6ff"/>
+                <circle cx="92" cy="72" r="22" fill="#0b67c2"/>
+                <circle cx="158" cy="108" r="28" fill="#18a36a"/>
+                <circle cx="232" cy="70" r="20" fill="#7652c8"/>
+                <path d="M92 72l66 36 74-38M92 72l140-2" stroke="#163b68" stroke-width="8" stroke-linecap="round" opacity=".35"/>
+              </svg>
+              <div class="news-card-body">
+                <div class="news-card-meta">
+                  <span class="news-badge">Обновления продуктов</span>
+                  <time datetime="2026-04-10">10.04.2026</time>
+                </div>
+                <h3>Кроссбордерные сетевые сервисы добавили ресурсы узлов в Юго-Восточной Азии</h3>
+                <p>Нейтральное резюме-заполнитель для этой примерной записи SSOT; полный текст новости ожидает отдельной страницы деталей.</p>
+                <a class="link-more" href="#news-detail-pending">Страница деталей ожидает подключения</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section support-note-section" id="news-detail-pending" aria-labelledby="news-detail-pending-title">
+        <div class="container support-note-grid">
+          <div>
+            <p class="eyebrow eyebrow-dark">Детали</p>
+            <h2 id="news-detail-pending-title">Страницы деталей новостей ожидают подключения</h2>
+            <p class="lead">Страницы деталей новостей, фильтрация категорий и backend-поддержка контента зарезервированы для следующих задач. Этот раунд предоставляет только статические записи и якоря на текущей странице.</p>
+          </div>
+          <div class="support-note-card">
+            <h3>Вход для консультации и контакта</h3>
+            <p>Используйте плавающий заполнитель поддержки или контактный заполнитель в нижнем колонтитуле для запросов по продуктам и услугам. Эта страница не предоставляет фиктивную форму или фиктивное состояние отправки.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#floating-support">Посмотреть заполнитель поддержки</a>
+              <a class="btn btn-outline" href="#site-footer-contact">Заполнитель контактов внизу</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" aria-label="Нижний колонтитул сайта">
+      <div class="container footer-grid">
+        <section>
+          <h2>Honey Badger</h2>
+          <p>Honey Badger — Продукты и услуги Honey Badger фокусируются на цифровизации промышленности, росте кроссбордерной электронной коммерции, формировании возможностей внедрения ИИ и кроссбордерных сетевых сервисах.</p>
+          <p>Honey Badger является операционной структурой российской компании ZennoLab в Китае.</p>
+        </section>
+        <section id="site-footer-contact">
+          <h3>Контактный заполнитель</h3>
+          <ul class="footer-list">
+            <li>Корпоративная почта: Будет настроено</li>
+            <li>Аккаунты поддержки: Будет настроено</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Заполнитель соответствия</h3>
+          <ul class="footer-list">
+            <li>Информация о регистрации ICP: Будет настроено</li>
+            <li>Информация об авторских правах: Будет настроено</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Внешние ссылки</h3>
+          <p>Ссылки поддержки зарезервированы до подтверждения.</p>
+        </section>
+      </div>
+    </footer>
+    <aside class="floating-support" id="floating-support" aria-label="Заполнитель поддержки">
+      <div class="support-panel" id="support-panel">
+        <div class="support-panel-head">
+          <strong>Заполнитель поддержки</strong>
+          <button class="support-close" type="button" aria-label="Закрыть панель поддержки">×</button>
+        </div>
+        <p>Официальные каналы поддержки: Будет настроено. Этот issue проверяет только структуру и взаимодействие.</p>
+        <div class="support-options" aria-label="Ожидающие каналы поддержки">
+          <span>WeChat: Будет настроено</span>
+          <span>QQ: Будет настроено</span>
+          <span>Email: Будет настроено</span>
+        </div>
+      </div>
+      <button class="support-toggle" type="button" aria-controls="support-panel" aria-expanded="false">
+        <span aria-hidden="true">?</span>
+        <strong>Поддержка</strong>
+      </button>
+    </aside>
+  </body>
+</html>
