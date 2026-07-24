@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "ru/index.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "ru/index.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 
@@ -228,6 +228,15 @@ function validateEnglishHome(html) {
   const productsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/products\.html["']>Products<\/a>/g) || [];
   if (productsNavLinks.length !== 2) {
     errors.push(`English home Products navigation must point to ./products.html on desktop and mobile; found ${productsNavLinks.length}.`);
+  }
+
+  const aboutNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/about\.html["']>About<\/a>/g) || [];
+  if (aboutNavLinks.length !== 2) {
+    errors.push(`English home About navigation must point to ./about.html on desktop and mobile; found ${aboutNavLinks.length}.`);
+  }
+
+  if (/data-placeholder=["']true["'][^>]*>About<\/a>/i.test(html)) {
+    errors.push("English home About navigation must not remain a placeholder link.");
   }
 
   for (const languagePath of ['href="../index.html"', 'href="./index.html" aria-current="true"', 'href="../ru/index.html"']) {
@@ -533,6 +542,118 @@ function validateEnglishNetworkServices(html) {
 
   if (/node count:\s*\d+|nodes:\s*\d+|\d+\s+nodes|refund guarantee|money-back|guaranteed SLA|100%\s*SLA/i.test(html)) {
     errors.push("English network services page contains unconfirmed node counts, refund guarantees or absolute SLA wording.");
+  }
+
+  return errors;
+}
+
+function validateEnglishAbout(html) {
+  const errors = [];
+  const expectedTitle = "About Us | Honey Badger";
+  const expectedDescription = "Learn about Guangzhou Honey Badger Software Co., Ltd., its company profile, positioning, background, ZennoLab China operating entity relationship and contact placeholders.";
+  const expectedFooterRelationship = "Honey Badger is ZennoLab's operating entity in China.";
+
+  if (!/<html\s+lang=["']en-US["']/i.test(html)) {
+    errors.push('English about page must render <html lang="en-US">.');
+  }
+
+  if (!html.includes(`<title>${expectedTitle}</title>`)) {
+    errors.push("English about page meta title must match the issue requirement exactly.");
+  }
+
+  if (!html.includes(`<meta name="description" content="${expectedDescription}">`)) {
+    errors.push("English about page meta description must match the production wording exactly.");
+  }
+
+  for (const marker of [
+    "About Us",
+    "Brand Introduction",
+    "Brand Positioning and Image",
+    "Company Background",
+    "Company Entity Statement",
+    "Contact Us",
+    "Guangzhou Honey Badger Software Co., Ltd.",
+    "founded on January 25, 2017",
+    "Mission and Vision",
+    "Core Positioning",
+    "Business Direction",
+    "Service Features",
+    "Development Background",
+    "Registered Business Scope",
+    "Business Coverage",
+    "4 regular products/services plus cross-border network services",
+    "The statement is not expanded into any stronger authorization, agency or distribution claim.",
+    "Contact Information Placeholder",
+    "The About page keeps a formal contact module for brand inquiries, product inquiries, cross-border network service inquiries and partnership communication.",
+    "Corporate email: To be configured",
+    "Support accounts: To be configured",
+    "Offline contact information: To be configured",
+    "ICP filing information: To be configured",
+    "Copyright information: To be configured",
+    expectedFooterRelationship,
+    "Support Placeholder",
+    "To be configured"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing English about page marker: ${marker}.`);
+    }
+  }
+
+  for (const selector of [
+    "en-about-page",
+    "about-hero",
+    "about-brand",
+    "about-positioning",
+    "about-background",
+    "about-entity",
+    "about-contact"
+  ]) {
+    if (!html.includes(selector)) {
+      errors.push(`Missing English about page section marker: ${selector}.`);
+    }
+  }
+
+  if (!/class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
+    errors.push("English about page must render breadcrumb markup.");
+  }
+
+  if (!html.includes('href="./index.html">Home</a>') || !html.includes('aria-current="page">About Us</span>')) {
+    errors.push("English about page breadcrumb must be Home / About Us with a working home link.");
+  }
+
+  if (!html.includes('href="./about.html" aria-current="page">About</a>')) {
+    errors.push("English about page header must mark About as current.");
+  }
+
+  for (const languagePath of ['href="../about.html"', 'href="./about.html" aria-current="true"', 'href="../ru/index.html"']) {
+    if (!html.includes(languagePath)) {
+      errors.push(`English about page language switcher missing ${languagePath}.`);
+    }
+  }
+
+  const relationshipMatches = html.match(new RegExp(expectedFooterRelationship.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || [];
+  if (relationshipMatches.length !== 2) {
+    errors.push(`English about page must render the exact ZennoLab relationship sentence in entity and footer blocks; found ${relationshipMatches.length}.`);
+  }
+
+  if (!/<section class=["'][^"']*home-section[^"']*home-section-soft[^"']*["'] id=["']about-entity["'][\s\S]*?<p class=["']about-entity-statement["']>Honey Badger is ZennoLab's operating entity in China\.<\/p>/i.test(html)) {
+    errors.push("English about page entity block must contain the exact relationship sentence.");
+  }
+
+  if (!/<footer class=["']site-footer["'][\s\S]*?<p>Honey Badger is ZennoLab's operating entity in China\.<\/p>/i.test(html)) {
+    errors.push("English about page footer must contain the exact relationship sentence.");
+  }
+
+  if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
+    errors.push("English about page must not include a fake contact form.");
+  }
+
+  if (/\b(exclusive|sole|only authorized|sole agent|exclusive distributor|exclusive agent|official sole)\b/i.test(html)) {
+    errors.push("English about page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  if (/\b(ZennoProxy|order system|payment system|member system|CMS backend|RDS|Redis|OSS)\b/i.test(html)) {
+    errors.push("English about page contains out-of-scope historical project facts.");
   }
 
   return errors;
@@ -1259,6 +1380,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "en/跨境网络服务.html") {
     htmlErrors.push(...validateEnglishNetworkServices(html));
+  }
+
+  if (relativePath === "en/about.html") {
+    htmlErrors.push(...validateEnglishAbout(html));
   }
 
   if (relativePath === "ru/index.html") {
