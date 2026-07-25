@@ -2746,7 +2746,7 @@ function validateStaticIpDetailPage(relativePath, html) {
       supportTitle: "Service support",
       specs: [
         ["Positioning", "Fixed residential proxy resource"],
-        ["Network profile", "Real ISP broadband, fixed session, exclusive access"],
+        ["Network profile", "Real ISP broadband, fixed session, dedicated access"],
         ["Teams", "Cross-border commerce, social operations, SEO and localization testing"]
       ],
       features: [
