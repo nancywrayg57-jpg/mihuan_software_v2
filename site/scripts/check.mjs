@@ -7,9 +7,9 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -558,8 +558,12 @@ function validateEnglishProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
-  if (pendingProductLinks.length !== 4) {
+  if (pendingProductLinks.length !== 3) {
     errors.push(`English products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']en-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>Detail page pending<\/a>/.test(html)) {
+    errors.push("English products page agriculture card must link to ./Agriculture.html.");
   }
 
   if (!html.includes('href="./跨境网络服务.html">View merged page</a>')) {
@@ -567,12 +571,12 @@ function validateEnglishProducts(html) {
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`English products page detail links must stay on #en-product-detail-pending or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
     errors.push("English products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -1803,8 +1807,12 @@ function validateRussianProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
-  if (pendingProductLinks.length !== 4) {
+  if (pendingProductLinks.length !== 3) {
     errors.push(`Russian products page regular entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']ru-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>Страница деталей ожидает подключения<\/a>/.test(html)) {
+    errors.push("Russian products page agriculture card must link to ./Agriculture.html.");
   }
 
   if (!html.includes('href="./跨境网络服务.html">Открыть объединенную страницу</a>')) {
@@ -1812,12 +1820,12 @@ function validateRussianProducts(html) {
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
     errors.push("Russian products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -2033,7 +2041,11 @@ function validateProductsPage(html) {
     errors.push("Products page network-services card must link to the merged page.");
   }
 
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>详情页待接入<\/a>/.test(html)) {
+    errors.push("Products page agriculture card must link to ./Agriculture.html.");
+  }
+
+  if (/href=["'][^"']*(mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
     errors.push("Products page must keep detail and network-service links as same-page placeholder anchors.");
   }
 
@@ -2043,6 +2055,129 @@ function validateProductsPage(html) {
 
   if (/唯一代理|独家授权|官方总代理|官方唯一/i.test(html)) {
     errors.push("Products page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateAgricultureDetailPage(relativePath, html) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const expectations = {
+    zh: {
+      title: "数字化农业综合管理系统",
+      subtitle: "物联网 + AI 驱动的全链条智慧农业管控平台",
+      lead: "面向现代农业产业园、种植基地与涉农企业，提供从生产监测、环境调控、质量溯源到供应链管理的一体化数字解决方案。",
+      functionsTitle: "六大核心功能",
+      scenarioTitle: "适用场景",
+      valueTitle: "客户价值",
+      features: [
+        ["物联网数据采集", "土壤温湿度、光照、CO₂、气象站等多维度传感器实时接入"],
+        ["AI 智能决策", "基于作物生长模型的灌溉、施肥、病虫害预警，产量预测"],
+        ["生产过程管理", "种植计划、农事记录、投入品管理全流程数字化"],
+        ["质量溯源体系", "一物一码，从田间到餐桌全链路可追溯"],
+        ["仓储与供应链", "库存智能管理、冷链温湿度监控、订单配送协同"],
+        ["可视化数据大屏", "园区整体运营态势一屏掌握，多级下钻"]
+      ],
+      scenarios: "现代农业产业园、规模化种植基地、政府智慧监管平台、生鲜品牌溯源体系、农业科研院所",
+      value: "降本（水肥药减少 15%-30%）、增效（人力成本下降 40%）、提质（标准化生产）、增值（溯源赋能品牌溢价）",
+      breadcrumb: ['href="./index.html">首页</a>', 'href="./products.html">产品介绍</a>', 'aria-current="page">数字化农业综合管理系统</span>'],
+      languagePaths: ['href="./Agriculture.html" aria-current="true"', 'href="./en/Agriculture.html"', 'href="./ru/Agriculture.html"']
+    },
+    en: {
+      title: "Digital Agriculture Integrated Management System",
+      subtitle: "Full-Chain Smart Agriculture Control Platform Driven by IoT + AI",
+      lead: "Providing integrated digital solutions from production monitoring, environmental regulation, quality traceability to supply chain management for modern agricultural industrial parks, planting bases and agriculture-related enterprises.",
+      functionsTitle: "Six Core Functions",
+      scenarioTitle: "Applicable Scenarios",
+      valueTitle: "Customer Value",
+      features: [
+        ["IoT Data Collection", "Real-time access to multi-dimensional sensors such as soil temperature and humidity, light, CO₂ and weather stations"],
+        ["AI Intelligent Decision-Making", "Irrigation, fertilization, pest and disease warning based on crop growth models, yield prediction"],
+        ["Production Process Management", "Full-process digitalization of planting plans, farming records and input management"],
+        ["Quality Traceability System", "One item one code, full-chain traceability from field to table"],
+        ["Warehousing &amp; Supply Chain", "Intelligent inventory management, cold chain temperature and humidity monitoring, order and delivery coordination"],
+        ["Visual Data Dashboard", "One-screen overview of overall park operation status, multi-level drill-down"]
+      ],
+      scenarios: "Modern agricultural industrial parks, large-scale planting bases, government smart supervision platforms, fresh food brand traceability systems, agricultural research institutes",
+      value: "Cost reduction (15%-30% less water, fertilizer and pesticides), efficiency improvement (40% lower labor costs), quality improvement (standardized production), value addition (traceability empowers brand premium)",
+      breadcrumb: ['href="./index.html">Home</a>', 'href="./products.html">Products</a>', 'aria-current="page">Digital Agriculture Integrated Management System</span>'],
+      languagePaths: ['href="../Agriculture.html"', 'href="./Agriculture.html" aria-current="true"', 'href="../ru/Agriculture.html"']
+    },
+    ru: {
+      title: "Интегрированная система цифрового сельского хозяйства",
+      subtitle: "Платформа полного цикла управления умным сельским хозяйством на базе IoT + ИИ",
+      lead: "Предоставление комплексных цифровых решений от мониторинга производства и регулирования окружающей среды до прослеживаемости качества и управления цепочками поставок для современных сельскохозяйственных парков, посевных баз и предприятий агросектора.",
+      functionsTitle: "Шесть основных функций",
+      scenarioTitle: "Применимые сценарии",
+      valueTitle: "Ценность для клиента",
+      features: [
+        ["Сбор данных Интернета вещей", "Доступ в реальном времени к многомерным датчикам: температура и влажность почвы, освещение, CO₂, метеостанции"],
+        ["Интеллектуальные решения ИИ", "Предупреждения о поливе, удобрении, вредителях и болезнях на основе моделей роста культур, прогнозирование урожайности"],
+        ["Управление производственным процессом", "Полная цифровизация планов посевов, сельскохозяйственных записей и управления ресурсами"],
+        ["Система прослеживаемости качества", "Один код на единицу продукции, полная прослеживаемость от поля до стола"],
+        ["Склад и цепочка поставок", "Интеллектуальное управление запасами, мониторинг температуры и влажности холодовой цепи, координация заказов и доставки"],
+        ["Визуальная панель данных", "Обзор общей оперативной ситуации парка на одном экране, многоуровневая детализация"]
+      ],
+      scenarios: "Современные сельскохозяйственные парки, масштабные посевные базы, правительственные платформы интеллектуального контроля, системы прослеживаемости брендов свежих продуктов, сельскохозяйственные научно-исследовательские институты",
+      value: "Снижение затрат (на 15-30% меньше воды, удобрений и пестицидов), повышение эффективности (снижение трудовых затрат на 40%), улучшение качества (стандартизированное производство), добавленная стоимость (прослеживаемость повышает премиальность бренда)",
+      breadcrumb: ['href="./index.html">Главная</a>', 'href="./products.html">Продукты</a>', 'aria-current="page">Интегрированная система цифрового сельского хозяйства</span>'],
+      languagePaths: ['href="../Agriculture.html"', 'href="../en/Agriculture.html"', 'href="./Agriculture.html" aria-current="true"']
+    }
+  }[locale];
+
+  for (const marker of [
+    expectations.title,
+    expectations.subtitle,
+    expectations.lead,
+    expectations.functionsTitle,
+    expectations.scenarioTitle,
+    expectations.valueTitle,
+    expectations.scenarios,
+    expectations.value,
+    "agriculture-detail-hero",
+    "agriculture-core-functions",
+    "agriculture-scenarios",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Agriculture detail marker for ${relativePath}: ${marker}.`);
+    }
+  }
+
+  for (const [featureTitle, featureBody] of expectations.features) {
+    if (!html.includes(featureTitle) || !html.includes(featureBody)) {
+      errors.push(`Missing Agriculture SSOT feature for ${relativePath}: ${featureTitle}.`);
+    }
+  }
+
+  for (const breadcrumbPart of expectations.breadcrumb) {
+    if (!html.includes(breadcrumbPart)) {
+      errors.push(`Agriculture breadcrumb missing ${breadcrumbPart} in ${relativePath}.`);
+    }
+  }
+
+  for (const languagePath of expectations.languagePaths) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Agriculture language switcher missing ${languagePath} in ${relativePath}.`);
+    }
+  }
+
+  const featureCount = (html.match(/data-agriculture-feature=/g) || []).length;
+  if (featureCount !== 6) {
+    errors.push(`Agriculture detail page must render 6 feature cards; found ${featureCount}.`);
+  }
+
+  if (/data-product=|seo-prerender/i.test(html)) {
+    errors.push("Agriculture detail page must be full static HTML, not prototype dynamic rendering.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole|only authorized)\b|эксклюзивн|единственн/i.test(html)) {
+    errors.push("Agriculture detail page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -2557,6 +2692,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateEnglishProducts(html));
   }
 
+  if (relativePath === "en/Agriculture.html") {
+    htmlErrors.push(...validateAgricultureDetailPage(relativePath, html));
+  }
+
   if (relativePath === "en/跨境网络服务.html") {
     htmlErrors.push(...validateEnglishNetworkServices(html));
   }
@@ -2581,6 +2720,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateRussianProducts(html));
   }
 
+  if (relativePath === "ru/Agriculture.html") {
+    htmlErrors.push(...validateAgricultureDetailPage(relativePath, html));
+  }
+
   if (relativePath === "ru/about.html") {
     htmlErrors.push(...validateRussianAbout(html));
   }
@@ -2599,6 +2742,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "products.html") {
     htmlErrors.push(...validateProductsPage(html));
+  }
+
+  if (relativePath === "Agriculture.html") {
+    htmlErrors.push(...validateAgricultureDetailPage(relativePath, html));
   }
 
   if (relativePath === "跨境网络服务.html") {
@@ -2655,7 +2802,8 @@ async function validateIssue50HeroAssetReferences() {
     "stacked-waves-haikei_3.svg",
     "waves-haikei.svg",
     "waves-haikei-2.svg",
-    "IP.svg"
+    "IP.svg",
+    "nongye.svg"
   ]);
   const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
   const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));
@@ -2876,6 +3024,7 @@ async function validateIssue60HeroOverlayRemoval() {
     [".news-hero", "stacked-waves-haikei_3.svg", "var(--hero)"],
     [".careers-hero", "waves-haikei.svg", "var(--hero)"],
     [".network-services-hero", "IP.svg", "var(--hero)"],
+    [".agriculture-detail-hero", "nongye.svg", "var(--hero)"],
     [".network-services-page #network-services-modules", "stacked-waves-haikei.svg", "var(--hero)"],
     [".network-service-module > header", "stacked-waves-haikei.svg", "var(--hero)"]
   ];
