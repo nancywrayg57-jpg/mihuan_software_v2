@@ -1,0 +1,24 @@
+{
+  "archive": "site/release/honeybadger-dist-6dfb59c06fdd.tar.gz",
+  "archiveBytes": 83165,
+  "tarEntryCount": 31,
+  "distFileCount": 31,
+  "distTotalBytes": 464821,
+  "extractedMatchesDist": true,
+  "systemTarExtractMatchesDist": true,
+  "mismatches": [],
+  "firstEntries": [
+    "about.html",
+    "assets/app.js",
+    "assets/img/hero-light-blue.svg",
+    "assets/img/IP.svg",
+    "assets/img/stacked-peaks-haikei_4.svg",
+    "assets/img/stacked-waves-haikei_2.svg",
+    "assets/img/stacked-waves-haikei_3.svg",
+    "assets/img/stacked-waves-haikei.svg",
+    "assets/img/waves-haikei-2.svg",
+    "assets/img/waves-haikei.svg",
+    "assets/styles.css",
+    "careers.html"
+  ]
+}

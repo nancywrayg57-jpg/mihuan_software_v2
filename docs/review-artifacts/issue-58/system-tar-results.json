@@ -1,0 +1,24 @@
+{
+  "archive": "honeybadger-dist-6dfb59c06fdd.tar.gz",
+  "extractedFileCount": 31,
+  "distFileCount": 31,
+  "systemTarExtractMatchesDist": true,
+  "mismatches": [],
+  "checkedChinesePaths": [
+    {
+      "path": "跨境网络服务.html",
+      "extracted": true,
+      "matchesDist": true
+    },
+    {
+      "path": "en/跨境网络服务.html",
+      "extracted": true,
+      "matchesDist": true
+    },
+    {
+      "path": "ru/跨境网络服务.html",
+      "extracted": true,
+      "matchesDist": true
+    }
+  ]
+}

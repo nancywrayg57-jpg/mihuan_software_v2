@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-07-25T03:27:09.992Z",
+  "method": "Headless Playwright loaded a local HTTP server for DOM/link/fetch checks; tab chrome screenshots were captured separately with visible Chromium and OS window screenshots.",
+  "results": [
+    {
+      "locale": "zh",
+      "url": "http://127.0.0.1:58505/index.html",
+      "pageStatus": 200,
+      "expectedHref": "./favicon.svg",
+      "screenshot": "docs/review-artifacts/issue-58/browser-zh-tab-favicon.png",
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "iconLinks": [
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "./favicon.svg",
+          "resolvedHref": "http://127.0.0.1:58505/favicon.svg"
+        }
+      ],
+      "iconFetchResults": [
+        {
+          "href": "./favicon.svg",
+          "resolvedHref": "http://127.0.0.1:58505/favicon.svg",
+          "status": 200,
+          "contentType": "image/svg+xml; charset=utf-8",
+          "bytes": 387,
+          "startsWithSvg": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "locale": "en",
+      "url": "http://127.0.0.1:58505/en/index.html",
+      "pageStatus": 200,
+      "expectedHref": "../favicon.svg",
+      "screenshot": "docs/review-artifacts/issue-58/browser-en-tab-favicon.png",
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "iconLinks": [
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "../favicon.svg",
+          "resolvedHref": "http://127.0.0.1:58505/favicon.svg"
+        }
+      ],
+      "iconFetchResults": [
+        {
+          "href": "../favicon.svg",
+          "resolvedHref": "http://127.0.0.1:58505/favicon.svg",
+          "status": 200,
+          "contentType": "image/svg+xml; charset=utf-8",
+          "bytes": 387,
+          "startsWithSvg": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "locale": "ru",
+      "url": "http://127.0.0.1:58505/ru/index.html",
+      "pageStatus": 200,
+      "expectedHref": "../favicon.svg",
+      "screenshot": "docs/review-artifacts/issue-58/browser-ru-tab-favicon.png",
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "iconLinks": [
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "../favicon.svg",
+          "resolvedHref": "http://127.0.0.1:58505/favicon.svg"
+        }
+      ],
+      "iconFetchResults": [
+        {
+          "href": "../favicon.svg",
+          "resolvedHref": "http://127.0.0.1:58505/favicon.svg",
+          "status": 200,
+          "contentType": "image/svg+xml; charset=utf-8",
+          "bytes": 387,
+          "startsWithSvg": true
+        }
+      ],
+      "pass": true
+    }
+  ]
+}
