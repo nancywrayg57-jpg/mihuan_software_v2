@@ -2649,7 +2649,6 @@ async function validateIssue50HeroAssetReferences() {
   const stylesPath = resolve(distDir, "assets", "styles.css");
   const css = await readFile(stylesPath, "utf8");
   const requiredHeroAssets = new Set([
-    "hero-light-blue.svg",
     "stacked-peaks-haikei_4.svg",
     "stacked-waves-haikei.svg",
     "stacked-waves-haikei_2.svg",
@@ -2868,7 +2867,7 @@ async function validateIssue60HeroOverlayRemoval() {
   const stylesPath = resolve(distDir, "assets", "styles.css");
   const css = await readFile(stylesPath, "utf8");
   const requiredBackgrounds = [
-    [".home-hero", "hero-light-blue.svg", "var(--hero)"],
+    [".home-hero", "stacked-waves-haikei.svg", "var(--hero)"],
     ["#home-relation", "stacked-peaks-haikei_4.svg", "#f6f9fd"],
     ["#en-brand-relationship", "stacked-peaks-haikei_4.svg", "#f6f9fd"],
     ["#ru-brand-relationship", "stacked-peaks-haikei_4.svg", "#f6f9fd"],

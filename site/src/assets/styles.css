@@ -811,7 +811,7 @@ h3 {
 .home-hero {
   position: relative;
   overflow: hidden;
-  background: var(--hero) url("./img/hero-light-blue.svg") center / cover no-repeat;
+  background: var(--hero) url("./img/stacked-waves-haikei.svg") center / cover no-repeat;
   color: white;
   padding: 112px 0 92px;
 }
@@ -1289,17 +1289,6 @@ h3 {
   background: var(--hero) url("./img/stacked-waves-haikei_2.svg") center / cover no-repeat;
   color: white;
   padding: 112px 0 92px;
-}
-
-.products-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgb(255 255 255 / 12%) 1px, transparent 1px),
-    linear-gradient(0deg, rgb(255 255 255 / 10%) 1px, transparent 1px);
-  background-size: 48px 48px;
-  opacity: 0.45;
 }
 
 .products-hero-grid {

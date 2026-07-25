@@ -11,9 +11,9 @@
 
 | Area | Selector(s) | Change | Readability | Evidence |
 |---|---|---|---|---|
-| Home hero | `.home-hero` | Removed blue `linear-gradient`, now `var(--hero) + hero-light-blue.svg`; follow-up removed local white translucent backgrounds from hero eyebrow, stats cards, visual panel, and SVG frame. | Kept white hero copy and text shadow; no home hero font color change in the follow-up. | `before-01-zh-home-hero.png`, `after-01-zh-home-hero.png` |
+| Home hero | `.home-hero` | Removed blue `linear-gradient`; final review follow-up replaces `hero-light-blue.svg` with `var(--hero) + stacked-waves-haikei.svg` and removes the obsolete light-blue asset. | Kept white hero copy and text shadow per administrator instruction; dark blue waves restore contrast without changing font color. | `before-01-zh-home-hero.png`, `after-01-zh-home-hero.png`, `after-mobile-zh-home-390x844.png` |
 | Brand relationship | `#home-relation`, `#en-brand-relationship`, `#ru-brand-relationship` | Removed blue `linear-gradient`, now `#f6f9fd + stacked-peaks-haikei_4.svg`. | Restored white heading/copy per review correction and added text shadow. | `before-02-zh-home-relation.png`, `after-02-zh-home-relation.png`, `after-02b-en-brand-relationship.png`, `after-02c-ru-brand-relationship.png` |
-| Products hero | `.products-hero` | Removed blue `linear-gradient`, now `var(--hero) + stacked-waves-haikei_2.svg`. | Kept white copy and added text shadow. Existing fine grid overlay is unchanged because it is not a blue block overlay. | `before-03-zh-products-hero.png`, `after-03-zh-products-hero.png` |
+| Products hero | `.products-hero` | Removed blue `linear-gradient`, now `var(--hero) + stacked-waves-haikei_2.svg`; final review follow-up deletes the shared `.products-hero::before` white grid pseudo-element. | Kept white copy and text shadow; browser validation confirms the pseudo-element no longer renders a grid. | `before-03-zh-products-hero.png`, `after-03-zh-products-hero.png` |
 | News hero | `.news-hero` | Removed blue `linear-gradient`, now `var(--hero) + stacked-waves-haikei_3.svg`. | Inherits products hero white copy with text shadow. | `before-04-zh-news-hero.png`, `after-04-zh-news-hero.png` |
 | About hero | `.about-hero` | Removed blue `linear-gradient`, now `var(--hero) + waves-haikei-2.svg`. | Inherits products hero white copy with text shadow. | `before-05-zh-about-hero.png`, `after-05-zh-about-hero.png` |
 | Careers hero | `.careers-hero` | Removed blue `linear-gradient`, now `var(--hero) + waves-haikei.svg`. | Inherits products hero white copy with text shadow. | `before-06-zh-careers-hero.png`, `after-06-zh-careers-hero.png` |
@@ -37,16 +37,18 @@
 
 | Check | Result | Evidence |
 |---|---|---|
-| Static build/check using bundled Node v24.14.0 | PASS | `scripts/clean.mjs`, `scripts/build.mjs`, `scripts/check.mjs` completed locally. |
+| Static build/check using bundled Node v24.14.0 | PASS | `scripts/clean.mjs`, `scripts/build.mjs`, `scripts/check.mjs` completed locally after the final review follow-up. |
 | Issue #60 static CSS assertions | PASS | `check.mjs` reports 11 SVG background rules without overlay gradients. |
 | Header LOGO 18 pages | PASS | `check.mjs` reports 18 header logo references; browser validation found no broken images. |
 | Favicon 18 pages | PASS | `check.mjs` reports 18 PNG favicon links; trilingual tab screenshot captured. |
-| Desktop/tablet/mobile 18-page regression | PASS | `browser-validation.json`: 54 checks, 0 console errors, 0 request/response failures, 0 broken images, 0 horizontal overflow. |
+| Desktop/tablet/mobile 18-page regression | PASS | `browser-validation.json`: 54 checks, 0 console errors, 0 request/response failures, 0 broken images, 0 horizontal overflow; final assertions confirm home uses `stacked-waves-haikei.svg`, white home text remains, and `.products-hero::before` grid is removed. |
 | Exact `npm ci && npm run build && npm run check` | [未经本地验证] | Local PATH has no `node`, `npm`, or `npx`; bundled Node has no bundled npm binary. |
 
 ## Notes
 
-- Review follow-up: `browser-validation.json` records home hero computed backgrounds for eyebrow/stat/visual/frame as transparent while h1/lead remain white.
+- Final review follow-up: home hero now uses `stacked-waves-haikei.svg`; `hero-light-blue.svg` is removed from source and static checks.
+- Final review follow-up: `.products-hero::before` was deleted, removing the shared white grid from products/about/news/careers/network hero surfaces.
+- Review follow-up: `browser-validation.json` records home hero h1/lead as white and verifies no product hero pseudo-grid is rendered.
 - No external assets were introduced.
 - No `UI/`, `LOGO/`, `.github/`, `site/src/assets/app.js`, or page body outside the authorized Header brand area was modified.
 - `site/src/favicon.svg` was removed and must not reappear in build output.
