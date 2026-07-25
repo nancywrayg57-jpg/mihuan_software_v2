@@ -1,0 +1,1905 @@
+{
+  "generatedAt": "2026-07-25T07:16:26.500Z",
+  "baselineRoot": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\mihuan_issue60_worktree_1e352add743a4a1bb8f0df25f67ca1a7\\site\\src",
+  "afterRoot": "D:\\workspace\\mihuan_software_v2\\site\\dist",
+  "baselineOrigin": "http://127.0.0.1:60448",
+  "afterOrigin": "http://127.0.0.1:60449",
+  "screenshots": [
+    "before-01-zh-home-hero.png",
+    "after-01-zh-home-hero.png",
+    "before-02-zh-home-relation.png",
+    "after-02-zh-home-relation.png",
+    "before-02b-en-brand-relationship.png",
+    "after-02b-en-brand-relationship.png",
+    "before-02c-ru-brand-relationship.png",
+    "after-02c-ru-brand-relationship.png",
+    "before-03-zh-products-hero.png",
+    "after-03-zh-products-hero.png",
+    "before-04-zh-news-hero.png",
+    "after-04-zh-news-hero.png",
+    "before-05-zh-about-hero.png",
+    "after-05-zh-about-hero.png",
+    "before-06-zh-careers-hero.png",
+    "after-06-zh-careers-hero.png",
+    "before-07-zh-network-hero.png",
+    "after-07-zh-network-hero.png",
+    "before-08-zh-network-modules.png",
+    "after-08-zh-network-modules.png",
+    "before-09-zh-network-module-header.png",
+    "after-09-zh-network-module-header.png",
+    "after-header-logo-closeup.png",
+    "after-mobile-zh-home-390x844.png",
+    "after-mobile-zh-network-390x844.png"
+  ],
+  "validationSummary": {
+    "pagesChecked": 54,
+    "viewports": [
+      "desktop-1440x900",
+      "tablet-820x1180",
+      "mobile-390x844"
+    ],
+    "failures": 0,
+    "consoleErrors": 0,
+    "pageErrors": 0,
+    "requestFailures": 0,
+    "responseFailures": 0,
+    "brokenImages": 0,
+    "horizontalOverflow": 0
+  },
+  "validations": [
+    {
+      "page": "index.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#home-relation",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "products.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "产品介绍 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "跨境网络服务.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "跨境网络服务 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "关于我们 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "news.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "新闻资讯 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "careers.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "人才招聘 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/index.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#en-brand-relationship",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/products.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Products | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/跨境网络服务.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Cross-border Network Services | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/about.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "About Us | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/news.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "News | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/careers.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Careers | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/index.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#ru-brand-relationship",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/products.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Продукты | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/跨境网络服务.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/about.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "О нас | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/news.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Новости | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/careers.html",
+      "viewport": "desktop-1440x900",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Карьера | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#home-relation",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "products.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "产品介绍 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "跨境网络服务.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "跨境网络服务 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "关于我们 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "news.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "新闻资讯 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "careers.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "人才招聘 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/index.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#en-brand-relationship",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/products.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Products | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/跨境网络服务.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Cross-border Network Services | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/about.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "About Us | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/news.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "News | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/careers.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Careers | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/index.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#ru-brand-relationship",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/products.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Продукты | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/跨境网络服务.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/about.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "О нас | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/news.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Новости | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/careers.html",
+      "viewport": "tablet-820x1180",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Карьера | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 52,
+        "height": 36,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "index.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#home-relation",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "products.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "产品介绍 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "跨境网络服务.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "跨境网络服务 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "about.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "关于我们 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "news.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "新闻资讯 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "careers.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "人才招聘 | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "./assets/img/honeybadger-logo-mark.png",
+        "alt": "蜜獾软件标志",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "./assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/index.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#en-brand-relationship",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/products.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Products | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/跨境网络服务.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Cross-border Network Services | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/about.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "About Us | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/news.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "News | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "en/careers.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Careers | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Honey Badger logo",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/index.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".home-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
+        },
+        {
+          "selector": "#ru-brand-relationship",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/products.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Продукты | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/跨境网络服务.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.network-services-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
+        },
+        {
+          "selector": "#network-services-modules",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        },
+        {
+          "selector": "",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/about.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "О нас | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".about-hero.products-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/news.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Новости | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.news-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
+        }
+      ]
+    },
+    {
+      "page": "ru/careers.html",
+      "viewport": "mobile-390x844",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "responseFailures": [],
+      "title": "Карьера | Honey Badger",
+      "brokenImages": [],
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "brandLogo": {
+        "src": "../assets/img/honeybadger-logo-mark.png",
+        "alt": "Логотип Honey Badger",
+        "width": 48,
+        "height": 34,
+        "naturalWidth": 512,
+        "naturalHeight": 270
+      },
+      "favicon": {
+        "href": "../assets/img/favicon.png",
+        "type": "image/png"
+      },
+      "targetBackgrounds": [
+        {
+          "selector": ".products-hero.careers-hero",
+          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
+        }
+      ]
+    }
+  ]
+}
