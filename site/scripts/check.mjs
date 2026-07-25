@@ -7,10 +7,10 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "idc-ip.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/TikTok.html", "en/跨境网络服务.html", "en/static-ip.html", "en/idc-ip.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/TikTok.html", "ru/跨境网络服务.html", "ru/static-ip.html", "ru/idc-ip.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
-const sitemapHtmlPaths = requiredHtmlPaths.filter((relativePath) => !relativePath.endsWith("static-ip.html") && !relativePath.endsWith("idc-ip.html"));
+const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "idc-ip.html", "dynamic-ip.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/TikTok.html", "en/跨境网络服务.html", "en/static-ip.html", "en/idc-ip.html", "en/dynamic-ip.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/TikTok.html", "ru/跨境网络服务.html", "ru/static-ip.html", "ru/idc-ip.html", "ru/dynamic-ip.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const sitemapHtmlPaths = requiredHtmlPaths.filter((relativePath) => !relativePath.endsWith("static-ip.html") && !relativePath.endsWith("idc-ip.html") && !relativePath.endsWith("dynamic-ip.html"));
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "idc-ip.html", "about.html", "news.html", "careers.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "idc-ip.html", "dynamic-ip.html", "about.html", "news.html", "careers.html"]);
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -705,7 +705,7 @@ function validateEnglishNetworkServices(html) {
     "Long-term cross-border store operations, overseas social account farming, ad account management, public data collection, ad effectiveness verification, localization access testing, lightweight server workload exits",
     "Access &amp; Assurance",
     "Confirm target regions, protocols, concurrency, rotation method and operations requirements by business goal; specific node resources, packages, SLA and after-sales policy must follow administrator-confirmed production wording",
-    "Detail page pending",
+    "provide their corresponding child service detail links",
     "Back to Products",
     "Corporate email: To be configured",
     "Support accounts: To be configured",
@@ -772,14 +772,12 @@ function validateEnglishNetworkServices(html) {
     errors.push("English network services Datacenter IP block must link to ./idc-ip.html with View details.");
   }
 
-  if (/href=["'][^"']*dynamic-ip\.html/i.test(html)) {
-    errors.push("English network child service detail links must only connect static-ip.html and idc-ip.html in this issue.");
+  if (!html.includes('id="service-dynamic-ip"') || !html.includes('href="./dynamic-ip.html">View details</a>')) {
+    errors.push("English network services Dynamic IP block must link to ./dynamic-ip.html with View details.");
   }
 
-  for (const anchor of ['href="#dynamic-ip-detail-pending"']) {
-    if (!html.includes(anchor)) {
-      errors.push(`English network child service missing placeholder detail anchor ${anchor}.`);
-    }
+  if (/dynamic-ip-detail-pending/i.test(html)) {
+    errors.push("English network services page must not retain Dynamic IP pending anchors after detail-page wiring.");
   }
 
   if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
@@ -1407,7 +1405,6 @@ function validateRussianNews(html) {
     "Список новостей",
     "Резюме являются нейтральными заполнителями",
     "Страницы деталей новостей ожидают подключения",
-    "Страница деталей ожидает подключения",
     "Вход для консультации и контакта",
     "Корпоративная почта: Будет настроено",
     "Аккаунты поддержки: Будет настроено",
@@ -1997,7 +1994,6 @@ function validateRussianNetworkServices(html) {
     "Долгосрочная работа кроссбордерных магазинов, ведение зарубежных соцсетевых аккаунтов, управление рекламными аккаунтами, сбор публичных данных, проверка эффективности рекламы, локализационное тестирование доступа, легкие серверные выходы",
     "Доступ и гарантии",
     "Регионы, протоколы, параллельность, способ ротации и требования к эксплуатации подтверждаются по бизнес-цели; конкретные ресурсы узлов, пакеты, SLA и послепродажная политика должны следовать производственным формулировкам, подтвержденным администратором",
-    "Страница деталей ожидает подключения",
     "Вернуться к Продуктам",
     "Корпоративная почта: Будет настроено",
     "Аккаунты поддержки: Будет настроено",
@@ -2065,14 +2061,12 @@ function validateRussianNetworkServices(html) {
     errors.push("Russian network services Datacenter IP block must link to ./idc-ip.html with Подробнее.");
   }
 
-  if (/href=["'][^"']*dynamic-ip\.html/i.test(html)) {
-    errors.push("Russian network child service detail links must only connect static-ip.html and idc-ip.html in this issue.");
+  if (!html.includes('id="service-dynamic-ip"') || !html.includes('href="./dynamic-ip.html">Подробнее</a>')) {
+    errors.push("Russian network services Dynamic IP block must link to ./dynamic-ip.html with Подробнее.");
   }
 
-  for (const anchor of ['href="#dynamic-ip-detail-pending"']) {
-    if (!html.includes(anchor)) {
-      errors.push(`Russian network child service missing placeholder detail anchor ${anchor}.`);
-    }
+  if (/dynamic-ip-detail-pending/i.test(html)) {
+    errors.push("Russian network services page must not retain Dynamic IP pending anchors after detail-page wiring.");
   }
 
   if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
@@ -3180,6 +3174,252 @@ function validateIdcIpDetailPage(relativePath, html) {
   return errors;
 }
 
+function validateDynamicIpDetailPage(relativePath, html) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const expectations = {
+    zh: {
+      title: "动态住宅 IP",
+      name: "动态IP",
+      eyebrow: "Dynamic Residential IP",
+      lead: "基于全球真实家庭宽带节点池，支持按请求或时间周期自动轮换，适合公开数据的高频、短周期采集任务。",
+      featureTitle: "核心优势",
+      featureLead: "动态住宅 IP 重点解决访问频率、匿名性和短周期采集效率问题。",
+      scenarioTitle: "适用场景",
+      workflowTitle: "接入流程",
+      supportTitle: "服务支持",
+      specs: [
+        ["定位", "轮换住宅代理资源"],
+        ["网络属性", "海量住宅节点、自动轮换、可保持短会话"],
+        ["适用团队", "公开数据采集、广告验证、舆情监测和竞品调研团队"]
+      ],
+      features: [
+        ["海量住宅节点轮换", "每次请求或周期切换新的住宅 IP，降低单一地址访问频率压力。"],
+        ["自定义轮换规则", "支持按请求、分钟、小时或会话策略切换，兼顾效率与短时稳定性。"],
+        ["匿名性与防封禁", "通过住宅节点轮换减少长期固定访问痕迹，降低短时高频风险。"],
+        ["混合与定点模式", "可使用全球混合节点，也可锁定单一城市动态池。"],
+        ["轻量化集成", "代理通道开箱即用，API 支持重置 IP 和自动化接入。"]
+      ],
+      scenarios: [
+        "大规模公开商品数据、资讯和评论的合规采集。",
+        "全网舆情实时监控与多渠道公开信息同步。",
+        "短周期竞品数据调研和限时活动公开数据统计。",
+        "公开榜单、短视频公开内容的合规分析。"
+      ],
+      workflow: [
+        ["01", "明确采集频率、地区和会话策略"],
+        ["02", "配置轮换周期与鉴权方式"],
+        ["03", "接入采集脚本或自动化流程"],
+        ["04", "监测验证码、拉黑和成功率并优化规则"]
+      ],
+      support: [
+        ["策略配置", "根据请求频率和站点规则设置轮换与会话保持。"],
+        ["API 接入", "支持自动重置 IP、批量任务接入和日志核对。"],
+        ["风险复盘", "围绕验证码、失败率和封禁风险做持续优化。"]
+      ],
+      breadcrumb: ['href="./index.html">首页</a>', 'href="./products.html">产品介绍</a>', 'href="./跨境网络服务.html">跨境网络服务</a>', 'aria-current="page">动态住宅 IP</span>'],
+      languagePaths: ['href="./dynamic-ip.html" aria-current="true"', 'href="./en/dynamic-ip.html"', 'href="./ru/dynamic-ip.html"']
+    },
+    en: {
+      title: "Dynamic Residential IP",
+      name: "Dynamic IP",
+      eyebrow: "Dynamic Residential IP",
+      lead: "A rotating residential IP pool based on real home broadband nodes. It fits high-frequency, short-cycle collection of publicly accessible data.",
+      featureTitle: "Core advantages",
+      featureLead: "Dynamic residential IPs improve frequency control, anonymity and short-cycle collection efficiency.",
+      scenarioTitle: "Scenarios",
+      workflowTitle: "Onboarding flow",
+      supportTitle: "Service support",
+      specs: [
+        ["Positioning", "Rotating residential proxy resource"],
+        ["Network profile", "Large residential pool, automatic rotation, optional short sessions"],
+        ["Teams", "Public data collection, ad verification, monitoring and competitor research"]
+      ],
+      features: [
+        ["Large rotating pool", "Switches to new residential IPs by request or interval to reduce single-address pressure."],
+        ["Custom rotation rules", "Supports per-request, minute, hour or session strategies."],
+        ["Anonymity and blocking control", "Rotating residential nodes reduce long fixed-access traces in short-cycle tasks."],
+        ["Mixed or targeted regions", "Use global mixed nodes or lock to a single city pool."],
+        ["Lightweight integration", "Proxy channels are ready to use, with API support for IP reset and automation."]
+      ],
+      scenarios: [
+        "Compliant collection of public product, news and review data.",
+        "Real-time public-opinion monitoring and public information sync.",
+        "Short-cycle competitor research and limited-time campaign statistics.",
+        "Analysis of public rankings and public short-video content."
+      ],
+      workflow: [
+        ["01", "Define frequency, region and session strategy"],
+        ["02", "Configure rotation cycle and authentication"],
+        ["03", "Connect collection scripts or automation flows"],
+        ["04", "Monitor CAPTCHA, block rate and success rate"]
+      ],
+      support: [
+        ["Strategy setup", "Set rotation and session rules based on request volume and site policies."],
+        ["API integration", "Support automated IP reset, batch task access and log checks."],
+        ["Risk review", "Review CAPTCHA, failure rate and blocking signals."]
+      ],
+      breadcrumb: ['href="./index.html">Home</a>', 'href="./products.html">Products</a>', 'href="./跨境网络服务.html">Cross-border Network Services</a>', 'aria-current="page">Dynamic Residential IP</span>'],
+      languagePaths: ['href="../dynamic-ip.html"', 'href="./dynamic-ip.html" aria-current="true"', 'href="../ru/dynamic-ip.html"']
+    },
+    ru: {
+      title: "Динамический residential IP",
+      name: "Динамический IP",
+      eyebrow: "Dynamic Residential IP",
+      lead: "Ротационный residential IP pool на базе реальных домашних broadband-узлов. Подходит для коротких циклов и high-frequency сбора открытых данных.",
+      featureTitle: "Ключевые преимущества",
+      featureLead: "Динамический residential IP помогает управлять частотой, анонимностью и эффективностью коротких задач.",
+      scenarioTitle: "Сценарии",
+      workflowTitle: "Подключение",
+      supportTitle: "Сервисная поддержка",
+      specs: [
+        ["Позиция", "Ротационный residential proxy"],
+        ["Сетевой профиль", "Большой пул, auto-rotation, короткие сессии"],
+        ["Команды", "Public data collection, ad verification, monitoring и competitor research"]
+      ],
+      features: [
+        ["Большой rotating pool", "Новый residential IP по запросу или интервалу снижает давление на один адрес."],
+        ["Гибкие правила ротации", "Запрос, минуты, часы или session strategy."],
+        ["Анонимность и снижение блокировок", "Ротация residential nodes уменьшает долгий фиксированный след."],
+        ["Смешанные и точечные регионы", "Глобальный mixed pool или single-city pool."],
+        ["Легкая интеграция", "Готовые proxy channels и API для IP reset и automation."]
+      ],
+      scenarios: [
+        "Законный сбор открытых product, news и review data.",
+        "Мониторинг public opinion и синхронизация открытой информации.",
+        "Короткие исследования конкурентов и статистика campaign data.",
+        "Анализ public rankings и открытого short-video content."
+      ],
+      workflow: [
+        ["01", "Определить frequency, регион и session strategy"],
+        ["02", "Настроить rotation cycle и авторизацию"],
+        ["03", "Подключить скрипты или automation flows"],
+        ["04", "Контролировать CAPTCHA, block rate и success rate"]
+      ],
+      support: [
+        ["Настройка стратегии", "Ротация и session rules под объем запросов и правила сайтов."],
+        ["API-интеграция", "Автоматический IP reset, batch access и проверка логов."],
+        ["Ревью риска", "Анализ CAPTCHA, failure rate и сигналов блокировки."]
+      ],
+      breadcrumb: ['href="./index.html">Главная</a>', 'href="./products.html">Продукты</a>', 'href="./跨境网络服务.html">Кроссбордерные сетевые сервисы</a>', 'aria-current="page">Динамический residential IP</span>'],
+      languagePaths: ['href="../dynamic-ip.html"', 'href="../en/dynamic-ip.html"', 'href="./dynamic-ip.html" aria-current="true"']
+    }
+  }[locale];
+
+  for (const marker of [
+    expectations.title,
+    expectations.name,
+    expectations.eyebrow,
+    expectations.lead,
+    expectations.featureTitle,
+    expectations.featureLead,
+    expectations.scenarioTitle,
+    expectations.workflowTitle,
+    expectations.supportTitle,
+    "dynamic-ip-detail-hero",
+    "dynamic-ip-specs",
+    "dynamic-ip-features",
+    "dynamic-ip-scenarios",
+    "dynamic-ip-workflow",
+    "dynamic-ip-support",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Dynamic IP marker for ${relativePath}: ${marker}.`);
+    }
+  }
+
+  for (const [specLabel, specValue] of expectations.specs) {
+    if (!html.includes(specLabel) || !html.includes(specValue)) {
+      errors.push(`Missing Dynamic IP spec for ${relativePath}: ${specLabel}.`);
+    }
+  }
+
+  for (const [featureTitle, featureBody] of expectations.features) {
+    if (!html.includes(featureTitle) || !html.includes(featureBody)) {
+      errors.push(`Missing Dynamic IP feature for ${relativePath}: ${featureTitle}.`);
+    }
+  }
+
+  for (const scenario of expectations.scenarios) {
+    if (!html.includes(scenario)) {
+      errors.push(`Missing Dynamic IP scenario for ${relativePath}: ${scenario}.`);
+    }
+  }
+
+  for (const [stepNumber, stepTitle] of expectations.workflow) {
+    if (!html.includes(`data-dynamic-ip-step="${stepNumber}"`) || !html.includes(stepTitle)) {
+      errors.push(`Missing Dynamic IP workflow step for ${relativePath}: ${stepNumber} ${stepTitle}.`);
+    }
+  }
+
+  for (const [supportTitle, supportBody] of expectations.support) {
+    if (!html.includes(supportTitle) || !html.includes(supportBody)) {
+      errors.push(`Missing Dynamic IP support item for ${relativePath}: ${supportTitle}.`);
+    }
+  }
+
+  for (const breadcrumbPart of expectations.breadcrumb) {
+    if (!html.includes(breadcrumbPart)) {
+      errors.push(`Dynamic IP breadcrumb missing ${breadcrumbPart} in ${relativePath}.`);
+    }
+  }
+
+  for (const languagePath of expectations.languagePaths) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Dynamic IP language switcher missing ${languagePath} in ${relativePath}.`);
+    }
+  }
+
+  const specCount = (html.match(/data-dynamic-ip-spec=/g) || []).length;
+  const featureCount = (html.match(/data-dynamic-ip-feature=/g) || []).length;
+  const scenarioCount = (html.match(/data-dynamic-ip-scenario=/g) || []).length;
+  const stepCount = (html.match(/data-dynamic-ip-step=/g) || []).length;
+  const supportCount = (html.match(/data-dynamic-ip-support=/g) || []).length;
+
+  if (specCount !== 3) {
+    errors.push(`Dynamic IP detail page must render 3 spec rows; found ${specCount}.`);
+  }
+
+  if (featureCount !== 5) {
+    errors.push(`Dynamic IP detail page must render 5 feature cards; found ${featureCount}.`);
+  }
+
+  if (scenarioCount !== 4) {
+    errors.push(`Dynamic IP detail page must render 4 scenario cards; found ${scenarioCount}.`);
+  }
+
+  if (stepCount !== 4) {
+    errors.push(`Dynamic IP detail page must render 4 workflow steps; found ${stepCount}.`);
+  }
+
+  if (supportCount !== 3) {
+    errors.push(`Dynamic IP detail page must render 3 support cards; found ${supportCount}.`);
+  }
+
+  if (/data-product=|seo-prerender/i.test(html)) {
+    errors.push("Dynamic IP detail page must be full static HTML, not prototype dynamic rendering.");
+  }
+
+  if (/static-ip-detail|idc-ip-detail|data-static-ip-|data-idc-ip-|sip\.svg|idc\.svg/i.test(html)) {
+    errors.push("Dynamic IP detail page contains Static Residential IP or Datacenter IP implementation residue.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole)\s+(?:agent|distributor|authorization|authorized)\b|\bonly authorized\b|эксклюзивн|единственн/i.test(html)) {
+    errors.push("Dynamic IP detail page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  if (/节点数量|退款|绝对\s*SLA|node counts?|refund|absolute\s+SLA|количеств[ао]\s+узлов|возврат/i.test(html)) {
+    errors.push("Dynamic IP detail page contains forbidden node count, refund or absolute SLA wording.");
+  }
+
+  return errors;
+}
+
 function validateNetworkServicesPage(html) {
   const errors = [];
 
@@ -3190,7 +3430,7 @@ function validateNetworkServicesPage(html) {
     "动态 IP",
     "三级",
     "三类 IP 子服务合并承接",
-    "详情承接页待接入",
+    "提供对应子服务详情页入口",
     "返回产品介绍",
     "接入与咨询",
     "开发骨架，非正式内容"
@@ -3245,14 +3485,12 @@ function validateNetworkServicesPage(html) {
     errors.push("Network services Datacenter IP block must link to ./idc-ip.html with 查看详情.");
   }
 
-  if (/href=["'][^"']*dynamic-ip\.html/i.test(html)) {
-    errors.push("Network child service detail links must only connect static-ip.html and idc-ip.html in this issue.");
+  if (!html.includes('id="service-dynamic-ip"') || !html.includes('href="./dynamic-ip.html">查看详情</a>')) {
+    errors.push("Network services Dynamic IP block must link to ./dynamic-ip.html with 查看详情.");
   }
 
-  for (const anchor of ['href="#dynamic-ip-detail-pending"']) {
-    if (!html.includes(anchor)) {
-      errors.push(`Network child service missing placeholder detail anchor ${anchor}.`);
-    }
+  if (/dynamic-ip-detail-pending/i.test(html)) {
+    errors.push("Network services page must not retain Dynamic IP pending anchors after detail-page wiring.");
   }
 
   if (/<form[\s>]/i.test(html)) {
@@ -3378,7 +3616,8 @@ function validateProductNavigationDropdown(html, relativePath) {
     "TikTok.html",
     "跨境网络服务.html",
     "static-ip.html",
-    "idc-ip.html"
+    "idc-ip.html",
+    "dynamic-ip.html"
   ]);
   const basename = relativePath.split("/").pop();
   const shouldMarkProductCurrent = productPages.has(basename);
@@ -3840,6 +4079,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateIdcIpDetailPage(relativePath, html));
   }
 
+  if (relativePath === "en/dynamic-ip.html") {
+    htmlErrors.push(...validateDynamicIpDetailPage(relativePath, html));
+  }
+
   if (relativePath === "en/about.html") {
     htmlErrors.push(...validateEnglishAbout(html));
   }
@@ -3900,6 +4143,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateIdcIpDetailPage(relativePath, html));
   }
 
+  if (relativePath === "ru/dynamic-ip.html") {
+    htmlErrors.push(...validateDynamicIpDetailPage(relativePath, html));
+  }
+
   if (relativePath === "products.html") {
     htmlErrors.push(...validateProductsPage(html));
   }
@@ -3930,6 +4177,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "idc-ip.html") {
     htmlErrors.push(...validateIdcIpDetailPage(relativePath, html));
+  }
+
+  if (relativePath === "dynamic-ip.html") {
+    htmlErrors.push(...validateDynamicIpDetailPage(relativePath, html));
   }
 
   if (relativePath === "about.html") {
@@ -3988,7 +4239,8 @@ async function validateIssue50HeroAssetReferences() {
     "AI-FDE.svg",
     "tiktok.svg",
     "sip.svg",
-    "idc.svg"
+    "idc.svg",
+    "dip.svg"
   ]);
   const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
   const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));
@@ -4212,6 +4464,7 @@ async function validateIssue60HeroOverlayRemoval() {
     [".agriculture-detail-hero", "nongye.svg", "var(--hero)"],
     [".static-ip-detail-hero", "sip.svg", "var(--hero)"],
     [".idc-ip-detail-hero", "idc.svg", "var(--hero)"],
+    [".dynamic-ip-detail-hero", "dip.svg", "var(--hero)"],
     [".network-services-page #network-services-modules", "stacked-waves-haikei.svg", "var(--hero)"],
     [".network-service-module > header", "stacked-waves-haikei.svg", "var(--hero)"]
   ];

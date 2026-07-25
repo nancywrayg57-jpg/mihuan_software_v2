@@ -1,0 +1,72 @@
+{
+  "issue": 80,
+  "validatedAt": "2026-07-25T23:29:50.9864381+08:00",
+  "baseUrl": "http://127.0.0.1:4173",
+  "browser": {
+    "tool": "Playwright CLI",
+    "version": "1.62.0",
+    "channel": "chrome"
+  },
+  "httpChecks": [
+    {
+      "path": "/dynamic-ip.html",
+      "status": 200
+    },
+    {
+      "path": "/en/dynamic-ip.html",
+      "status": 200
+    },
+    {
+      "path": "/ru/dynamic-ip.html",
+      "status": 200
+    },
+    {
+      "path": "/\u8de8\u5883\u7f51\u7edc\u670d\u52a1.html",
+      "status": 200
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "dynamic-ip-zh-desktop.png",
+      "viewport": "1440x900",
+      "imageSize": "1440x3473",
+      "bytes": 284288,
+      "result": "pass"
+    },
+    {
+      "name": "dynamic-ip-en-desktop.png",
+      "viewport": "1440x900",
+      "imageSize": "1440x3705",
+      "bytes": 300003,
+      "result": "pass"
+    },
+    {
+      "name": "dynamic-ip-ru-desktop.png",
+      "viewport": "1440x900",
+      "imageSize": "1440x3709",
+      "bytes": 313799,
+      "result": "pass"
+    },
+    {
+      "name": "network-services-zh-desktop.png",
+      "viewport": "1440x900",
+      "imageSize": "1440x5330",
+      "bytes": 623779,
+      "result": "pass"
+    },
+    {
+      "name": "dynamic-ip-zh-mobile.png",
+      "viewport": "390x844",
+      "imageSize": "390x5952",
+      "bytes": 259290,
+      "result": "pass"
+    }
+  ],
+  "manualReview": {
+    "dynamicIpHeroSvgVisible": true,
+    "whiteTranslucentOverlayOverSvg": false,
+    "desktopLayoutOverlapObserved": false,
+    "mobileHorizontalOverflowObserved": false,
+    "networkPageDynamicIpLinkVisible": true
+  }
+}
