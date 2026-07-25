@@ -3375,6 +3375,10 @@ function validateDynamicIpDetailPage(relativePath, html) {
     }
   }
 
+  if (locale === "ru" && !html.includes("Honey Badger является операционной структурой российской компании ZennoLab в Китае.")) {
+    errors.push("Russian Dynamic IP detail page footer relationship wording must match the approved ZennoLab entity statement exactly.");
+  }
+
   const specCount = (html.match(/data-dynamic-ip-spec=/g) || []).length;
   const featureCount = (html.match(/data-dynamic-ip-feature=/g) || []).length;
   const scenarioCount = (html.match(/data-dynamic-ip-scenario=/g) || []).length;
