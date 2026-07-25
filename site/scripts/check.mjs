@@ -2963,8 +2963,31 @@ async function validateBrandLogoOutput() {
   console.log(`Checked brand logo output and ${requiredHtmlPaths.length} header logo reference(s).`);
 }
 
+async function validateIssue62HeroVisualFrame() {
+  const stylesPath = resolve(distDir, "assets", "styles.css");
+  const css = await readFile(stylesPath, "utf8");
+  const visualFrameBlocks = findCssBlocks(css, ".visual-frame");
+
+  if (visualFrameBlocks.length !== 1) {
+    throw new Error(`Expected one .visual-frame rule, found ${visualFrameBlocks.length}.`);
+  }
+
+  const visualFrameBlock = visualFrameBlocks[0];
+
+  if (!visualFrameBlock.includes("fill: #fff")) {
+    throw new Error("Issue #62 visual frame must use white fill.");
+  }
+
+  if (!visualFrameBlock.includes("stroke: #d8e5f3")) {
+    throw new Error("Issue #62 visual frame must use the approved light border stroke.");
+  }
+
+  console.log("Checked Issue #62 home hero visual frame white fill and light border.");
+}
+
 await validateIssue50HeroAssetReferences();
 await validateSitemapAndRobots();
 await validateFaviconOutput();
 await validateIssue60HeroOverlayRemoval();
 await validateBrandLogoOutput();
+await validateIssue62HeroVisualFrame();

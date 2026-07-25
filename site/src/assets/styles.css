@@ -981,8 +981,8 @@ h3 {
 }
 
 .visual-frame {
-  fill: transparent;
-  stroke: rgb(255 255 255 / 34%);
+  fill: #fff;
+  stroke: #d8e5f3;
   stroke-width: 2;
 }
 
