@@ -1,35 +1,36 @@
 {
-  "generatedAt": "2026-07-25T07:16:26.500Z",
-  "baselineRoot": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\mihuan_issue60_worktree_1e352add743a4a1bb8f0df25f67ca1a7\\site\\src",
+  "generatedAt": "2026-07-25T07:44:12.302Z",
   "afterRoot": "D:\\workspace\\mihuan_software_v2\\site\\dist",
-  "baselineOrigin": "http://127.0.0.1:60448",
-  "afterOrigin": "http://127.0.0.1:60449",
+  "afterOrigin": "http://127.0.0.1:62367",
   "screenshots": [
-    "before-01-zh-home-hero.png",
     "after-01-zh-home-hero.png",
-    "before-02-zh-home-relation.png",
     "after-02-zh-home-relation.png",
-    "before-02b-en-brand-relationship.png",
     "after-02b-en-brand-relationship.png",
-    "before-02c-ru-brand-relationship.png",
     "after-02c-ru-brand-relationship.png",
-    "before-03-zh-products-hero.png",
     "after-03-zh-products-hero.png",
-    "before-04-zh-news-hero.png",
     "after-04-zh-news-hero.png",
-    "before-05-zh-about-hero.png",
     "after-05-zh-about-hero.png",
-    "before-06-zh-careers-hero.png",
     "after-06-zh-careers-hero.png",
-    "before-07-zh-network-hero.png",
     "after-07-zh-network-hero.png",
-    "before-08-zh-network-modules.png",
     "after-08-zh-network-modules.png",
-    "before-09-zh-network-module-header.png",
+    "after-08b-zh-network-modules-viewport.png",
     "after-09-zh-network-module-header.png",
     "after-header-logo-closeup.png",
     "after-mobile-zh-home-390x844.png",
-    "after-mobile-zh-network-390x844.png"
+    "after-mobile-zh-network-390x844.png",
+    "before-01-zh-home-hero.png",
+    "before-02-zh-home-relation.png",
+    "before-02b-en-brand-relationship.png",
+    "before-02c-ru-brand-relationship.png",
+    "before-03-zh-products-hero.png",
+    "before-04-zh-news-hero.png",
+    "before-05-zh-about-hero.png",
+    "before-06-zh-careers-hero.png",
+    "before-07-zh-network-hero.png",
+    "before-08-zh-network-modules.png",
+    "before-08b-zh-network-modules-viewport.png",
+    "before-09-zh-network-module-header.png",
+    "favicon-tabs-trilingual.png"
   ],
   "validationSummary": {
     "pagesChecked": 54,
@@ -71,16 +72,14 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#home-relation",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "products.html",
@@ -106,12 +105,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "跨境网络服务.html",
@@ -137,28 +131,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "about.html",
@@ -184,12 +157,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "news.html",
@@ -215,12 +183,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "careers.html",
@@ -246,12 +209,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/index.html",
@@ -277,16 +235,14 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#en-brand-relationship",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "en/products.html",
@@ -312,12 +268,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/跨境网络服务.html",
@@ -343,28 +294,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/about.html",
@@ -390,12 +320,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/news.html",
@@ -421,12 +346,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/careers.html",
@@ -452,12 +372,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/index.html",
@@ -483,16 +398,14 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#ru-brand-relationship",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "ru/products.html",
@@ -518,12 +431,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/跨境网络服务.html",
@@ -549,28 +457,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/about.html",
@@ -596,12 +483,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/news.html",
@@ -627,12 +509,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/careers.html",
@@ -658,12 +535,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "index.html",
@@ -689,16 +561,14 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#home-relation",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "products.html",
@@ -724,12 +594,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "跨境网络服务.html",
@@ -755,28 +620,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "about.html",
@@ -802,12 +646,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "news.html",
@@ -833,12 +672,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "careers.html",
@@ -864,12 +698,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/index.html",
@@ -895,16 +724,14 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#en-brand-relationship",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "en/products.html",
@@ -930,12 +757,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/跨境网络服务.html",
@@ -961,28 +783,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/about.html",
@@ -1008,12 +809,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/news.html",
@@ -1039,12 +835,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/careers.html",
@@ -1070,12 +861,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/index.html",
@@ -1101,16 +887,14 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#ru-brand-relationship",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "ru/products.html",
@@ -1136,12 +920,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/跨境网络服务.html",
@@ -1167,28 +946,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/about.html",
@@ -1214,12 +972,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/news.html",
@@ -1245,12 +998,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/careers.html",
@@ -1276,12 +1024,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "index.html",
@@ -1307,16 +1050,14 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#home-relation",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "products.html",
@@ -1342,12 +1083,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "跨境网络服务.html",
@@ -1373,28 +1109,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "about.html",
@@ -1420,12 +1135,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "news.html",
@@ -1451,12 +1161,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "careers.html",
@@ -1482,12 +1187,7 @@
         "href": "./assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/index.html",
@@ -1513,16 +1213,14 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#en-brand-relationship",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "en/products.html",
@@ -1548,12 +1246,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/跨境网络服务.html",
@@ -1579,28 +1272,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/about.html",
@@ -1626,12 +1298,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/news.html",
@@ -1657,12 +1324,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "en/careers.html",
@@ -1688,12 +1350,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/index.html",
@@ -1719,16 +1376,14 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".home-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/hero-light-blue.svg\")"
-        },
-        {
-          "selector": "#ru-brand-relationship",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-peaks-haikei_4.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": {
+        "eyebrow": "rgba(0, 0, 0, 0)",
+        "stat": "rgba(0, 0, 0, 0)",
+        "visual": "rgba(0, 0, 0, 0)",
+        "visualFrameFill": "rgba(0, 0, 0, 0)",
+        "h1Color": "rgb(255, 255, 255)",
+        "leadColor": "rgba(255, 255, 255, 0.88)"
+      }
     },
     {
       "page": "ru/products.html",
@@ -1754,12 +1409,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/跨境网络服务.html",
@@ -1785,28 +1435,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.network-services-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/IP.svg\")"
-        },
-        {
-          "selector": "#network-services-modules",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        },
-        {
-          "selector": "",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/about.html",
@@ -1832,12 +1461,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".about-hero.products-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei-2.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/news.html",
@@ -1863,12 +1487,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.news-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/stacked-waves-haikei_3.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     },
     {
       "page": "ru/careers.html",
@@ -1894,12 +1513,7 @@
         "href": "../assets/img/favicon.png",
         "type": "image/png"
       },
-      "targetBackgrounds": [
-        {
-          "selector": ".products-hero.careers-hero",
-          "backgroundImage": "url(\"http://127.0.0.1:60449/assets/img/waves-haikei.svg\")"
-        }
-      ]
+      "homeHeroLocalBackgrounds": null
     }
   ]
 }

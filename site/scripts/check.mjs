@@ -2902,8 +2902,8 @@ async function validateIssue60HeroOverlayRemoval() {
   for (const selector of ["#home-relation", "#en-brand-relationship", "#ru-brand-relationship"]) {
     const relationBlocks = findCssBlocks(css, selector).join("\n");
 
-    if (!relationBlocks.includes("color: var(--text)")) {
-      throw new Error(`Issue #60 relation section must use dark text color: ${selector}`);
+    if (!relationBlocks.includes("color: white")) {
+      throw new Error(`Issue #60 relation section must use white text color: ${selector}`);
     }
   }
 

@@ -11,8 +11,8 @@
 
 | Area | Selector(s) | Change | Readability | Evidence |
 |---|---|---|---|---|
-| Home hero | `.home-hero` | Removed blue `linear-gradient`, now `var(--hero) + hero-light-blue.svg`. | Kept white hero copy and added text shadow. | `before-01-zh-home-hero.png`, `after-01-zh-home-hero.png` |
-| Brand relationship | `#home-relation`, `#en-brand-relationship`, `#ru-brand-relationship` | Removed blue `linear-gradient`, now `#f6f9fd + stacked-peaks-haikei_4.svg`. | Switched section copy, heading and eyebrow to dark/primary colors. | `before-02-zh-home-relation.png`, `after-02-zh-home-relation.png`, `after-02b-en-brand-relationship.png`, `after-02c-ru-brand-relationship.png` |
+| Home hero | `.home-hero` | Removed blue `linear-gradient`, now `var(--hero) + hero-light-blue.svg`; follow-up removed local white translucent backgrounds from hero eyebrow, stats cards, visual panel, and SVG frame. | Kept white hero copy and text shadow; no home hero font color change in the follow-up. | `before-01-zh-home-hero.png`, `after-01-zh-home-hero.png` |
+| Brand relationship | `#home-relation`, `#en-brand-relationship`, `#ru-brand-relationship` | Removed blue `linear-gradient`, now `#f6f9fd + stacked-peaks-haikei_4.svg`. | Restored white heading/copy per review correction and added text shadow. | `before-02-zh-home-relation.png`, `after-02-zh-home-relation.png`, `after-02b-en-brand-relationship.png`, `after-02c-ru-brand-relationship.png` |
 | Products hero | `.products-hero` | Removed blue `linear-gradient`, now `var(--hero) + stacked-waves-haikei_2.svg`. | Kept white copy and added text shadow. Existing fine grid overlay is unchanged because it is not a blue block overlay. | `before-03-zh-products-hero.png`, `after-03-zh-products-hero.png` |
 | News hero | `.news-hero` | Removed blue `linear-gradient`, now `var(--hero) + stacked-waves-haikei_3.svg`. | Inherits products hero white copy with text shadow. | `before-04-zh-news-hero.png`, `after-04-zh-news-hero.png` |
 | About hero | `.about-hero` | Removed blue `linear-gradient`, now `var(--hero) + waves-haikei-2.svg`. | Inherits products hero white copy with text shadow. | `before-05-zh-about-hero.png`, `after-05-zh-about-hero.png` |
@@ -46,6 +46,7 @@
 
 ## Notes
 
+- Review follow-up: `browser-validation.json` records home hero computed backgrounds for eyebrow/stat/visual/frame as transparent while h1/lead remain white.
 - No external assets were introduced.
 - No `UI/`, `LOGO/`, `.github/`, `site/src/assets/app.js`, or page body outside the authorized Header brand area was modified.
 - `site/src/favicon.svg` was removed and must not reappear in build output.

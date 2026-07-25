@@ -834,6 +834,10 @@ h3 {
   color: white;
 }
 
+.home-hero .home-eyebrow {
+  background: transparent;
+}
+
 .home-hero-subtitle {
   margin: 16px 0 0;
   color: white;
@@ -942,9 +946,9 @@ h3 {
 
 .home-stats div {
   min-height: 108px;
-  border: 1px solid rgb(255 255 255 / 22%);
+  border: 1px solid rgb(255 255 255 / 34%);
   border-radius: var(--radius);
-  background: rgb(255 255 255 / 14%);
+  background: transparent;
   padding: 16px;
 }
 
@@ -963,11 +967,11 @@ h3 {
 
 .home-visual {
   margin: 0;
-  border: 1px solid rgb(255 255 255 / 22%);
-  border-radius: var(--radius);
-  background: rgb(255 255 255 / 14%);
-  padding: 24px;
-  box-shadow: var(--shadow);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
 }
 
 .home-visual svg {
@@ -976,7 +980,12 @@ h3 {
   height: auto;
 }
 
-.visual-frame,
+.visual-frame {
+  fill: transparent;
+  stroke: rgb(255 255 255 / 34%);
+  stroke-width: 2;
+}
+
 .visual-chip rect {
   fill: #f8fbff;
   stroke: #d8e5f3;
@@ -1065,27 +1074,17 @@ h3 {
   position: relative;
   overflow: hidden;
   background: #f6f9fd url("./img/stacked-peaks-haikei_4.svg") center / cover no-repeat;
-  color: var(--text);
-}
-
-#home-relation .eyebrow-dark,
-#en-brand-relationship .eyebrow-dark,
-#ru-brand-relationship .eyebrow-dark {
-  border-color: rgb(0 90 180 / 20%);
-  background: rgb(255 255 255 / 82%);
-  color: var(--primary);
+  color: white;
 }
 
 #home-relation h2,
-#en-brand-relationship h2,
-#ru-brand-relationship h2 {
-  color: var(--text);
-}
-
 #home-relation .lead,
+#en-brand-relationship h2,
 #en-brand-relationship .lead,
+#ru-brand-relationship h2,
 #ru-brand-relationship .lead {
-  color: var(--text-body);
+  color: white;
+  text-shadow: 0 2px 8px rgb(0 24 64 / 38%);
 }
 
 .section-heading {
