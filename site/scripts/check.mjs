@@ -562,7 +562,7 @@ function validateEnglishProducts(html) {
     errors.push(`English products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
-  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']en-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>Detail page pending<\/a>/.test(html)) {
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']en-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>View details<\/a>/.test(html)) {
     errors.push("English products page agriculture card must link to ./Agriculture.html.");
   }
 
@@ -1811,7 +1811,7 @@ function validateRussianProducts(html) {
     errors.push(`Russian products page regular entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
-  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']ru-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>Страница деталей ожидает подключения<\/a>/.test(html)) {
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']ru-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>Подробнее<\/a>/.test(html)) {
     errors.push("Russian products page agriculture card must link to ./Agriculture.html.");
   }
 
@@ -2041,7 +2041,7 @@ function validateProductsPage(html) {
     errors.push("Products page network-services card must link to the merged page.");
   }
 
-  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>详情页待接入<\/a>/.test(html)) {
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>查看详情<\/a>/.test(html)) {
     errors.push("Products page agriculture card must link to ./Agriculture.html.");
   }
 
