@@ -7,9 +7,9 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/TikTok.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/TikTok.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -558,7 +558,7 @@ function validateEnglishProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
-  if (pendingProductLinks.length !== 1) {
+  if (pendingProductLinks.length !== 0) {
     errors.push(`English products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -574,17 +574,21 @@ function validateEnglishProducts(html) {
     errors.push("English products page AI-FDE card must link to ./AI-FDE.html.");
   }
 
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']en-product-social["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/TikTok\.html["']>View details<\/a>/.test(html)) {
+    errors.push("English products page Social Commerce card must link to ./TikTok.html.");
+  }
+
   if (!html.includes('href="./跨境网络服务.html">View merged page</a>')) {
     errors.push("English products page NET card must link to the merged English network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./TikTok.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html, ./TikTok.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
     errors.push("English products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -1815,7 +1819,7 @@ function validateRussianProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
-  if (pendingProductLinks.length !== 1) {
+  if (pendingProductLinks.length !== 0) {
     errors.push(`Russian products page regular entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -1831,17 +1835,21 @@ function validateRussianProducts(html) {
     errors.push("Russian products page AI-FDE card must link to ./AI-FDE.html.");
   }
 
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']ru-product-social["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/TikTok\.html["']>Подробнее<\/a>/.test(html)) {
+    errors.push("Russian products page Social Commerce card must link to ./TikTok.html.");
+  }
+
   if (!html.includes('href="./跨境网络服务.html">Открыть объединенную страницу</a>')) {
     errors.push("Russian products page NET card must link to the merged Russian network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./TikTok.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html, ./TikTok.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
     errors.push("Russian products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -2062,7 +2070,7 @@ function validateProductsPage(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#details-pending["']>详情页待接入<\/a>/g) || [];
-  if (pendingProductLinks.length !== 1) {
+  if (pendingProductLinks.length !== 0) {
     errors.push(`Products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -2074,7 +2082,11 @@ function validateProductsPage(html) {
     errors.push("Products page AI-FDE card must link to ./AI-FDE.html.");
   }
 
-  if (/href=["'][^"']*(TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']product-social["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/TikTok\.html["']>查看详情<\/a>/.test(html)) {
+    errors.push("Products page Social Commerce card must link to ./TikTok.html.");
+  }
+
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
     errors.push("Products page must keep detail and network-service links as same-page placeholder anchors.");
   }
 
@@ -2453,6 +2465,121 @@ function validateAifdeDetailPage(relativePath, html) {
 
   if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole|only authorized)\b|эксклюзивн|единственн/i.test(html)) {
     errors.push("AI-FDE detail page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateTiktokDetailPage(relativePath, html) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const expectations = {
+    zh: {
+      title: "社媒跨境私域陪跑",
+      subtitle: "TikTok / Facebook / Instagram 全域引流 + 私域转化全链路陪跑",
+      phasesTitle: "四阶段 12 周陪跑内容",
+      formatTitle: "陪跑形式",
+      phases: [
+        ["第 1-2 周 账号基建与定位", "市场调研、人设定位、三平台账号搭建、工具栈配置"],
+        ["第 3-6 周 内容生产与流量启动", "选题库搭建、爆款方法论、冷启动流量破万"],
+        ["第 7-10 周 引流矩阵与私域沉淀", "多路径引流话术、WhatsApp/Telegram 承接、私域 SOP 设计"],
+        ["第 11-12 周 转化变现与复购体系", "转化话术、促销玩法、客户生命周期管理"]
+      ],
+      format: "1v1 专属导师、每日答疑、周度复盘会、素材模板库、资源对接",
+      breadcrumb: ['href="./index.html">首页</a>', 'href="./products.html">产品介绍</a>', 'aria-current="page">社媒跨境私域陪跑</span>'],
+      languagePaths: ['href="./TikTok.html" aria-current="true"', 'href="./en/TikTok.html"', 'href="./ru/TikTok.html"'],
+      forbiddenLead: "导语",
+      forbiddenValue: "客户价值"
+    },
+    en: {
+      title: "Social Commerce Private Domain Coaching",
+      subtitle: "Full-Domain Traffic Acquisition + Private Domain Conversion Full-Chain Coaching for TikTok / Facebook / Instagram",
+      phasesTitle: "Four-Phase 12-Week Coaching Content",
+      formatTitle: "Coaching Format",
+      phases: [
+        ["Weeks 1-2 Account Infrastructure &amp; Positioning", "Market research, persona positioning, three-platform account setup, tool stack configuration"],
+        ["Weeks 3-6 Content Production &amp; Traffic Launch", "Topic library building, viral content methodology, cold start traffic breakthrough"],
+        ["Weeks 7-10 Traffic Matrix &amp; Private Domain Accumulation", "Multi-channel traffic scripts, WhatsApp/Telegram 承接，private domain SOP design"],
+        ["Weeks 11-12 Conversion Monetization &amp; Repurchase System", "Conversion scripts, promotional tactics, customer lifecycle management"]
+      ],
+      format: "1v1 dedicated mentor, daily Q&amp;A, weekly review meetings, material template library, resource connections",
+      breadcrumb: ['href="./index.html">Home</a>', 'href="./products.html">Products</a>', 'aria-current="page">Social Commerce Private Domain Coaching</span>'],
+      languagePaths: ['href="../TikTok.html"', 'href="./TikTok.html" aria-current="true"', 'href="../ru/TikTok.html"'],
+      forbiddenLead: "lead",
+      forbiddenValue: "Customer Value"
+    },
+    ru: {
+      title: "Сопровождение приватной зоны в соцсетях",
+      subtitle: "Полномасштабное привлечение трафика + полноцепочное сопровождение конверсии в приватной зоне в TikTok / Facebook / Instagram",
+      phasesTitle: "Содержание 12-недельного сопровождения в четыре этапа",
+      formatTitle: "Формат сопровождения",
+      phases: [
+        ["Недели 1-2. Инфраструктура и позиционирование аккаунтов", "Исследование рынка, позиционирование персоны, настройка аккаунтов на трех платформах, конфигурация инструментального стека"],
+        ["Недели 3-6. Производство контента и запуск трафика", "Создание библиотеки тем, методология вирусного контента, преодоление порога в 10 тысяч просмотров при холодном старте"],
+        ["Недели 7-10. Матрица привлечения трафика и накопление приватной зоны", "Скрипты привлечения трафика по нескольким каналам, прием в WhatsApp/Telegram, проектирование SOP приватной зоны"],
+        ["Недели 11-12. Монетизация конверсии и система повторных покупок", "Скрипты конверсии, тактики продвижения, управление жизненным циклом клиентов"]
+      ],
+      format: "Выделенный наставник 1 на 1, ежедневные ответы на вопросы, еженедельные встречи по анализу, библиотека шаблонов материалов, подключение ресурсов",
+      breadcrumb: ['href="./index.html">Главная</a>', 'href="./products.html">Продукты</a>', 'aria-current="page">Сопровождение приватной зоны в соцсетях</span>'],
+      languagePaths: ['href="../TikTok.html"', 'href="../en/TikTok.html"', 'href="./TikTok.html" aria-current="true"'],
+      forbiddenLead: "введение",
+      forbiddenValue: "Ценность"
+    }
+  }[locale];
+
+  for (const marker of [
+    expectations.title,
+    expectations.subtitle,
+    expectations.phasesTitle,
+    expectations.formatTitle,
+    expectations.format,
+    "tiktok-detail-hero",
+    "tiktok-coaching-phases",
+    "tiktok-coaching-format",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Social Commerce detail marker for ${relativePath}: ${marker}.`);
+    }
+  }
+
+  for (const [phaseTitle, phaseBody] of expectations.phases) {
+    if (!html.includes(phaseTitle) || !html.includes(phaseBody)) {
+      errors.push(`Missing Social Commerce SSOT phase for ${relativePath}: ${phaseTitle}.`);
+    }
+  }
+
+  for (const breadcrumbPart of expectations.breadcrumb) {
+    if (!html.includes(breadcrumbPart)) {
+      errors.push(`Social Commerce breadcrumb missing ${breadcrumbPart} in ${relativePath}.`);
+    }
+  }
+
+  for (const languagePath of expectations.languagePaths) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Social Commerce language switcher missing ${languagePath} in ${relativePath}.`);
+    }
+  }
+
+  const phaseCount = (html.match(/data-tiktok-phase=/g) || []).length;
+  if (phaseCount !== 4) {
+    errors.push(`Social Commerce detail page must render 4 phase cards; found ${phaseCount}.`);
+  }
+
+  if (/<p class=["']lead["']/.test(html) || html.includes(expectations.forbiddenLead) || html.includes(expectations.forbiddenValue) || /data-tiktok-lead|data-tiktok-value|六大核心功能|四大核心模块/i.test(html)) {
+    errors.push("Social Commerce detail page must not invent a hero lead, value section or unrelated module shape.");
+  }
+
+  if (/data-product=|seo-prerender/i.test(html)) {
+    errors.push("Social Commerce detail page must be full static HTML, not prototype dynamic rendering.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole|only authorized)\b|эксклюзивн|единственн/i.test(html)) {
+    errors.push("Social Commerce detail page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -2979,6 +3106,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateAifdeDetailPage(relativePath, html));
   }
 
+  if (relativePath === "en/TikTok.html") {
+    htmlErrors.push(...validateTiktokDetailPage(relativePath, html));
+  }
+
   if (relativePath === "en/跨境网络服务.html") {
     htmlErrors.push(...validateEnglishNetworkServices(html));
   }
@@ -3015,6 +3146,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateAifdeDetailPage(relativePath, html));
   }
 
+  if (relativePath === "ru/TikTok.html") {
+    htmlErrors.push(...validateTiktokDetailPage(relativePath, html));
+  }
+
   if (relativePath === "ru/about.html") {
     htmlErrors.push(...validateRussianAbout(html));
   }
@@ -3045,6 +3180,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "AI-FDE.html") {
     htmlErrors.push(...validateAifdeDetailPage(relativePath, html));
+  }
+
+  if (relativePath === "TikTok.html") {
+    htmlErrors.push(...validateTiktokDetailPage(relativePath, html));
   }
 
   if (relativePath === "跨境网络服务.html") {
@@ -3104,7 +3243,8 @@ async function validateIssue50HeroAssetReferences() {
     "IP.svg",
     "nongye.svg",
     "yuantu.svg",
-    "AI-FDE.svg"
+    "AI-FDE.svg",
+    "tiktok.svg"
   ]);
   const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
   const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));
