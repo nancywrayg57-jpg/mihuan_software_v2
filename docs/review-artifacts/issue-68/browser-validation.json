@@ -1,0 +1,328 @@
+{
+  "generatedAt": "2026-07-25T10:42:34.126Z",
+  "baseUrl": "http://127.0.0.1:56548",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "viewportMatrix": [
+    "desktop 1440x900 zh/en/ru detail",
+    "desktop 1440x900 zh products card and click-through",
+    "mobile 390x844 zh detail"
+  ],
+  "checks": [
+    {
+      "title": "AI-FDE VibeCoding 培训 | Honey Badger",
+      "path": "/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:56548/assets/img/AI-FDE.svg\")",
+      "moduleCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./AI-FDE.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/AI-FDE.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/AI-FDE.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/AI-FDE.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/AI-FDE.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/AI-FDE.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        }
+      ],
+      "productCard": null,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-detail-desktop",
+      "screenshot": "docs/review-artifacts/issue-68/zh-aifde-desktop-full.png"
+    },
+    {
+      "title": "AI-FDE VibeCoding Training | Honey Badger",
+      "path": "/en/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:56548/assets/img/AI-FDE.svg\")",
+      "moduleCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../AI-FDE.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "./AI-FDE.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/AI-FDE.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/en/AI-FDE.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/AI-FDE.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/AI-FDE.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        }
+      ],
+      "productCard": null,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "en-detail-desktop",
+      "screenshot": "docs/review-artifacts/issue-68/en-aifde-desktop-full.png"
+    },
+    {
+      "title": "Обучение AI-FDE VibeCoding | Honey Badger",
+      "path": "/ru/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:56548/assets/img/AI-FDE.svg\")",
+      "moduleCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../AI-FDE.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "../en/AI-FDE.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./AI-FDE.html",
+          "current": "true"
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/ru/AI-FDE.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/AI-FDE.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/AI-FDE.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        }
+      ],
+      "productCard": null,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "ru-detail-desktop",
+      "screenshot": "docs/review-artifacts/issue-68/ru-aifde-desktop-full.png"
+    },
+    {
+      "title": "产品介绍 | Honey Badger",
+      "path": "/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": null,
+      "moduleCount": 0,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./products.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/index.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/index.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/products.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/products.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/products.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/products.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/products.html"
+        }
+      ],
+      "productCard": {
+        "href": "./AI-FDE.html",
+        "text": "查看详情"
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-products-card",
+      "screenshot": "docs/review-artifacts/issue-68/zh-products-aifde-card.png"
+    },
+    {
+      "title": "AI-FDE VibeCoding 培训 | Honey Badger",
+      "path": "/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:56548/assets/img/AI-FDE.svg\")",
+      "moduleCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./AI-FDE.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/AI-FDE.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/AI-FDE.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/AI-FDE.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/AI-FDE.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/AI-FDE.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        }
+      ],
+      "productCard": null,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-products-after-click",
+      "screenshot": "docs/review-artifacts/issue-68/zh-products-after-click-detail.png"
+    },
+    {
+      "title": "AI-FDE VibeCoding 培训 | Honey Badger",
+      "path": "/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:56548/assets/img/AI-FDE.svg\")",
+      "moduleCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./AI-FDE.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/AI-FDE.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/AI-FDE.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/AI-FDE.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/AI-FDE.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/AI-FDE.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/AI-FDE.html"
+        }
+      ],
+      "productCard": null,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "zh-detail-mobile",
+      "screenshot": "docs/review-artifacts/issue-68/zh-aifde-mobile-full.png"
+    }
+  ],
+  "pass": true
+}

@@ -7,9 +7,9 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -558,7 +558,7 @@ function validateEnglishProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
-  if (pendingProductLinks.length !== 2) {
+  if (pendingProductLinks.length !== 1) {
     errors.push(`English products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -570,17 +570,21 @@ function validateEnglishProducts(html) {
     errors.push("English products page Original Image card must link to ./mihuan_yuantu.html.");
   }
 
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']en-product-ai-fde["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/AI-FDE\.html["']>View details<\/a>/.test(html)) {
+    errors.push("English products page AI-FDE card must link to ./AI-FDE.html.");
+  }
+
   if (!html.includes('href="./跨境网络服务.html">View merged page</a>')) {
     errors.push("English products page NET card must link to the merged English network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
     errors.push("English products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -1811,7 +1815,7 @@ function validateRussianProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
-  if (pendingProductLinks.length !== 2) {
+  if (pendingProductLinks.length !== 1) {
     errors.push(`Russian products page regular entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -1823,17 +1827,21 @@ function validateRussianProducts(html) {
     errors.push("Russian products page Original Image card must link to ./mihuan_yuantu.html.");
   }
 
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']ru-product-ai-fde["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/AI-FDE\.html["']>Подробнее<\/a>/.test(html)) {
+    errors.push("Russian products page AI-FDE card must link to ./AI-FDE.html.");
+  }
+
   if (!html.includes('href="./跨境网络服务.html">Открыть объединенную страницу</a>')) {
     errors.push("Russian products page NET card must link to the merged Russian network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
     errors.push("Russian products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -2054,7 +2062,7 @@ function validateProductsPage(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#details-pending["']>详情页待接入<\/a>/g) || [];
-  if (pendingProductLinks.length !== 2) {
+  if (pendingProductLinks.length !== 1) {
     errors.push(`Products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -2062,7 +2070,11 @@ function validateProductsPage(html) {
     errors.push("Products page Original Image card must link to ./mihuan_yuantu.html.");
   }
 
-  if (/href=["'][^"']*(AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']product-ai-fde["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/AI-FDE\.html["']>查看详情<\/a>/.test(html)) {
+    errors.push("Products page AI-FDE card must link to ./AI-FDE.html.");
+  }
+
+  if (/href=["'][^"']*(TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
     errors.push("Products page must keep detail and network-service links as same-page placeholder anchors.");
   }
 
@@ -2317,6 +2329,130 @@ function validateYuantuDetailPage(relativePath, html) {
 
   if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole|only authorized)\b|эксклюзивн|единственн/i.test(html)) {
     errors.push("Original Image detail page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateAifdeDetailPage(relativePath, html) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const expectations = {
+    zh: {
+      title: "AI-FDE VibeCoding 培训",
+      subtitle: "从零基础到独立交付商用 AI 系统的实战训练营",
+      modulesTitle: "四大核心模块",
+      programTitle: "培训特色与班型",
+      featureTitle: "培训特色",
+      programTypesTitle: "班型",
+      modules: [
+        ["AI 开发思维与工具链", "Vibe Coding 方法论、Cursor/Copilot 深度使用、Prompt 工程进阶"],
+        ["全栈技术栈实战", "React/Vue + AI、Node.js/Python + AI、数据库 AI 辅助优化"],
+        ["AI 原生应用开发", "LLM API 集成、RAG 系统搭建、Agent 工作流设计、向量数据库"],
+        ["商用项目交付实战", "真实企业级项目跟练、需求沟通报价、项目管理交付"]
+      ],
+      features: "项目驱动（3 个真实项目）、手把手陪练、1v1 答疑、就业导向、持续更新",
+      programTypes: "入门班 4 周 / 进阶班 8 周 / 旗舰班 12 周",
+      breadcrumb: ['href="./index.html">首页</a>', 'href="./products.html">产品介绍</a>', 'aria-current="page">AI-FDE VibeCoding 培训</span>'],
+      languagePaths: ['href="./AI-FDE.html" aria-current="true"', 'href="./en/AI-FDE.html"', 'href="./ru/AI-FDE.html"'],
+      forbiddenLead: "导语"
+    },
+    en: {
+      title: "AI-FDE VibeCoding Training",
+      subtitle: "Practical Bootcamp from Zero Foundation to Independent Commercial AI System Delivery",
+      modulesTitle: "Four Core Modules",
+      programTitle: "Training Features and Program Types",
+      featureTitle: "Training Features",
+      programTypesTitle: "Program Types",
+      modules: [
+        ["AI Development Mindset &amp; Toolchain", "Vibe Coding methodology, deep use of Cursor/Copilot, advanced Prompt engineering"],
+        ["Full-Stack Tech Stack Practice", "React/Vue + AI, Node.js/Python + AI, AI-assisted database optimization"],
+        ["AI-Native Application Development", "LLM API integration, RAG system building, Agent workflow design, vector database"],
+        ["Commercial Project Delivery Practice", "Real enterprise project follow-along, requirement communication and pricing, project management and delivery"]
+      ],
+      features: "Project-driven (3 real projects), hands-on coaching, 1v1 Q&amp;A, career-oriented, continuous updates",
+      programTypes: "Beginner 4 weeks / Advanced 8 weeks / Flagship 12 weeks",
+      breadcrumb: ['href="./index.html">Home</a>', 'href="./products.html">Products</a>', 'aria-current="page">AI-FDE VibeCoding Training</span>'],
+      languagePaths: ['href="../AI-FDE.html"', 'href="./AI-FDE.html" aria-current="true"', 'href="../ru/AI-FDE.html"'],
+      forbiddenLead: "lead"
+    },
+    ru: {
+      title: "Обучение AI-FDE VibeCoding",
+      subtitle: "Практический буткемп от нулевого уровня до самостоятельной поставки коммерческих ИИ-систем",
+      modulesTitle: "Четыре основных модуля",
+      programTitle: "Особенности обучения и форматы программ",
+      featureTitle: "Особенности обучения",
+      programTypesTitle: "Форматы программ",
+      modules: [
+        ["Мышление разработки ИИ и инструментарий", "Методология Vibe Coding, глубокое использование Cursor/Copilot, продвинутая Prompt-инженерия"],
+        ["Практика полностековых технологий", "React/Vue + ИИ, Node.js/Python + ИИ, ИИ-помощь в оптимизации баз данных"],
+        ["Разработка ИИ-оригинальных приложений", "Интеграция LLM API, построение RAG-систем, проектирование рабочих процессов Agent, векторные базы данных"],
+        ["Практика поставки коммерческих проектов", "Совместное обучение на реальных корпоративных проектах, коммуникация по требованиям и ценообразование, управление проектами и поставка"]
+      ],
+      features: "Основанное на проектах (3 реальных проекта), пошаговое сопровождение, вопросы и ответы 1 на 1, ориентация на трудоустройство, непрерывные обновления",
+      programTypes: "Начальный 4 недели / Продвинутый 8 недель / Флагманский 12 недель",
+      breadcrumb: ['href="./index.html">Главная</a>', 'href="./products.html">Продукты</a>', 'aria-current="page">Обучение AI-FDE VibeCoding</span>'],
+      languagePaths: ['href="../AI-FDE.html"', 'href="../en/AI-FDE.html"', 'href="./AI-FDE.html" aria-current="true"'],
+      forbiddenLead: "введение"
+    }
+  }[locale];
+
+  for (const marker of [
+    expectations.title,
+    expectations.subtitle,
+    expectations.modulesTitle,
+    expectations.programTitle,
+    expectations.featureTitle,
+    expectations.programTypesTitle,
+    expectations.features,
+    expectations.programTypes,
+    "aifde-detail-hero",
+    "aifde-core-modules",
+    "aifde-program",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing AI-FDE detail marker for ${relativePath}: ${marker}.`);
+    }
+  }
+
+  for (const [moduleTitle, moduleBody] of expectations.modules) {
+    if (!html.includes(moduleTitle) || !html.includes(moduleBody)) {
+      errors.push(`Missing AI-FDE SSOT module for ${relativePath}: ${moduleTitle}.`);
+    }
+  }
+
+  for (const breadcrumbPart of expectations.breadcrumb) {
+    if (!html.includes(breadcrumbPart)) {
+      errors.push(`AI-FDE breadcrumb missing ${breadcrumbPart} in ${relativePath}.`);
+    }
+  }
+
+  for (const languagePath of expectations.languagePaths) {
+    if (!html.includes(languagePath)) {
+      errors.push(`AI-FDE language switcher missing ${languagePath} in ${relativePath}.`);
+    }
+  }
+
+  const moduleCount = (html.match(/data-aifde-module=/g) || []).length;
+  if (moduleCount !== 4) {
+    errors.push(`AI-FDE detail page must render 4 module cards; found ${moduleCount}.`);
+  }
+
+  if (/<p class=["']lead["']/.test(html) || html.includes(expectations.forbiddenLead) || /data-aifde-lead|six-card|六卡|六大核心功能/i.test(html)) {
+    errors.push("AI-FDE detail page must not invent a hero lead or six-card section.");
+  }
+
+  if (/data-product=|seo-prerender/i.test(html)) {
+    errors.push("AI-FDE detail page must be full static HTML, not prototype dynamic rendering.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole|only authorized)\b|эксклюзивн|единственн/i.test(html)) {
+    errors.push("AI-FDE detail page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -2839,6 +2975,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateYuantuDetailPage(relativePath, html));
   }
 
+  if (relativePath === "en/AI-FDE.html") {
+    htmlErrors.push(...validateAifdeDetailPage(relativePath, html));
+  }
+
   if (relativePath === "en/跨境网络服务.html") {
     htmlErrors.push(...validateEnglishNetworkServices(html));
   }
@@ -2871,6 +3011,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateYuantuDetailPage(relativePath, html));
   }
 
+  if (relativePath === "ru/AI-FDE.html") {
+    htmlErrors.push(...validateAifdeDetailPage(relativePath, html));
+  }
+
   if (relativePath === "ru/about.html") {
     htmlErrors.push(...validateRussianAbout(html));
   }
@@ -2897,6 +3041,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "mihuan_yuantu.html") {
     htmlErrors.push(...validateYuantuDetailPage(relativePath, html));
+  }
+
+  if (relativePath === "AI-FDE.html") {
+    htmlErrors.push(...validateAifdeDetailPage(relativePath, html));
   }
 
   if (relativePath === "跨境网络服务.html") {
@@ -2955,7 +3103,8 @@ async function validateIssue50HeroAssetReferences() {
     "waves-haikei-2.svg",
     "IP.svg",
     "nongye.svg",
-    "yuantu.svg"
+    "yuantu.svg",
+    "AI-FDE.svg"
   ]);
   const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
   const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));

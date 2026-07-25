@@ -2772,3 +2772,47 @@ button:focus-visible,
     grid-template-columns: 1fr;
   }
 }
+
+.aifde-detail-hero {
+  /* Issue #68 AI-FDE VibeCoding Training detail pages */
+  background: var(--hero) url("./img/AI-FDE.svg") center / cover no-repeat;
+}
+
+.aifde-detail-page .products-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.aifde-detail-page .products-hero-copy {
+  max-width: 920px;
+}
+
+.aifde-module-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: calc(100% - 180px);
+}
+
+.aifde-module-card {
+  min-height: 244px;
+}
+
+.aifde-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+.aifde-support-card {
+  min-height: 100%;
+}
+
+@media (max-width: 760px) {
+  .aifde-module-grid,
+  .aifde-support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aifde-module-grid {
+    max-width: none;
+  }
+}
