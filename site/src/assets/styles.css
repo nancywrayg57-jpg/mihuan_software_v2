@@ -2683,3 +2683,44 @@ button:focus-visible,
     transform: none;
   }
 }
+
+.agriculture-detail-hero {
+  /* Issue #64 Agriculture detail pages */
+  background: var(--hero) url("./img/nongye.svg") center / cover no-repeat;
+}
+
+.agriculture-detail-page .products-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.agriculture-detail-page .products-hero-copy {
+  max-width: 920px;
+}
+
+.agriculture-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.agriculture-feature-card {
+  min-height: 232px;
+}
+
+.agriculture-scenario-grid {
+  align-items: stretch;
+}
+
+.agriculture-value-card {
+  min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .agriculture-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .agriculture-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
