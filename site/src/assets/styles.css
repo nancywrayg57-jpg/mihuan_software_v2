@@ -2816,3 +2816,67 @@ button:focus-visible,
     max-width: none;
   }
 }
+
+.tiktok-detail-hero {
+  /* Issue #70 Social Commerce Private Domain Coaching detail pages */
+  background: var(--hero) url("./img/tiktok.svg") center / cover no-repeat;
+}
+
+.tiktok-detail-page .products-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.tiktok-detail-page .products-hero-copy {
+  max-width: 920px;
+}
+
+.tiktok-phase-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: calc(100% - 180px);
+}
+
+.tiktok-phase-card {
+  min-height: 216px;
+}
+
+.tiktok-format-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(360px, 0.9fr);
+  gap: 48px;
+  align-items: stretch;
+}
+
+.tiktok-format-card {
+  min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .tiktok-format-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .tiktok-phase-grid,
+  .tiktok-format-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tiktok-phase-grid {
+    max-width: none;
+  }
+
+  .tiktok-detail-page .tiktok-phase-card {
+    padding-right: 72px;
+  }
+
+  .tiktok-detail-page .tiktok-phase-card h3,
+  .tiktok-detail-page .tiktok-phase-card p {
+    max-width: 100%;
+  }
+
+  .tiktok-detail-page .floating-support {
+    right: 8px;
+    bottom: max(4px, env(safe-area-inset-bottom));
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "generatedAt": "2026-07-25T11:09:26.268Z",
+  "baseUrl": "http://127.0.0.1:58067",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "viewportMatrix": [
+    "desktop 1440x900 zh/en/ru detail",
+    "tablet 820x1180 zh/en/ru detail",
+    "mobile 390x844 zh/en/ru detail",
+    "desktop 1440x900 zh products card and click-through"
+  ],
+  "checks": [
+    {
+      "title": "社媒跨境私域陪跑 | Honey Badger",
+      "path": "/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./TikTok.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/TikTok.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/TikTok.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-detail-desktop",
+      "screenshot": "docs/review-artifacts/issue-70/zh-tiktok-desktop-1440x900.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Social Commerce Private Domain Coaching | Honey Badger",
+      "path": "/en/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../TikTok.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "./TikTok.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/TikTok.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/en/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "en-detail-desktop",
+      "screenshot": "docs/review-artifacts/issue-70/en-tiktok-desktop-1440x900.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Сопровождение приватной зоны в соцсетях | Honey Badger",
+      "path": "/ru/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../TikTok.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "../en/TikTok.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./TikTok.html",
+          "current": "true"
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/ru/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "ru-detail-desktop",
+      "screenshot": "docs/review-artifacts/issue-70/ru-tiktok-desktop-1440x900.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "社媒跨境私域陪跑 | Honey Badger",
+      "path": "/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./TikTok.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/TikTok.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/TikTok.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "zh-detail-tablet",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Social Commerce Private Domain Coaching | Honey Badger",
+      "path": "/en/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../TikTok.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "./TikTok.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/TikTok.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/en/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "en-detail-tablet",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Сопровождение приватной зоны в соцсетях | Honey Badger",
+      "path": "/ru/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../TikTok.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "../en/TikTok.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./TikTok.html",
+          "current": "true"
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/ru/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "ru-detail-tablet",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "社媒跨境私域陪跑 | Honey Badger",
+      "path": "/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./TikTok.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/TikTok.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/TikTok.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "zh-detail-mobile",
+      "screenshot": "docs/review-artifacts/issue-70/zh-tiktok-mobile-390x844.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Social Commerce Private Domain Coaching | Honey Badger",
+      "path": "/en/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../TikTok.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "./TikTok.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/TikTok.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/en/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "en-detail-mobile",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Сопровождение приватной зоны в соцсетях | Honey Badger",
+      "path": "/ru/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../TikTok.html",
+          "current": null
+        },
+        {
+          "text": "EN",
+          "href": "../en/TikTok.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./TikTok.html",
+          "current": "true"
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/ru/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "ru-detail-mobile",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "产品介绍 | Honey Badger",
+      "path": "/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": null,
+      "heroTitleColor": null,
+      "heroSubtitleColor": null,
+      "phaseCount": 0,
+      "heroLeadCount": 5,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./products.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/index.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/index.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/products.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/products.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/products.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/products.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/products.html"
+        }
+      ],
+      "productCard": {
+        "href": "./TikTok.html",
+        "text": "查看详情"
+      },
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-products-card",
+      "screenshot": "docs/review-artifacts/issue-70/zh-products-tiktok-card.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "社媒跨境私域陪跑 | Honey Badger",
+      "path": "/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "heroBackground": "url(\"http://127.0.0.1:58067/assets/img/tiktok.svg\")",
+      "heroTitleColor": "rgb(255, 255, 255)",
+      "heroSubtitleColor": "rgb(255, 255, 255)",
+      "phaseCount": 4,
+      "heroLeadCount": 0,
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./TikTok.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/TikTok.html",
+          "current": null
+        },
+        {
+          "text": "RU",
+          "href": "./ru/TikTok.html",
+          "current": null
+        }
+      ],
+      "canonical": "https://www.honeybadgersoft.com/TikTok.html",
+      "hreflangs": [
+        {
+          "lang": "zh-CN",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        },
+        {
+          "lang": "en-US",
+          "href": "https://www.honeybadgersoft.com/en/TikTok.html"
+        },
+        {
+          "lang": "ru-RU",
+          "href": "https://www.honeybadgersoft.com/ru/TikTok.html"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://www.honeybadgersoft.com/TikTok.html"
+        }
+      ],
+      "productCard": null,
+      "supportOverlapsContent": false,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-products-after-click",
+      "screenshot": "docs/review-artifacts/issue-70/zh-products-after-click-detail.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    }
+  ],
+  "pass": true
+}
