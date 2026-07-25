@@ -3110,6 +3110,128 @@ button:focus-visible,
   }
 }
 
+.dynamic-ip-detail-hero {
+  /* Issue #80 Dynamic IP detail pages */
+  background: var(--hero) url("./img/dip.svg") center / cover no-repeat;
+}
+
+.dynamic-ip-detail-page .products-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.dynamic-ip-detail-page .products-hero-copy {
+  max-width: 920px;
+}
+
+.dynamic-ip-spec-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(360px, 0.9fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.dynamic-ip-spec-table {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.dynamic-ip-spec-table th,
+.dynamic-ip-spec-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+.dynamic-ip-spec-table tr:last-child th,
+.dynamic-ip-spec-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.dynamic-ip-spec-table th {
+  width: 34%;
+  font-weight: 800;
+}
+
+.dynamic-ip-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dynamic-ip-feature-card {
+  min-height: 236px;
+}
+
+.dynamic-ip-scenario-grid,
+.dynamic-ip-support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.dynamic-ip-support-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dynamic-ip-scenario-card,
+.dynamic-ip-support-card {
+  min-height: 100%;
+}
+
+.dynamic-ip-scenario-card span {
+  display: inline-flex;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.dynamic-ip-step-list li {
+  min-height: 84px;
+}
+
+.dynamic-ip-detail-page .breadcrumb .container {
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+@media (max-width: 1100px) {
+  .dynamic-ip-spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dynamic-ip-feature-grid,
+  .dynamic-ip-scenario-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .dynamic-ip-feature-grid,
+  .dynamic-ip-scenario-grid,
+  .dynamic-ip-support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dynamic-ip-spec-table th,
+  .dynamic-ip-spec-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .dynamic-ip-spec-table th {
+    padding-bottom: 6px;
+    border-bottom: 0;
+  }
+
+  .dynamic-ip-spec-table td {
+    padding-top: 0;
+  }
+}
+
 .nav-dropdown {
   position: relative;
   display: inline-flex;
