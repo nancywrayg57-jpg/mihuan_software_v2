@@ -1,0 +1,249 @@
+{
+  "generatedAt": "2026-07-25T13:16:25.882Z",
+  "baseUrl": "http://127.0.0.1:49309",
+  "results": [
+    {
+      "pagePath": "static-ip.html",
+      "screenshotName": "static-ip-zh-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "静态住宅 IP | Honey Badger",
+      "h1": "静态住宅 IP",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyTextLength": 1114,
+      "brokenImages": [],
+      "currentLanguageLinks": [
+        {
+          "text": "中文",
+          "href": "./static-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/static-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./ru/static-ip.html",
+          "current": ""
+        }
+      ],
+      "breadcrumb": "首页\n/\n产品介绍\n/\n跨境网络服务\n/\n静态住宅 IP",
+      "staticFeatureCount": 5,
+      "staticScenarioCount": 4,
+      "staticStepCount": 4,
+      "staticSupportCount": 3,
+      "staticSpecCount": 3,
+      "staticLinkHref": "",
+      "hasHorizontalOverflow": false
+    },
+    {
+      "pagePath": "en/static-ip.html",
+      "screenshotName": "static-ip-en-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Static Residential IP | Honey Badger",
+      "h1": "Static Residential IP",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyTextLength": 2920,
+      "brokenImages": [],
+      "currentLanguageLinks": [
+        {
+          "text": "中文",
+          "href": "../static-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "./static-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/static-ip.html",
+          "current": ""
+        }
+      ],
+      "breadcrumb": "Home\n/\nProducts\n/\nCross-border Network Services\n/\nStatic Residential IP",
+      "staticFeatureCount": 5,
+      "staticScenarioCount": 4,
+      "staticStepCount": 4,
+      "staticSupportCount": 3,
+      "staticSpecCount": 3,
+      "staticLinkHref": "",
+      "hasHorizontalOverflow": false
+    },
+    {
+      "pagePath": "ru/static-ip.html",
+      "screenshotName": "static-ip-ru-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Статический residential IP | Honey Badger",
+      "h1": "Статический residential IP",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyTextLength": 2881,
+      "brokenImages": [],
+      "currentLanguageLinks": [
+        {
+          "text": "中文",
+          "href": "../static-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "../en/static-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./static-ip.html",
+          "current": "true"
+        }
+      ],
+      "breadcrumb": "Главная\n/\nПродукты\n/\nКроссбордерные сетевые сервисы\n/\nСтатический residential IP",
+      "staticFeatureCount": 5,
+      "staticScenarioCount": 4,
+      "staticStepCount": 4,
+      "staticSupportCount": 3,
+      "staticSpecCount": 3,
+      "staticLinkHref": "",
+      "hasHorizontalOverflow": false
+    },
+    {
+      "pagePath": "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "screenshotName": "network-static-ip-link-zh-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "跨境网络服务 | Honey Badger",
+      "h1": "跨境网络服务",
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "bodyTextLength": 2163,
+      "brokenImages": [],
+      "currentLanguageLinks": [
+        {
+          "text": "中文",
+          "href": "./跨境网络服务.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/index.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./ru/index.html",
+          "current": ""
+        }
+      ],
+      "breadcrumb": "首页\n/\n产品介绍\n/\n跨境网络服务",
+      "staticFeatureCount": 0,
+      "staticScenarioCount": 0,
+      "staticStepCount": 0,
+      "staticSupportCount": 0,
+      "staticSpecCount": 0,
+      "staticLinkHref": "./static-ip.html",
+      "hasHorizontalOverflow": false
+    },
+    {
+      "pagePath": "static-ip.html",
+      "screenshotName": "static-ip-zh-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "静态住宅 IP | Honey Badger",
+      "h1": "静态住宅 IP",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyTextLength": 1073,
+      "brokenImages": [],
+      "currentLanguageLinks": [
+        {
+          "text": "中文",
+          "href": "./static-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/static-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./ru/static-ip.html",
+          "current": ""
+        }
+      ],
+      "breadcrumb": "首页\n/\n产品介绍\n/\n跨境网络服务\n/\n静态住宅 IP",
+      "staticFeatureCount": 5,
+      "staticScenarioCount": 4,
+      "staticStepCount": 4,
+      "staticSupportCount": 3,
+      "staticSpecCount": 3,
+      "staticLinkHref": "",
+      "hasHorizontalOverflow": false
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "summary": {
+    "pagesChecked": 5,
+    "failedStatuses": [],
+    "pagesWithBrokenImages": [],
+    "pagesWithHorizontalOverflow": [],
+    "staticDetailPagesWithCompleteCounts": [
+      {
+        "pagePath": "static-ip.html",
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3
+      },
+      {
+        "pagePath": "en/static-ip.html",
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3
+      },
+      {
+        "pagePath": "ru/static-ip.html",
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3
+      },
+      {
+        "pagePath": "static-ip.html",
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3
+      }
+    ],
+    "mergedZhStaticLinkHref": "./static-ip.html"
+  }
+}

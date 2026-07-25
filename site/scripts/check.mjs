@@ -7,9 +7,10 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/TikTok.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/TikTok.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/TikTok.html", "en/跨境网络服务.html", "en/static-ip.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/TikTok.html", "ru/跨境网络服务.html", "ru/static-ip.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const sitemapHtmlPaths = requiredHtmlPaths.filter((relativePath) => !relativePath.endsWith("static-ip.html"));
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "about.html", "news.html", "careers.html"]);
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -763,11 +764,15 @@ function validateEnglishNetworkServices(html) {
     }
   }
 
-  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
-    errors.push("English network child service detail links must stay as same-page placeholder anchors.");
+  if (!html.includes('id="service-static-residential-ip"') || !html.includes('href="./static-ip.html">View details</a>')) {
+    errors.push("English network services static residential IP block must link to ./static-ip.html with View details.");
   }
 
-  for (const anchor of ['href="#static-ip-detail-pending"', 'href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+  if (/href=["'][^"']*(idc-ip|dynamic-ip)\.html/i.test(html)) {
+    errors.push("English network child service detail links must only connect static-ip.html in this issue.");
+  }
+
+  for (const anchor of ['href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
     if (!html.includes(anchor)) {
       errors.push(`English network child service missing placeholder detail anchor ${anchor}.`);
     }
@@ -2048,11 +2053,15 @@ function validateRussianNetworkServices(html) {
     }
   }
 
-  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
-    errors.push("Russian network child service detail links must stay as same-page placeholder anchors.");
+  if (!html.includes('id="service-static-residential-ip"') || !html.includes('href="./static-ip.html">Подробнее</a>')) {
+    errors.push("Russian network services static residential IP block must link to ./static-ip.html with Подробнее.");
   }
 
-  for (const anchor of ['href="#static-ip-detail-pending"', 'href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+  if (/href=["'][^"']*(idc-ip|dynamic-ip)\.html/i.test(html)) {
+    errors.push("Russian network child service detail links must only connect static-ip.html in this issue.");
+  }
+
+  for (const anchor of ['href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
     if (!html.includes(anchor)) {
       errors.push(`Russian network child service missing placeholder detail anchor ${anchor}.`);
     }
@@ -2675,6 +2684,248 @@ function validateTiktokDetailPage(relativePath, html) {
   return errors;
 }
 
+function validateStaticIpDetailPage(relativePath, html) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const expectations = {
+    zh: {
+      title: "静态住宅 IP",
+      name: "静态住宅IP",
+      eyebrow: "Static Residential IP",
+      lead: "来自真实家庭宽带线路的长期固定住宅 IP，适合需要稳定网络身份、城市属地和长效会话的合规业务。",
+      featureTitle: "核心优势",
+      featureLead: "静态住宅 IP 重点解决长期账号、固定身份访问和地域一致性问题。",
+      scenarioTitle: "适用场景",
+      workflowTitle: "接入流程",
+      supportTitle: "服务支持",
+      specs: [
+        ["定位", "固定住宅代理资源"],
+        ["网络属性", "真实 ISP 家庭宽带、长期固定、独享稳定"],
+        ["适用团队", "跨境电商、社媒运营、SEO 与本地化测试团队"]
+      ],
+      features: [
+        ["真实住宅原生属性", "源自家庭宽带线路，具备民用 ISP 标识，访问形态更接近普通本地用户。"],
+        ["IP 长期固定不轮换", "单个 IP 可持续绑定业务，适合店铺运营、账号托管和广告投放等长期场景。"],
+        ["地域精细化定位", "可按国家、城市等维度筛选资源，用于本地化访问、调研和测试。"],
+        ["独立稳定带宽", "独享链路减少共享拥挤，适合长期挂机、批量登录和稳定会话。"],
+        ["协议与 API 接入", "支持 HTTP/SOCKS5 与 API 管理，便于接入爬虫框架、自动化工具和业务系统。"]
+      ],
+      scenarios: [
+        "跨境电商多店铺运营、价格监控和海外广告投放。",
+        "海外社交媒体矩阵账号托管与品牌本地化运营。",
+        "搜索引擎本地化排名监测和关键词长期数据采集。",
+        "海外软件本地化兼容性测试与地区网络访问验证。"
+      ],
+      workflow: [
+        ["01", "确认目标国家、城市和业务场景"],
+        ["02", "分配固定住宅 IP 并配置鉴权"],
+        ["03", "接入浏览器、脚本或企业系统"],
+        ["04", "持续监测稳定性并按业务复盘"]
+      ],
+      support: [
+        ["资源筛选", "按区域、稳定性和业务类型匹配住宅 IP 资源。"],
+        ["接入指导", "提供协议、鉴权和 API 管理的接入说明。"],
+        ["稳定性复盘", "围绕延迟、可用性和会话质量进行定期检查。"]
+      ],
+      breadcrumb: ['href="./index.html">首页</a>', 'href="./products.html">产品介绍</a>', 'href="./跨境网络服务.html">跨境网络服务</a>', 'aria-current="page">静态住宅 IP</span>'],
+      languagePaths: ['href="./static-ip.html" aria-current="true"', 'href="./en/static-ip.html"', 'href="./ru/static-ip.html"']
+    },
+    en: {
+      title: "Static Residential IP",
+      name: "Static Residential IP",
+      eyebrow: "Static Residential IP",
+      lead: "A long-term fixed residential IP from real home broadband. It fits compliant work that needs a stable identity, city location and persistent sessions.",
+      featureTitle: "Core advantages",
+      featureLead: "Static residential IPs solve long-term identity, location consistency and stable session needs.",
+      scenarioTitle: "Scenarios",
+      workflowTitle: "Onboarding flow",
+      supportTitle: "Service support",
+      specs: [
+        ["Positioning", "Fixed residential proxy resource"],
+        ["Network profile", "Real ISP broadband, fixed session, exclusive access"],
+        ["Teams", "Cross-border commerce, social operations, SEO and localization testing"]
+      ],
+      features: [
+        ["Real residential profile", "Uses home broadband lines with civilian ISP attributes, closer to normal local-user traffic."],
+        ["Long-term fixed IP", "A single IP can stay bound to one business use, supporting stores, accounts and ad operations."],
+        ["Precise location targeting", "Resources can be selected by country and city for local access, research and testing."],
+        ["Stable dedicated bandwidth", "Dedicated access reduces shared congestion for long sessions and batch logins."],
+        ["Protocol and API access", "Supports HTTP/SOCKS5 and API management for automation tools and business systems."]
+      ],
+      scenarios: [
+        "Long-term cross-border store operations, price checks and overseas ad placement.",
+        "Overseas social account management and localized brand operations.",
+        "Local SEO ranking monitoring and long-term keyword data collection.",
+        "Localization testing and regional network access verification."
+      ],
+      workflow: [
+        ["01", "Confirm target country, city and use case"],
+        ["02", "Assign fixed residential IP and authentication"],
+        ["03", "Connect browsers, scripts or internal systems"],
+        ["04", "Monitor stability and review by business cycle"]
+      ],
+      support: [
+        ["Resource matching", "Match residential IP resources by region, stability and business type."],
+        ["Integration guidance", "Provide protocol, authentication and API management notes."],
+        ["Stability review", "Check latency, availability and session quality over time."]
+      ],
+      breadcrumb: ['href="./index.html">Home</a>', 'href="./products.html">Products</a>', 'href="./跨境网络服务.html">Cross-border Network Services</a>', 'aria-current="page">Static Residential IP</span>'],
+      languagePaths: ['href="../static-ip.html"', 'href="./static-ip.html" aria-current="true"', 'href="../ru/static-ip.html"']
+    },
+    ru: {
+      title: "Статический residential IP",
+      name: "Статический residential IP",
+      eyebrow: "Static Residential IP",
+      lead: "Долгосрочный фиксированный residential IP из реальной домашней broadband-сети. Подходит для законных задач со стабильной сетевой идентичностью и городским таргетингом.",
+      featureTitle: "Ключевые преимущества",
+      featureLead: "Статический residential IP решает задачи долгой идентичности, стабильной сессии и постоянной географии.",
+      scenarioTitle: "Сценарии",
+      workflowTitle: "Подключение",
+      supportTitle: "Сервисная поддержка",
+      specs: [
+        ["Позиция", "Фиксированный residential proxy"],
+        ["Сетевой профиль", "Реальный ISP, стабильная сессия, выделенный доступ"],
+        ["Команды", "Cross-border commerce, соцсети, SEO и локализационное тестирование"]
+      ],
+      features: [
+        ["Реальный residential профиль", "Использует домашние broadband-линии с гражданским ISP-профилем."],
+        ["Долгосрочный фиксированный IP", "Один IP может быть закреплен за конкретным бизнес-сценарием."],
+        ["Точная география", "Ресурсы можно выбирать по стране и городу для локального доступа и тестов."],
+        ["Стабильная выделенная полоса", "Меньше общего перегруза для долгих сессий и пакетных входов."],
+        ["Протоколы и API", "Поддерживаются HTTP/SOCKS5 и API-управление для автоматизации."]
+      ],
+      scenarios: [
+        "Долгая работа cross-border магазинов, мониторинг цен и overseas ads.",
+        "Управление зарубежными social accounts и локальные brand operations.",
+        "Локальный SEO-мониторинг и долгий сбор открытых keyword data.",
+        "Локализационное тестирование и проверка регионального доступа."
+      ],
+      workflow: [
+        ["01", "Уточнить страну, город и сценарий"],
+        ["02", "Назначить fixed residential IP и авторизацию"],
+        ["03", "Подключить браузеры, скрипты или системы"],
+        ["04", "Отслеживать стабильность и делать ревью"]
+      ],
+      support: [
+        ["Подбор ресурса", "Подбор residential IP по региону, стабильности и типу задачи."],
+        ["Интеграция", "Инструкции по протоколам, авторизации и API."],
+        ["Ревью стабильности", "Проверка задержки, доступности и качества сессий."]
+      ],
+      breadcrumb: ['href="./index.html">Главная</a>', 'href="./products.html">Продукты</a>', 'href="./跨境网络服务.html">Кроссбордерные сетевые сервисы</a>', 'aria-current="page">Статический residential IP</span>'],
+      languagePaths: ['href="../static-ip.html"', 'href="../en/static-ip.html"', 'href="./static-ip.html" aria-current="true"']
+    }
+  }[locale];
+
+  for (const marker of [
+    expectations.title,
+    expectations.name,
+    expectations.eyebrow,
+    expectations.lead,
+    expectations.featureTitle,
+    expectations.featureLead,
+    expectations.scenarioTitle,
+    expectations.workflowTitle,
+    expectations.supportTitle,
+    "static-ip-detail-hero",
+    "static-ip-specs",
+    "static-ip-features",
+    "static-ip-scenarios",
+    "static-ip-workflow",
+    "static-ip-support",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Static Residential IP marker for ${relativePath}: ${marker}.`);
+    }
+  }
+
+  for (const [specLabel, specValue] of expectations.specs) {
+    if (!html.includes(specLabel) || !html.includes(specValue)) {
+      errors.push(`Missing Static Residential IP spec for ${relativePath}: ${specLabel}.`);
+    }
+  }
+
+  for (const [featureTitle, featureBody] of expectations.features) {
+    if (!html.includes(featureTitle) || !html.includes(featureBody)) {
+      errors.push(`Missing Static Residential IP feature for ${relativePath}: ${featureTitle}.`);
+    }
+  }
+
+  for (const scenario of expectations.scenarios) {
+    if (!html.includes(scenario)) {
+      errors.push(`Missing Static Residential IP scenario for ${relativePath}: ${scenario}.`);
+    }
+  }
+
+  for (const [stepNumber, stepTitle] of expectations.workflow) {
+    if (!html.includes(`data-static-ip-step="${stepNumber}"`) || !html.includes(stepTitle)) {
+      errors.push(`Missing Static Residential IP workflow step for ${relativePath}: ${stepNumber} ${stepTitle}.`);
+    }
+  }
+
+  for (const [supportTitle, supportBody] of expectations.support) {
+    if (!html.includes(supportTitle) || !html.includes(supportBody)) {
+      errors.push(`Missing Static Residential IP support item for ${relativePath}: ${supportTitle}.`);
+    }
+  }
+
+  for (const breadcrumbPart of expectations.breadcrumb) {
+    if (!html.includes(breadcrumbPart)) {
+      errors.push(`Static Residential IP breadcrumb missing ${breadcrumbPart} in ${relativePath}.`);
+    }
+  }
+
+  for (const languagePath of expectations.languagePaths) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Static Residential IP language switcher missing ${languagePath} in ${relativePath}.`);
+    }
+  }
+
+  const specCount = (html.match(/data-static-ip-spec=/g) || []).length;
+  const featureCount = (html.match(/data-static-ip-feature=/g) || []).length;
+  const scenarioCount = (html.match(/data-static-ip-scenario=/g) || []).length;
+  const stepCount = (html.match(/data-static-ip-step=/g) || []).length;
+  const supportCount = (html.match(/data-static-ip-support=/g) || []).length;
+
+  if (specCount !== 3) {
+    errors.push(`Static Residential IP detail page must render 3 spec rows; found ${specCount}.`);
+  }
+
+  if (featureCount !== 5) {
+    errors.push(`Static Residential IP detail page must render 5 feature cards; found ${featureCount}.`);
+  }
+
+  if (scenarioCount !== 4) {
+    errors.push(`Static Residential IP detail page must render 4 scenario cards; found ${scenarioCount}.`);
+  }
+
+  if (stepCount !== 4) {
+    errors.push(`Static Residential IP detail page must render 4 workflow steps; found ${stepCount}.`);
+  }
+
+  if (supportCount !== 3) {
+    errors.push(`Static Residential IP detail page must render 3 support cards; found ${supportCount}.`);
+  }
+
+  if (/data-product=|seo-prerender/i.test(html)) {
+    errors.push("Static Residential IP detail page must be full static HTML, not prototype dynamic rendering.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole)\s+(?:agent|distributor|authorization|authorized)\b|\bonly authorized\b|эксклюзивн|единственн/i.test(html)) {
+    errors.push("Static Residential IP detail page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  if (/节点数量|退款|绝对\s*SLA|node counts?|refund|absolute\s+SLA|количеств[ао]\s+узлов|возврат/i.test(html)) {
+    errors.push("Static Residential IP detail page contains forbidden node count, refund or absolute SLA wording.");
+  }
+
+  return errors;
+}
+
 function validateNetworkServicesPage(html) {
   const errors = [];
 
@@ -2732,11 +2983,15 @@ function validateNetworkServicesPage(html) {
     errors.push(`Network services page must render exactly 3 child service sections; found ${networkServices.length}.`);
   }
 
-  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
-    errors.push("Network child service detail links must stay as same-page placeholder anchors.");
+  if (!html.includes('id="service-static-residential-ip"') || !html.includes('href="./static-ip.html">查看详情</a>')) {
+    errors.push("Network services static residential IP block must link to ./static-ip.html with 查看详情.");
   }
 
-  for (const anchor of ['href="#static-ip-detail-pending"', 'href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+  if (/href=["'][^"']*(idc-ip|dynamic-ip)\.html/i.test(html)) {
+    errors.push("Network child service detail links must only connect static-ip.html in this issue.");
+  }
+
+  for (const anchor of ['href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
     if (!html.includes(anchor)) {
       errors.push(`Network child service missing placeholder detail anchor ${anchor}.`);
     }
@@ -2863,7 +3118,8 @@ function validateProductNavigationDropdown(html, relativePath) {
     "mihuan_yuantu.html",
     "AI-FDE.html",
     "TikTok.html",
-    "跨境网络服务.html"
+    "跨境网络服务.html",
+    "static-ip.html"
   ]);
   const basename = relativePath.split("/").pop();
   const shouldMarkProductCurrent = productPages.has(basename);
@@ -3317,6 +3573,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateEnglishNetworkServices(html));
   }
 
+  if (relativePath === "en/static-ip.html") {
+    htmlErrors.push(...validateStaticIpDetailPage(relativePath, html));
+  }
+
   if (relativePath === "en/about.html") {
     htmlErrors.push(...validateEnglishAbout(html));
   }
@@ -3369,6 +3629,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateRussianNetworkServices(html));
   }
 
+  if (relativePath === "ru/static-ip.html") {
+    htmlErrors.push(...validateStaticIpDetailPage(relativePath, html));
+  }
+
   if (relativePath === "products.html") {
     htmlErrors.push(...validateProductsPage(html));
   }
@@ -3391,6 +3655,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "跨境网络服务.html") {
     htmlErrors.push(...validateNetworkServicesPage(html));
+  }
+
+  if (relativePath === "static-ip.html") {
+    htmlErrors.push(...validateStaticIpDetailPage(relativePath, html));
   }
 
   if (relativePath === "about.html") {
@@ -3447,7 +3715,8 @@ async function validateIssue50HeroAssetReferences() {
     "nongye.svg",
     "yuantu.svg",
     "AI-FDE.svg",
-    "tiktok.svg"
+    "tiktok.svg",
+    "sip.svg"
   ]);
   const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
   const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));
@@ -3518,7 +3787,7 @@ async function validateSitemapAndRobots() {
   const robots = await readFile(robotsPath, "utf8");
   const expectedCanonicals = [];
 
-  for (const requiredHtmlPath of requiredHtmlPaths) {
+  for (const requiredHtmlPath of sitemapHtmlPaths) {
     const html = await readFile(resolve(distDir, requiredHtmlPath), "utf8");
     expectedCanonicals.push(getCanonicalHref(requiredHtmlPath, html));
   }
@@ -3534,8 +3803,8 @@ async function validateSitemapAndRobots() {
   const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
   const uniqueLocs = new Set(sitemapLocs);
 
-  if (sitemapLocs.length !== requiredHtmlPaths.length) {
-    throw new Error(`sitemap.xml must contain ${requiredHtmlPaths.length} loc entries, found ${sitemapLocs.length}.`);
+  if (sitemapLocs.length !== sitemapHtmlPaths.length) {
+    throw new Error(`sitemap.xml must contain ${sitemapHtmlPaths.length} core loc entries, found ${sitemapLocs.length}.`);
   }
 
   if (uniqueLocs.size !== sitemapLocs.length) {
@@ -3669,6 +3938,7 @@ async function validateIssue60HeroOverlayRemoval() {
     [".careers-hero", "waves-haikei.svg", "var(--hero)"],
     [".network-services-hero", "IP.svg", "var(--hero)"],
     [".agriculture-detail-hero", "nongye.svg", "var(--hero)"],
+    [".static-ip-detail-hero", "sip.svg", "var(--hero)"],
     [".network-services-page #network-services-modules", "stacked-waves-haikei.svg", "var(--hero)"],
     [".network-service-module > header", "stacked-waves-haikei.svg", "var(--hero)"]
   ];

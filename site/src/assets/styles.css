@@ -2850,16 +2850,123 @@ button:focus-visible,
   min-height: 100%;
 }
 
+.static-ip-detail-hero {
+  /* Issue #76 Static Residential IP detail pages */
+  background: var(--hero) url("./img/sip.svg") center / cover no-repeat;
+}
+
+.static-ip-detail-page .products-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.static-ip-detail-page .products-hero-copy {
+  max-width: 920px;
+}
+
+.static-ip-spec-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(360px, 0.9fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.static-ip-spec-table {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.static-ip-spec-table th,
+.static-ip-spec-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+.static-ip-spec-table tr:last-child th,
+.static-ip-spec-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.static-ip-spec-table th {
+  width: 34%;
+  font-weight: 800;
+}
+
+.static-ip-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.static-ip-feature-card {
+  min-height: 236px;
+}
+
+.static-ip-scenario-grid,
+.static-ip-support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.static-ip-support-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.static-ip-scenario-card,
+.static-ip-support-card {
+  min-height: 100%;
+}
+
+.static-ip-scenario-card span {
+  display: inline-flex;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.static-ip-step-list li {
+  min-height: 84px;
+}
+
 @media (max-width: 1100px) {
+  .static-ip-spec-grid,
   .tiktok-format-grid {
     grid-template-columns: 1fr;
+  }
+
+  .static-ip-feature-grid,
+  .static-ip-scenario-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 760px) {
+  .static-ip-feature-grid,
+  .static-ip-scenario-grid,
+  .static-ip-support-grid,
   .tiktok-phase-grid,
   .tiktok-format-grid {
     grid-template-columns: 1fr;
+  }
+
+  .static-ip-spec-table th,
+  .static-ip-spec-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .static-ip-spec-table th {
+    padding-bottom: 6px;
+    border-bottom: 0;
+  }
+
+  .static-ip-spec-table td {
+    padding-top: 0;
   }
 
   .tiktok-phase-grid {
