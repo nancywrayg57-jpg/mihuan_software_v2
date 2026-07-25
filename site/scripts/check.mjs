@@ -11,6 +11,39 @@ const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "m
 const sitemapHtmlPaths = requiredHtmlPaths.filter((relativePath) => !relativePath.endsWith("static-ip.html") && !relativePath.endsWith("idc-ip.html") && !relativePath.endsWith("dynamic-ip.html"));
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
 const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "idc-ip.html", "dynamic-ip.html", "about.html", "news.html", "careers.html"]);
+const issue82DetailHtmlPaths = [
+  "Agriculture.html",
+  "mihuan_yuantu.html",
+  "AI-FDE.html",
+  "TikTok.html",
+  "static-ip.html",
+  "idc-ip.html",
+  "dynamic-ip.html",
+  "en/Agriculture.html",
+  "en/mihuan_yuantu.html",
+  "en/AI-FDE.html",
+  "en/TikTok.html",
+  "en/static-ip.html",
+  "en/idc-ip.html",
+  "en/dynamic-ip.html",
+  "ru/Agriculture.html",
+  "ru/mihuan_yuantu.html",
+  "ru/AI-FDE.html",
+  "ru/TikTok.html",
+  "ru/static-ip.html",
+  "ru/idc-ip.html",
+  "ru/dynamic-ip.html"
+];
+const issue82DetailHtmlPathSet = new Set(issue82DetailHtmlPaths);
+const issue82DetailHeroClasses = [
+  ".agriculture-detail-hero",
+  ".yuantu-detail-hero",
+  ".aifde-detail-hero",
+  ".tiktok-detail-hero",
+  ".static-ip-detail-hero",
+  ".idc-ip-detail-hero",
+  ".dynamic-ip-detail-hero"
+];
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -3424,6 +3457,20 @@ function validateDynamicIpDetailPage(relativePath, html) {
   return errors;
 }
 
+function validateIssue82DetailPageSoftRemoval(relativePath, html) {
+  const errors = [];
+
+  if (!issue82DetailHtmlPathSet.has(relativePath)) {
+    return errors;
+  }
+
+  if (/home-section-soft/.test(html)) {
+    errors.push(`Issue #82 detail page must not retain home-section-soft on ${relativePath}.`);
+  }
+
+  return errors;
+}
+
 function validateNetworkServicesPage(html) {
   const errors = [];
 
@@ -4019,6 +4066,7 @@ async function validateBuiltHtml(relativePath) {
   }
 
   htmlErrors.push(...validateProductNavigationDropdown(html, relativePath));
+  htmlErrors.push(...validateIssue82DetailPageSoftRemoval(relativePath, html));
 
   if (homeHtmlPaths.has(relativePath) && /class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
     htmlErrors.push("Home pages must not render breadcrumb markup.");
@@ -4452,6 +4500,41 @@ function findCssBlocks(css, selector) {
   return blocks;
 }
 
+function cssBlockHas(blocks, pattern) {
+  return blocks.some((block) => pattern.test(block));
+}
+
+async function validateIssue82DetailHeroAlignment() {
+  const stylesPath = resolve(distDir, "assets", "styles.css");
+  const css = await readFile(stylesPath, "utf8");
+
+  for (const selector of issue82DetailHeroClasses) {
+    const blocks = findCssBlocks(css, selector);
+
+    if (blocks.length === 0) {
+      throw new Error(`Issue #82 missing detail hero rule for ${selector}.`);
+    }
+
+    if (!cssBlockHas(blocks, /display:\s*flex\s*;/)) {
+      throw new Error(`Issue #82 ${selector} must use flex alignment.`);
+    }
+
+    if (!cssBlockHas(blocks, /align-items:\s*center\s*;/)) {
+      throw new Error(`Issue #82 ${selector} must vertically center hero content.`);
+    }
+
+    for (const minHeight of ["678px", "1164px", "1664px"]) {
+      const minHeightPattern = new RegExp(`min-height:\\s*${minHeight.replace("px", "\\s*px")}\\s*;`);
+
+      if (!cssBlockHas(blocks, minHeightPattern)) {
+        throw new Error(`Issue #82 ${selector} missing measured min-height ${minHeight}.`);
+      }
+    }
+  }
+
+  console.log(`Checked Issue #82 detail hero min-height rules for ${issue82DetailHeroClasses.length} hero classes.`);
+}
+
 async function validateIssue60HeroOverlayRemoval() {
   const stylesPath = resolve(distDir, "assets", "styles.css");
   const css = await readFile(stylesPath, "utf8");
@@ -4584,3 +4667,4 @@ await validateFaviconOutput();
 await validateIssue60HeroOverlayRemoval();
 await validateBrandLogoOutput();
 await validateIssue62HeroVisualFrame();
+await validateIssue82DetailHeroAlignment();

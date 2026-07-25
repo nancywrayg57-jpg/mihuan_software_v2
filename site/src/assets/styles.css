@@ -3123,6 +3123,43 @@ button:focus-visible,
   max-width: 920px;
 }
 
+.agriculture-detail-hero,
+.yuantu-detail-hero,
+.aifde-detail-hero,
+.tiktok-detail-hero,
+.static-ip-detail-hero,
+.idc-ip-detail-hero,
+.dynamic-ip-detail-hero {
+  /* Issue #82: align product detail heroes with the measured products page hero. */
+  display: flex;
+  align-items: center;
+  min-height: 678px;
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .agriculture-detail-hero,
+  .yuantu-detail-hero,
+  .aifde-detail-hero,
+  .tiktok-detail-hero,
+  .static-ip-detail-hero,
+  .idc-ip-detail-hero,
+  .dynamic-ip-detail-hero {
+    min-height: 1164px;
+  }
+}
+
+@media (max-width: 760px) {
+  .agriculture-detail-hero,
+  .yuantu-detail-hero,
+  .aifde-detail-hero,
+  .tiktok-detail-hero,
+  .static-ip-detail-hero,
+  .idc-ip-detail-hero,
+  .dynamic-ip-detail-hero {
+    min-height: 1664px;
+  }
+}
+
 .dynamic-ip-spec-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(360px, 0.9fr);
