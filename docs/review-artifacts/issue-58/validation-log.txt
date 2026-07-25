@@ -1,0 +1,114 @@
+Node: v24.14.0
+npm: unavailable
+npx: unavailable
+[clean]
+Removed D:\workspace\mihuan_software_v2\site\dist
+[build]
+Built static site: D:\workspace\mihuan_software_v2\site\src -> D:\workspace\mihuan_software_v2\site\dist
+[check]
+Checked D:\workspace\mihuan_software_v2\site\dist\index.html
+Checked 18 required static HTML page(s).
+Build output contains 31 file(s), 464821 byte(s).
+Checked 9 local hero background asset reference(s).
+Checked sitemap.xml with 18 canonical loc entry(s).
+Checked robots.txt allow-all and sitemap directive.
+Checked favicon.svg output and 18 favicon link(s).
+[package]
+Built static site: D:\workspace\mihuan_software_v2\site\src -> D:\workspace\mihuan_software_v2\site\dist
+Checked D:\workspace\mihuan_software_v2\site\dist\index.html
+Checked 18 required static HTML page(s).
+Build output contains 31 file(s), 464821 byte(s).
+Checked 9 local hero background asset reference(s).
+Checked sitemap.xml with 18 canonical loc entry(s).
+Checked robots.txt allow-all and sitemap directive.
+Checked favicon.svg output and 18 favicon link(s).
+Packaged 31 dist file(s) into D:\workspace\mihuan_software_v2\site\release\honeybadger-dist-6dfb59c06fdd.tar.gz
+Archive size: 83165 byte(s).
+[git bash tar -tzf]
+about.html
+assets/app.js
+assets/img/hero-light-blue.svg
+assets/img/IP.svg
+assets/img/stacked-peaks-haikei_4.svg
+assets/img/stacked-waves-haikei_2.svg
+assets/img/stacked-waves-haikei_3.svg
+assets/img/stacked-waves-haikei.svg
+assets/img/waves-haikei-2.svg
+assets/img/waves-haikei.svg
+assets/styles.css
+careers.html
+en/about.html
+en/careers.html
+en/index.html
+en/news.html
+en/products.html
+en/跨境网络服务.html
+favicon.svg
+index.html
+news.html
+products.html
+robots.txt
+ru/about.html
+ru/careers.html
+ru/index.html
+ru/news.html
+ru/products.html
+ru/跨境网络服务.html
+sitemap.xml
+跨境网络服务.html
+[system tar extract consistency]
+{
+  "archive": "honeybadger-dist-6dfb59c06fdd.tar.gz",
+  "extractedFileCount": 31,
+  "distFileCount": 31,
+  "systemTarExtractMatchesDist": true,
+  "mismatches": [],
+  "checkedChinesePaths": [
+    {
+      "path": "跨境网络服务.html",
+      "extracted": true,
+      "matchesDist": true
+    },
+    {
+      "path": "en/跨境网络服务.html",
+      "extracted": true,
+      "matchesDist": true
+    },
+    {
+      "path": "ru/跨境网络服务.html",
+      "extracted": true,
+      "matchesDist": true
+    }
+  ]
+}
+[package-results.json refresh]
+{
+  "archive": "site/release/honeybadger-dist-6dfb59c06fdd.tar.gz",
+  "archiveBytes": 83165,
+  "tarEntryCount": 31,
+  "distFileCount": 31,
+  "distTotalBytes": 464821,
+  "extractedMatchesDist": true,
+  "systemTarExtractMatchesDist": true,
+  "mismatches": [],
+  "firstEntries": [
+    "about.html",
+    "assets/app.js",
+    "assets/img/hero-light-blue.svg",
+    "assets/img/IP.svg",
+    "assets/img/stacked-peaks-haikei_4.svg",
+    "assets/img/stacked-waves-haikei_2.svg",
+    "assets/img/stacked-waves-haikei_3.svg",
+    "assets/img/stacked-waves-haikei.svg",
+    "assets/img/waves-haikei-2.svg",
+    "assets/img/waves-haikei.svg",
+    "assets/styles.css",
+    "careers.html"
+  ]
+}
+[git diff --check]
+warning: in the working copy of 'site/package.json', CRLF will be replaced by LF the next time Git touches it
+[forbidden scope check]
+No forbidden-scope tracked diff.
+[HTML diff head icon only check]
+HTML diff contains only added favicon link lines.

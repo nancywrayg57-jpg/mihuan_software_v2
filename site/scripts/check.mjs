@@ -2792,5 +2792,53 @@ async function validateSitemapAndRobots() {
   console.log("Checked robots.txt allow-all and sitemap directive.");
 }
 
+async function validateFaviconOutput() {
+  const faviconPath = resolve(distDir, "favicon.svg");
+  const faviconStats = await stat(faviconPath).catch(() => null);
+
+  if (!faviconStats?.isFile() || faviconStats.size <= 0) {
+    throw new Error(`Missing or empty favicon output: ${faviconPath}`);
+  }
+
+  for (const requiredHtmlPath of requiredHtmlPaths) {
+    const html = await readFile(resolve(distDir, requiredHtmlPath), "utf8");
+    const headMatch = html.match(/<head\b[^>]*>[\s\S]*?<\/head>/i);
+
+    if (!headMatch) {
+      throw new Error(`Missing <head> block while validating favicon for ${requiredHtmlPath}.`);
+    }
+
+    const head = headMatch[0];
+    const htmlWithoutHead = html.replace(head, "");
+    const iconLinks = [...head.matchAll(/<link\b[^>]*>/gi)]
+      .map((match) => parseTagAttributes(match[0]))
+      .filter((attributes) => attributes.get("rel")?.toLowerCase().split(/\s+/).includes("icon"));
+    const expectedHref = requiredHtmlPath.startsWith("en/") || requiredHtmlPath.startsWith("ru/")
+      ? "../favicon.svg"
+      : "./favicon.svg";
+
+    if (/<link\b[^>]*\brel=["'][^"']*\bicon\b/i.test(htmlWithoutHead)) {
+      throw new Error(`Favicon link must stay inside <head> for ${requiredHtmlPath}.`);
+    }
+
+    if (iconLinks.length !== 1) {
+      throw new Error(`Expected exactly 1 favicon icon link in ${requiredHtmlPath}, found ${iconLinks.length}.`);
+    }
+
+    const iconLink = iconLinks[0];
+
+    if (iconLink.get("href") !== expectedHref) {
+      throw new Error(`Favicon href mismatch in ${requiredHtmlPath}: expected ${expectedHref}, found ${iconLink.get("href") || "missing"}.`);
+    }
+
+    if (iconLink.get("type") !== "image/svg+xml") {
+      throw new Error(`Favicon type mismatch in ${requiredHtmlPath}: expected image/svg+xml, found ${iconLink.get("type") || "missing"}.`);
+    }
+  }
+
+  console.log(`Checked favicon.svg output and ${requiredHtmlPaths.length} favicon link(s).`);
+}
+
 await validateIssue50HeroAssetReferences();
 await validateSitemapAndRobots();
+await validateFaviconOutput();
