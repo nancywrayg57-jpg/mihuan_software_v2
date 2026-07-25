@@ -1053,6 +1053,16 @@ h3 {
   color: rgb(255 255 255 / 88%);
 }
 
+#home-relation,
+#en-brand-relationship,
+#ru-brand-relationship {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgb(0 64 139 / 92%), rgb(0 90 180 / 86%)),
+    #f6f9fd url("./img/stacked-peaks-haikei_4.svg") center / cover no-repeat;
+}
+
 .section-heading {
   max-width: 780px;
   margin-bottom: 34px;
@@ -1587,6 +1597,15 @@ h3 {
     url("./img/IP.svg") center / cover no-repeat;
 }
 
+.network-services-page #network-services-modules {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgb(0 50 118 / 96%), rgb(0 92 196 / 88%)),
+    url("./img/stacked-waves-haikei.svg") center / cover no-repeat;
+}
+
 .network-hero-panel {
   display: grid;
   gap: 14px;
@@ -1682,7 +1701,9 @@ h3 {
   grid-template-columns: 64px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
-  background: rgb(255 255 255 / 14%);
+  background:
+    linear-gradient(135deg, rgb(5 89 209 / 96%), rgb(43 132 239 / 88%)),
+    url("./img/stacked-waves-haikei.svg") center / cover no-repeat;
   padding: 28px;
 }
 
@@ -1692,18 +1713,18 @@ h3 {
 }
 
 .network-service-module > header .home-eyebrow {
-  border-color: var(--border);
-  background: var(--surface-blue);
-  color: var(--primary);
+  border-color: rgb(255 255 255 / 38%);
+  background: rgb(255 255 255 / 14%);
+  color: white;
 }
 
 .network-service-module > header h3,
 .network-service-module > header p {
-  color: var(--text-body);
+  color: white;
 }
 
 .network-service-module > header h3 {
-  color: var(--text);
+  color: white;
   font-size: 28px;
 }
 

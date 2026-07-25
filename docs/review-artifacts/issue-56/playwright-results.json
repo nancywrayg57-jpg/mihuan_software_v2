@@ -1,0 +1,634 @@
+{
+  "generatedAt": "2026-07-25T02:24:45.702Z",
+  "baseUrl": "http://127.0.0.1:54948",
+  "beforeDist": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\mihuan_issue56_before_374e2bffa5d545c9a6c7940aeb6742c9\\site\\dist",
+  "afterDist": "D:\\workspace\\mihuan_software_v2\\site\\dist",
+  "node": "v24.14.0",
+  "npm": null,
+  "npmNote": "npm/npx were not available in PATH or bundled runtime; site scripts were executed with bundled Node directly.",
+  "results": [
+    {
+      "item": {
+        "name": "desktop-1440x900-zh-home-relation",
+        "lang": "zh",
+        "area": "home relation",
+        "path": "index.html",
+        "selector": "#home-relation",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg"
+      },
+      "before": {
+        "prefix": "before",
+        "phase": "before",
+        "name": "desktop-1440x900-zh-home-relation",
+        "lang": "zh",
+        "area": "home relation",
+        "path": "index.html",
+        "selector": "#home-relation",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg",
+        "url": "http://127.0.0.1:54948/before/index.html",
+        "screenshot": "before-desktop-1440x900-zh-home-relation.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "none",
+          "backgroundColor": "rgb(0, 90, 180)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "",
+          "headerColor": "",
+          "firstHeaderH3Color": ""
+        }
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "desktop-1440x900-zh-home-relation",
+        "lang": "zh",
+        "area": "home relation",
+        "path": "index.html",
+        "selector": "#home-relation",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg",
+        "url": "http://127.0.0.1:54948/after/index.html",
+        "screenshot": "after-desktop-1440x900-zh-home-relation.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 64, 139, 0.92), rgba(0, 90, 180, 0.86)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-peaks-haikei_4.svg\")",
+          "backgroundColor": "rgb(246, 249, 253)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "",
+          "headerColor": "",
+          "firstHeaderH3Color": ""
+        }
+      },
+      "compare": "compare-desktop-1440x900-zh-home-relation.png",
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    },
+    {
+      "item": {
+        "name": "desktop-1440x900-en-home-relation",
+        "lang": "en",
+        "area": "home relation",
+        "path": "en/index.html",
+        "selector": "#en-brand-relationship",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg"
+      },
+      "before": {
+        "prefix": "before",
+        "phase": "before",
+        "name": "desktop-1440x900-en-home-relation",
+        "lang": "en",
+        "area": "home relation",
+        "path": "en/index.html",
+        "selector": "#en-brand-relationship",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg",
+        "url": "http://127.0.0.1:54948/before/en/index.html",
+        "screenshot": "before-desktop-1440x900-en-home-relation.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "none",
+          "backgroundColor": "rgb(0, 90, 180)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "",
+          "headerColor": "",
+          "firstHeaderH3Color": ""
+        }
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "desktop-1440x900-en-home-relation",
+        "lang": "en",
+        "area": "home relation",
+        "path": "en/index.html",
+        "selector": "#en-brand-relationship",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg",
+        "url": "http://127.0.0.1:54948/after/en/index.html",
+        "screenshot": "after-desktop-1440x900-en-home-relation.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 64, 139, 0.92), rgba(0, 90, 180, 0.86)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-peaks-haikei_4.svg\")",
+          "backgroundColor": "rgb(246, 249, 253)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "",
+          "headerColor": "",
+          "firstHeaderH3Color": ""
+        }
+      },
+      "compare": "compare-desktop-1440x900-en-home-relation.png",
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    },
+    {
+      "item": {
+        "name": "desktop-1440x900-ru-home-relation",
+        "lang": "ru",
+        "area": "home relation",
+        "path": "ru/index.html",
+        "selector": "#ru-brand-relationship",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg"
+      },
+      "before": {
+        "prefix": "before",
+        "phase": "before",
+        "name": "desktop-1440x900-ru-home-relation",
+        "lang": "ru",
+        "area": "home relation",
+        "path": "ru/index.html",
+        "selector": "#ru-brand-relationship",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg",
+        "url": "http://127.0.0.1:54948/before/ru/index.html",
+        "screenshot": "before-desktop-1440x900-ru-home-relation.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "none",
+          "backgroundColor": "rgb(0, 90, 180)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "",
+          "headerColor": "",
+          "firstHeaderH3Color": ""
+        }
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "desktop-1440x900-ru-home-relation",
+        "lang": "ru",
+        "area": "home relation",
+        "path": "ru/index.html",
+        "selector": "#ru-brand-relationship",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg",
+        "url": "http://127.0.0.1:54948/after/ru/index.html",
+        "screenshot": "after-desktop-1440x900-ru-home-relation.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 64, 139, 0.92), rgba(0, 90, 180, 0.86)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-peaks-haikei_4.svg\")",
+          "backgroundColor": "rgb(246, 249, 253)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "",
+          "headerColor": "",
+          "firstHeaderH3Color": ""
+        }
+      },
+      "compare": "compare-desktop-1440x900-ru-home-relation.png",
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    },
+    {
+      "item": {
+        "name": "desktop-1440x900-zh-network-modules",
+        "lang": "zh",
+        "area": "network modules",
+        "path": "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg"
+      },
+      "before": {
+        "prefix": "before",
+        "phase": "before",
+        "name": "desktop-1440x900-zh-network-modules",
+        "lang": "zh",
+        "area": "network modules",
+        "path": "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg",
+        "url": "http://127.0.0.1:54948/before/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "screenshot": "before-desktop-1440x900-zh-network-modules.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "none",
+          "backgroundColor": "rgb(0, 90, 180)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "none",
+          "headerColor": "rgb(255, 255, 255)",
+          "firstHeaderH3Color": "rgb(30, 30, 30)"
+        }
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "desktop-1440x900-zh-network-modules",
+        "lang": "zh",
+        "area": "network modules",
+        "path": "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg",
+        "url": "http://127.0.0.1:54948/after/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "screenshot": "after-desktop-1440x900-zh-network-modules.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 50, 118, 0.96), rgba(0, 92, 196, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "linear-gradient(135deg, rgba(5, 89, 209, 0.96), rgba(43, 132, 239, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "headerColor": "rgb(255, 255, 255)",
+          "firstHeaderH3Color": "rgb(255, 255, 255)"
+        }
+      },
+      "compare": "compare-desktop-1440x900-zh-network-modules.png",
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    },
+    {
+      "item": {
+        "name": "desktop-1440x900-en-network-modules",
+        "lang": "en",
+        "area": "network modules",
+        "path": "en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg"
+      },
+      "before": {
+        "prefix": "before",
+        "phase": "before",
+        "name": "desktop-1440x900-en-network-modules",
+        "lang": "en",
+        "area": "network modules",
+        "path": "en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg",
+        "url": "http://127.0.0.1:54948/before/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "screenshot": "before-desktop-1440x900-en-network-modules.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "none",
+          "backgroundColor": "rgb(0, 90, 180)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "none",
+          "headerColor": "rgb(255, 255, 255)",
+          "firstHeaderH3Color": "rgb(30, 30, 30)"
+        }
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "desktop-1440x900-en-network-modules",
+        "lang": "en",
+        "area": "network modules",
+        "path": "en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg",
+        "url": "http://127.0.0.1:54948/after/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "screenshot": "after-desktop-1440x900-en-network-modules.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 50, 118, 0.96), rgba(0, 92, 196, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "linear-gradient(135deg, rgba(5, 89, 209, 0.96), rgba(43, 132, 239, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "headerColor": "rgb(255, 255, 255)",
+          "firstHeaderH3Color": "rgb(255, 255, 255)"
+        }
+      },
+      "compare": "compare-desktop-1440x900-en-network-modules.png",
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    },
+    {
+      "item": {
+        "name": "desktop-1440x900-ru-network-modules",
+        "lang": "ru",
+        "area": "network modules",
+        "path": "ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg"
+      },
+      "before": {
+        "prefix": "before",
+        "phase": "before",
+        "name": "desktop-1440x900-ru-network-modules",
+        "lang": "ru",
+        "area": "network modules",
+        "path": "ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg",
+        "url": "http://127.0.0.1:54948/before/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "screenshot": "before-desktop-1440x900-ru-network-modules.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "none",
+          "backgroundColor": "rgb(0, 90, 180)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "none",
+          "headerColor": "rgb(255, 255, 255)",
+          "firstHeaderH3Color": "rgb(30, 30, 30)"
+        }
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "desktop-1440x900-ru-network-modules",
+        "lang": "ru",
+        "area": "network modules",
+        "path": "ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "expectedAsset": "stacked-waves-haikei.svg",
+        "url": "http://127.0.0.1:54948/after/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "screenshot": "after-desktop-1440x900-ru-network-modules.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "bodyScrollWidth": 1440,
+          "viewportWidth": 1440,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 50, 118, 0.96), rgba(0, 92, 196, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "linear-gradient(135deg, rgba(5, 89, 209, 0.96), rgba(43, 132, 239, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "headerColor": "rgb(255, 255, 255)",
+          "firstHeaderH3Color": "rgb(255, 255, 255)"
+        }
+      },
+      "compare": "compare-desktop-1440x900-ru-network-modules.png",
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    },
+    {
+      "item": {
+        "name": "mobile-390x844-zh-home-relation",
+        "lang": "zh",
+        "area": "home relation mobile",
+        "path": "index.html",
+        "selector": "#home-relation",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg"
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "mobile-390x844-zh-home-relation",
+        "lang": "zh",
+        "area": "home relation mobile",
+        "path": "index.html",
+        "selector": "#home-relation",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expectedAsset": "stacked-peaks-haikei_4.svg",
+        "url": "http://127.0.0.1:54948/after/index.html",
+        "screenshot": "after-mobile-390x844-zh-home-relation.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390,
+          "viewportWidth": 390,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 64, 139, 0.92), rgba(0, 90, 180, 0.86)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-peaks-haikei_4.svg\")",
+          "backgroundColor": "rgb(246, 249, 253)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "",
+          "headerColor": "",
+          "firstHeaderH3Color": ""
+        }
+      },
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    },
+    {
+      "item": {
+        "name": "mobile-390x844-zh-network-modules",
+        "lang": "zh",
+        "area": "network modules mobile",
+        "path": "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expectedAsset": "stacked-waves-haikei.svg"
+      },
+      "after": {
+        "prefix": "after",
+        "phase": "after",
+        "name": "mobile-390x844-zh-network-modules",
+        "lang": "zh",
+        "area": "network modules mobile",
+        "path": "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "selector": "#network-services-modules",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "expectedAsset": "stacked-waves-haikei.svg",
+        "url": "http://127.0.0.1:54948/after/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+        "screenshot": "after-mobile-390x844-zh-network-modules.png",
+        "consoleErrors": [],
+        "requestFailures": [],
+        "metrics": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "bodyScrollWidth": 390,
+          "viewportWidth": 390,
+          "overflowX": false,
+          "brokenImages": [],
+          "backgroundImage": "linear-gradient(135deg, rgba(0, 50, 118, 0.96), rgba(0, 92, 196, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "headerBackgroundImage": "linear-gradient(135deg, rgba(5, 89, 209, 0.96), rgba(43, 132, 239, 0.88)), url(\"http://127.0.0.1:54948/after/assets/img/stacked-waves-haikei.svg\")",
+          "headerColor": "rgb(255, 255, 255)",
+          "firstHeaderH3Color": "rgb(255, 255, 255)"
+        }
+      },
+      "checks": {
+        "consoleZeroErrors": true,
+        "requestZeroFailures": true,
+        "zeroBrokenImages": true,
+        "noHorizontalOverflow": true,
+        "expectedAssetPresent": true
+      }
+    }
+  ],
+  "mobileScreenshotMode": "Mobile artifact PNGs are target-section screenshots at 390x844 with fixed header/support/skip-link hidden only during capture to avoid screenshot stitching occlusion; target-element metrics remain recorded in results."
+}
