@@ -7,10 +7,10 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/TikTok.html", "en/跨境网络服务.html", "en/static-ip.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/TikTok.html", "ru/跨境网络服务.html", "ru/static-ip.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
-const sitemapHtmlPaths = requiredHtmlPaths.filter((relativePath) => !relativePath.endsWith("static-ip.html"));
+const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "idc-ip.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/AI-FDE.html", "en/TikTok.html", "en/跨境网络服务.html", "en/static-ip.html", "en/idc-ip.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/AI-FDE.html", "ru/TikTok.html", "ru/跨境网络服务.html", "ru/static-ip.html", "ru/idc-ip.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const sitemapHtmlPaths = requiredHtmlPaths.filter((relativePath) => !relativePath.endsWith("static-ip.html") && !relativePath.endsWith("idc-ip.html"));
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "about.html", "news.html", "careers.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "AI-FDE.html", "TikTok.html", "跨境网络服务.html", "static-ip.html", "idc-ip.html", "about.html", "news.html", "careers.html"]);
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -768,11 +768,15 @@ function validateEnglishNetworkServices(html) {
     errors.push("English network services static residential IP block must link to ./static-ip.html with View details.");
   }
 
-  if (/href=["'][^"']*(idc-ip|dynamic-ip)\.html/i.test(html)) {
-    errors.push("English network child service detail links must only connect static-ip.html in this issue.");
+  if (!html.includes('id="service-idc-ip"') || !html.includes('href="./idc-ip.html">View details</a>')) {
+    errors.push("English network services Datacenter IP block must link to ./idc-ip.html with View details.");
   }
 
-  for (const anchor of ['href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+  if (/href=["'][^"']*dynamic-ip\.html/i.test(html)) {
+    errors.push("English network child service detail links must only connect static-ip.html and idc-ip.html in this issue.");
+  }
+
+  for (const anchor of ['href="#dynamic-ip-detail-pending"']) {
     if (!html.includes(anchor)) {
       errors.push(`English network child service missing placeholder detail anchor ${anchor}.`);
     }
@@ -2057,11 +2061,15 @@ function validateRussianNetworkServices(html) {
     errors.push("Russian network services static residential IP block must link to ./static-ip.html with Подробнее.");
   }
 
-  if (/href=["'][^"']*(idc-ip|dynamic-ip)\.html/i.test(html)) {
-    errors.push("Russian network child service detail links must only connect static-ip.html in this issue.");
+  if (!html.includes('id="service-idc-ip"') || !html.includes('href="./idc-ip.html">Подробнее</a>')) {
+    errors.push("Russian network services Datacenter IP block must link to ./idc-ip.html with Подробнее.");
   }
 
-  for (const anchor of ['href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+  if (/href=["'][^"']*dynamic-ip\.html/i.test(html)) {
+    errors.push("Russian network child service detail links must only connect static-ip.html and idc-ip.html in this issue.");
+  }
+
+  for (const anchor of ['href="#dynamic-ip-detail-pending"']) {
     if (!html.includes(anchor)) {
       errors.push(`Russian network child service missing placeholder detail anchor ${anchor}.`);
     }
@@ -2926,6 +2934,252 @@ function validateStaticIpDetailPage(relativePath, html) {
   return errors;
 }
 
+function validateIdcIpDetailPage(relativePath, html) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const expectations = {
+    zh: {
+      title: "机房 IP",
+      name: "机房IP",
+      eyebrow: "Datacenter IP",
+      lead: "部署于专业 IDC 数据中心的静态虚拟 IP 资源，强调高带宽、低延迟和高并发，适合大规模公开数据处理。",
+      featureTitle: "核心优势",
+      featureLead: "机房 IP 更适合速度、并发和成本优先的批量任务。",
+      scenarioTitle: "适用场景",
+      workflowTitle: "接入流程",
+      supportTitle: "服务支持",
+      specs: [
+        ["定位", "IDC 数据中心代理资源"],
+        ["网络属性", "高带宽、低延迟、固定 IP、强并发"],
+        ["适用团队", "数据采集、监测系统、服务器业务和测试团队"]
+      ],
+      features: [
+        ["超高带宽与快速响应", "依托机房骨干网络，适合海量请求和高并发公开数据采集。"],
+        ["海量 IP 池扩容", "资源供给稳定，可按业务峰值快速扩容和分组使用。"],
+        ["成本经济", "相比住宅资源单价更低，适合大规模商用采集和监测任务。"],
+        ["7x24 机房运维", "机房运维与节点切换机制支撑持续在线任务。"],
+        ["灵活授权管理", "支持白名单、账号密码鉴权、分组管理和 API 批量操作。"]
+      ],
+      scenarios: [
+        "公开网页资讯、行业舆情和商品基础数据批量采集。",
+        "搜索引擎关键词收录、快照和公开榜单监测。",
+        "企业比价系统、公开市场数据同步和行业分析。",
+        "服务器压力测试与多地区访问速度检测。"
+      ],
+      workflow: [
+        ["01", "确认并发量、地区和协议需求"],
+        ["02", "开通机房 IP 池与鉴权方式"],
+        ["03", "接入采集、监测或测试系统"],
+        ["04", "按可用性、延迟和成本持续优化"]
+      ],
+      support: [
+        ["容量规划", "根据并发、带宽和任务周期估算资源规模。"],
+        ["分组管理", "为不同业务配置独立 IP 池、权限和启停策略。"],
+        ["监控复盘", "围绕在线率、延迟和异常类型进行记录。"]
+      ],
+      breadcrumb: ['href="./index.html">首页</a>', 'href="./products.html">产品介绍</a>', 'href="./跨境网络服务.html">跨境网络服务</a>', 'aria-current="page">机房 IP</span>'],
+      languagePaths: ['href="./idc-ip.html" aria-current="true"', 'href="./en/idc-ip.html"', 'href="./ru/idc-ip.html"']
+    },
+    en: {
+      title: "Datacenter IP",
+      name: "Datacenter IP",
+      eyebrow: "Datacenter IP",
+      lead: "Static virtual IP resources hosted in professional IDC data centers. They prioritize high bandwidth, low latency and strong concurrency for public data tasks.",
+      featureTitle: "Core advantages",
+      featureLead: "Datacenter IPs fit batch tasks where speed, concurrency and cost matter most.",
+      scenarioTitle: "Scenarios",
+      workflowTitle: "Onboarding flow",
+      supportTitle: "Service support",
+      specs: [
+        ["Positioning", "IDC datacenter proxy resource"],
+        ["Network profile", "High bandwidth, low latency, fixed IP, strong concurrency"],
+        ["Teams", "Data collection, monitoring, server workloads and testing"]
+      ],
+      features: [
+        ["High bandwidth response", "Backbone datacenter networks support large request volumes and concurrent public-data collection."],
+        ["Large IP pool", "Stable supply can scale by business peak and be grouped by task."],
+        ["Cost efficient", "Lower unit cost than residential resources for large commercial monitoring and collection."],
+        ["24/7 operations", "Datacenter maintenance and node switching support continuous online work."],
+        ["Flexible authorization", "Supports whitelist, username/password auth, grouping and API batch operations."]
+      ],
+      scenarios: [
+        "Bulk collection of public news, market information and basic product data.",
+        "Search-index, snapshot and public ranking monitoring.",
+        "Price comparison systems, public market data sync and industry analysis.",
+        "Server stress tests and multi-region speed checks."
+      ],
+      workflow: [
+        ["01", "Confirm concurrency, region and protocol needs"],
+        ["02", "Open datacenter IP pool and authentication"],
+        ["03", "Connect collection, monitoring or testing systems"],
+        ["04", "Optimize by availability, latency and cost"]
+      ],
+      support: [
+        ["Capacity planning", "Estimate resource scale by concurrency, bandwidth and task cycle."],
+        ["Grouped management", "Configure independent IP pools and policies for different teams."],
+        ["Monitoring review", "Record uptime, latency and exception classes."]
+      ],
+      breadcrumb: ['href="./index.html">Home</a>', 'href="./products.html">Products</a>', 'href="./跨境网络服务.html">Cross-border Network Services</a>', 'aria-current="page">Datacenter IP</span>'],
+      languagePaths: ['href="../idc-ip.html"', 'href="./idc-ip.html" aria-current="true"', 'href="../ru/idc-ip.html"']
+    },
+    ru: {
+      title: "Datacenter IP",
+      name: "Datacenter IP",
+      eyebrow: "Datacenter IP",
+      lead: "Статические virtual IP в профессиональных IDC дата-центрах. Приоритеты: высокая пропускная способность, низкая задержка и параллельность.",
+      featureTitle: "Ключевые преимущества",
+      featureLead: "Datacenter IP подходит для пакетных задач, где важны скорость, параллельность и стоимость.",
+      scenarioTitle: "Сценарии",
+      workflowTitle: "Подключение",
+      supportTitle: "Сервисная поддержка",
+      specs: [
+        ["Позиция", "IDC datacenter proxy"],
+        ["Сетевой профиль", "Высокая полоса, низкая задержка, fixed IP, concurrency"],
+        ["Команды", "Сбор данных, мониторинг, server workloads и тестирование"]
+      ],
+      features: [
+        ["Высокая полоса", "Магистральные сети дата-центров поддерживают большие объемы запросов."],
+        ["Большой IP-пул", "Ресурсы можно масштабировать под пики и разделять по задачам."],
+        ["Экономичность", "Ниже стоимость единицы ресурса для масштабного мониторинга и сбора."],
+        ["24/7 эксплуатация", "Операции дата-центра и переключение узлов поддерживают непрерывные задачи."],
+        ["Гибкая авторизация", "Whitelist, логин/пароль, группы и API-операции."]
+      ],
+      scenarios: [
+        "Пакетный сбор открытых новостей, рыночной информации и product data.",
+        "Мониторинг поисковой выдачи, snapshot data и публичных рейтингов.",
+        "Системы сравнения цен, синхронизация открытых market data и анализ отрасли.",
+        "Нагрузочные тесты серверов и проверка скорости из разных регионов."
+      ],
+      workflow: [
+        ["01", "Уточнить concurrency, регион и протокол"],
+        ["02", "Открыть datacenter IP pool и авторизацию"],
+        ["03", "Подключить сбор, мониторинг или тесты"],
+        ["04", "Оптимизировать доступность, задержку и стоимость"]
+      ],
+      support: [
+        ["Планирование емкости", "Оценка ресурса по concurrency, полосе и циклу задач."],
+        ["Групповое управление", "Отдельные IP-пулы и политики для разных команд."],
+        ["Мониторинг", "Запись uptime, задержки и классов исключений."]
+      ],
+      breadcrumb: ['href="./index.html">Главная</a>', 'href="./products.html">Продукты</a>', 'href="./跨境网络服务.html">Кроссбордерные сетевые сервисы</a>', 'aria-current="page">Datacenter IP</span>'],
+      languagePaths: ['href="../idc-ip.html"', 'href="../en/idc-ip.html"', 'href="./idc-ip.html" aria-current="true"']
+    }
+  }[locale];
+
+  for (const marker of [
+    expectations.title,
+    expectations.name,
+    expectations.eyebrow,
+    expectations.lead,
+    expectations.featureTitle,
+    expectations.featureLead,
+    expectations.scenarioTitle,
+    expectations.workflowTitle,
+    expectations.supportTitle,
+    "idc-ip-detail-hero",
+    "idc-ip-specs",
+    "idc-ip-features",
+    "idc-ip-scenarios",
+    "idc-ip-workflow",
+    "idc-ip-support",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Datacenter IP marker for ${relativePath}: ${marker}.`);
+    }
+  }
+
+  for (const [specLabel, specValue] of expectations.specs) {
+    if (!html.includes(specLabel) || !html.includes(specValue)) {
+      errors.push(`Missing Datacenter IP spec for ${relativePath}: ${specLabel}.`);
+    }
+  }
+
+  for (const [featureTitle, featureBody] of expectations.features) {
+    if (!html.includes(featureTitle) || !html.includes(featureBody)) {
+      errors.push(`Missing Datacenter IP feature for ${relativePath}: ${featureTitle}.`);
+    }
+  }
+
+  for (const scenario of expectations.scenarios) {
+    if (!html.includes(scenario)) {
+      errors.push(`Missing Datacenter IP scenario for ${relativePath}: ${scenario}.`);
+    }
+  }
+
+  for (const [stepNumber, stepTitle] of expectations.workflow) {
+    if (!html.includes(`data-idc-ip-step="${stepNumber}"`) || !html.includes(stepTitle)) {
+      errors.push(`Missing Datacenter IP workflow step for ${relativePath}: ${stepNumber} ${stepTitle}.`);
+    }
+  }
+
+  for (const [supportTitle, supportBody] of expectations.support) {
+    if (!html.includes(supportTitle) || !html.includes(supportBody)) {
+      errors.push(`Missing Datacenter IP support item for ${relativePath}: ${supportTitle}.`);
+    }
+  }
+
+  for (const breadcrumbPart of expectations.breadcrumb) {
+    if (!html.includes(breadcrumbPart)) {
+      errors.push(`Datacenter IP breadcrumb missing ${breadcrumbPart} in ${relativePath}.`);
+    }
+  }
+
+  for (const languagePath of expectations.languagePaths) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Datacenter IP language switcher missing ${languagePath} in ${relativePath}.`);
+    }
+  }
+
+  const specCount = (html.match(/data-idc-ip-spec=/g) || []).length;
+  const featureCount = (html.match(/data-idc-ip-feature=/g) || []).length;
+  const scenarioCount = (html.match(/data-idc-ip-scenario=/g) || []).length;
+  const stepCount = (html.match(/data-idc-ip-step=/g) || []).length;
+  const supportCount = (html.match(/data-idc-ip-support=/g) || []).length;
+
+  if (specCount !== 3) {
+    errors.push(`Datacenter IP detail page must render 3 spec rows; found ${specCount}.`);
+  }
+
+  if (featureCount !== 5) {
+    errors.push(`Datacenter IP detail page must render 5 feature cards; found ${featureCount}.`);
+  }
+
+  if (scenarioCount !== 4) {
+    errors.push(`Datacenter IP detail page must render 4 scenario cards; found ${scenarioCount}.`);
+  }
+
+  if (stepCount !== 4) {
+    errors.push(`Datacenter IP detail page must render 4 workflow steps; found ${stepCount}.`);
+  }
+
+  if (supportCount !== 3) {
+    errors.push(`Datacenter IP detail page must render 3 support cards; found ${supportCount}.`);
+  }
+
+  if (/data-product=|seo-prerender/i.test(html)) {
+    errors.push("Datacenter IP detail page must be full static HTML, not prototype dynamic rendering.");
+  }
+
+  if (/static-ip-detail|data-static-ip-|sip\.svg/i.test(html)) {
+    errors.push("Datacenter IP detail page contains Static Residential IP implementation residue.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole)\s+(?:agent|distributor|authorization|authorized)\b|\bonly authorized\b|эксклюзивн|единственн/i.test(html)) {
+    errors.push("Datacenter IP detail page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  if (/节点数量|退款|绝对\s*SLA|node counts?|refund|absolute\s+SLA|количеств[ао]\s+узлов|возврат/i.test(html)) {
+    errors.push("Datacenter IP detail page contains forbidden node count, refund or absolute SLA wording.");
+  }
+
+  return errors;
+}
+
 function validateNetworkServicesPage(html) {
   const errors = [];
 
@@ -2987,11 +3241,15 @@ function validateNetworkServicesPage(html) {
     errors.push("Network services static residential IP block must link to ./static-ip.html with 查看详情.");
   }
 
-  if (/href=["'][^"']*(idc-ip|dynamic-ip)\.html/i.test(html)) {
-    errors.push("Network child service detail links must only connect static-ip.html in this issue.");
+  if (!html.includes('id="service-idc-ip"') || !html.includes('href="./idc-ip.html">查看详情</a>')) {
+    errors.push("Network services Datacenter IP block must link to ./idc-ip.html with 查看详情.");
   }
 
-  for (const anchor of ['href="#idc-ip-detail-pending"', 'href="#dynamic-ip-detail-pending"']) {
+  if (/href=["'][^"']*dynamic-ip\.html/i.test(html)) {
+    errors.push("Network child service detail links must only connect static-ip.html and idc-ip.html in this issue.");
+  }
+
+  for (const anchor of ['href="#dynamic-ip-detail-pending"']) {
     if (!html.includes(anchor)) {
       errors.push(`Network child service missing placeholder detail anchor ${anchor}.`);
     }
@@ -3119,7 +3377,8 @@ function validateProductNavigationDropdown(html, relativePath) {
     "AI-FDE.html",
     "TikTok.html",
     "跨境网络服务.html",
-    "static-ip.html"
+    "static-ip.html",
+    "idc-ip.html"
   ]);
   const basename = relativePath.split("/").pop();
   const shouldMarkProductCurrent = productPages.has(basename);
@@ -3577,6 +3836,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateStaticIpDetailPage(relativePath, html));
   }
 
+  if (relativePath === "en/idc-ip.html") {
+    htmlErrors.push(...validateIdcIpDetailPage(relativePath, html));
+  }
+
   if (relativePath === "en/about.html") {
     htmlErrors.push(...validateEnglishAbout(html));
   }
@@ -3633,6 +3896,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateStaticIpDetailPage(relativePath, html));
   }
 
+  if (relativePath === "ru/idc-ip.html") {
+    htmlErrors.push(...validateIdcIpDetailPage(relativePath, html));
+  }
+
   if (relativePath === "products.html") {
     htmlErrors.push(...validateProductsPage(html));
   }
@@ -3659,6 +3926,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "static-ip.html") {
     htmlErrors.push(...validateStaticIpDetailPage(relativePath, html));
+  }
+
+  if (relativePath === "idc-ip.html") {
+    htmlErrors.push(...validateIdcIpDetailPage(relativePath, html));
   }
 
   if (relativePath === "about.html") {
@@ -3716,7 +3987,8 @@ async function validateIssue50HeroAssetReferences() {
     "yuantu.svg",
     "AI-FDE.svg",
     "tiktok.svg",
-    "sip.svg"
+    "sip.svg",
+    "idc.svg"
   ]);
   const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
   const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));
@@ -3939,6 +4211,7 @@ async function validateIssue60HeroOverlayRemoval() {
     [".network-services-hero", "IP.svg", "var(--hero)"],
     [".agriculture-detail-hero", "nongye.svg", "var(--hero)"],
     [".static-ip-detail-hero", "sip.svg", "var(--hero)"],
+    [".idc-ip-detail-hero", "idc.svg", "var(--hero)"],
     [".network-services-page #network-services-modules", "stacked-waves-haikei.svg", "var(--hero)"],
     [".network-service-module > header", "stacked-waves-haikei.svg", "var(--hero)"]
   ];

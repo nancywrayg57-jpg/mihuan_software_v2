@@ -1,0 +1,557 @@
+{
+  "generatedAt": "2026-07-25T14:39:49.030Z",
+  "baseUrl": "http://127.0.0.1:53687",
+  "results": [
+    {
+      "pagePath": "idc-ip.html",
+      "screenshotName": "idc-ip-zh-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "机房IP | Honey Badger",
+      "h1": "机房 IP",
+      "breadcrumb": "首页\n/\n产品介绍\n/\n跨境网络服务\n/\n机房 IP",
+      "bodyTextLength": 1032,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./idc-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./ru/idc-ip.html",
+          "current": ""
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "en/idc-ip.html",
+      "screenshotName": "idc-ip-en-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Datacenter IP | Honey Badger",
+      "h1": "Datacenter IP",
+      "breadcrumb": "Home\n/\nProducts\n/\nCross-border Network Services\n/\nDatacenter IP",
+      "bodyTextLength": 2763,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "./idc-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/idc-ip.html",
+          "current": ""
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "ru/idc-ip.html",
+      "screenshotName": "idc-ip-ru-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "Datacenter IP | Honey Badger",
+      "h1": "Datacenter IP",
+      "breadcrumb": "Главная\n/\nПродукты\n/\nКроссбордерные сетевые сервисы\n/\nDatacenter IP",
+      "bodyTextLength": 2703,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "../en/idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./idc-ip.html",
+          "current": "true"
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "idc-ip.html",
+      "screenshotName": "",
+      "viewport": {
+        "width": 834,
+        "height": 1112
+      },
+      "status": 200,
+      "title": "机房IP | Honey Badger",
+      "h1": "机房 IP",
+      "breadcrumb": "首页\n/\n产品介绍\n/\n跨境网络服务\n/\n机房 IP",
+      "bodyTextLength": 1009,
+      "scrollWidth": 834,
+      "clientWidth": 834,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./idc-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./ru/idc-ip.html",
+          "current": ""
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "en/idc-ip.html",
+      "screenshotName": "",
+      "viewport": {
+        "width": 834,
+        "height": 1112
+      },
+      "status": 200,
+      "title": "Datacenter IP | Honey Badger",
+      "h1": "Datacenter IP",
+      "breadcrumb": "Home\n/\nProducts\n/\nCross-border Network Services\n/\nDatacenter IP",
+      "bodyTextLength": 2730,
+      "scrollWidth": 834,
+      "clientWidth": 834,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "./idc-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/idc-ip.html",
+          "current": ""
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "ru/idc-ip.html",
+      "screenshotName": "",
+      "viewport": {
+        "width": 834,
+        "height": 1112
+      },
+      "status": 200,
+      "title": "Datacenter IP | Honey Badger",
+      "h1": "Datacenter IP",
+      "breadcrumb": "Главная\n/\nПродукты\n/\nКроссбордерные сетевые сервисы\n/\nDatacenter IP",
+      "bodyTextLength": 2664,
+      "scrollWidth": 834,
+      "clientWidth": 834,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "../en/idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./idc-ip.html",
+          "current": "true"
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "idc-ip.html",
+      "screenshotName": "idc-ip-zh-mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "机房IP | Honey Badger",
+      "h1": "机房 IP",
+      "breadcrumb": "首页\n/\n产品介绍\n/\n跨境网络服务\n/\n机房 IP",
+      "bodyTextLength": 991,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "./idc-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "EN",
+          "href": "./en/idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./ru/idc-ip.html",
+          "current": ""
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "en/idc-ip.html",
+      "screenshotName": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "Datacenter IP | Honey Badger",
+      "h1": "Datacenter IP",
+      "breadcrumb": "Home\n/\nProducts\n/\nCross-border Network Services\n/\nDatacenter IP",
+      "bodyTextLength": 2707,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "./idc-ip.html",
+          "current": "true"
+        },
+        {
+          "text": "RU",
+          "href": "../ru/idc-ip.html",
+          "current": ""
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "ru/idc-ip.html",
+      "screenshotName": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "title": "Datacenter IP | Honey Badger",
+      "h1": "Datacenter IP",
+      "breadcrumb": "Главная\n/\nПродукты\n/\nКроссбордерные сетевые сервисы\n/\nDatacenter IP",
+      "bodyTextLength": 2639,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalOverflow": false,
+      "brokenImages": [],
+      "languageLinks": [
+        {
+          "text": "中文",
+          "href": "../idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "EN",
+          "href": "../en/idc-ip.html",
+          "current": ""
+        },
+        {
+          "text": "RU",
+          "href": "./idc-ip.html",
+          "current": "true"
+        }
+      ],
+      "idcSpecCount": 3,
+      "idcFeatureCount": 5,
+      "idcScenarioCount": 4,
+      "idcStepCount": 4,
+      "idcSupportCount": 3,
+      "idcLinkHref": "",
+      "idcLinkText": "",
+      "dynamicLinkHref": "",
+      "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")",
+      "heroBackgroundColor": "rgb(56, 140, 233)"
+    },
+    {
+      "pagePath": "跨境网络服务.html#service-idc-ip",
+      "screenshotName": "network-idc-ip-link-zh-desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "title": "跨境网络服务 | Honey Badger",
+      "h1": "跨境网络服务",
+      "breadcrumb": "首页\n/\n产品介绍\n/\n跨境网络服务",
+      "idcLinkHref": "./idc-ip.html",
+      "idcLinkText": "查看详情",
+      "staticLinkHref": "./static-ip.html",
+      "dynamicLinkHref": "#dynamic-ip-detail-pending",
+      "hasHorizontalOverflow": false,
+      "brokenImages": []
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "summary": {
+    "baseUrl": "http://127.0.0.1:53687",
+    "pagesChecked": 10,
+    "failedStatuses": [],
+    "pagesWithBrokenImages": [],
+    "pagesWithHorizontalOverflow": [],
+    "idcDetailPagesWithCompleteCounts": [
+      {
+        "pagePath": "idc-ip.html",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "en/idc-ip.html",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "ru/idc-ip.html",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "idc-ip.html",
+        "viewport": {
+          "width": 834,
+          "height": 1112
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "en/idc-ip.html",
+        "viewport": {
+          "width": 834,
+          "height": 1112
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "ru/idc-ip.html",
+        "viewport": {
+          "width": 834,
+          "height": 1112
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "idc-ip.html",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "en/idc-ip.html",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      },
+      {
+        "pagePath": "ru/idc-ip.html",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "specs": 3,
+        "features": 5,
+        "scenarios": 4,
+        "steps": 4,
+        "support": 3,
+        "heroBackground": "url(\"http://127.0.0.1:53687/assets/img/idc.svg\")"
+      }
+    ],
+    "mergedZhIdcLinkHref": "./idc-ip.html",
+    "mergedZhIdcLinkText": "查看详情",
+    "mergedZhStaticLinkHref": "./static-ip.html",
+    "mergedZhDynamicLinkHref": "#dynamic-ip-detail-pending",
+    "clickThrough": {
+      "path": "idc-ip.html",
+      "h1": "机房 IP"
+    },
+    "overallPass": true
+  }
+}
