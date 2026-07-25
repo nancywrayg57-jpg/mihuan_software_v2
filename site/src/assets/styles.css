@@ -3160,6 +3160,134 @@ button:focus-visible,
   }
 }
 
+/* Issue #84: product detail hero panels use the existing products dashboard style. */
+.detail-hero-panel {
+  width: 100%;
+  max-width: 440px;
+  justify-self: center;
+}
+
+.detail-product-dashboard {
+  width: 100%;
+  padding: 14px;
+}
+
+.detail-dashboard-flow span {
+  min-height: 0;
+  grid-template-columns: 28px minmax(0, 1fr);
+  padding: 6px;
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.detail-product-dashboard .dashboard-bar {
+  padding: 8px;
+}
+
+.detail-dashboard-body {
+  gap: 8px;
+  grid-template-columns: 1fr;
+  padding: 12px;
+}
+
+.detail-dashboard-flow,
+.detail-dashboard-metrics {
+  gap: 6px;
+}
+
+.detail-dashboard-flow {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-dashboard-metrics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-dashboard-flow strong {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  font-size: 10px;
+}
+
+.detail-dashboard-metrics {
+  padding: 10px;
+}
+
+.detail-dashboard-metrics i {
+  height: 6px;
+}
+
+.agriculture-detail-page .breadcrumb .container,
+.yuantu-detail-page .breadcrumb .container,
+.aifde-detail-page .breadcrumb .container,
+.tiktok-detail-page .breadcrumb .container,
+.static-ip-detail-page .breadcrumb .container,
+.idc-ip-detail-page .breadcrumb .container,
+.dynamic-ip-detail-page .breadcrumb .container {
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+@media (min-width: 1101px) {
+  .agriculture-detail-page .products-hero-grid,
+  .yuantu-detail-page .products-hero-grid,
+  .aifde-detail-page .products-hero-grid,
+  .tiktok-detail-page .products-hero-grid,
+  .static-ip-detail-page .products-hero-grid,
+  .idc-ip-detail-page .products-hero-grid,
+  .dynamic-ip-detail-page .products-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
+    gap: 28px;
+  }
+
+  .agriculture-detail-hero,
+  .yuantu-detail-hero,
+  .aifde-detail-hero,
+  .tiktok-detail-hero,
+  .static-ip-detail-hero,
+  .idc-ip-detail-hero,
+  .dynamic-ip-detail-hero {
+    padding: 70px 0;
+  }
+
+  .agriculture-detail-page .products-hero-copy,
+  .yuantu-detail-page .products-hero-copy,
+  .aifde-detail-page .products-hero-copy,
+  .tiktok-detail-page .products-hero-copy,
+  .static-ip-detail-page .products-hero-copy,
+  .idc-ip-detail-page .products-hero-copy,
+  .dynamic-ip-detail-page .products-hero-copy {
+    max-width: none;
+  }
+
+  .detail-hero-panel {
+    justify-self: end;
+  }
+
+  .ru-agriculture-detail-page .products-hero-grid,
+  .ru-yuantu-detail-page .products-hero-grid,
+  .ru-aifde-detail-page .products-hero-grid,
+  .ru-tiktok-detail-page .products-hero-grid,
+  .ru-static-ip-detail-page .products-hero-grid,
+  .ru-idc-ip-detail-page .products-hero-grid,
+  .ru-dynamic-ip-detail-page .products-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.33fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .detail-hero-panel {
+    max-width: none;
+  }
+
+  .detail-dashboard-flow,
+  .detail-dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
 .dynamic-ip-spec-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(360px, 0.9fr);
