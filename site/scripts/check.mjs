@@ -7,9 +7,9 @@ const __dirname = dirname(__filename);
 const projectRoot = resolve(__dirname, "..");
 const distDir = resolve(projectRoot, "dist");
 const indexPath = resolve(distDir, "index.html");
-const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
+const requiredHtmlPaths = ["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "跨境网络服务.html", "about.html", "news.html", "careers.html", "en/index.html", "en/products.html", "en/Agriculture.html", "en/mihuan_yuantu.html", "en/跨境网络服务.html", "en/about.html", "en/news.html", "en/careers.html", "ru/index.html", "ru/products.html", "ru/Agriculture.html", "ru/mihuan_yuantu.html", "ru/跨境网络服务.html", "ru/about.html", "ru/news.html", "ru/careers.html"];
 const homeHtmlPaths = new Set(["index.html", "en/index.html", "ru/index.html"]);
-const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
+const zhHtmlPaths = new Set(["index.html", "products.html", "Agriculture.html", "mihuan_yuantu.html", "跨境网络服务.html", "about.html", "news.html", "careers.html"]);
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -558,7 +558,7 @@ function validateEnglishProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
-  if (pendingProductLinks.length !== 3) {
+  if (pendingProductLinks.length !== 2) {
     errors.push(`English products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -566,17 +566,21 @@ function validateEnglishProducts(html) {
     errors.push("English products page agriculture card must link to ./Agriculture.html.");
   }
 
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']en-product-image["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/mihuan_yuantu\.html["']>View details<\/a>/.test(html)) {
+    errors.push("English products page Original Image card must link to ./mihuan_yuantu.html.");
+  }
+
   if (!html.includes('href="./跨境网络服务.html">View merged page</a>')) {
     errors.push("English products page NET card must link to the merged English network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
     errors.push("English products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -1807,7 +1811,7 @@ function validateRussianProducts(html) {
   }
 
   const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
-  if (pendingProductLinks.length !== 3) {
+  if (pendingProductLinks.length !== 2) {
     errors.push(`Russian products page regular entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
@@ -1815,17 +1819,21 @@ function validateRussianProducts(html) {
     errors.push("Russian products page agriculture card must link to ./Agriculture.html.");
   }
 
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']ru-product-image["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/mihuan_yuantu\.html["']>Подробнее<\/a>/.test(html)) {
+    errors.push("Russian products page Original Image card must link to ./mihuan_yuantu.html.");
+  }
+
   if (!html.includes('href="./跨境网络服务.html">Открыть объединенную страницу</a>')) {
     errors.push("Russian products page NET card must link to the merged Russian network services page.");
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
   }
 
-  if (/href=["'][^"']*(mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+  if (/href=["'][^"']*(AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
     errors.push("Russian products page must not link to nonexistent product or network-service detail pages.");
   }
 
@@ -2045,7 +2053,16 @@ function validateProductsPage(html) {
     errors.push("Products page agriculture card must link to ./Agriculture.html.");
   }
 
-  if (/href=["'][^"']*(mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
+  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#details-pending["']>详情页待接入<\/a>/g) || [];
+  if (pendingProductLinks.length !== 2) {
+    errors.push(`Products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  }
+
+  if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']product-image["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/mihuan_yuantu\.html["']>查看详情<\/a>/.test(html)) {
+    errors.push("Products page Original Image card must link to ./mihuan_yuantu.html.");
+  }
+
+  if (/href=["'][^"']*(AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
     errors.push("Products page must keep detail and network-service links as same-page placeholder anchors.");
   }
 
@@ -2178,6 +2195,128 @@ function validateAgricultureDetailPage(relativePath, html) {
 
   if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole|only authorized)\b|эксклюзивн|единственн/i.test(html)) {
     errors.push("Agriculture detail page contains over-scoped ZennoLab relationship wording.");
+  }
+
+  return errors;
+}
+
+function validateYuantuDetailPage(relativePath, html) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const expectations = {
+    zh: {
+      title: "蜜獾原图",
+      subtitle: "AI 驱动的跨境商品图原创化批量处理工具",
+      lead: "专为跨境电商卖家打造的图片原创化解决方案。基于深度生成模型，在保留商品核心特征的前提下智能重构，有效规避平台查重与侵权风险。",
+      functionsTitle: "六大核心功能",
+      valueTitle: "客户价值",
+      features: [
+        ["智能原创重构", "AI 深度生成，原创度检测自动校验通过率"],
+        ["批量处理引擎", "百张级批量上传，单张秒级完成"],
+        ["平台规格适配", "内置 Amazon、TikTok Shop、eBay 等平台尺寸模板"],
+        ["细节增强优化", "商品轮廓锐化、文字清晰化、色彩校正"],
+        ["水印与合规处理", "自动移除水印、敏感元素检测替换"],
+        ["API 与工作流集成", "开放 RESTful API，对接 ERP / 上架系统"]
+      ],
+      value: "上新效率提升 10 倍，美工成本下降 70%，原创检测通过率 &gt; 95%",
+      breadcrumb: ['href="./index.html">首页</a>', 'href="./products.html">产品介绍</a>', 'aria-current="page">蜜獾原图</span>'],
+      languagePaths: ['href="./mihuan_yuantu.html" aria-current="true"', 'href="./en/mihuan_yuantu.html"', 'href="./ru/mihuan_yuantu.html"'],
+      forbiddenScenario: "适用场景"
+    },
+    en: {
+      title: "Honey Badger Original Image",
+      subtitle: "AI-Driven Cross-Border Product Image Originality Batch Processing Tool",
+      lead: "An image originality solution built exclusively for cross-border e-commerce sellers. Based on deep generative models, it performs intelligent reconstruction while retaining core product features, effectively avoiding platform duplicate checks and infringement risks.",
+      functionsTitle: "Six Core Functions",
+      valueTitle: "Customer Value",
+      features: [
+        ["Intelligent Original Reconstruction", "AI deep generation, originality detection automatically verifies pass rate"],
+        ["Batch Processing Engine", "Hundreds of images batch upload, single image completed in seconds"],
+        ["Platform Specification Adaptation", "Built-in size templates for Amazon, TikTok Shop, eBay and other platforms"],
+        ["Detail Enhancement &amp; Optimization", "Product contour sharpening, text clarification, color correction"],
+        ["Watermark &amp; Compliance Processing", "Automatic watermark removal, sensitive element detection and replacement"],
+        ["API &amp; Workflow Integration", "Open RESTful API, connects with ERP / listing systems"]
+      ],
+      value: "10x faster listing efficiency, 70% lower design costs, &gt;95% originality detection pass rate",
+      breadcrumb: ['href="./index.html">Home</a>', 'href="./products.html">Products</a>', 'aria-current="page">Honey Badger Original Image</span>'],
+      languagePaths: ['href="../mihuan_yuantu.html"', 'href="./mihuan_yuantu.html" aria-current="true"', 'href="../ru/mihuan_yuantu.html"'],
+      forbiddenScenario: "Applicable Scenarios"
+    },
+    ru: {
+      title: "Оригинальные изображения Honey Badger",
+      subtitle: "ИИ-инструмент для пакетной обработки и оригинализации кроссбордерных товарных фото",
+      lead: "Решение для оригинализации изображений, созданное специально для продавцов кроссбордерной электронной коммерции. На основе моделей глубокой генерации выполняет интеллектуальную реконструкцию с сохранением ключевых характеристик товара, эффективно избегая проверок на дубликаты и рисков нарушения авторских прав на платформах.",
+      functionsTitle: "Шесть основных функций",
+      valueTitle: "Ценность для клиента",
+      features: [
+        ["Интеллектуальная оригинальная реконструкция", "Глубокая генерация ИИ, автоматическая проверка степени оригинальности и подтверждение прохождения"],
+        ["Движок пакетной обработки", "Пакетная загрузка сотен изображений, обработка одного фото за секунды"],
+        ["Адаптация под спецификации платформ", "Встроенные шаблоны размеров для Amazon, TikTok Shop, eBay и других платформ"],
+        ["Улучшение и оптимизация деталей", "Заточка контуров товара, улучшение четкости текста, цветокоррекция"],
+        ["Обработка водяных знаков и соответствие требованиям", "Автоматическое удаление водяных знаков, обнаружение и замена чувствительных элементов"],
+        ["Интеграция API и рабочих процессов", "Открытый RESTful API, интеграция с ERP / системами размещения товаров"]
+      ],
+      value: "Эффективность размещения новых товаров выше в 10 раз, затраты на дизайн ниже на 70%, доля прохождения проверки оригинальности &gt; 95%",
+      breadcrumb: ['href="./index.html">Главная</a>', 'href="./products.html">Продукты</a>', 'aria-current="page">Оригинальные изображения Honey Badger</span>'],
+      languagePaths: ['href="../mihuan_yuantu.html"', 'href="../en/mihuan_yuantu.html"', 'href="./mihuan_yuantu.html" aria-current="true"'],
+      forbiddenScenario: "Применимые сценарии"
+    }
+  }[locale];
+
+  for (const marker of [
+    expectations.title,
+    expectations.subtitle,
+    expectations.lead,
+    expectations.functionsTitle,
+    expectations.valueTitle,
+    expectations.value,
+    "yuantu-detail-hero",
+    "yuantu-core-functions",
+    "yuantu-customer-value",
+    "开发骨架，非正式内容"
+  ]) {
+    if (!html.includes(marker)) {
+      errors.push(`Missing Original Image detail marker for ${relativePath}: ${marker}.`);
+    }
+  }
+
+  for (const [featureTitle, featureBody] of expectations.features) {
+    if (!html.includes(featureTitle) || !html.includes(featureBody)) {
+      errors.push(`Missing Original Image SSOT feature for ${relativePath}: ${featureTitle}.`);
+    }
+  }
+
+  for (const breadcrumbPart of expectations.breadcrumb) {
+    if (!html.includes(breadcrumbPart)) {
+      errors.push(`Original Image breadcrumb missing ${breadcrumbPart} in ${relativePath}.`);
+    }
+  }
+
+  for (const languagePath of expectations.languagePaths) {
+    if (!html.includes(languagePath)) {
+      errors.push(`Original Image language switcher missing ${languagePath} in ${relativePath}.`);
+    }
+  }
+
+  const featureCount = (html.match(/data-yuantu-feature=/g) || []).length;
+  if (featureCount !== 6) {
+    errors.push(`Original Image detail page must render 6 feature cards; found ${featureCount}.`);
+  }
+
+  if (html.includes(expectations.forbiddenScenario) || /data-yuantu-scenario|agriculture-scenarios/i.test(html)) {
+    errors.push("Original Image detail page must not invent an applicable-scenarios section.");
+  }
+
+  if (/data-product=|seo-prerender/i.test(html)) {
+    errors.push("Original Image detail page must be full static HTML, not prototype dynamic rendering.");
+  }
+
+  if (/唯一代理|独家授权|官方总代理|官方唯一|\b(exclusive|sole|only authorized)\b|эксклюзивн|единственн/i.test(html)) {
+    errors.push("Original Image detail page contains over-scoped ZennoLab relationship wording.");
   }
 
   return errors;
@@ -2696,6 +2835,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateAgricultureDetailPage(relativePath, html));
   }
 
+  if (relativePath === "en/mihuan_yuantu.html") {
+    htmlErrors.push(...validateYuantuDetailPage(relativePath, html));
+  }
+
   if (relativePath === "en/跨境网络服务.html") {
     htmlErrors.push(...validateEnglishNetworkServices(html));
   }
@@ -2724,6 +2867,10 @@ async function validateBuiltHtml(relativePath) {
     htmlErrors.push(...validateAgricultureDetailPage(relativePath, html));
   }
 
+  if (relativePath === "ru/mihuan_yuantu.html") {
+    htmlErrors.push(...validateYuantuDetailPage(relativePath, html));
+  }
+
   if (relativePath === "ru/about.html") {
     htmlErrors.push(...validateRussianAbout(html));
   }
@@ -2746,6 +2893,10 @@ async function validateBuiltHtml(relativePath) {
 
   if (relativePath === "Agriculture.html") {
     htmlErrors.push(...validateAgricultureDetailPage(relativePath, html));
+  }
+
+  if (relativePath === "mihuan_yuantu.html") {
+    htmlErrors.push(...validateYuantuDetailPage(relativePath, html));
   }
 
   if (relativePath === "跨境网络服务.html") {
@@ -2803,7 +2954,8 @@ async function validateIssue50HeroAssetReferences() {
     "waves-haikei.svg",
     "waves-haikei-2.svg",
     "IP.svg",
-    "nongye.svg"
+    "nongye.svg",
+    "yuantu.svg"
   ]);
   const cssUrls = [...css.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1]);
   const heroAssetRefs = cssUrls.filter((url) => url.startsWith("./img/"));
