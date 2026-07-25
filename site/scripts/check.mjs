@@ -44,6 +44,111 @@ const issue82DetailHeroClasses = [
   ".idc-ip-detail-hero",
   ".dynamic-ip-detail-hero"
 ];
+const issue84PanelLocales = [
+  { key: "zh", prefix: "" },
+  { key: "en", prefix: "en/" },
+  { key: "ru", prefix: "ru/" }
+];
+const issue84PanelTitles = {
+  zh: {
+    functions6: "六大核心功能",
+    modules4: "四大核心模块",
+    phases4: "四阶段 12 周陪跑内容",
+    network3: "三类网络服务"
+  },
+  en: {
+    functions6: "Six Core Functions",
+    modules4: "Four Core Modules",
+    phases4: "Four-Phase 12-Week Coaching Content",
+    network3: "Three Network Services"
+  },
+  ru: {
+    functions6: "Шесть основных функций",
+    modules4: "Четыре основных модуля",
+    phases4: "Содержание 12-недельного сопровождения в четыре этапа",
+    network3: "Три сетевых сервиса"
+  }
+};
+const issue84PanelProducts = {
+  agriculture: {
+    file: "Agriculture.html",
+    heroGridSelector: ".agriculture-detail-page .products-hero-grid",
+    type: "functions6",
+    items: {
+      zh: ["物联网数据采集", "AI 智能决策", "生产过程管理", "质量溯源体系", "仓储与供应链", "可视化数据大屏"],
+      en: ["IoT Data Collection", "AI Intelligent Decision-Making", "Production Process Management", "Quality Traceability System", "Warehousing & Supply Chain", "Visual Data Dashboard"],
+      ru: ["Сбор данных Интернета вещей", "Интеллектуальные решения ИИ", "Управление производственным процессом", "Система прослеживаемости качества", "Склад и цепочка поставок", "Визуальная панель данных"]
+    }
+  },
+  yuantu: {
+    file: "mihuan_yuantu.html",
+    heroGridSelector: ".yuantu-detail-page .products-hero-grid",
+    type: "functions6",
+    items: {
+      zh: ["智能原创重构", "批量处理引擎", "平台规格适配", "细节增强优化", "水印与合规处理", "API 与工作流集成"],
+      en: ["Intelligent Original Reconstruction", "Batch Processing Engine", "Platform Specification Adaptation", "Detail Enhancement & Optimization", "Watermark & Compliance Processing", "API & Workflow Integration"],
+      ru: ["Интеллектуальная оригинальная реконструкция", "Движок пакетной обработки", "Адаптация под спецификации платформ", "Улучшение и оптимизация деталей", "Обработка водяных знаков и соответствие требованиям", "Интеграция API и рабочих процессов"]
+    }
+  },
+  aifde: {
+    file: "AI-FDE.html",
+    heroGridSelector: ".aifde-detail-page .products-hero-grid",
+    type: "modules4",
+    items: {
+      zh: ["AI 开发思维与工具链", "全栈技术栈实战", "AI 原生应用开发", "商用项目交付实战"],
+      en: ["AI Development Mindset & Toolchain", "Full-Stack Tech Stack Practice", "AI-Native Application Development", "Commercial Project Delivery Practice"],
+      ru: ["Мышление разработки ИИ и инструментарий", "Практика полностековых технологий", "Разработка ИИ-оригинальных приложений", "Практика поставки коммерческих проектов"]
+    }
+  },
+  tiktok: {
+    file: "TikTok.html",
+    heroGridSelector: ".tiktok-detail-page .products-hero-grid",
+    type: "phases4",
+    items: {
+      zh: ["第 1-2 周 账号基建与定位", "第 3-6 周 内容生产与流量启动", "第 7-10 周 引流矩阵与私域沉淀", "第 11-12 周 转化变现与复购体系"],
+      en: ["Weeks 1-2 Account Infrastructure & Positioning", "Weeks 3-6 Content Production & Traffic Launch", "Weeks 7-10 Traffic Matrix & Private Domain Accumulation", "Weeks 11-12 Conversion Monetization & Repurchase System"],
+      ru: ["Недели 1-2. Инфраструктура и позиционирование аккаунтов", "Недели 3-6. Производство контента и запуск трафика", "Недели 7-10. Матрица привлечения трафика и накопление приватной зоны", "Недели 11-12. Монетизация конверсии и система повторных покупок"]
+    }
+  },
+  "static-ip": {
+    file: "static-ip.html",
+    heroGridSelector: ".static-ip-detail-page .products-hero-grid",
+    type: "network3",
+    items: {
+      zh: ["静态住宅 IP", "面向长期账号运营、店铺登录、广告账户管理等稳定身份场景", "场景分层", "接入灵活", "运维可控"],
+      en: ["Static Residential IP", "For long-term account operations, store login, ad account management and other stable identity scenarios", "Scenario-Based Matching", "Flexible Integration", "Controlled Operations"],
+      ru: ["Статический домашний IP", "Для долгосрочной работы аккаунтов, входа в магазины, управления рекламными аккаунтами и других сценариев стабильной идентичности", "Подбор по сценариям", "Гибкая интеграция", "Контролируемая эксплуатация"]
+    }
+  },
+  "idc-ip": {
+    file: "idc-ip.html",
+    heroGridSelector: ".idc-ip-detail-page .products-hero-grid",
+    type: "network3",
+    items: {
+      zh: ["机房 IP", "面向批量采集、监测、测试、服务器业务出口等高并发场景", "场景分层", "接入灵活", "运维可控"],
+      en: ["Datacenter IP", "For batch collection, monitoring, testing and server workload exits", "Scenario-Based Matching", "Flexible Integration", "Controlled Operations"],
+      ru: ["Датацентровый IP", "Для пакетного сбора, мониторинга, тестирования и серверных выходов", "Подбор по сценариям", "Гибкая интеграция", "Контролируемая эксплуатация"]
+    }
+  },
+  "dynamic-ip": {
+    file: "dynamic-ip.html",
+    heroGridSelector: ".dynamic-ip-detail-page .products-hero-grid",
+    type: "network3",
+    items: {
+      zh: ["动态 IP", "面向短周期调研、广告验证、公开数据抓取和高频多会话任务", "场景分层", "接入灵活", "运维可控"],
+      en: ["Dynamic IP", "For short-cycle research, ad verification, public data collection and high-frequency multi-session tasks", "Scenario-Based Matching", "Flexible Integration", "Controlled Operations"],
+      ru: ["Динамический IP", "Для краткосрочных исследований, проверки рекламы, сбора публичных данных и высокочастотных многосессионных задач", "Подбор по сценариям", "Гибкая интеграция", "Контролируемая эксплуатация"]
+    }
+  }
+};
+const issue84DetailPanelConfigs = Object.entries(issue84PanelProducts).flatMap(([productKey, productConfig]) => issue84PanelLocales.map((locale) => ({
+  productKey,
+  relativePath: `${locale.prefix}${productConfig.file}`,
+  heroGridSelector: productConfig.heroGridSelector,
+  title: issue84PanelTitles[locale.key][productConfig.type],
+  items: productConfig.items[locale.key]
+})));
+const issue84DetailPanelPathMap = new Map(issue84DetailPanelConfigs.map((config) => [config.relativePath, config]));
 const productionOrigin = "https://www.honeybadgersoft.com";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
@@ -3471,6 +3576,65 @@ function validateIssue82DetailPageSoftRemoval(relativePath, html) {
   return errors;
 }
 
+function escapeIssue84Html(value) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function validateIssue84DetailHeroPanel(relativePath, html) {
+  const errors = [];
+  const config = issue84DetailPanelPathMap.get(relativePath);
+
+  if (!config) {
+    return errors;
+  }
+
+  const panelPattern = new RegExp(`<figure class="products-visual detail-hero-panel" aria-hidden="true" data-issue84-panel="${config.productKey}">[\\s\\S]*?<\\/figure>`);
+  const panelMatch = html.match(panelPattern);
+
+  if (!panelMatch) {
+    errors.push(`Issue #84 detail hero panel missing for ${relativePath}.`);
+    return errors;
+  }
+
+  const panelHtml = panelMatch[0];
+
+  for (const marker of [
+    "product-dashboard detail-product-dashboard",
+    "dashboard-bar",
+    "dashboard-body detail-dashboard-body",
+    "dashboard-flow detail-dashboard-flow",
+    "dashboard-metrics detail-dashboard-metrics"
+  ]) {
+    if (!panelHtml.includes(marker)) {
+      errors.push(`Issue #84 panel marker missing in ${relativePath}: ${marker}.`);
+    }
+  }
+
+  const itemCount = (panelHtml.match(/data-issue84-panel-item=/g) || []).length;
+
+  if (itemCount !== config.items.length) {
+    errors.push(`Issue #84 panel item count mismatch in ${relativePath}: expected ${config.items.length}, found ${itemCount}.`);
+  }
+
+  config.items.forEach((item, index) => {
+    const number = String(index + 1).padStart(2, "0");
+
+    if (!panelHtml.includes(`data-issue84-panel-item="${number}"`) || !panelHtml.includes(escapeIssue84Html(item))) {
+      errors.push(`Issue #84 panel missing SSOT item ${number} in ${relativePath}: ${item}.`);
+    }
+  });
+
+  if (/\bproduct-dashboard\b/.test(html.replace(panelHtml, ""))) {
+    errors.push(`Issue #84 detail page should contain exactly one hero product dashboard panel in ${relativePath}.`);
+  }
+
+  return errors;
+}
+
 function validateNetworkServicesPage(html) {
   const errors = [];
 
@@ -4067,6 +4231,7 @@ async function validateBuiltHtml(relativePath) {
 
   htmlErrors.push(...validateProductNavigationDropdown(html, relativePath));
   htmlErrors.push(...validateIssue82DetailPageSoftRemoval(relativePath, html));
+  htmlErrors.push(...validateIssue84DetailHeroPanel(relativePath, html));
 
   if (homeHtmlPaths.has(relativePath) && /class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
     htmlErrors.push("Home pages must not render breadcrumb markup.");
@@ -4535,6 +4700,34 @@ async function validateIssue82DetailHeroAlignment() {
   console.log(`Checked Issue #82 detail hero min-height rules for ${issue82DetailHeroClasses.length} hero classes.`);
 }
 
+async function validateIssue84DetailHeroPanelStyles() {
+  const stylesPath = resolve(distDir, "assets", "styles.css");
+  const css = await readFile(stylesPath, "utf8");
+
+  for (const selector of new Set(issue84DetailPanelConfigs.map((config) => config.heroGridSelector))) {
+    const blocks = findCssBlocks(css, selector);
+
+    if (!cssBlockHas(blocks, /grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(320px,\s*0\.42fr\)\s*;/)) {
+      throw new Error(`Issue #84 ${selector} must restore the desktop detail hero two-column grid.`);
+    }
+  }
+
+  for (const selector of [
+    ".detail-hero-panel",
+    ".detail-product-dashboard",
+    ".detail-dashboard-flow span",
+    ".detail-dashboard-body"
+  ]) {
+    const blocks = findCssBlocks(css, selector);
+
+    if (blocks.length === 0) {
+      throw new Error(`Issue #84 missing detail hero panel style for ${selector}.`);
+    }
+  }
+
+  console.log(`Checked Issue #84 detail hero panel markup for ${issue84DetailPanelConfigs.length} page(s).`);
+}
+
 async function validateIssue60HeroOverlayRemoval() {
   const stylesPath = resolve(distDir, "assets", "styles.css");
   const css = await readFile(stylesPath, "utf8");
@@ -4668,3 +4861,4 @@ await validateIssue60HeroOverlayRemoval();
 await validateBrandLogoOutput();
 await validateIssue62HeroVisualFrame();
 await validateIssue82DetailHeroAlignment();
+await validateIssue84DetailHeroPanelStyles();
