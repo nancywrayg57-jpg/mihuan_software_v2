@@ -4572,17 +4572,18 @@ async function validateSitemapAndRobots() {
     throw new Error("robots.txt must contain User-agent: *.");
   }
 
-  if (!/^Allow:\s*\/\s*$/mi.test(robots)) {
-    throw new Error("robots.txt must contain Allow: /.");
+  if (!/^Disallow:\s*\/\s*$/mi.test(robots)) {
+    throw new Error("robots.txt must contain Disallow: /.");
   }
 
-  if (!/^Sitemap:\s*https:\/\/www\.honeybadgersoft\.com\/sitemap\.xml\s*$/mi.test(robots)) {
-    throw new Error("robots.txt must point to https://www.honeybadgersoft.com/sitemap.xml.");
+  const allowLines = robots.split(/\r?\n/).filter((line) => /^Allow:/i.test(line.trim()));
+  if (allowLines.length > 0) {
+    throw new Error(`robots.txt must not contain Allow directives during the noindex period: ${allowLines.join(", ")}`);
   }
 
-  const disallowLines = robots.split(/\r?\n/).filter((line) => /^Disallow:/i.test(line.trim()) && line.trim() !== "Disallow:");
-  if (disallowLines.length > 0) {
-    throw new Error(`robots.txt must not disallow core paths: ${disallowLines.join(", ")}`);
+  const sitemapLines = robots.split(/\r?\n/).filter((line) => /^Sitemap:/i.test(line.trim()));
+  if (sitemapLines.length > 0) {
+    throw new Error(`robots.txt must not contain Sitemap directives during the noindex period: ${sitemapLines.join(", ")}`);
   }
 
   if (/zennolabchina|48151650|marketing@honeybadgersoft\.com|dingtalk|钉钉/i.test(robots)) {
@@ -4590,7 +4591,7 @@ async function validateSitemapAndRobots() {
   }
 
   console.log(`Checked sitemap.xml with ${sitemapLocs.length} canonical loc entry(s).`);
-  console.log("Checked robots.txt allow-all and sitemap directive.");
+  console.log("Checked robots.txt noindex directive without Allow or Sitemap directives.");
 }
 
 async function validateFaviconOutput() {
