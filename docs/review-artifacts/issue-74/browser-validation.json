@@ -1,0 +1,293 @@
+{
+  "generatedAt": "2026-07-25T12:23:54.986Z",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "source": "site/dist",
+  "screenshotCaptureMode": "element section screenshot; fixed header, floating support and skip-link hidden only during screenshot capture to avoid obscuring section evidence",
+  "screenshots": [
+    {
+      "fileName": "home-products-zh-desktop.png",
+      "relativePath": "index.html",
+      "selector": "#home-products",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "captureMode": "element-section-screenshot-fixed-overlays-hidden",
+      "boundingBox": {
+        "x": 0,
+        "y": -71.84375,
+        "width": 1440,
+        "height": 1043.53125
+      }
+    },
+    {
+      "fileName": "home-products-en-desktop.png",
+      "relativePath": "en/index.html",
+      "selector": "#en-products",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "captureMode": "element-section-screenshot-fixed-overlays-hidden",
+      "boundingBox": {
+        "x": 0,
+        "y": -87.78125,
+        "width": 1440,
+        "height": 1075.03125
+      }
+    },
+    {
+      "fileName": "home-products-ru-desktop.png",
+      "relativePath": "ru/index.html",
+      "selector": "#ru-products",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "captureMode": "element-section-screenshot-fixed-overlays-hidden",
+      "boundingBox": {
+        "x": 0,
+        "y": -103.890625,
+        "width": 1440,
+        "height": 1106.890625
+      }
+    },
+    {
+      "fileName": "products-overview-zh-desktop.png",
+      "relativePath": "products.html",
+      "selector": "#product-overview",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "captureMode": "element-section-screenshot-fixed-overlays-hidden",
+      "boundingBox": {
+        "x": 0,
+        "y": -0.3125,
+        "width": 1440,
+        "height": 1194.828125
+      }
+    },
+    {
+      "fileName": "home-products-zh-mobile.png",
+      "relativePath": "index.html",
+      "selector": "#home-products",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "captureMode": "element-section-screenshot-fixed-overlays-hidden",
+      "boundingBox": {
+        "x": 0,
+        "y": -595.125,
+        "width": 390,
+        "height": 2034.90625
+      }
+    }
+  ],
+  "home": {
+    "zh": {
+      "locale": "zh",
+      "sectionFound": true,
+      "leadExpected": "围绕智慧农业、跨境电商图片原创化、AI 开发培训、海外社媒私域增长和跨境网络服务，建立清晰的产品说明与咨询入口。",
+      "leadActual": "围绕智慧农业、跨境电商图片原创化、AI 开发培训、海外社媒私域增长和跨境网络服务，建立清晰的产品说明与咨询入口。",
+      "leadPass": true,
+      "productCardCount": 5,
+      "removedPendingIdAbsent": true,
+      "removedProductPendingTextAbsent": true,
+      "checks": [
+        {
+          "id": "product-agriculture",
+          "expectedHref": "./Agriculture.html",
+          "actualHref": "./Agriculture.html",
+          "expectedText": "查看详情",
+          "actualText": "查看详情",
+          "pass": true
+        },
+        {
+          "id": "product-image",
+          "expectedHref": "./mihuan_yuantu.html",
+          "actualHref": "./mihuan_yuantu.html",
+          "expectedText": "查看详情",
+          "actualText": "查看详情",
+          "pass": true
+        },
+        {
+          "id": "product-ai-fde",
+          "expectedHref": "./AI-FDE.html",
+          "actualHref": "./AI-FDE.html",
+          "expectedText": "查看详情",
+          "actualText": "查看详情",
+          "pass": true
+        },
+        {
+          "id": "product-social",
+          "expectedHref": "./TikTok.html",
+          "actualHref": "./TikTok.html",
+          "expectedText": "查看详情",
+          "actualText": "查看详情",
+          "pass": true
+        },
+        {
+          "id": "product-network",
+          "expectedHref": "./跨境网络服务.html",
+          "actualHref": "./跨境网络服务.html",
+          "expectedText": "查看详情",
+          "actualText": "查看详情",
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "en": {
+      "locale": "en",
+      "sectionFound": true,
+      "leadExpected": "Establish product descriptions and inquiry channels around smart agriculture, cross-border e-commerce, AI development training, overseas social private domain growth and cross-border network services.",
+      "leadActual": "Establish product descriptions and inquiry channels around smart agriculture, cross-border e-commerce, AI development training, overseas social private domain growth and cross-border network services.",
+      "leadPass": true,
+      "productCardCount": 5,
+      "removedPendingIdAbsent": true,
+      "removedProductPendingTextAbsent": true,
+      "checks": [
+        {
+          "id": "en-product-agriculture",
+          "expectedHref": "./Agriculture.html",
+          "actualHref": "./Agriculture.html",
+          "expectedText": "View details",
+          "actualText": "View details",
+          "pass": true
+        },
+        {
+          "id": "en-product-image",
+          "expectedHref": "./mihuan_yuantu.html",
+          "actualHref": "./mihuan_yuantu.html",
+          "expectedText": "View details",
+          "actualText": "View details",
+          "pass": true
+        },
+        {
+          "id": "en-product-ai-fde",
+          "expectedHref": "./AI-FDE.html",
+          "actualHref": "./AI-FDE.html",
+          "expectedText": "View details",
+          "actualText": "View details",
+          "pass": true
+        },
+        {
+          "id": "en-product-social",
+          "expectedHref": "./TikTok.html",
+          "actualHref": "./TikTok.html",
+          "expectedText": "View details",
+          "actualText": "View details",
+          "pass": true
+        },
+        {
+          "id": "en-product-network",
+          "expectedHref": "./跨境网络服务.html",
+          "actualHref": "./跨境网络服务.html",
+          "expectedText": "View details",
+          "actualText": "View details",
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    "ru": {
+      "locale": "ru",
+      "sectionFound": true,
+      "leadExpected": "Создание описаний продуктов и каналов консультаций вокруг умного сельского хозяйства, кроссбордерной электронной коммерции, обучения разработке ИИ, роста приватной зоны в зарубежных соцсетях и кроссбордерных сетевых сервисов.",
+      "leadActual": "Создание описаний продуктов и каналов консультаций вокруг умного сельского хозяйства, кроссбордерной электронной коммерции, обучения разработке ИИ, роста приватной зоны в зарубежных соцсетях и кроссбордерных сетевых сервисов.",
+      "leadPass": true,
+      "productCardCount": 5,
+      "removedPendingIdAbsent": true,
+      "removedProductPendingTextAbsent": true,
+      "checks": [
+        {
+          "id": "ru-product-agriculture",
+          "expectedHref": "./Agriculture.html",
+          "actualHref": "./Agriculture.html",
+          "expectedText": "Подробнее",
+          "actualText": "Подробнее",
+          "pass": true
+        },
+        {
+          "id": "ru-product-image",
+          "expectedHref": "./mihuan_yuantu.html",
+          "actualHref": "./mihuan_yuantu.html",
+          "expectedText": "Подробнее",
+          "actualText": "Подробнее",
+          "pass": true
+        },
+        {
+          "id": "ru-product-ai-fde",
+          "expectedHref": "./AI-FDE.html",
+          "actualHref": "./AI-FDE.html",
+          "expectedText": "Подробнее",
+          "actualText": "Подробнее",
+          "pass": true
+        },
+        {
+          "id": "ru-product-social",
+          "expectedHref": "./TikTok.html",
+          "actualHref": "./TikTok.html",
+          "expectedText": "Подробнее",
+          "actualText": "Подробнее",
+          "pass": true
+        },
+        {
+          "id": "ru-product-network",
+          "expectedHref": "./跨境网络服务.html",
+          "actualHref": "./跨境网络服务.html",
+          "expectedText": "Подробнее",
+          "actualText": "Подробнее",
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  },
+  "products": {
+    "zh": {
+      "locale": "zh",
+      "leadExpected": "本页按当前 4+1 口径展示产品入口。四个常规产品详情页与跨境网络服务合并页均已接入。",
+      "leadActual": "本页按当前 4+1 口径展示产品入口。四个常规产品详情页与跨境网络服务合并页均已接入。",
+      "leadPass": true,
+      "removedPendingIdAbsent": true,
+      "networkNoteExpected": "跨境网络服务已接入合并产品二级页；三类 IP 子服务只在合并页内部承接。",
+      "networkNoteActual": "跨境网络服务已接入合并产品二级页；三类 IP 子服务只在合并页内部承接。",
+      "networkNotePass": true,
+      "pass": true
+    },
+    "en": {
+      "locale": "en",
+      "leadExpected": "This page presents the current 4+1 product scope. All four regular product detail pages and the merged network services page are connected.",
+      "leadActual": "This page presents the current 4+1 product scope. All four regular product detail pages and the merged network services page are connected.",
+      "leadPass": true,
+      "removedPendingIdAbsent": true,
+      "networkNoteExpected": "The merged English network page is connected; the three IP child service detail entries remain pending inside that page.",
+      "networkNoteActual": "The merged English network page is connected; the three IP child service detail entries remain pending inside that page.",
+      "networkNotePass": true,
+      "pass": true
+    },
+    "ru": {
+      "locale": "ru",
+      "leadExpected": "Эта страница представляет текущий объем продуктов 4+1. Все четыре страницы деталей стандартных продуктов и объединенная страница сетевых сервисов подключены.",
+      "leadActual": "Эта страница представляет текущий объем продуктов 4+1. Все четыре страницы деталей стандартных продуктов и объединенная страница сетевых сервисов подключены.",
+      "leadPass": true,
+      "removedPendingIdAbsent": true,
+      "networkNoteExpected": "Русская объединенная страница сетевых сервисов подключена; три дочерних IP-сервиса остаются ожидающими внутри этой страницы.",
+      "networkNoteActual": "Русская объединенная страница сетевых сервисов подключена; три дочерних IP-сервиса остаются ожидающими внутри этой страницы.",
+      "networkNotePass": true,
+      "pass": true
+    }
+  },
+  "tiktok": {
+    "en": {
+      "expected": "Multi-channel traffic scripts, WhatsApp/Telegram intake, private domain SOP design",
+      "expectedPresent": true,
+      "chineseResidueAbsent": true,
+      "pass": true
+    }
+  },
+  "overallPass": true
+}

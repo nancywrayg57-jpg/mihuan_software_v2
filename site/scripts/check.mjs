@@ -115,6 +115,20 @@ function parseTagAttributes(tag) {
   return attributes;
 }
 
+function escapeRegExpLiteral(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function assertProductCardDirectLinks(html, cards, pageLabel, errors) {
+  for (const { id, href, text } of cards) {
+    const pattern = new RegExp(`<article class=["'][^"']*\\bproduct-card\\b[^"']*["'] id=["']${escapeRegExpLiteral(id)}["'][\\s\\S]*?<a class=["']link-more["'] href=["']${escapeRegExpLiteral(href)}["']>${escapeRegExpLiteral(text)}<\\/a>`);
+
+    if (!pattern.test(html)) {
+      errors.push(`${pageLabel} ${id} card must link directly to ${href} with text "${text}".`);
+    }
+  }
+}
+
 function getSeoPageDetails(relativePath) {
   const locale = relativePath.startsWith("en/")
     ? seoLocaleConfigs[1]
@@ -258,7 +272,7 @@ function validateChineseHome(html) {
     "AI-FDE VibeCoding 培训",
     "社媒跨境私域陪跑",
     "跨境网络服务",
-    "详情页待接入",
+    "查看详情",
     "新闻资讯预览",
     "人才招聘预览",
     "待发布",
@@ -280,6 +294,25 @@ function validateChineseHome(html) {
   ]) {
     if (!html.includes(selector)) {
       errors.push(`Missing Chinese home section marker: ${selector}.`);
+    }
+  }
+
+  assertProductCardDirectLinks(html, [
+    { id: "product-agriculture", href: "./Agriculture.html", text: "查看详情" },
+    { id: "product-image", href: "./mihuan_yuantu.html", text: "查看详情" },
+    { id: "product-ai-fde", href: "./AI-FDE.html", text: "查看详情" },
+    { id: "product-social", href: "./TikTok.html", text: "查看详情" },
+    { id: "product-network", href: "./跨境网络服务.html", text: "查看详情" }
+  ], "Chinese home", errors);
+
+  for (const removedProductPendingMarker of [
+    "#product-detail-pending",
+    'id="product-detail-pending"',
+    "产品条目已接入产品介绍页；常规产品详情页将在后续 Issue 接入，跨境网络服务已接入合并页。",
+    ">详情页待接入<"
+  ]) {
+    if (html.includes(removedProductPendingMarker)) {
+      errors.push(`Chinese home product pending marker must be removed: ${removedProductPendingMarker}.`);
     }
   }
 
@@ -333,7 +366,7 @@ function validateEnglishHome(html) {
     "TikTok/FB/INS full-domain operation coaching, full-process practical guidance from traffic acquisition to private domain conversion",
     "Cross-border Network Services",
     "Combines static residential IP, datacenter IP and dynamic IP services for stable account environments, high-concurrency exits and rotating residential IP pools",
-    "Detail page pending",
+    "View details",
     "Brand Relationship Notes",
     "Product Localization",
     "Establish product descriptions and inquiry channels around smart agriculture, cross-border e-commerce, AI development training, overseas social private domain growth and cross-border network services",
@@ -428,16 +461,31 @@ function validateEnglishHome(html) {
     errors.push(`English home must render 1 network-services entry; found ${networkEntries.length}.`);
   }
 
-  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
-  if (pendingProductLinks.length !== 5) {
-    errors.push(`English product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  assertProductCardDirectLinks(html, [
+    { id: "en-product-agriculture", href: "./Agriculture.html", text: "View details" },
+    { id: "en-product-image", href: "./mihuan_yuantu.html", text: "View details" },
+    { id: "en-product-ai-fde", href: "./AI-FDE.html", text: "View details" },
+    { id: "en-product-social", href: "./TikTok.html", text: "View details" },
+    { id: "en-product-network", href: "./跨境网络服务.html", text: "View details" }
+  ], "English home", errors);
+
+  for (const removedProductPendingMarker of [
+    "#en-product-detail-pending",
+    'id="en-product-detail-pending"',
+    "The English home page keeps product entries as same-page placeholders until English detail pages are built.",
+    "English product detail pages are pending; all product entries stay on same-page anchors in this S3 first round.",
+    ">Detail page pending<"
+  ]) {
+    if (html.includes(removedProductPendingMarker)) {
+      errors.push(`English home product pending marker must be removed: ${removedProductPendingMarker}.`);
+    }
   }
 
   const englishHomeWithoutNavigation = html
     .replace(/<nav class=["']desktop-nav["'][^>]*>[\s\S]*?<\/nav>/, "")
     .replace(/<nav class=["']mobile-nav["'][^>]*>[\s\S]*?<\/nav>/, "");
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network)[^#"']*\.html/i.test(englishHomeWithoutNavigation)) {
-    errors.push("English home must not link to nonexistent English product or service detail pages.");
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(englishHomeWithoutNavigation)) {
+    errors.push("English home must not link to nonexistent child network-service detail pages.");
   }
 
   if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
@@ -483,7 +531,7 @@ function validateEnglishProducts(html) {
     "TikTok/FB/INS full-domain operation coaching, full-process practical guidance from traffic acquisition to private domain conversion",
     "Cross-border Network Services",
     "Combines static residential IP, datacenter IP and dynamic IP services for stable account environments, high-concurrency exits and rotating residential IP pools",
-    "English detail pages for the four regular entries remain pending, while the merged English network page is now connected from the NET card.",
+    "This page presents the current 4+1 product scope. All four regular product detail pages and the merged network services page are connected.",
     "Opens the merged English network page for static residential IP, datacenter IP and dynamic IP",
     "The merged English network page is connected; the three IP child service detail entries remain pending inside that page.",
     "Core Capabilities",
@@ -560,9 +608,15 @@ function validateEnglishProducts(html) {
     errors.push(`English products page must render 1 network-services entry; found ${networkEntries.length}.`);
   }
 
-  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#en-product-detail-pending["']>Detail page pending<\/a>/g) || [];
-  if (pendingProductLinks.length !== 0) {
-    errors.push(`English products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  for (const removedProductPendingMarker of [
+    "#en-product-detail-pending",
+    'id="en-product-detail-pending"',
+    "English product detail pages are pending; all product entries stay on same-page anchors in this S3 first round.",
+    "English detail pages for the four regular entries remain pending, while the merged English network page is now connected from the NET card."
+  ]) {
+    if (html.includes(removedProductPendingMarker)) {
+      errors.push(`English products page obsolete pending marker must be removed: ${removedProductPendingMarker}.`);
+    }
   }
 
   if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']en-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>View details<\/a>/.test(html)) {
@@ -586,9 +640,9 @@ function validateEnglishProducts(html) {
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#en-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./TikTok.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./TikTok.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`English products page detail links must stay on #en-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html, ./TikTok.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`English products page detail links must use direct product pages only; found ${externalDetailLinks.join(", ")}.`);
   }
 
   if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)[^#"']*\.html/i.test(html)) {
@@ -1168,7 +1222,7 @@ function validateRussianHome(html) {
     "Полномасштабное сопровождение операций в TikTok/FB/INS, практическое руководство по всему процессу от привлечения трафика до конверсии в приватной зоне",
     "Кроссбордерные сетевые сервисы",
     "Объединяют статический домашний IP, датацентровый IP и динамический IP для стабильных аккаунтных сред, высокопараллельных выходов и ротационных домашних IP-пулов",
-    "Страница деталей ожидает подключения",
+    "Подробнее",
     "Пояснения к бренд-отношениям",
     "Локализация продуктов",
     "Создание описаний продуктов и каналов консультаций вокруг умного сельского хозяйства, кроссбордерной электронной коммерции, обучения разработке ИИ, роста приватной зоны в зарубежных соцсетях и кроссбордерных сетевых сервисов",
@@ -1267,16 +1321,31 @@ function validateRussianHome(html) {
     errors.push(`Russian home must render 1 network-services entry; found ${networkEntries.length}.`);
   }
 
-  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
-  if (pendingProductLinks.length !== 5) {
-    errors.push(`Russian product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  assertProductCardDirectLinks(html, [
+    { id: "ru-product-agriculture", href: "./Agriculture.html", text: "Подробнее" },
+    { id: "ru-product-image", href: "./mihuan_yuantu.html", text: "Подробнее" },
+    { id: "ru-product-ai-fde", href: "./AI-FDE.html", text: "Подробнее" },
+    { id: "ru-product-social", href: "./TikTok.html", text: "Подробнее" },
+    { id: "ru-product-network", href: "./跨境网络服务.html", text: "Подробнее" }
+  ], "Russian home", errors);
+
+  for (const removedProductPendingMarker of [
+    "#ru-product-detail-pending",
+    'id="ru-product-detail-pending"',
+    "Русская главная страница сохраняет продуктовые входы как якорные заполнители до создания русских страниц деталей.",
+    "Русские страницы деталей продуктов ожидают подключения; в этом раунде S3 все продуктовые входы остаются якорями на текущей странице.",
+    ">Страница деталей ожидает подключения<"
+  ]) {
+    if (html.includes(removedProductPendingMarker)) {
+      errors.push(`Russian home product pending marker must be removed: ${removedProductPendingMarker}.`);
+    }
   }
 
   const russianHomeWithoutNavigation = html
     .replace(/<nav class=["']desktop-nav["'][^>]*>[\s\S]*?<\/nav>/, "")
     .replace(/<nav class=["']mobile-nav["'][^>]*>[\s\S]*?<\/nav>/, "");
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(russianHomeWithoutNavigation)) {
-    errors.push("Russian home must not link to nonexistent Russian product or service detail pages.");
+  if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip|продукт)[^#"']*\.html/i.test(russianHomeWithoutNavigation)) {
+    errors.push("Russian home must not link to nonexistent child network-service detail pages.");
   }
 
   if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
@@ -1745,9 +1814,8 @@ function validateRussianProducts(html) {
     "Полномасштабное сопровождение операций в TikTok/FB/INS, практическое руководство по всему процессу от привлечения трафика до конверсии в приватной зоне",
     "Кроссбордерные сетевые сервисы",
     "Объединяют статический домашний IP, датацентровый IP и динамический IP для стабильных аккаунтных сред, высокопараллельных выходов и ротационных домашних IP-пулов",
-    "Русские страницы деталей четырех стандартных продуктов ожидают подключения, а русская объединенная страница сетевых сервисов уже подключена из карточки NET.",
+    "Эта страница представляет текущий объем продуктов 4+1. Все четыре страницы деталей стандартных продуктов и объединенная страница сетевых сервисов подключены.",
     "Открывает русскую объединенную страницу сетевых сервисов для статического домашнего IP, датацентрового IP и динамического IP",
-    "Русские страницы деталей четырех стандартных продуктов ожидают подключения; эти входы остаются якорями на текущей странице.",
     "Русская объединенная страница сетевых сервисов подключена; три дочерних IP-сервиса остаются ожидающими внутри этой страницы.",
     "Основные возможности",
     "Цифровой контроль промышленности",
@@ -1824,9 +1892,15 @@ function validateRussianProducts(html) {
     errors.push(`Russian products page must render 1 network-services entry; found ${networkEntries.length}.`);
   }
 
-  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#ru-product-detail-pending["']>Страница деталей ожидает подключения<\/a>/g) || [];
-  if (pendingProductLinks.length !== 0) {
-    errors.push(`Russian products page regular entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  for (const removedProductPendingMarker of [
+    "#ru-product-detail-pending",
+    'id="ru-product-detail-pending"',
+    "Русские страницы деталей четырех стандартных продуктов ожидают подключения, а русская объединенная страница сетевых сервисов уже подключена из карточки NET.",
+    "Русские страницы деталей четырех стандартных продуктов ожидают подключения; эти входы остаются якорями на текущей странице."
+  ]) {
+    if (html.includes(removedProductPendingMarker)) {
+      errors.push(`Russian products page obsolete pending marker must be removed: ${removedProductPendingMarker}.`);
+    }
   }
 
   if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']ru-product-agriculture["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/Agriculture\.html["']>Подробнее<\/a>/.test(html)) {
@@ -1850,9 +1924,9 @@ function validateRussianProducts(html) {
   }
 
   const detailLinks = [...html.matchAll(/<a class=["']link-more["'] href=["']([^"']+)["'][^>]*>/g)].map((match) => match[1]);
-  const externalDetailLinks = detailLinks.filter((href) => href !== "#ru-product-detail-pending" && href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./TikTok.html" && href !== "./跨境网络服务.html");
+  const externalDetailLinks = detailLinks.filter((href) => href !== "./Agriculture.html" && href !== "./mihuan_yuantu.html" && href !== "./AI-FDE.html" && href !== "./TikTok.html" && href !== "./跨境网络服务.html");
   if (externalDetailLinks.length > 0) {
-    errors.push(`Russian products page detail links must stay on #ru-product-detail-pending, ./Agriculture.html, ./mihuan_yuantu.html, ./AI-FDE.html, ./TikTok.html or ./跨境网络服务.html; found ${externalDetailLinks.join(", ")}.`);
+    errors.push(`Russian products page detail links must use direct product pages only; found ${externalDetailLinks.join(", ")}.`);
   }
 
   if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
@@ -2006,6 +2080,7 @@ function validateProductsPage(html) {
     "蜜獾产品与服务介绍",
     "4 项常规产品/服务 + 跨境网络服务合并入口",
     "产品与服务分类概览",
+    "本页按当前 4+1 口径展示产品入口。四个常规产品详情页与跨境网络服务合并页均已接入。",
     "核心能力说明",
     "服务落地四步路径",
     "咨询与联系入口",
@@ -2014,7 +2089,6 @@ function validateProductsPage(html) {
     "AI-FDE VibeCoding 培训",
     "社媒跨境私域陪跑",
     "跨境网络服务",
-    "详情页待接入",
     "查看合并页"
   ]) {
     if (!html.includes(marker)) {
@@ -2075,9 +2149,19 @@ function validateProductsPage(html) {
     errors.push("Products page agriculture card must link to ./Agriculture.html.");
   }
 
-  const pendingProductLinks = html.match(/<a class=["']link-more["'] href=["']#details-pending["']>详情页待接入<\/a>/g) || [];
-  if (pendingProductLinks.length !== 0) {
-    errors.push(`Products page regular product entries must keep same-page pending detail anchors; found ${pendingProductLinks.length}.`);
+  for (const removedProductPendingMarker of [
+    "#details-pending",
+    'id="details-pending"',
+    "4 项常规产品/服务详情页待接入；本轮入口保持本页占位锚点。",
+    "常规产品详情页仍为后续 Issue 接入"
+  ]) {
+    if (html.includes(removedProductPendingMarker)) {
+      errors.push(`Products page obsolete pending marker must be removed: ${removedProductPendingMarker}.`);
+    }
+  }
+
+  if (!html.includes("跨境网络服务已接入合并产品二级页；三类 IP 子服务只在合并页内部承接。")) {
+    errors.push("Products page must preserve the merged network services note.");
   }
 
   if (!/<article class=["'][^"']*\bproduct-card\b[^"']*["'] id=["']product-image["'][\s\S]*?<a class=["']link-more["'] href=["']\.\/mihuan_yuantu\.html["']>查看详情<\/a>/.test(html)) {
@@ -2093,7 +2177,7 @@ function validateProductsPage(html) {
   }
 
   if (/href=["'][^"']*(static-ip|idc-ip|dynamic-ip)\.html/i.test(html)) {
-    errors.push("Products page must keep detail and network-service links as same-page placeholder anchors.");
+    errors.push("Products page must not link to nonexistent child network-service detail pages.");
   }
 
   if (/<form[\s>]/i.test(html)) {
@@ -2509,7 +2593,7 @@ function validateTiktokDetailPage(relativePath, html) {
       phases: [
         ["Weeks 1-2 Account Infrastructure &amp; Positioning", "Market research, persona positioning, three-platform account setup, tool stack configuration"],
         ["Weeks 3-6 Content Production &amp; Traffic Launch", "Topic library building, viral content methodology, cold start traffic breakthrough"],
-        ["Weeks 7-10 Traffic Matrix &amp; Private Domain Accumulation", "Multi-channel traffic scripts, WhatsApp/Telegram 承接，private domain SOP design"],
+        ["Weeks 7-10 Traffic Matrix &amp; Private Domain Accumulation", "Multi-channel traffic scripts, WhatsApp/Telegram intake, private domain SOP design"],
         ["Weeks 11-12 Conversion Monetization &amp; Repurchase System", "Conversion scripts, promotional tactics, customer lifecycle management"]
       ],
       format: "1v1 dedicated mentor, daily Q&amp;A, weekly review meetings, material template library, resource connections",
