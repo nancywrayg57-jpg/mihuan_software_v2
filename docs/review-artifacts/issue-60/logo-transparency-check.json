@@ -1,0 +1,266 @@
+[
+  {
+    "role": "source-header-favicon",
+    "file": "LOGO\\PNG\\无英文名水印.png",
+    "width": 4267,
+    "height": 4267,
+    "pixelFormat": "Format32bppArgb",
+    "hasAlphaPixelFormat": true,
+    "sampledPixels": [
+      {
+        "name": "top-left",
+        "x": 0,
+        "y": 0,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "top-right",
+        "x": 4266,
+        "y": 0,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "bottom-left",
+        "x": 0,
+        "y": 4266,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "bottom-right",
+        "x": 4266,
+        "y": 4266,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "center",
+        "x": 2134,
+        "y": 2134,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      }
+    ],
+    "nonTransparentScan": {
+      "stride": 8,
+      "sampledPixels": 285156,
+      "nonTransparentSamples": 10616,
+      "bounds": {
+        "minX": 728,
+        "minY": 1544,
+        "maxX": 3568,
+        "maxY": 2480
+      }
+    }
+  },
+  {
+    "role": "available-source-with-english",
+    "file": "LOGO\\PNG\\有英文名水印.png",
+    "width": 4267,
+    "height": 4267,
+    "pixelFormat": "Format32bppArgb",
+    "hasAlphaPixelFormat": true,
+    "sampledPixels": [
+      {
+        "name": "top-left",
+        "x": 0,
+        "y": 0,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "top-right",
+        "x": 4266,
+        "y": 0,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "bottom-left",
+        "x": 0,
+        "y": 4266,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "bottom-right",
+        "x": 4266,
+        "y": 4266,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      },
+      {
+        "name": "center",
+        "x": 2134,
+        "y": 2134,
+        "alpha": 0,
+        "red": 255,
+        "green": 255,
+        "blue": 255
+      }
+    ],
+    "nonTransparentScan": {
+      "stride": 8,
+      "sampledPixels": 285156,
+      "nonTransparentSamples": 12214,
+      "bounds": {
+        "minX": 744,
+        "minY": 1464,
+        "maxX": 3584,
+        "maxY": 2584
+      }
+    }
+  },
+  {
+    "role": "derived-header",
+    "file": "site\\src\\assets\\img\\honeybadger-logo-mark.png",
+    "width": 512,
+    "height": 270,
+    "pixelFormat": "Format32bppArgb",
+    "hasAlphaPixelFormat": true,
+    "sampledPixels": [
+      {
+        "name": "top-left",
+        "x": 0,
+        "y": 0,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "top-right",
+        "x": 511,
+        "y": 0,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "bottom-left",
+        "x": 0,
+        "y": 269,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "bottom-right",
+        "x": 511,
+        "y": 269,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "center",
+        "x": 256,
+        "y": 135,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      }
+    ],
+    "nonTransparentScan": {
+      "stride": 1,
+      "sampledPixels": 138240,
+      "nonTransparentSamples": 60806,
+      "bounds": {
+        "minX": 10,
+        "minY": 17,
+        "maxX": 462,
+        "maxY": 269
+      }
+    }
+  },
+  {
+    "role": "derived-favicon",
+    "file": "site\\src\\assets\\img\\favicon.png",
+    "width": 256,
+    "height": 256,
+    "pixelFormat": "Format32bppArgb",
+    "hasAlphaPixelFormat": true,
+    "sampledPixels": [
+      {
+        "name": "top-left",
+        "x": 0,
+        "y": 0,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "top-right",
+        "x": 255,
+        "y": 0,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "bottom-left",
+        "x": 0,
+        "y": 255,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "bottom-right",
+        "x": 255,
+        "y": 255,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      {
+        "name": "center",
+        "x": 128,
+        "y": 128,
+        "alpha": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      }
+    ],
+    "nonTransparentScan": {
+      "stride": 1,
+      "sampledPixels": 65536,
+      "nonTransparentSamples": 13384,
+      "bounds": {
+        "minX": 14,
+        "minY": 74,
+        "maxX": 223,
+        "maxY": 190
+      }
+    }
+  }
+]

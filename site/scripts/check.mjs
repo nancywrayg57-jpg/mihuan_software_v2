@@ -2649,7 +2649,6 @@ async function validateIssue50HeroAssetReferences() {
   const stylesPath = resolve(distDir, "assets", "styles.css");
   const css = await readFile(stylesPath, "utf8");
   const requiredHeroAssets = new Set([
-    "hero-light-blue.svg",
     "stacked-peaks-haikei_4.svg",
     "stacked-waves-haikei.svg",
     "stacked-waves-haikei_2.svg",
@@ -2793,11 +2792,17 @@ async function validateSitemapAndRobots() {
 }
 
 async function validateFaviconOutput() {
-  const faviconPath = resolve(distDir, "favicon.svg");
+  const faviconPath = resolve(distDir, "assets", "img", "favicon.png");
   const faviconStats = await stat(faviconPath).catch(() => null);
+  const oldFaviconPath = resolve(distDir, "favicon.svg");
+  const oldFaviconStats = await stat(oldFaviconPath).catch(() => null);
 
   if (!faviconStats?.isFile() || faviconStats.size <= 0) {
     throw new Error(`Missing or empty favicon output: ${faviconPath}`);
+  }
+
+  if (oldFaviconStats?.isFile()) {
+    throw new Error(`Old SVG favicon must not be present in build output: ${oldFaviconPath}`);
   }
 
   for (const requiredHtmlPath of requiredHtmlPaths) {
@@ -2814,8 +2819,8 @@ async function validateFaviconOutput() {
       .map((match) => parseTagAttributes(match[0]))
       .filter((attributes) => attributes.get("rel")?.toLowerCase().split(/\s+/).includes("icon"));
     const expectedHref = requiredHtmlPath.startsWith("en/") || requiredHtmlPath.startsWith("ru/")
-      ? "../favicon.svg"
-      : "./favicon.svg";
+      ? "../assets/img/favicon.png"
+      : "./assets/img/favicon.png";
 
     if (/<link\b[^>]*\brel=["'][^"']*\bicon\b/i.test(htmlWithoutHead)) {
       throw new Error(`Favicon link must stay inside <head> for ${requiredHtmlPath}.`);
@@ -2831,14 +2836,135 @@ async function validateFaviconOutput() {
       throw new Error(`Favicon href mismatch in ${requiredHtmlPath}: expected ${expectedHref}, found ${iconLink.get("href") || "missing"}.`);
     }
 
-    if (iconLink.get("type") !== "image/svg+xml") {
-      throw new Error(`Favicon type mismatch in ${requiredHtmlPath}: expected image/svg+xml, found ${iconLink.get("type") || "missing"}.`);
+    if (iconLink.get("type") !== "image/png") {
+      throw new Error(`Favicon type mismatch in ${requiredHtmlPath}: expected image/png, found ${iconLink.get("type") || "missing"}.`);
     }
   }
 
-  console.log(`Checked favicon.svg output and ${requiredHtmlPaths.length} favicon link(s).`);
+  console.log(`Checked favicon.png output and ${requiredHtmlPaths.length} favicon link(s).`);
+}
+
+function findCssBlocks(css, selector) {
+  const blocks = [];
+  const blockPattern = /([^{}]+)\{([^{}]*)\}/g;
+  let match;
+
+  while ((match = blockPattern.exec(css)) !== null) {
+    const selectorList = match[1]
+      .split(",")
+      .map((part) => part.trim())
+      .filter(Boolean);
+
+    if (selectorList.includes(selector)) {
+      blocks.push(match[2]);
+    }
+  }
+
+  return blocks;
+}
+
+async function validateIssue60HeroOverlayRemoval() {
+  const stylesPath = resolve(distDir, "assets", "styles.css");
+  const css = await readFile(stylesPath, "utf8");
+  const requiredBackgrounds = [
+    [".home-hero", "stacked-waves-haikei.svg", "var(--hero)"],
+    ["#home-relation", "stacked-peaks-haikei_4.svg", "#f6f9fd"],
+    ["#en-brand-relationship", "stacked-peaks-haikei_4.svg", "#f6f9fd"],
+    ["#ru-brand-relationship", "stacked-peaks-haikei_4.svg", "#f6f9fd"],
+    [".products-hero", "stacked-waves-haikei_2.svg", "var(--hero)"],
+    [".about-hero", "waves-haikei-2.svg", "var(--hero)"],
+    [".news-hero", "stacked-waves-haikei_3.svg", "var(--hero)"],
+    [".careers-hero", "waves-haikei.svg", "var(--hero)"],
+    [".network-services-hero", "IP.svg", "var(--hero)"],
+    [".network-services-page #network-services-modules", "stacked-waves-haikei.svg", "var(--hero)"],
+    [".network-service-module > header", "stacked-waves-haikei.svg", "var(--hero)"]
+  ];
+
+  for (const [selector, assetName, expectedBase] of requiredBackgrounds) {
+    const matchingBlocks = findCssBlocks(css, selector).filter((block) => block.includes(`./img/${assetName}`));
+
+    if (matchingBlocks.length === 0) {
+      throw new Error(`Missing Issue #60 background asset for ${selector}: ./img/${assetName}`);
+    }
+
+    for (const block of matchingBlocks) {
+      if (/linear-gradient/i.test(block)) {
+        throw new Error(`Issue #60 background for ${selector} must not use linear-gradient over ./img/${assetName}.`);
+      }
+
+      if (!block.includes(expectedBase)) {
+        throw new Error(`Issue #60 background for ${selector} must use base ${expectedBase}.`);
+      }
+    }
+  }
+
+  for (const selector of ["#home-relation", "#en-brand-relationship", "#ru-brand-relationship"]) {
+    const relationBlocks = findCssBlocks(css, selector).join("\n");
+
+    if (!relationBlocks.includes("color: white")) {
+      throw new Error(`Issue #60 relation section must use white text color: ${selector}`);
+    }
+  }
+
+  console.log(`Checked ${requiredBackgrounds.length} Issue #60 SVG background rule(s) without blue overlay gradients.`);
+}
+
+async function validateBrandLogoOutput() {
+  const logoPath = resolve(distDir, "assets", "img", "honeybadger-logo-mark.png");
+  const logoStats = await stat(logoPath).catch(() => null);
+
+  if (!logoStats?.isFile() || logoStats.size <= 0) {
+    throw new Error(`Missing or empty brand logo output: ${logoPath}`);
+  }
+
+  for (const requiredHtmlPath of requiredHtmlPaths) {
+    const html = await readFile(resolve(distDir, requiredHtmlPath), "utf8");
+    const brandMatch = html.match(/<a\b[^>]*class=["'][^"']*\bbrand\b[^"']*["'][^>]*>[\s\S]*?<\/a>/i);
+
+    if (!brandMatch) {
+      throw new Error(`Missing header brand anchor while validating logo for ${requiredHtmlPath}.`);
+    }
+
+    if (/\bbrand-mark\b/.test(brandMatch[0])) {
+      throw new Error(`Old brand-mark must not remain in header brand area for ${requiredHtmlPath}.`);
+    }
+
+    const logoTags = [...brandMatch[0].matchAll(/<img\b[^>]*>/gi)]
+      .map((match) => parseTagAttributes(match[0]))
+      .filter((attributes) => attributes.get("class")?.split(/\s+/).includes("brand-logo"));
+    const expectedSrc = requiredHtmlPath.startsWith("en/") || requiredHtmlPath.startsWith("ru/")
+      ? "../assets/img/honeybadger-logo-mark.png"
+      : "./assets/img/honeybadger-logo-mark.png";
+    const expectedAlt = requiredHtmlPath.startsWith("en/")
+      ? "Honey Badger logo"
+      : requiredHtmlPath.startsWith("ru/")
+        ? "Логотип Honey Badger"
+        : "蜜獾软件标志";
+
+    if (logoTags.length !== 1) {
+      throw new Error(`Expected exactly 1 header brand-logo image in ${requiredHtmlPath}, found ${logoTags.length}.`);
+    }
+
+    const logo = logoTags[0];
+
+    if (logo.get("src") !== expectedSrc) {
+      throw new Error(`Header logo src mismatch in ${requiredHtmlPath}: expected ${expectedSrc}, found ${logo.get("src") || "missing"}.`);
+    }
+
+    if (logo.get("alt") !== expectedAlt) {
+      throw new Error(`Header logo alt mismatch in ${requiredHtmlPath}: expected ${expectedAlt}, found ${logo.get("alt") || "missing"}.`);
+    }
+
+    if (logo.get("width") !== "52" || logo.get("height") !== "36") {
+      throw new Error(`Header logo dimensions mismatch in ${requiredHtmlPath}; expected width=52 height=36.`);
+    }
+  }
+
+  console.log(`Checked brand logo output and ${requiredHtmlPaths.length} header logo reference(s).`);
 }
 
 await validateIssue50HeroAssetReferences();
 await validateSitemapAndRobots();
 await validateFaviconOutput();
+await validateIssue60HeroOverlayRemoval();
+await validateBrandLogoOutput();
