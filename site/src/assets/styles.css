@@ -2724,3 +2724,51 @@ button:focus-visible,
     grid-template-columns: 1fr;
   }
 }
+
+.yuantu-detail-hero {
+  /* Issue #66 Honey Badger Original Image detail pages */
+  background: var(--hero) url("./img/yuantu.svg") center / cover no-repeat;
+}
+
+.yuantu-detail-page .products-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.yuantu-detail-page .products-hero-copy {
+  max-width: 920px;
+}
+
+.yuantu-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.yuantu-feature-card {
+  min-height: 232px;
+}
+
+.yuantu-value-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(320px, 0.8fr);
+  gap: 48px;
+  align-items: stretch;
+}
+
+.yuantu-value-card {
+  min-height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .yuantu-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .yuantu-value-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .yuantu-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
