@@ -2880,3 +2880,103 @@ button:focus-visible,
     bottom: max(4px, env(safe-area-inset-bottom));
   }
 }
+
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown::after {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 10px;
+  content: "";
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 130;
+  display: grid;
+  width: min(420px, calc(100vw - 48px));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-card);
+  padding: 8px;
+  box-shadow: var(--shadow);
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+  visibility: hidden;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  transition-delay: 0s;
+  visibility: visible;
+}
+
+.nav-dropdown-link {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-dropdown-link:hover,
+.nav-dropdown-link:focus-visible,
+.mobile-nav-sublink:hover,
+.mobile-nav-sublink:focus-visible {
+  background: rgb(0 90 180 / 6%);
+}
+
+.nav-dropdown-link:active,
+.mobile-nav-sublink:active {
+  transform: translateY(1px);
+}
+
+.mobile-nav-submenu {
+  display: grid;
+  padding: 0 0 4px 18px;
+  gap: 6px;
+}
+
+.mobile-nav-sublink {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+@media (max-width: 760px) {
+  .mobile-nav-submenu {
+    padding-left: 12px;
+  }
+
+  .mobile-nav-sublink {
+    min-height: 42px;
+  }
+}

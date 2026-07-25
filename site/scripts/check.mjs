@@ -375,7 +375,7 @@ function validateEnglishHome(html) {
     errors.push("English home header must mark Home as the current real page.");
   }
 
-  const productsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/products\.html["']>Products<\/a>/g) || [];
+  const productsNavLinks = html.match(/<a class=["']nav-link(?: nav-dropdown-trigger)?["'] href=["']\.\/products\.html["'](?: aria-haspopup=["']true["'])?>Products<\/a>/g) || [];
   if (productsNavLinks.length !== 2) {
     errors.push(`English home Products navigation must point to ./products.html on desktop and mobile; found ${productsNavLinks.length}.`);
   }
@@ -433,7 +433,10 @@ function validateEnglishHome(html) {
     errors.push(`English product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network)[^#"']*\.html/i.test(html)) {
+  const englishHomeWithoutNavigation = html
+    .replace(/<nav class=["']desktop-nav["'][^>]*>[\s\S]*?<\/nav>/, "")
+    .replace(/<nav class=["']mobile-nav["'][^>]*>[\s\S]*?<\/nav>/, "");
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network)[^#"']*\.html/i.test(englishHomeWithoutNavigation)) {
     errors.push("English home must not link to nonexistent English product or service detail pages.");
   }
 
@@ -1207,7 +1210,7 @@ function validateRussianHome(html) {
     errors.push("Russian home header must mark Главная as the current real page.");
   }
 
-  const productsNavLinks = html.match(/<a class=["']nav-link["'] href=["']\.\/products\.html["']>Продукты<\/a>/g) || [];
+  const productsNavLinks = html.match(/<a class=["']nav-link(?: nav-dropdown-trigger)?["'] href=["']\.\/products\.html["'](?: aria-haspopup=["']true["'])?>Продукты<\/a>/g) || [];
   if (productsNavLinks.length !== 2) {
     errors.push(`Russian home Продукты navigation must point to ./products.html on desktop and mobile; found ${productsNavLinks.length}.`);
   }
@@ -1269,7 +1272,10 @@ function validateRussianHome(html) {
     errors.push(`Russian product entries must use same-page pending detail anchors; found ${pendingProductLinks.length}.`);
   }
 
-  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(html)) {
+  const russianHomeWithoutNavigation = html
+    .replace(/<nav class=["']desktop-nav["'][^>]*>[\s\S]*?<\/nav>/, "")
+    .replace(/<nav class=["']mobile-nav["'][^>]*>[\s\S]*?<\/nav>/, "");
+  if (/href=["'][^"']*(Agriculture|mihuan_yuantu|AI-FDE|TikTok|static-ip|idc-ip|dynamic-ip|network|продукт)[^#"']*\.html/i.test(russianHomeWithoutNavigation)) {
     errors.push("Russian home must not link to nonexistent Russian product or service detail pages.");
   }
 
@@ -2720,6 +2726,117 @@ function validateCareersNavigation(html, relativePath) {
   return errors;
 }
 
+function validateProductNavigationDropdown(html, relativePath) {
+  const errors = [];
+  const locale = relativePath.startsWith("en/")
+    ? "en"
+    : relativePath.startsWith("ru/")
+      ? "ru"
+      : "zh";
+  const config = {
+    zh: {
+      productLabel: "产品介绍",
+      desktopLabel: "产品子页面入口",
+      mobileLabel: "产品子页面入口",
+      links: [
+        ["数字化农业综合管理系统", "./Agriculture.html"],
+        ["蜜獾原图", "./mihuan_yuantu.html"],
+        ["AI-FDE VibeCoding 培训", "./AI-FDE.html"],
+        ["社媒跨境私域陪跑", "./TikTok.html"],
+        ["跨境网络服务", "./跨境网络服务.html"]
+      ]
+    },
+    en: {
+      productLabel: "Products",
+      desktopLabel: "Product detail links",
+      mobileLabel: "Product detail links",
+      links: [
+        ["Digital Agriculture Integrated Management System", "./Agriculture.html"],
+        ["Honey Badger Original Image", "./mihuan_yuantu.html"],
+        ["AI-FDE VibeCoding Training", "./AI-FDE.html"],
+        ["Social Commerce Private Domain Coaching", "./TikTok.html"],
+        ["Cross-border Network Services", "./跨境网络服务.html"]
+      ]
+    },
+    ru: {
+      productLabel: "Продукты",
+      desktopLabel: "Ссылки на страницы продуктов",
+      mobileLabel: "Ссылки на страницы продуктов",
+      links: [
+        ["Интегрированная система цифрового сельского хозяйства", "./Agriculture.html"],
+        ["Оригинальные изображения Honey Badger", "./mihuan_yuantu.html"],
+        ["Обучение AI-FDE VibeCoding", "./AI-FDE.html"],
+        ["Сопровождение приватной зоны в соцсетях", "./TikTok.html"],
+        ["Кроссбордерные сетевые сервисы", "./跨境网络服务.html"]
+      ]
+    }
+  }[locale];
+  const desktopNav = html.match(/<nav class=["']desktop-nav["'][^>]*>[\s\S]*?<\/nav>/)?.[0] || "";
+  const mobileNav = html.match(/<nav class=["']mobile-nav["'][^>]*>[\s\S]*?<\/nav>/)?.[0] || "";
+  const productPages = new Set([
+    "products.html",
+    "Agriculture.html",
+    "mihuan_yuantu.html",
+    "AI-FDE.html",
+    "TikTok.html",
+    "跨境网络服务.html"
+  ]);
+  const basename = relativePath.split("/").pop();
+  const shouldMarkProductCurrent = productPages.has(basename);
+
+  if (!desktopNav.includes('class="nav-dropdown"')) {
+    errors.push(`${relativePath} desktop Product navigation must render a nav-dropdown wrapper.`);
+  }
+
+  const expectedDesktopTrigger = shouldMarkProductCurrent
+    ? `<a class="nav-link nav-dropdown-trigger" href="./products.html" aria-haspopup="true" aria-current="page">${config.productLabel}</a>`
+    : `<a class="nav-link nav-dropdown-trigger" href="./products.html" aria-haspopup="true">${config.productLabel}</a>`;
+  if (!desktopNav.includes(expectedDesktopTrigger)) {
+    errors.push(`${relativePath} desktop Product parent link must stay clickable and preserve aria-current state.`);
+  }
+
+  if (!desktopNav.includes(`<div class="nav-dropdown-menu" aria-label="${config.desktopLabel}">`)) {
+    errors.push(`${relativePath} desktop Product dropdown panel missing localized aria-label.`);
+  }
+
+  const desktopDropdownLinks = desktopNav.match(/class=["']nav-dropdown-link["']/g) || [];
+  if (desktopDropdownLinks.length !== 5) {
+    errors.push(`${relativePath} desktop Product dropdown must render exactly 5 child links; found ${desktopDropdownLinks.length}.`);
+  }
+
+  for (const [label, href] of config.links) {
+    const desktopLink = `<a class="nav-dropdown-link" href="${href}">${label}</a>`;
+    if (!desktopNav.includes(desktopLink)) {
+      errors.push(`${relativePath} desktop Product dropdown missing ${label} -> ${href}.`);
+    }
+  }
+
+  const expectedMobileParent = shouldMarkProductCurrent
+    ? `<a class="nav-link" href="./products.html" aria-current="page">${config.productLabel}</a>`
+    : `<a class="nav-link" href="./products.html">${config.productLabel}</a>`;
+  if (!mobileNav.includes(expectedMobileParent)) {
+    errors.push(`${relativePath} mobile Product parent link must stay clickable and preserve aria-current state.`);
+  }
+
+  if (!mobileNav.includes(`<div class="mobile-nav-submenu" aria-label="${config.mobileLabel}">`)) {
+    errors.push(`${relativePath} mobile Product submenu missing localized aria-label.`);
+  }
+
+  const mobileSubLinks = mobileNav.match(/class=["']mobile-nav-sublink["']/g) || [];
+  if (mobileSubLinks.length !== 5) {
+    errors.push(`${relativePath} mobile Product submenu must render exactly 5 child links; found ${mobileSubLinks.length}.`);
+  }
+
+  for (const [label, href] of config.links) {
+    const mobileLink = `<a class="mobile-nav-sublink" href="${href}">${label}</a>`;
+    if (!mobileNav.includes(mobileLink)) {
+      errors.push(`${relativePath} mobile Product submenu missing ${label} -> ${href}.`);
+    }
+  }
+
+  return errors;
+}
+
 function validateAboutPage(html) {
   const errors = [];
   const relationship = "蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体";
@@ -3058,6 +3175,8 @@ async function validateBuiltHtml(relativePath) {
       htmlErrors.push(`Missing S1 shell marker: ${selector}.`);
     }
   }
+
+  htmlErrors.push(...validateProductNavigationDropdown(html, relativePath));
 
   if (homeHtmlPaths.has(relativePath) && /class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
     htmlErrors.push("Home pages must not render breadcrumb markup.");

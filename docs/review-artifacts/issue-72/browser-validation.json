@@ -1,0 +1,6280 @@
+{
+  "generatedAt": "2026-07-25T11:50:19.181Z",
+  "baseUrl": "http://127.0.0.1:60497",
+  "chromePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "viewportMatrix": [
+    "desktop 1440x900",
+    "tablet 820x1180",
+    "mobile 390x844"
+  ],
+  "pageChecks": [
+    {
+      "title": "关于我们 | Honey Badger",
+      "path": "/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "关于我们 | Honey Badger",
+      "path": "/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "关于我们 | Honey Badger",
+      "path": "/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "数字化农业综合管理系统 | Honey Badger",
+      "path": "/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "数字化农业综合管理系统 | Honey Badger",
+      "path": "/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "数字化农业综合管理系统 | Honey Badger",
+      "path": "/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "AI-FDE VibeCoding 培训 | Honey Badger",
+      "path": "/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "AI-FDE VibeCoding 培训 | Honey Badger",
+      "path": "/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "AI-FDE VibeCoding 培训 | Honey Badger",
+      "path": "/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "人才招聘 | Honey Badger",
+      "path": "/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "人才招聘 | Honey Badger",
+      "path": "/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "人才招聘 | Honey Badger",
+      "path": "/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "About Us | Honey Badger",
+      "path": "/en/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "About Us | Honey Badger",
+      "path": "/en/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "About Us | Honey Badger",
+      "path": "/en/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Digital Agriculture Integrated Management System | Honey Badger",
+      "path": "/en/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Digital Agriculture Integrated Management System | Honey Badger",
+      "path": "/en/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Digital Agriculture Integrated Management System | Honey Badger",
+      "path": "/en/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "AI-FDE VibeCoding Training | Honey Badger",
+      "path": "/en/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "AI-FDE VibeCoding Training | Honey Badger",
+      "path": "/en/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "AI-FDE VibeCoding Training | Honey Badger",
+      "path": "/en/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Careers | Honey Badger",
+      "path": "/en/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Careers | Honey Badger",
+      "path": "/en/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Careers | Honey Badger",
+      "path": "/en/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "path": "/en/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "path": "/en/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "path": "/en/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Original Image | Honey Badger",
+      "path": "/en/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Original Image | Honey Badger",
+      "path": "/en/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Original Image | Honey Badger",
+      "path": "/en/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "News | Honey Badger",
+      "path": "/en/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "News | Honey Badger",
+      "path": "/en/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "News | Honey Badger",
+      "path": "/en/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Products | Honey Badger",
+      "path": "/en/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Products | Honey Badger",
+      "path": "/en/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Products | Honey Badger",
+      "path": "/en/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Social Commerce Private Domain Coaching | Honey Badger",
+      "path": "/en/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Social Commerce Private Domain Coaching | Honey Badger",
+      "path": "/en/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Social Commerce Private Domain Coaching | Honey Badger",
+      "path": "/en/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Cross-border Network Services | Honey Badger",
+      "path": "/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Cross-border Network Services | Honey Badger",
+      "path": "/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Cross-border Network Services | Honey Badger",
+      "path": "/en/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "path": "/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "path": "/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "path": "/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾原图 | Honey Badger",
+      "path": "/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾原图 | Honey Badger",
+      "path": "/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾原图 | Honey Badger",
+      "path": "/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "新闻资讯 | Honey Badger",
+      "path": "/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "新闻资讯 | Honey Badger",
+      "path": "/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "新闻资讯 | Honey Badger",
+      "path": "/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "产品介绍 | Honey Badger",
+      "path": "/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "产品介绍 | Honey Badger",
+      "path": "/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "产品介绍 | Honey Badger",
+      "path": "/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "О нас | Honey Badger",
+      "path": "/ru/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "О нас | Honey Badger",
+      "path": "/ru/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "О нас | Honey Badger",
+      "path": "/ru/about.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Интегрированная система цифрового сельского хозяйства | Honey Badger",
+      "path": "/ru/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Интегрированная система цифрового сельского хозяйства | Honey Badger",
+      "path": "/ru/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Интегрированная система цифрового сельского хозяйства | Honey Badger",
+      "path": "/ru/Agriculture.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Обучение AI-FDE VibeCoding | Honey Badger",
+      "path": "/ru/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Обучение AI-FDE VibeCoding | Honey Badger",
+      "path": "/ru/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Обучение AI-FDE VibeCoding | Honey Badger",
+      "path": "/ru/AI-FDE.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Карьера | Honey Badger",
+      "path": "/ru/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Карьера | Honey Badger",
+      "path": "/ru/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Карьера | Honey Badger",
+      "path": "/ru/careers.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "path": "/ru/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "path": "/ru/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "path": "/ru/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Оригинальные изображения Honey Badger | Honey Badger",
+      "path": "/ru/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Оригинальные изображения Honey Badger | Honey Badger",
+      "path": "/ru/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Оригинальные изображения Honey Badger | Honey Badger",
+      "path": "/ru/mihuan_yuantu.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Новости | Honey Badger",
+      "path": "/ru/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Новости | Honey Badger",
+      "path": "/ru/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Новости | Honey Badger",
+      "path": "/ru/news.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Продукты | Honey Badger",
+      "path": "/ru/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Продукты | Honey Badger",
+      "path": "/ru/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Продукты | Honey Badger",
+      "path": "/ru/products.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Сопровождение приватной зоны в соцсетях | Honey Badger",
+      "path": "/ru/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Сопровождение приватной зоны в соцсетях | Honey Badger",
+      "path": "/ru/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Сопровождение приватной зоны в соцсетях | Honey Badger",
+      "path": "/ru/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+      "path": "/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+      "path": "/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Кроссбордерные сетевые сервисы | Honey Badger",
+      "path": "/ru/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "社媒跨境私域陪跑 | Honey Badger",
+      "path": "/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "社媒跨境私域陪跑 | Honey Badger",
+      "path": "/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "社媒跨境私域陪跑 | Honey Badger",
+      "path": "/TikTok.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "跨境网络服务 | Honey Badger",
+      "path": "/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "desktop-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "跨境网络服务 | Honey Badger",
+      "path": "/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "tablet",
+        "width": 820,
+        "height": 1180
+      },
+      "kind": "tablet-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "跨境网络服务 | Honey Badger",
+      "path": "/%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": "page",
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mobile-dom",
+      "screenshot": null,
+      "consoleErrors": [],
+      "networkFailures": []
+    }
+  ],
+  "screenshotChecks": [
+    {
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "path": "/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-home-hover",
+      "screenshot": "docs/review-artifacts/issue-72/zh-home-dropdown-hover-1440x900.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | ZennoLab Official Operating Entity in China",
+      "path": "/en/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Digital Agriculture Integrated Management System",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Honey Badger Original Image",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding Training",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Social Commerce Private Domain Coaching",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Cross-border Network Services",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "en-home-hover",
+      "screenshot": "docs/review-artifacts/issue-72/en-home-dropdown-hover-1440x900.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "Honey Badger Software | Официальная операционная структура ZennoLab в Китае",
+      "path": "/ru/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "Интегрированная система цифрового сельского хозяйства",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "Оригинальные изображения Honey Badger",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "Обучение AI-FDE VibeCoding",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "Сопровождение приватной зоны в соцсетях",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "Кроссбордерные сетевые сервисы",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "ru-home-hover",
+      "screenshot": "docs/review-artifacts/issue-72/ru-home-dropdown-hover-1440x900.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "path": "/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": true,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": false,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "kind": "zh-home-focus",
+      "screenshot": "docs/review-artifacts/issue-72/zh-home-dropdown-focus-1440x900.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    },
+    {
+      "title": "蜜獾软件 | ZennoLab 中国运营实体",
+      "path": "/index.html",
+      "horizontalOverflow": false,
+      "brokenImages": [],
+      "parentHref": "./products.html",
+      "parentCurrent": null,
+      "hasAriaHaspopup": "true",
+      "productLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "mobileLinks": [
+        {
+          "text": "数字化农业综合管理系统",
+          "href": "./Agriculture.html"
+        },
+        {
+          "text": "蜜獾原图",
+          "href": "./mihuan_yuantu.html"
+        },
+        {
+          "text": "AI-FDE VibeCoding 培训",
+          "href": "./AI-FDE.html"
+        },
+        {
+          "text": "社媒跨境私域陪跑",
+          "href": "./TikTok.html"
+        },
+        {
+          "text": "跨境网络服务",
+          "href": "./跨境网络服务.html"
+        }
+      ],
+      "dropdownVisible": false,
+      "dropdownFitsViewport": true,
+      "mobileNavOpen": true,
+      "mobileNavFitsViewport": true,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "zh-home-mobile-nav",
+      "screenshot": "docs/review-artifacts/issue-72/zh-home-mobile-nav-390x844.png",
+      "consoleErrors": [],
+      "networkFailures": []
+    }
+  ],
+  "pass": true
+}
