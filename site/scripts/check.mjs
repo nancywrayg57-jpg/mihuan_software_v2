@@ -2650,6 +2650,8 @@ async function validateIssue50HeroAssetReferences() {
   const css = await readFile(stylesPath, "utf8");
   const requiredHeroAssets = new Set([
     "hero-light-blue.svg",
+    "stacked-peaks-haikei_4.svg",
+    "stacked-waves-haikei.svg",
     "stacked-waves-haikei_2.svg",
     "stacked-waves-haikei_3.svg",
     "waves-haikei.svg",
