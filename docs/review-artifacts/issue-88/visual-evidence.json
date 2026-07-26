@@ -1,0 +1,839 @@
+{
+  "baseUrl": "http://127.0.0.1:65174",
+  "generatedAt": "2026-07-26T02:27:27.527Z",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "locale": "zh",
+      "template": "index",
+      "path": "index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "zh",
+      "template": "products",
+      "path": "products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "zh",
+      "template": "news",
+      "path": "news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "zh",
+      "template": "careers",
+      "path": "careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "zh",
+      "template": "about",
+      "path": "about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "zh",
+      "template": "network-services",
+      "path": "跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "en",
+      "template": "index",
+      "path": "en/index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "en",
+      "template": "products",
+      "path": "en/products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "en",
+      "template": "news",
+      "path": "en/news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "en",
+      "template": "careers",
+      "path": "en/careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "en",
+      "template": "about",
+      "path": "en/about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "en",
+      "template": "network-services",
+      "path": "en/跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "ru",
+      "template": "index",
+      "path": "ru/index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "ru",
+      "template": "products",
+      "path": "ru/products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "ru",
+      "template": "news",
+      "path": "ru/news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "ru",
+      "template": "careers",
+      "path": "ru/careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "ru",
+      "template": "about",
+      "path": "ru/about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "locale": "ru",
+      "template": "network-services",
+      "path": "ru/跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "zh",
+      "template": "index",
+      "path": "index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "zh",
+      "template": "products",
+      "path": "products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "zh",
+      "template": "news",
+      "path": "news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "zh",
+      "template": "careers",
+      "path": "careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "zh",
+      "template": "about",
+      "path": "about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "zh",
+      "template": "network-services",
+      "path": "跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "en",
+      "template": "index",
+      "path": "en/index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "en",
+      "template": "products",
+      "path": "en/products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "en",
+      "template": "news",
+      "path": "en/news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "en",
+      "template": "careers",
+      "path": "en/careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "en",
+      "template": "about",
+      "path": "en/about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "en",
+      "template": "network-services",
+      "path": "en/跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "ru",
+      "template": "index",
+      "path": "ru/index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "ru",
+      "template": "products",
+      "path": "ru/products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "ru",
+      "template": "news",
+      "path": "ru/news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "ru",
+      "template": "careers",
+      "path": "ru/careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "ru",
+      "template": "about",
+      "path": "ru/about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "locale": "ru",
+      "template": "network-services",
+      "path": "ru/跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "zh",
+      "template": "index",
+      "path": "index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "zh",
+      "template": "products",
+      "path": "products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "zh",
+      "template": "news",
+      "path": "news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "zh",
+      "template": "careers",
+      "path": "careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "zh",
+      "template": "about",
+      "path": "about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "zh",
+      "template": "network-services",
+      "path": "跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "en",
+      "template": "index",
+      "path": "en/index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "en",
+      "template": "products",
+      "path": "en/products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "en",
+      "template": "news",
+      "path": "en/news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "en",
+      "template": "careers",
+      "path": "en/careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "en",
+      "template": "about",
+      "path": "en/about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "en",
+      "template": "network-services",
+      "path": "en/跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "ru",
+      "template": "index",
+      "path": "ru/index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "ru",
+      "template": "products",
+      "path": "ru/products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_2.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "ru",
+      "template": "news",
+      "path": "ru/news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/stacked-waves-haikei_3.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "ru",
+      "template": "careers",
+      "path": "ru/careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "ru",
+      "template": "about",
+      "path": "ru/about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "status": "PASS",
+      "softSectionCount": 2,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")",
+        "url(\"http://127.0.0.1:65174/assets/img/waves-haikei-2.svg\")"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "locale": "ru",
+      "template": "network-services",
+      "path": "ru/跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "status": "PASS",
+      "softSectionCount": 1,
+      "horizontalOverflow": 0,
+      "backgrounds": [
+        "url(\"http://127.0.0.1:65174/assets/img/IP.svg\")"
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "desktop-zh-index-soft.png",
+      "locale": "zh",
+      "template": "index",
+      "viewport": "desktop",
+      "path": "index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/stacked-waves-haikei.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "desktop-zh-products-soft.png",
+      "locale": "zh",
+      "template": "products",
+      "viewport": "desktop",
+      "path": "products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/stacked-waves-haikei_2.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "desktop-zh-news-soft.png",
+      "locale": "zh",
+      "template": "news",
+      "viewport": "desktop",
+      "path": "news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/stacked-waves-haikei_3.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "desktop-zh-careers-soft.png",
+      "locale": "zh",
+      "template": "careers",
+      "viewport": "desktop",
+      "path": "careers.html",
+      "expectedAsset": "waves-haikei.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/waves-haikei.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "desktop-zh-about-soft.png",
+      "locale": "zh",
+      "template": "about",
+      "viewport": "desktop",
+      "path": "about.html",
+      "expectedAsset": "waves-haikei-2.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/waves-haikei-2.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "desktop-zh-network-services-soft.png",
+      "locale": "zh",
+      "template": "network-services",
+      "viewport": "desktop",
+      "path": "跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/IP.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "desktop-en-products-soft.png",
+      "locale": "en",
+      "template": "products",
+      "viewport": "desktop",
+      "path": "en/products.html",
+      "expectedAsset": "stacked-waves-haikei_2.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/stacked-waves-haikei_2.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "desktop-ru-news-soft.png",
+      "locale": "ru",
+      "template": "news",
+      "viewport": "desktop",
+      "path": "ru/news.html",
+      "expectedAsset": "stacked-waves-haikei_3.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/stacked-waves-haikei_3.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "mobile-zh-index-soft.png",
+      "locale": "zh",
+      "template": "index",
+      "viewport": "mobile",
+      "path": "index.html",
+      "expectedAsset": "stacked-waves-haikei.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/stacked-waves-haikei.svg\")",
+      "color": "rgb(255, 255, 255)"
+    },
+    {
+      "file": "mobile-zh-network-services-soft.png",
+      "locale": "zh",
+      "template": "network-services",
+      "viewport": "mobile",
+      "path": "跨境网络服务.html",
+      "expectedAsset": "IP.svg",
+      "capture": "viewport",
+      "backgroundImage": "url(\"http://127.0.0.1:65371/assets/img/IP.svg\")",
+      "color": "rgb(255, 255, 255)"
+    }
+  ],
+  "screenshotCaptureMode": "viewport at requested dimensions after scrolling first soft section into view"
+}
