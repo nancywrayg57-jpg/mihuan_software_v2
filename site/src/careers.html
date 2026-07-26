@@ -110,20 +110,36 @@
           <figure class="careers-visual" role="img" aria-label="人才招聘岗位与流程结构示意图">
             <svg class="careers-visual-map" viewBox="0 0 560 420" aria-hidden="true" focusable="false">
               <title>人才招聘岗位与流程结构示意图</title>
-              <rect x="30" y="30" width="500" height="360" rx="18" fill="#ffffff" opacity=".94"></rect>
-              <circle cx="146" cy="122" r="46" fill="#0b67c2" opacity=".16"></circle>
-              <circle cx="414" cy="122" r="46" fill="#168c61" opacity=".16"></circle>
-              <circle cx="146" cy="294" r="46" fill="#7353b6" opacity=".16"></circle>
-              <circle cx="414" cy="294" r="46" fill="#1687a7" opacity=".16"></circle>
-              <path d="M190 122h180M414 168v80M370 294H190M146 248v-80" fill="none" stroke="#0b67c2" stroke-width="10" stroke-linecap="round" opacity=".34"></path>
-              <g fill="#132238" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900" text-anchor="middle">
-                <text x="146" y="129">运营</text>
-                <text x="414" y="129">前端</text>
-                <text x="146" y="301">客户成功</text>
-                <text x="414" y="301">AI 培训</text>
+              <rect class="careers-visual-frame" x="24" y="24" width="512" height="372" rx="24"></rect>
+              <rect class="careers-visual-topbar" x="48" y="48" width="464" height="36" rx="12"></rect>
+              <g>
+                <circle class="careers-visual-dot" cx="70" cy="66" r="5"></circle>
+                <circle class="careers-visual-dot" cx="88" cy="66" r="5"></circle>
+                <circle class="careers-visual-dot" cx="106" cy="66" r="5"></circle>
               </g>
-              <rect x="208" y="186" width="144" height="48" rx="8" fill="#005ab4"></rect>
-              <text x="280" y="217" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" text-anchor="middle">Honey Badger</text>
+              <path class="careers-visual-rail" d="M218 140H342M418 176V258M342 294H218M142 258V176"></path>
+              <g class="careers-visual-node">
+                <rect x="66" y="104" width="152" height="72" rx="16"></rect>
+                <circle cx="96" cy="140" r="9"></circle>
+                <text x="148" y="147">运营</text>
+              </g>
+              <g class="careers-visual-node careers-visual-node-green">
+                <rect x="342" y="104" width="152" height="72" rx="16"></rect>
+                <circle cx="372" cy="140" r="9"></circle>
+                <text x="424" y="147">前端</text>
+              </g>
+              <g class="careers-visual-node careers-visual-node-purple">
+                <rect x="66" y="258" width="152" height="72" rx="16"></rect>
+                <circle cx="96" cy="294" r="9"></circle>
+                <text x="148" y="301">客户成功</text>
+              </g>
+              <g class="careers-visual-node careers-visual-node-cyan">
+                <rect x="342" y="258" width="152" height="72" rx="16"></rect>
+                <circle cx="372" cy="294" r="9"></circle>
+                <text x="424" y="301">AI 培训</text>
+              </g>
+              <rect class="careers-visual-hub" x="198" y="181" width="164" height="58" rx="16"></rect>
+              <text class="careers-visual-hub-text" x="280" y="216">Honey Badger</text>
             </svg>
           </figure>
         </div>
