@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "index.html: footer contact values and ali-exmail link verified",
+    "en/index.html: footer contact values and ali-exmail link verified",
+    "ru/index.html: footer contact values and ali-exmail link verified",
+    "about.html: zh about contact section verified",
+    "index.html: footer contact values and ali-exmail link verified"
+  ]
+}
