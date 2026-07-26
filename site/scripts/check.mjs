@@ -150,6 +150,10 @@ const issue84DetailPanelConfigs = Object.entries(issue84PanelProducts).flatMap((
 })));
 const issue84DetailPanelPathMap = new Map(issue84DetailPanelConfigs.map((config) => [config.relativePath, config]));
 const productionOrigin = "https://www.honeybadgersoft.com";
+const issue90ContactEmail = "marketing@honeybadgersoft.com";
+const issue90ContactWechat = "zennolabchina";
+const issue90ContactQq = "48151650";
+const issue90ExmailPortal = "https://www.ali-exmail.cn/Land/";
 const encodedNetworkServicesFile = "%E8%B7%A8%E5%A2%83%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1.html";
 const seoLocaleConfigs = [
   { key: "zh", hreflang: "zh-CN", prefix: "", htmlLang: "zh-CN" },
@@ -311,7 +315,120 @@ function stripAllowedProductionSeoLinks(html) {
     }
 
     return tag;
-  });
+  }).replace(new RegExp(`<a\\b[^>]*href=["']${escapeRegExpLiteral(issue90ExmailPortal)}["'][^>]*>[\\s\\S]*?<\\/a>`, "gi"), "");
+}
+
+function getIssue90Locale(relativePath) {
+  if (relativePath.startsWith("en/")) {
+    return "en";
+  }
+
+  if (relativePath.startsWith("ru/")) {
+    return "ru";
+  }
+
+  return "zh";
+}
+
+function validateIssue90Footer(relativePath, html) {
+  const errors = [];
+  const locale = getIssue90Locale(relativePath);
+  const configs = {
+    zh: {
+      contactTitle: "联系方式",
+      contactItems: [
+        `企业邮箱：${issue90ContactEmail}`,
+        `客服微信：${issue90ContactWechat}`,
+        `客服 QQ：${issue90ContactQq}`
+      ],
+      externalTitle: "外链预留",
+      externalText: "阿里云企业邮箱入口",
+      complianceMarkers: [
+        "ICP备案信息：待配置",
+        "版权信息：待配置"
+      ],
+      pendingPattern: /待配置/
+    },
+    en: {
+      contactTitle: "Contacts",
+      contactItems: [
+        `Email: ${issue90ContactEmail}`,
+        `WeChat: ${issue90ContactWechat}`,
+        `QQ: ${issue90ContactQq}`
+      ],
+      externalTitle: "External Links",
+      externalText: "Alibaba Cloud Enterprise Mail portal",
+      complianceMarkers: [
+        "ICP filing information: To be configured",
+        "Copyright information: To be configured"
+      ],
+      pendingPattern: /To be configured/
+    },
+    ru: {
+      contactTitle: "Контакты",
+      contactItems: [
+        `Эл. почта: ${issue90ContactEmail}`,
+        `WeChat: ${issue90ContactWechat}`,
+        `QQ: ${issue90ContactQq}`
+      ],
+      externalTitle: "Внешние ссылки",
+      externalText: "Портал корпоративной почты Alibaba Cloud",
+      complianceMarkers: [
+        "Информация о регистрации ICP: Будет настроено",
+        "Информация об авторских правах: Будет настроено",
+        "ICP-регистрация: будет настроена",
+        "Copyright: будет настроен"
+      ],
+      pendingPattern: /Будет настроено|будет настроен[аы]?|будут настроены/i
+    }
+  };
+  const config = configs[locale];
+  const footerMatch = html.match(/<footer class=["']site-footer["'][\s\S]*?<\/footer>/i);
+  const footer = footerMatch?.[0] ?? "";
+  const contactMatch = footer.match(/<section id=["']site-footer-contact["']>[\s\S]*?<\/section>/i);
+  const contactSection = contactMatch?.[0] ?? "";
+
+  if (!contactSection) {
+    errors.push(`${relativePath} footer must contain #site-footer-contact.`);
+  }
+
+  if (!contactSection.includes(`<h3>${config.contactTitle}</h3>`)) {
+    errors.push(`${relativePath} footer contact title must be ${config.contactTitle}.`);
+  }
+
+  for (const item of config.contactItems) {
+    if (!contactSection.includes(`<li>${item}</li>`)) {
+      errors.push(`${relativePath} footer contact section missing ${item}.`);
+    }
+  }
+
+  if (config.pendingPattern.test(contactSection)) {
+    errors.push(`${relativePath} footer contact section must not contain pending placeholder values.`);
+  }
+
+  const externalMatch = footer.match(new RegExp(`<section>\\s*<h3>${escapeRegExpLiteral(config.externalTitle)}<\\/h3>[\\s\\S]*?<\\/section>`, "i"));
+  const externalSection = externalMatch?.[0] ?? "";
+  const externalLinks = [...externalSection.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)];
+
+  if (externalLinks.length !== 1) {
+    errors.push(`${relativePath} footer external section must contain exactly one external link.`);
+  } else {
+    const [rawLink, href, text] = externalLinks[0];
+
+    if (href !== issue90ExmailPortal || text.trim() !== config.externalText) {
+      errors.push(`${relativePath} footer external link must point to the approved ali-exmail portal with localized text.`);
+    }
+
+    if (!/\btarget=["']_blank["']/i.test(rawLink) || !/\brel=["']noopener noreferrer["']/i.test(rawLink)) {
+      errors.push(`${relativePath} footer external link must use target="_blank" and rel="noopener noreferrer".`);
+    }
+  }
+
+  if (!config.complianceMarkers.some((marker) => footer.includes(marker))) {
+    errors.push(`${relativePath} footer compliance placeholder must remain present.`);
+  }
+
+  return errors;
 }
 
 function validateSeoLinks(relativePath, html) {
@@ -512,16 +629,17 @@ function validateEnglishHome(html) {
     "Local Support",
     "Provide local language, delivery workflow and troubleshooting support for Chinese enterprises, developers and partners",
     "Compliant Launch",
-    "ICP filing, customer service accounts, corporate email and copyright information all retain configuration positions, to be updated after administrators provide real values",
+    "ICP filing and copyright information retain configuration positions for administrator-provided values; customer service accounts and corporate email are configured",
     "News and Careers Preview",
     "News Preview",
     "Careers Preview",
-    "Corporate email: To be configured",
-    "Support accounts: To be configured",
+    "Email: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "ICP filing information: To be configured",
     "Copyright information: To be configured",
     expectedFooterRelationship,
-    "Support Placeholder",
+    "Support",
     "To be configured"
   ]) {
     if (!html.includes(marker)) {
@@ -689,12 +807,13 @@ function validateEnglishProducts(html) {
     "Establish pilot processes, materials or system prototypes",
     "Complete training, delivery, review and continuous iteration",
     "Contact and Support Entry",
-    "Corporate email: To be configured",
-    "Support accounts: To be configured",
+    "Email: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "ICP filing information: To be configured",
     "Copyright information: To be configured",
     expectedFooterRelationship,
-    "Support Placeholder",
+    "Support",
     "To be configured"
   ]) {
     if (!html.includes(marker)) {
@@ -845,12 +964,13 @@ function validateEnglishNetworkServices(html) {
     "Confirm target regions, protocols, concurrency, rotation method and operations requirements by business goal; specific node resources, packages, SLA and after-sales policy must follow administrator-confirmed production wording",
     "provide their corresponding child service detail links",
     "Back to Products",
-    "Corporate email: To be configured",
-    "Support accounts: To be configured",
+    "Email: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "ICP filing information: To be configured",
     "Copyright information: To be configured",
     expectedFooterRelationship,
-    "Support Placeholder",
+    "Support",
     "To be configured"
   ]) {
     if (!html.includes(marker)) {
@@ -969,15 +1089,16 @@ function validateEnglishAbout(html) {
     "Business Coverage",
     "4 regular products/services plus cross-border network services",
     "The statement is not expanded into any stronger authorization, agency or distribution claim.",
-    "Contact Information Placeholder",
-    "The About page keeps a formal contact module for brand inquiries, product inquiries, cross-border network service inquiries and partnership communication.",
-    "Corporate email: To be configured",
-    "Support accounts: To be configured",
-    "Offline contact information: To be configured",
+    "Contact Information",
+    "The About page provides formal contact values for brand inquiries, product inquiries, cross-border network service inquiries and partnership communication.",
+    "Email: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
+    "Email: marketing@honeybadgersoft.com",
     "ICP filing information: To be configured",
     "Copyright information: To be configured",
     expectedFooterRelationship,
-    "Support Placeholder",
+    "Support",
     "To be configured"
   ]) {
     if (!html.includes(marker)) {
@@ -1086,12 +1207,13 @@ function validateEnglishNews(html) {
     "News Detail Pages Pending",
     "Detail page pending",
     "Consultation and Contact Entry",
-    "Corporate email: To be configured",
-    "Support accounts: To be configured",
+    "Email: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "ICP filing information: To be configured",
     "Copyright information: To be configured",
     expectedFooterRelationship,
-    "Support Placeholder",
+    "Support",
     "To be configured"
   ]) {
     if (!html.includes(marker)) {
@@ -1224,8 +1346,8 @@ function validateEnglishCareers(html) {
     "Business Interview",
     "Final Interview / Offer",
     "Application and Contact",
-    "Corporate email: To be configured",
-    "Support panel: To be configured",
+    "Email: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
     "开发骨架，非正式内容",
     expectedFooterRelationship
   ]) {
@@ -1374,16 +1496,17 @@ function validateRussianHome(html) {
     "Локальная поддержка",
     "Предоставление поддержки на местном языке, процессов доставки и диагностики проблем для китайских предприятий, разработчиков и партнеров",
     "Запуск с соблюдением требований",
-    "Регистрация ICP, аккаунты поддержки, корпоративная почта и информация об авторских правах сохраняют позиции для конфигурации, будут обновлены после предоставления реальных значений администраторами",
+    "Регистрация ICP и информация об авторских правах сохраняют позиции для конфигурации; аккаунты поддержки и корпоративная почта настроены",
     "Предпросмотр новостей и вакансий",
     "Предпросмотр новостей",
     "Предпросмотр вакансий",
-    "Корпоративная почта: Будет настроено",
-    "Аккаунты поддержки: Будет настроено",
+    "Эл. почта: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "Информация о регистрации ICP: Будет настроено",
     "Информация об авторских правах: Будет настроено",
     expectedFooterRelationship,
-    "Заполнитель поддержки",
+    "Поддержка",
     "Будет настроено"
   ]) {
     if (!html.includes(marker)) {
@@ -1544,12 +1667,13 @@ function validateRussianNews(html) {
     "Резюме являются нейтральными заполнителями",
     "Страницы деталей новостей ожидают подключения",
     "Вход для консультации и контакта",
-    "Корпоративная почта: Будет настроено",
-    "Аккаунты поддержки: Будет настроено",
+    "Эл. почта: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "Информация о регистрации ICP: Будет настроено",
     "Информация об авторских правах: Будет настроено",
     expectedFooterRelationship,
-    "Заполнитель поддержки",
+    "Поддержка",
     "Будет настроено"
   ]) {
     if (!html.includes(marker)) {
@@ -1625,10 +1749,6 @@ function validateRussianNews(html) {
     errors.push("Russian news page must not include a fake contact form.");
   }
 
-  if (/zennolabchina|48151650|marketing@honeybadgersoft\.com/i.test(html)) {
-    errors.push("Russian news page must not include real contact values.");
-  }
-
   if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
     errors.push("Russian news page contains over-scoped ZennoLab relationship wording.");
   }
@@ -1692,11 +1812,11 @@ function validateRussianCareers(html) {
     "Детали вакансии ожидают подключения",
     "Процесс найма",
     "Отклик и контакт",
-    "Корпоративная почта: Будет настроено",
-    "Панель поддержки: Будет настроено",
+    "Эл. почта: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
     "开发骨架，非正式内容",
     expectedFooterRelationship,
-    "Заполнитель поддержки"
+    "Поддержка"
   ]) {
     if (!html.includes(marker)) {
       errors.push(`Missing Russian careers page marker: ${marker}.`);
@@ -1795,10 +1915,6 @@ function validateRussianCareers(html) {
     errors.push("Russian careers page must not include fake recruiting interaction buttons.");
   }
 
-  if (/zennolabchina|48151650|marketing@honeybadgersoft\.com/i.test(html)) {
-    errors.push("Russian careers page must not include real contact values.");
-  }
-
   if (/зарплат|оклад|полная\s+занятость|частичная\s+занятость|стажировк|гибрид|удален|офис|телефон\s+HR|отправлено\s+успешно|откликнуться\s+сейчас/i.test(html)) {
     errors.push("Russian careers page contains unconfirmed recruiting facts or fake application wording.");
   }
@@ -1847,14 +1963,15 @@ function validateRussianAbout(html) {
     "4 стандартных продукта/услуги + кроссбордерные сетевые сервисы",
     "Формулировка не расширяется до более сильных заявлений об авторизации, агентстве или дистрибуции.",
     "Контактная информация",
-    "Страница «О нас» сохраняет официальный контактный модуль для запросов по бренду, продуктам, кроссбордерным сетевым сервисам и партнерству.",
-    "Корпоративная почта: Будет настроено",
-    "Аккаунты поддержки: Будет настроено",
-    "Офлайн-контактная информация: Будет настроено",
+    "Страница «О нас» предоставляет официальные контактные значения для запросов по бренду, продуктам, кроссбордерным сетевым сервисам и партнерству.",
+    "Эл. почта: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
+    "Эл. почта: marketing@honeybadgersoft.com",
     "Информация о регистрации ICP: Будет настроено",
     "Информация об авторских правах: Будет настроено",
     expectedFooterRelationship,
-    "Заполнитель поддержки",
+    "Поддержка",
     "Будет настроено"
   ]) {
     if (!html.includes(marker)) {
@@ -1909,10 +2026,6 @@ function validateRussianAbout(html) {
 
   if (/<form[\s>]/i.test(html) || /type=["']submit["']/i.test(html)) {
     errors.push("Russian about page must not include a fake contact form.");
-  }
-
-  if (/zennolabchina|48151650|marketing@honeybadgersoft\.com/i.test(html)) {
-    errors.push("Russian about page must not include real contact values.");
   }
 
   if (/эксклюзивн|единственн|официальн[а-яё]*\s+единственн/i.test(html)) {
@@ -1977,12 +2090,13 @@ function validateRussianProducts(html) {
     "Создание пилотных процессов, материалов или прототипов системы",
     "Завершение обучения, поставки, анализа и непрерывной итерации",
     "Вход для консультации и контакта",
-    "Корпоративная почта: Будет настроено",
-    "Аккаунты поддержки: Будет настроено",
+    "Эл. почта: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "Информация о регистрации ICP: Будет настроено",
     "Информация об авторских правах: Будет настроено",
     expectedFooterRelationship,
-    "Заполнитель поддержки",
+    "Поддержка",
     "Будет настроено"
   ]) {
     if (!html.includes(marker)) {
@@ -2133,12 +2247,13 @@ function validateRussianNetworkServices(html) {
     "Доступ и гарантии",
     "Регионы, протоколы, параллельность, способ ротации и требования к эксплуатации подтверждаются по бизнес-цели; конкретные ресурсы узлов, пакеты, SLA и послепродажная политика должны следовать производственным формулировкам, подтвержденным администратором",
     "Вернуться к Продуктам",
-    "Корпоративная почта: Будет настроено",
-    "Аккаунты поддержки: Будет настроено",
+    "Эл. почта: marketing@honeybadgersoft.com",
+    "WeChat: zennolabchina",
+    "QQ: 48151650",
     "Информация о регистрации ICP: Будет настроено",
     "Информация об авторских правах: Будет настроено",
     expectedFooterRelationship,
-    "Заполнитель поддержки",
+    "Поддержка",
     "Будет настроено"
   ]) {
     if (!html.includes(marker)) {
@@ -3905,9 +4020,10 @@ function validateAboutPage(html) {
     "品牌愿景",
     "核心定位",
     relationship,
-    "企业邮箱：待配置",
-    "客服路径：待配置",
-    "线下联系信息：待配置",
+    "企业邮箱：marketing@honeybadgersoft.com",
+    "客服微信：zennolabchina",
+    "客服 QQ：48151650",
+    "客服 QQ：48151650",
     "开发骨架，非正式内容"
   ]) {
     if (!html.includes(marker)) {
@@ -4097,7 +4213,7 @@ function validateCareersPage(html) {
     "业务面试",
     "终面 / Offer",
     "投递与联系",
-    "企业邮箱：待配置",
+    "企业邮箱：marketing@honeybadgersoft.com",
     "开发骨架，非正式内容"
   ]) {
     if (!html.includes(marker)) {
@@ -4232,6 +4348,7 @@ async function validateBuiltHtml(relativePath) {
   htmlErrors.push(...validateProductNavigationDropdown(html, relativePath));
   htmlErrors.push(...validateIssue82DetailPageSoftRemoval(relativePath, html));
   htmlErrors.push(...validateIssue84DetailHeroPanel(relativePath, html));
+  htmlErrors.push(...validateIssue90Footer(relativePath, html));
 
   if (homeHtmlPaths.has(relativePath) && /class=["'][^"']*\bbreadcrumb\b/i.test(html)) {
     htmlErrors.push("Home pages must not render breadcrumb markup.");
@@ -4244,9 +4361,6 @@ async function validateBuiltHtml(relativePath) {
   }
 
   for (const forbiddenPattern of [
-    /zennolabchina/i,
-    /48151650/,
-    /marketing@honeybadgersoft\.com/i,
     /dingtalk|钉钉/i,
     /copyright\s+\d{4}|版权所有.*\d{4}/i,
     /ICP\s*[\w-]*\d/i
