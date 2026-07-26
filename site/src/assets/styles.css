@@ -3525,3 +3525,15 @@ body[data-page="network-services"] #network-services-modules,
 body[data-page="network-services"] .home-section-soft {
   background: var(--hero) url("./img/IP.svg") center / cover no-repeat;
 }
+
+.about-page .about-contact-list li,
+.about-page .footer-list,
+.about-page .support-options span {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 1101px) {
+  .about-page .about-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

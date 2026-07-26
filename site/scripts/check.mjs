@@ -1073,28 +1073,47 @@ function validateEnglishAbout(html) {
 
   for (const marker of [
     "About Us",
-    "Brand Introduction",
-    "Brand Positioning and Image",
-    "Company Background",
-    "Company Entity Statement",
+    "Company Profile",
+    "Mission, Vision and Core Values",
+    "Product and Service Scope (4 Regular Products/Services + Cross-border Network Services)",
+    "Core Competitiveness",
+    "Service Commitments",
+    "Brand Closing Statement",
     "Contact Us",
     "Guangzhou Honey Badger Software Co., Ltd.",
     "founded on January 25, 2017",
-    "Mission and Vision",
-    "Core Positioning",
-    "Business Direction",
-    "Service Features",
-    "Development Background",
-    "Registered Business Scope",
-    "Business Coverage",
-    "4 regular products/services plus cross-border network services",
+    "software development; information system integration services; data processing and storage services; game software design and production; AI application software development; network and information security software development; information technology consulting services; internet data services; digital content production services.",
+    "digital agriculture, cross-border AI image tools, AI development training, and overseas social media operations",
+    "4 regular products/services + cross-border network services (including static residential IP, datacenter IP, and dynamic IP)",
+    "Mission",
+    "Vision",
+    "Core Values",
+    "Block 1: Agricultural Digitalization Solutions",
+    "Digital Agriculture Integrated Management System",
+    "Block 2: Cross-border AI Self-developed Tools and Technical Training",
+    "Honey Badger Original Image",
+    "AI-FDE VibeCoding Training",
+    "Block 3: Full-process Cross-border Social Media Private Domain Coaching",
+    "Social Commerce Private Domain Coaching",
+    "Block 4: Cross-border Full-scope Network Server Services",
+    "static residential servers, datacenter servers, and dynamic residential servers",
+    "stable dedicated environments",
+    "All cross-border network server services are paired with a visual unified management console and open APIs",
+    "Full-chain Self-developed Technical Capabilities",
+    "Differentiated Dual-track Business Layout",
+    "Complete Product and Service Closed Loop",
+    "Compliant and Stable Technical Operations System",
+    "Continuous Technical Iteration and Updates",
+    "Dedicated One-on-one Implementation Support",
+    "Around-the-clock Operations Assurance",
+    "Customized Solution Delivery",
+    "The About page keeps a formal contact module for brand inquiries, product inquiries, cross-border network service inquiries and partnership communication.",
     "The statement is not expanded into any stronger authorization, agency or distribution claim.",
     "Contact Information",
     "The About page provides formal contact values for brand inquiries, product inquiries, cross-border network service inquiries and partnership communication.",
     "Email: marketing@honeybadgersoft.com",
     "WeChat: zennolabchina",
     "QQ: 48151650",
-    "Email: marketing@honeybadgersoft.com",
     "ICP filing information: To be configured",
     "Copyright information: To be configured",
     expectedFooterRelationship,
@@ -1111,7 +1130,9 @@ function validateEnglishAbout(html) {
     "about-hero",
     "about-brand",
     "about-positioning",
-    "about-background",
+    "about-services",
+    "about-competitiveness",
+    "about-commitments",
     "about-entity",
     "about-contact"
   ]) {
@@ -1139,8 +1160,8 @@ function validateEnglishAbout(html) {
   }
 
   const relationshipMatches = html.match(new RegExp(expectedFooterRelationship.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || [];
-  if (relationshipMatches.length !== 2) {
-    errors.push(`English about page must render the exact ZennoLab relationship sentence in entity and footer blocks; found ${relationshipMatches.length}.`);
+  if (relationshipMatches.length < 2) {
+    errors.push(`English about page must render the exact ZennoLab relationship sentence in body and footer blocks; found ${relationshipMatches.length}.`);
   }
 
   if (!/<section class=["'][^"']*home-section[^"']*home-section-soft[^"']*["'] id=["']about-entity["'][\s\S]*?<p class=["']about-entity-statement["']>Honey Badger is ZennoLab's operating entity in China\.<\/p>/i.test(html)) {
@@ -1946,28 +1967,47 @@ function validateRussianAbout(html) {
 
   for (const marker of [
     "О нас",
-    "Бренд",
-    "Позиционирование",
-    "Бэкграунд",
-    "Структура",
+    "Профиль компании",
+    "Миссия, видение и основные ценности",
+    "Объем продуктов и услуг (4 стандартных продукта/услуги + кроссбордерные сетевые сервисы)",
+    "Ключевые конкурентные преимущества",
+    "Сервисные обязательства",
+    "Заключительное слово бренда",
     "Контакты",
     "Guangzhou Honey Badger Software Co., Ltd.",
     "основана 25 января 2017 года",
-    "Миссия и видение",
-    "Основное позиционирование",
-    "Бизнес-направления",
-    "Сервисные особенности",
-    "Профиль компании",
-    "Зарегистрированные виды деятельности",
-    "Охват бизнеса 4+1",
-    "4 стандартных продукта/услуги + кроссбордерные сетевые сервисы",
+    "разработка программного обеспечения; услуги интеграции информационных систем; обработка и хранение данных; проектирование и производство игрового программного обеспечения; разработка прикладного ПО на базе искусственного интеллекта; разработка программного обеспечения для сетевой и информационной безопасности; консультационные услуги в сфере информационных технологий; интернет-сервисы данных; производство цифрового контента.",
+    "цифрового сельского хозяйства, кроссбордерных AI-инструментов для изображений, обучения AI-разработке и операций в зарубежных социальных сетях",
+    "4 стандартных продукта/услуги + кроссбордерные сетевые сервисы (включая статический домашний IP, датацентровый IP и динамический IP)",
+    "Миссия",
+    "Видение",
+    "Основные ценности",
+    "Блок 1: Решения для цифровизации сельского хозяйства",
+    "Интегрированная система управления цифровым сельским хозяйством",
+    "Блок 2: Кроссбордерные собственные AI-инструменты и техническое обучение",
+    "Honey Badger Original Image",
+    "обучение AI-FDE VibeCoding",
+    "Блок 3: Полное сопровождение кроссбордерной приватной зоны в соцсетях",
+    "Сопровождение приватной зоны в соцсетях",
+    "Блок 4: Кроссбордерные сетевые серверные сервисы полного охвата",
+    "статические домашние серверы, датацентровые серверы и динамические домашние серверы",
+    "стабильной выделенной средой",
+    "Все кроссбордерные сетевые серверные сервисы оснащаются визуальной единой консолью управления и открытыми API",
+    "Полноцепочечные собственные технические возможности",
+    "Дифференцированное преимущество двух направлений",
+    "Полный замкнутый цикл продуктов и услуг",
+    "Соответствующая требованиям и стабильная система технической эксплуатации",
+    "Постоянные технические итерации и обновления",
+    "Персональная поддержка внедрения один на один",
+    "Круглосуточное операционное обеспечение",
+    "Вывод кастомизированных решений",
+    "Страница «О нас» сохраняет официальный контактный модуль для запросов по бренду, продуктам, кроссбордерным сетевым сервисам и партнерству.",
     "Формулировка не расширяется до более сильных заявлений об авторизации, агентстве или дистрибуции.",
     "Контактная информация",
     "Страница «О нас» предоставляет официальные контактные значения для запросов по бренду, продуктам, кроссбордерным сетевым сервисам и партнерству.",
     "Эл. почта: marketing@honeybadgersoft.com",
     "WeChat: zennolabchina",
     "QQ: 48151650",
-    "Эл. почта: marketing@honeybadgersoft.com",
     "Информация о регистрации ICP: Будет настроено",
     "Информация об авторских правах: Будет настроено",
     expectedFooterRelationship,
@@ -1984,7 +2024,9 @@ function validateRussianAbout(html) {
     "about-hero",
     "about-brand",
     "about-positioning",
-    "about-background",
+    "about-services",
+    "about-competitiveness",
+    "about-commitments",
     "about-entity",
     "about-contact"
   ]) {
@@ -2012,8 +2054,8 @@ function validateRussianAbout(html) {
   }
 
   const relationshipMatches = html.match(new RegExp(expectedFooterRelationship.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || [];
-  if (relationshipMatches.length !== 2) {
-    errors.push(`Russian about page must render the exact ZennoLab relationship sentence in entity and footer blocks; found ${relationshipMatches.length}.`);
+  if (relationshipMatches.length < 2) {
+    errors.push(`Russian about page must render the exact ZennoLab relationship sentence in body and footer blocks; found ${relationshipMatches.length}.`);
   }
 
   if (!/<section class=["'][^"']*home-section[^"']*home-section-soft[^"']*["'] id=["']about-entity["'][\s\S]*?<p class=["']about-entity-statement["']>Honey Badger является операционной структурой российской компании ZennoLab в Китае\.<\/p>/i.test(html)) {
@@ -4011,18 +4053,43 @@ function validateAboutPage(html) {
 
   for (const marker of [
     "关于我们",
-    "品牌介绍",
-    "品牌定位与形象展示",
-    "企业背景介绍",
-    "公司主体说明",
+    "企业简介",
+    "企业使命、愿景与核心价值观",
+    "产品与服务范围（4 项常规产品/服务 + 跨境网络服务）",
+    "核心竞争力",
+    "企业服务承诺",
+    "品牌结语",
     "联系我们",
-    "品牌名称",
-    "品牌愿景",
-    "核心定位",
+    "广州蜜獾软件有限公司创立于2017年01月25日",
+    "软件开发；信息系统集成服务；数据处理和存储服务；游戏软件设计制作；人工智能应用软件开发；网络与信息安全软件开发；信息技术咨询服务；互联网数据服务；数字内容制作服务。",
+    "数字化农业、跨境AI图片工具、AI 开发培训、海外社媒运营",
+    "当前对外产品范围统一为 4 项常规产品/服务 + 跨境网络服务（含静态住宅 IP、机房 IP、动态 IP）",
+    "企业使命",
+    "企业愿景",
+    "核心价值观",
+    "板块1：农业数字化解决方案",
+    "数字化农业综合管理系统",
+    "板块2：跨境AI自研工具与技术培训",
+    "蜜獾原图",
+    "AI-FDE VibeCoding战培训",
+    "板块3：跨境社媒私域全流程陪跑",
+    "社媒跨境私域陪跑服务",
+    "板块4：跨境全域网络服务器服务",
+    "静态住宅服务器、机房数据服务器、动态住宅服务器",
+    "网络环境稳定独享",
+    "全系跨境网络服务器配套可视化统一管理后台与开放API接口",
+    "全链路自研技术能力",
+    "双赛道差异化布局优势",
+    "完整的产品服务闭环",
+    "合规稳定的技术运营体系",
+    "持续技术迭代更新",
+    "一对一专属落地支持",
+    "全天候运维保障",
+    "定制化解决方案输出",
+    "关于我们页保留正式联系模块，统一承接品牌咨询、产品咨询、跨境网络服务咨询和合作沟通。",
     relationship,
     "企业邮箱：marketing@honeybadgersoft.com",
     "客服微信：zennolabchina",
-    "客服 QQ：48151650",
     "客服 QQ：48151650",
     "开发骨架，非正式内容"
   ]) {
@@ -4035,7 +4102,9 @@ function validateAboutPage(html) {
     "about-hero",
     "about-brand",
     "about-positioning",
-    "about-background",
+    "about-services",
+    "about-competitiveness",
+    "about-commitments",
     "about-entity",
     "about-contact"
   ]) {
@@ -4060,6 +4129,19 @@ function validateAboutPage(html) {
     if (!html.includes(languagePath)) {
       errors.push(`About page language switcher missing ${languagePath}.`);
     }
+  }
+
+  const relationshipMatches = html.match(new RegExp(relationship.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || [];
+  if (relationshipMatches.length < 3) {
+    errors.push(`About page must render the exact ZennoLab relationship sentence in hero/body/footer blocks; found ${relationshipMatches.length}.`);
+  }
+
+  if (!/<section class=["'][^"']*home-section[^"']*home-section-soft[^"']*["'] id=["']about-entity["'][\s\S]*?<p class=["']about-entity-statement["']>蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体。<\/p>/i.test(html)) {
+    errors.push("About page entity block must contain the exact relationship sentence.");
+  }
+
+  if (!/<footer class=["']site-footer["'][\s\S]*?<p>蜜獾公司是俄罗斯 ZennoLab 公司在中国的运营实体。正式主体信息将在管理员确认后配置。<\/p>/i.test(html)) {
+    errors.push("About page footer must contain the exact relationship sentence and placeholder note.");
   }
 
   if (/<form[\s>]/i.test(html)) {
