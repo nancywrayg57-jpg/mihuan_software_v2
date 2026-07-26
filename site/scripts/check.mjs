@@ -4863,3 +4863,45 @@ await validateBrandLogoOutput();
 await validateIssue62HeroVisualFrame();
 await validateIssue82DetailHeroAlignment();
 await validateIssue84DetailHeroPanelStyles();
+
+async function validateIssue88SoftSvgBackgrounds() {
+  const stylesPath = resolve(distDir, "assets", "styles.css");
+  const css = (await readFile(stylesPath, "utf8")).replace(/\/\*[\s\S]*?\*\//g, "");
+  const templateBackgrounds = [
+    ["body[data-page=\"home\"] .home-section-soft", "stacked-waves-haikei.svg"],
+    ["body[data-page=\"products\"] .home-section-soft", "stacked-waves-haikei_2.svg"],
+    ["body[data-page=\"news\"] .home-section-soft", "stacked-waves-haikei_3.svg"],
+    ["body[data-page=\"careers\"] .home-section-soft", "waves-haikei.svg"],
+    ["body[data-page=\"about\"] .home-section-soft", "waves-haikei-2.svg"],
+    ["body[data-page=\"network-services\"] .home-section-soft", "IP.svg"]
+  ];
+  const highSpecificityOverrides = [
+    ["body[data-page=\"home\"] #home-relation", "stacked-waves-haikei.svg"],
+    ["body[data-page=\"home\"] #en-brand-relationship", "stacked-waves-haikei.svg"],
+    ["body[data-page=\"home\"] #ru-brand-relationship", "stacked-waves-haikei.svg"],
+    ["body[data-page=\"network-services\"] #network-services-modules", "IP.svg"]
+  ];
+
+  for (const [selector, assetName] of [...templateBackgrounds, ...highSpecificityOverrides]) {
+    const expectedBackground = `background: var(--hero) url("./img/${assetName}") center / cover no-repeat;`;
+    const matchingBlocks = findCssBlocks(css, selector).filter((block) => block.includes(`./img/${assetName}`));
+
+    if (matchingBlocks.length === 0) {
+      throw new Error(`Issue #88 missing soft-section SVG background for ${selector}: ./img/${assetName}`);
+    }
+
+    for (const block of matchingBlocks) {
+      if (!block.includes(expectedBackground)) {
+        throw new Error(`Issue #88 ${selector} must use exact hero-matched soft background: ${expectedBackground}`);
+      }
+
+      if (/linear-gradient/i.test(block)) {
+        throw new Error(`Issue #88 ${selector} must not add an overlay gradient.`);
+      }
+    }
+  }
+
+  console.log(`Checked ${templateBackgrounds.length} Issue #88 first-level soft-section SVG background mapping rule(s).`);
+}
+
+await validateIssue88SoftSvgBackgrounds();
