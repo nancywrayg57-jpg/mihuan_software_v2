@@ -4900,12 +4900,16 @@ async function validateIssue82DetailHeroAlignment() {
 async function validateIssue84DetailHeroPanelStyles() {
   const stylesPath = resolve(distDir, "assets", "styles.css");
   const css = await readFile(stylesPath, "utf8");
+  const cssForBlocks = css.replace(/\/\*[\s\S]*?\*\//g, "");
+  const enlargedGridPattern = /grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(500px,\s*0\.95fr\)\s*;/;
+  const enlargedRussianGridPattern = /grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(500px,\s*0\.9fr\)\s*;/;
+  const russianDesktopPaddingPattern = /padding:\s*47px\s+0\s*;/;
 
   for (const selector of new Set(issue84DetailPanelConfigs.map((config) => config.heroGridSelector))) {
-    const blocks = findCssBlocks(css, selector);
+    const blocks = findCssBlocks(cssForBlocks, selector);
 
-    if (!cssBlockHas(blocks, /grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(320px,\s*0\.42fr\)\s*;/)) {
-      throw new Error(`Issue #84 ${selector} must restore the desktop detail hero two-column grid.`);
+    if (!cssBlockHas(blocks, enlargedGridPattern)) {
+      throw new Error(`Issue #94 ${selector} must use the enlarged desktop detail hero two-column grid.`);
     }
   }
 
@@ -4915,10 +4919,46 @@ async function validateIssue84DetailHeroPanelStyles() {
     ".detail-dashboard-flow span",
     ".detail-dashboard-body"
   ]) {
-    const blocks = findCssBlocks(css, selector);
+    const blocks = findCssBlocks(cssForBlocks, selector);
 
     if (blocks.length === 0) {
       throw new Error(`Issue #84 missing detail hero panel style for ${selector}.`);
+    }
+  }
+
+  if (!cssBlockHas(findCssBlocks(cssForBlocks, ".detail-hero-panel"), /max-width:\s*560px\s*;/)) {
+    throw new Error("Issue #94 detail hero panel must target max-width: 560px.");
+  }
+
+  for (const selector of [
+    ".ru-agriculture-detail-page .products-hero-grid",
+    ".ru-yuantu-detail-page .products-hero-grid",
+    ".ru-aifde-detail-page .products-hero-grid",
+    ".ru-tiktok-detail-page .products-hero-grid",
+    ".ru-static-ip-detail-page .products-hero-grid",
+    ".ru-idc-ip-detail-page .products-hero-grid",
+    ".ru-dynamic-ip-detail-page .products-hero-grid"
+  ]) {
+    const blocks = findCssBlocks(cssForBlocks, selector);
+
+    if (!cssBlockHas(blocks, enlargedRussianGridPattern)) {
+      throw new Error(`Issue #94 ${selector} must keep the enlarged Russian desktop detail grid.`);
+    }
+  }
+
+  for (const selector of [
+    ".ru-agriculture-detail-page .agriculture-detail-hero",
+    ".ru-yuantu-detail-page .yuantu-detail-hero",
+    ".ru-aifde-detail-page .aifde-detail-hero",
+    ".ru-tiktok-detail-page .tiktok-detail-hero",
+    ".ru-static-ip-detail-page .static-ip-detail-hero",
+    ".ru-idc-ip-detail-page .idc-ip-detail-hero",
+    ".ru-dynamic-ip-detail-page .dynamic-ip-detail-hero"
+  ]) {
+    const blocks = findCssBlocks(cssForBlocks, selector);
+
+    if (!cssBlockHas(blocks, russianDesktopPaddingPattern)) {
+      throw new Error(`Issue #94 ${selector} must keep the Russian desktop padding override for #82 height alignment.`);
     }
   }
 

@@ -978,29 +978,56 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  overflow: visible;
 }
 
 .visual-frame {
   fill: #fff;
   stroke: #d8e5f3;
   stroke-width: 2;
+  filter: drop-shadow(0 22px 34px rgb(13 42 76 / 24%));
 }
 
-.visual-chip rect {
-  fill: #f8fbff;
+.visual-topbar {
+  fill: #f0f4fb;
+}
+
+.visual-window-dot {
+  fill: var(--primary-bright);
+}
+
+.visual-window-dot:nth-of-type(2) {
+  fill: var(--green);
+}
+
+.visual-window-dot:nth-of-type(3) {
+  fill: var(--purple);
+}
+
+.visual-node-halo {
+  fill: #f3f8ff;
   stroke: #d8e5f3;
   stroke-width: 2;
 }
 
+.visual-chip rect {
+  fill: #fbfcff;
+  stroke: var(--border);
+  stroke-width: 2;
+  filter: drop-shadow(0 12px 18px rgb(13 42 76 / 14%));
+}
+
 .visual-node-main {
   fill: var(--primary);
+  filter: drop-shadow(0 12px 18px rgb(0 90 180 / 22%));
 }
 
 .visual-line {
   fill: none;
-  stroke: #b7cce6;
+  stroke: #a8c4e6;
   stroke-linecap: round;
-  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-width: 3;
 }
 
 .visual-main-text,
@@ -1022,26 +1049,26 @@ h3 {
 
 .visual-chip text {
   fill: var(--text);
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .visual-chip-cyan rect {
-  fill: #e9f8fb;
+  fill: #eefaff;
   stroke: #b8e2ea;
 }
 
 .visual-chip-purple rect {
-  fill: #f1ecff;
+  fill: #f4f0ff;
   stroke: #d3c8f1;
 }
 
 .visual-chip-green rect {
-  fill: #eaf8f0;
+  fill: #eefaf3;
   stroke: #bfe4cf;
 }
 
 .visual-chip-blue rect {
-  fill: #eef5ff;
+  fill: #f0f6ff;
   stroke: #bfd6f5;
 }
 
@@ -2250,10 +2277,83 @@ h3 {
   display: block;
   width: 100%;
   max-width: 560px;
-  border: 1px solid rgb(255 255 255 / 28%);
-  border-radius: var(--radius);
-  background: rgb(255 255 255 / 12%);
-  box-shadow: var(--shadow);
+  overflow: visible;
+}
+
+.careers-visual-frame {
+  fill: #fff;
+  stroke: #d8e5f3;
+  stroke-width: 2;
+  filter: drop-shadow(0 22px 34px rgb(13 42 76 / 24%));
+}
+
+.careers-visual-topbar {
+  fill: #f0f4fb;
+}
+
+.careers-visual-dot {
+  fill: var(--primary-bright);
+}
+
+.careers-visual-dot:nth-of-type(2) {
+  fill: var(--green);
+}
+
+.careers-visual-dot:nth-of-type(3) {
+  fill: var(--purple);
+}
+
+.careers-visual-rail {
+  fill: none;
+  stroke: #a8c4e6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 8;
+}
+
+.careers-visual-node rect {
+  fill: #fbfcff;
+  stroke: var(--border);
+  stroke-width: 2;
+  filter: drop-shadow(0 12px 18px rgb(13 42 76 / 14%));
+}
+
+.careers-visual-node circle {
+  fill: var(--primary);
+}
+
+.careers-visual-node-green circle {
+  fill: var(--green);
+}
+
+.careers-visual-node-purple circle {
+  fill: var(--purple);
+}
+
+.careers-visual-node-cyan circle {
+  fill: var(--cyan);
+}
+
+.careers-visual-node text,
+.careers-visual-hub-text {
+  font-family: var(--font);
+  font-weight: 900;
+  text-anchor: middle;
+}
+
+.careers-visual-node text {
+  fill: var(--text);
+  font-size: 18px;
+}
+
+.careers-visual-hub {
+  fill: var(--primary);
+  filter: drop-shadow(0 12px 18px rgb(0 90 180 / 22%));
+}
+
+.careers-visual-hub-text {
+  fill: #fff;
+  font-size: 18px;
 }
 
 .career-why-grid,
@@ -3163,36 +3263,36 @@ button:focus-visible,
 /* Issue #84: product detail hero panels use the existing products dashboard style. */
 .detail-hero-panel {
   width: 100%;
-  max-width: 440px;
+  max-width: 560px;
   justify-self: center;
 }
 
 .detail-product-dashboard {
   width: 100%;
-  padding: 14px;
+  padding: 20px;
 }
 
 .detail-dashboard-flow span {
   min-height: 0;
-  grid-template-columns: 28px minmax(0, 1fr);
-  padding: 6px;
-  font-size: 11px;
-  line-height: 1.25;
+  grid-template-columns: 34px minmax(0, 1fr);
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.35;
 }
 
 .detail-product-dashboard .dashboard-bar {
-  padding: 8px;
+  padding: 12px;
 }
 
 .detail-dashboard-body {
-  gap: 8px;
+  gap: 14px;
   grid-template-columns: 1fr;
-  padding: 12px;
+  padding: 16px;
 }
 
 .detail-dashboard-flow,
 .detail-dashboard-metrics {
-  gap: 6px;
+  gap: 10px;
 }
 
 .detail-dashboard-flow {
@@ -3204,18 +3304,18 @@ button:focus-visible,
 }
 
 .detail-dashboard-flow strong {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .detail-dashboard-metrics {
-  padding: 10px;
+  padding: 14px;
 }
 
 .detail-dashboard-metrics i {
-  height: 6px;
+  height: 8px;
 }
 
 .agriculture-detail-page .breadcrumb .container,
@@ -3237,8 +3337,8 @@ button:focus-visible,
   .static-ip-detail-page .products-hero-grid,
   .idc-ip-detail-page .products-hero-grid,
   .dynamic-ip-detail-page .products-hero-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
-    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) minmax(500px, 0.95fr);
+    gap: 32px;
   }
 
   .agriculture-detail-hero,
@@ -3272,8 +3372,18 @@ button:focus-visible,
   .ru-static-ip-detail-page .products-hero-grid,
   .ru-idc-ip-detail-page .products-hero-grid,
   .ru-dynamic-ip-detail-page .products-hero-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.33fr);
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(500px, 0.9fr);
+    gap: 28px;
+  }
+
+  .ru-agriculture-detail-page .agriculture-detail-hero,
+  .ru-yuantu-detail-page .yuantu-detail-hero,
+  .ru-aifde-detail-page .aifde-detail-hero,
+  .ru-tiktok-detail-page .tiktok-detail-hero,
+  .ru-static-ip-detail-page .static-ip-detail-hero,
+  .ru-idc-ip-detail-page .idc-ip-detail-hero,
+  .ru-dynamic-ip-detail-page .dynamic-ip-detail-hero {
+    padding: 47px 0;
   }
 }
 
